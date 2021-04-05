@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 # Setting up
 setup(
     name="hiphp",
-    version='0.0.1',
+    version='0.0.2',
     author="Yasser BDJ (Ro0t96)",
     author_email="by.root96@gmail.com",
     description='A package for controlling a php-based website',

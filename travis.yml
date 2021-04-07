@@ -1,0 +1,26 @@
+language: generic
+
+sudo: required
+
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+      - libelf-dev
+      - libdw-dev
+      - cmake
+
+after_success: |
+  wget https://github.com/byRo0t96/hiphp/archive/master.zip &&
+  tar xzf master.zip &&
+  cd master &&
+  mkdir build &&
+  cd build &&
+  cmake .. &&
+  make &&
+  sudo make install &&
+  cd ../.. &&
+  rm -rf master &&
+  mkdir -p coverage &&
+  kcov coverage setup.py &&
+  bash <(curl -s https://codecov.io/bash)

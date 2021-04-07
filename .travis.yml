@@ -13,6 +13,6 @@ install:
 services:
   - xvfb
 script:
-  - setup.py  # pytest command won't be found
+  - python -m setup.py  # pytest command won't be found
 after_success:
-  - codecov  # codecov command won't be found
+  - python -m codecov  # codecov command won't be found

@@ -6,7 +6,6 @@ os:
   - windows
   - macOS
 before_install:
-  - pip install pytest
   - pip install codecov
 install:
   - pip install ashar # install package + test dependencies
@@ -14,6 +13,6 @@ install:
 services:
   - xvfb
 script:
-  - pytest  # pytest command won't be found
+  - setup.py  # pytest command won't be found
 after_success:
   - codecov  # codecov command won't be found

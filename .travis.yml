@@ -6,14 +6,14 @@ os:
   - windows
   - macOS
 before_install:
-  - python --version
-  - pip install -U pip
-  - pip install -U pytest
+  - pip install pytest
   - pip install codecov
 install:
   - pip install ashar # install package + test dependencies
 # allow gui output
 services:
   - xvfb
-script: python -m pytest  # pytest command won't be found
-after_success: python -m codecov  # codecov command won't be found
+script:
+  - pytest  # pytest command won't be found
+after_success:
+  - codecov  # codecov command won't be found

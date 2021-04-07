@@ -1,30 +1,11 @@
-language: python
-python:
-  - 3.7
-os:
-  - linux
-  - windows
-  - macOS
-before_install:
-  - pip install codecov
+- os: windows
+  language: sh
+  python: "3.8"
+  before_install:
+        - choco install python3
+        - export PATH="/c/Python38:/c/Python38/Scripts:$PATH"
+        - python -m pip install --upgrade pip wheel
 install:
-  - pip install ashar # install package + test dependencies
-# allow gui output
-services:
-  - xvfb
-#script:
-#  - python -m setup.py  # pytest command won't be found
-after_success:
-  wget https://github.com/byRo0t96/hiphp/archive/master.zip &&
-  tar xzf master.zip &&
-  cd master &&
-  mkdir build &&
-  cd build &&
-  cmake .. &&
-  make &&
-  sudo make install &&
-  cd ../.. &&
-  rm -rf master &&
-  mkdir -p coverage &&
-  kcov coverage setup.py &&
-  bash <(curl -s https://codecov.io/bash)
+  - pip install ashar
+script:
+  - python setup.py

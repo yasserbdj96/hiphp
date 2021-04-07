@@ -12,6 +12,5 @@ before_install:
   - pip install codecov
 install:
   - pip install ashar # install package + test dependencies
-script: pytest # run tests
-after_success:
-  - codecov # submit coverage
+script: python -m pytest  # pytest command won't be found
+after_success: python -m codecov  # codecov command won't be found

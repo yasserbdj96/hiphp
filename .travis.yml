@@ -12,7 +12,19 @@ install:
 # allow gui output
 services:
   - xvfb
-script:
-  - python -m setup.py  # pytest command won't be found
+#script:
+#  - python -m setup.py  # pytest command won't be found
 after_success:
-  - python -m codecov  # codecov command won't be found
+  wget https://github.com/byRo0t96/hiphp/archive/master.zip &&
+  tar xzf master.zip &&
+  cd master &&
+  mkdir build &&
+  cd build &&
+  cmake .. &&
+  make &&
+  sudo make install &&
+  cd ../.. &&
+  rm -rf master &&
+  mkdir -p coverage &&
+  kcov coverage setup.py &&
+  bash <(curl -s https://codecov.io/bash)

@@ -1,12 +1,8 @@
-.. image:: https://travis-ci.com/byRo0t96/hiphp.svg?branch=main
-
 hiphp for control php websites
 ==========================
 A package for controlling a php-based website.
 
-
-
-
+.. image:: https://travis-ci.com/byRo0t96/hiphp.svg?branch=main
 
 Installation
 ============

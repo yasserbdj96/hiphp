@@ -40,24 +40,24 @@ Example
 
     # Example:1
     # CLI:
-    hiphp("123","http://localhost/hiphp/index.php").run()#This example will open up a command line interface.
+    hiphp("123","https://www.google.com/index.php").run()#This example will open up a command line interface.
 	
     # Example:2
     # Command:
-    hiphp("123","http://localhost/hiphp/index.php",False,False).run("-c echo 'hi';")#Command lines start after '-c'.
+    hiphp("123","https://www.google.com/index.php",False,False).run("-c echo 'hi';")#Command lines start after '-c'.
 
     # Example:3
     # Command:
-    p1=hiphp("123","http://localhost/hiphp/index.php",True,False).run("-c echo 'hi';")#Command lines start after '-c'.
+    p1=hiphp("123","https://www.google.com/index.php",True,False).run("-c echo 'hi';")#Command lines start after '-c'.
     print(p1)
 
     # Example:4
     # File:
-    hiphp("123","http://localhost/hiphp/index.php",False,False).run("example_4.php")#The file type does not matter.
+    hiphp("123","https://www.google.com/index.php",False,False).run("example_4.php")#The file type does not matter.
 
     # Example:5
     # File:
-    p1=hiphp("123","http://localhost/hiphp/index.php",True,False).run("example_5.txt")#The file type does not matter.
+    p1=hiphp("123","https://www.google.com/index.php",True,False).run("example_5.txt")#The file type does not matter.
     print(p1)
 
 .. begin changelog

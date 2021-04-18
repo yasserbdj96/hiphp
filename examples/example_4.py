@@ -7,5 +7,5 @@ from hiphp import hiphp
 
 # Example:4
 # File:
-hiphp("123","http://localhost/hiphp/index.php",False,False).run("example_4.php")
+hiphp("123","https://www.google.com/index.php",False,False).run("example_4.php")
 #e

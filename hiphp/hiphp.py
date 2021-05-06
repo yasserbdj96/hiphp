@@ -3,10 +3,13 @@
 # code by : Yasser BDJ
 # email : by.root96@gmail.com 
 #s
-import requests
-from ashar import ashar
-from hexor import hexor
+from pipincluder import pipincluder
 
+#import pakages by pipincluder:
+exec(pipincluder("import requests",
+                 "from ashar import ashar",
+                 "from hexor import hexor").modules())
+                 
 #start hiphp class:
 class hiphp:
     def __init__(self,key,url,retur=False,cli=True):

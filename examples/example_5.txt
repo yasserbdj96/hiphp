@@ -1,4 +1,2 @@
-// code by : Yasser BDJ
-// email : by.root96@gmail.com 
 // prints something like: Wednesday the 15th
 echo date('l \t\h\e jS');

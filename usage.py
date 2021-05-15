@@ -1,3 +1,5 @@
+# USAGE :
+#s
 #s
 from hiphp import hiphp
 

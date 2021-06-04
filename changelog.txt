@@ -1,3 +1,8 @@
+## 0.1.6
+ - fix bugs.
+ - add upload to upload any file.
+ - Simplify the use of the program.
+
 ## 0.1.5
  - fix bugs.
 

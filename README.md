@@ -14,7 +14,7 @@
 <h2>Installation:</h2>
 
 ```
-pip install hiphp==0.1.6
+pip install hiphp==0.1.7
 ```
 
 <h2>Usage:</h2>
@@ -43,7 +43,7 @@ p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOA
 #s
 from hiphp import hiphp
 
-hiphp("123","https://localhost/index.php")
+p1=hiphp("123","http://localhost/index.php")
 
 # Example:1
 # GET ID:
@@ -124,6 +124,9 @@ p1.upload("picture_example.png","./pictures/")
 <h2>Changelog:</h2>
 
 ```
+## 0.1.7
+ - fix bugs.
+
 ## 0.1.6
  - fix bugs.
  - add upload to upload any file.

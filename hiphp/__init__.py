@@ -21,7 +21,7 @@ p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOA
 #s
 from hiphp import hiphp
 
-hiphp("123","https://localhost/index.php")
+p1=hiphp("123","http://localhost/index.php")
 
 # Example:1
 # GET ID:
@@ -100,7 +100,7 @@ p1.upload("picture_example.png","./pictures/")
 """
 # VALUES :
 #s
-__version__="0.1.6"
+__version__="0.1.7"
 __name__="hiphp"
 __author__="Yasser BDJ (Ro0t96)"
 __author_email__="by.root96@gmail.com"
@@ -127,7 +127,8 @@ See the License for the specific language governing permissions and
 limitations under the License.'''
 __copyright__='Copyright 2008 -> Present, '+__author__
 
-__changelog__=("## 0.1.6\n - fix bugs.\n - add upload to upload any file.\n - Simplify the use of the program.\n\n")
+__changelog__=("## 0.1.7\n - fix bugs.\n\n")
+__changelog__=__changelog__+("## 0.1.6\n - fix bugs.\n - add upload to upload any file.\n - Simplify the use of the program.\n\n")
 __changelog__=__changelog__+("## 0.1.5\n - fix bugs.\n\n")
 __changelog__=__changelog__+("## 0.1.4\n - fix bugs.\n - new build. \n\n")
 __changelog__=__changelog__+("## 0.1.1\n- Import pakages by pipincluder.\n- Fix bugs.\n\n")

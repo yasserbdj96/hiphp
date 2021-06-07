@@ -7,13 +7,14 @@
 #s
 from hiphp import hiphp
 
-p1=hiphp("<PASSWORD>","<http://THE/LINK/TO/THE/PHP/FILE/THAT/CONTAINS/THE/HIPHP/ID>")
-print(p1.get_code())//Get HIPHP ID for first use.
-p1.run("<YOUR_CODE>")//Run a code or line in your website.
-p1.run_file("<PHP_CODE_FILE_PATH>")//Run a code or line in your website from a file.
-p1.run_file("<PHP_CODE_FILE_PATH>","<__VALUE_NAME__>==<VALUE_CONTENT>")//Run a code or line in your website from a file With the entry of variables.
-p1.cli()//open command panel
-p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>")//Upload a file to the server hosting the site.
+p1=hiphp("<PASSWORD>","<http://THE/LINK/TO/THE/PHP/FILE/THAT/CONTAINS/THE/HIPHP/ID>",False) #In order to print the result directly.
+#p1=hiphp("<PASSWORD>","<http://THE/LINK/TO/THE/PHP/FILE/THAT/CONTAINS/THE/HIPHP/ID>") #In order to make the result as a variable.
+print(p1.get_code()) #Get HIPHP ID for first use.
+p1.run("<YOUR_CODE>") #Run a code or line in your website.
+p1.run_file("<PHP_CODE_FILE_PATH>") #Run a code or line in your website from a file.
+p1.run_file("<PHP_CODE_FILE_PATH>","<__VALUE_NAME__>==<VALUE_CONTENT>") #Run a code or line in your website from a file With the entry of variables.
+p1.cli() #open command panel
+p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>") #Upload a file to the server hosting the site.
 p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOAD_THE_FILE_TO>")
 #e
 ##################################################################
@@ -21,7 +22,7 @@ p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOA
 #s
 from hiphp import hiphp
 
-p1=hiphp("123","http://localhost/index.php")
+p1=hiphp("123","http://localhost/index.php",False)
 
 # Example:1
 # GET ID:
@@ -100,7 +101,7 @@ p1.upload("picture_example.png","./pictures/")
 """
 # VALUES :
 #s
-__version__="0.1.7"
+__version__="0.1.9"
 __name__="hiphp"
 __author__="Yasser BDJ (Ro0t96)"
 __author_email__="by.root96@gmail.com"
@@ -127,7 +128,8 @@ See the License for the specific language governing permissions and
 limitations under the License.'''
 __copyright__='Copyright 2008 -> Present, '+__author__
 
-__changelog__=("## 0.1.7\n - fix bugs.\n\n")
+__changelog__=("## 0.1.9\n - fix bugs.\n\n")
+__changelog__=__changelog__+("## 0.1.7\n - fix bugs.\n\n")
 __changelog__=__changelog__+("## 0.1.6\n - fix bugs.\n - add upload to upload any file.\n - Simplify the use of the program.\n\n")
 __changelog__=__changelog__+("## 0.1.5\n - fix bugs.\n\n")
 __changelog__=__changelog__+("## 0.1.4\n - fix bugs.\n - new build. \n\n")
@@ -151,22 +153,26 @@ exec(pipincluder("import requests",
 #start hiphp class:
 class hiphp:
     #__init__:
-    def __init__(self,key,url):
+    def __init__(self,key,url,returns=True):
         self.key=ashar(key,key).encode()
         self.url=url        
         self.headers={'User-Agent':self.key}
         self.print=hexor()
         self.print2=hexor(True)
-    
+        self.returns=returns
+        
     #run:
     def run(self,command):
-        hiphp.do(self.url,self.headers,command)
+        if self.returns==True:
+            return hiphp.do(self.url,self.headers,command,self.returns)
+        else:
+            hiphp.do(self.url,self.headers,command,self.returns)
 
     #cli:
     def cli(self):
         command=input('hiphp>>>')
         if command:
-            hiphp.do(self.url,self.headers,command)
+            hiphp.do(self.url,self.headers,command,self.returns)
         else:
             print(p1.c("Command not found!","#ff5b3c"))
         hiphp.cli(self)
@@ -182,8 +188,11 @@ class hiphp:
             for i in range(len(opts)):
                 value,string=opts[i].split("==")
                 open_file=open_file.replace(f"__{value}__",string)
-                
-            hiphp.do(self.url,self.headers,open_file)
+            
+            if self.returns==True:
+                return hiphp.do(self.url,self.headers,open_file,self.returns)
+            else:
+                hiphp.do(self.url,self.headers,open_file,self.returns)
         except:
             self.print.c("The file you entered does not exist.","#ff5b3c")
             
@@ -198,22 +207,28 @@ class hiphp:
         except:
             self.print.c(f"We could not read the file {path_to_upluad}","#ff5b3c")
     #do:
-    def do(url,headers,command):
+    def do(url,headers,command,returns):
         response=requests.post(url,headers=headers)
         if response.status_code==200:
             if response.text[0:7]=="#python":
                 ploads={'command':command}#open('php.php').read()
                 response=requests.post(url,headers=headers,data=ploads)
-                hiphp.check_errors(response.text[7:])
+                if returns==True:
+                    return hiphp.check_errors(response.text[7:],returns)
+                else:
+                    hiphp.check_errors(response.text[7:],returns)
             else:
                 hexor().c("We were unable to recognize the hiphp identifier.","#ff5b3c")
         else:
             hexor().c("We were unable to connect '"+url+"'.","#ff5b3c")
         
     #check_errors:
-    def check_errors(response):
+    def check_errors(response,returns):
         if response[:6]!="<br />":
-            print(response)
+            if returns==True:
+                return response
+            else:
+                print(response)
         else:
             result=re.search('on line <b>(.*)</b><br />',response)
             hexor().c(f"ERROR in line {result.group(1)}.","#ff5b3c")

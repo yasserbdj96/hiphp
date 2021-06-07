@@ -2,7 +2,7 @@
 #s
 from hiphp import hiphp
 
-p1=hiphp("123","http://localhost/index.php")
+p1=hiphp("123","http://localhost/index.php",False)
 
 # Example:1
 # GET ID:

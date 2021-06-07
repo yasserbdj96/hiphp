@@ -1,12 +1,16 @@
-# EXAMPLES :
 #s
-import re
-from hiphp import hiphp
-from tkinter import *
-from tkinter import filedialog
-import os
-from chardet import detect
-
+try:
+    from pipincluder import pipincluder
+except:
+    print("please use this command : pip install pipincluder")
+    exit()
+    
+exec(pipincluder("import re,os",
+                 "from hiphp import hiphp",
+                 "from tkinter import *",
+                 "from tkinter import filedialog",
+                 "from chardet import detect").modules())
+                 
 url="http://localhost/hiphp.php"
 password="123"
 
@@ -16,7 +20,10 @@ def get_encoding_type(file):
         rawdata = f.read()
     return detect(rawdata)['encoding']
 
-
+def get_id():
+    p1=hiphp(password,url).get_code()
+    print(p1)
+    
 def selectmode():
     if var1.get()==1:
         mylist['selectmode']="multiple"
@@ -137,6 +144,10 @@ Reconnect()
 mylist.pack(side=LEFT,padx=0,pady=0,expand=YES,fill="both")
 scrollbar.pack(side=LEFT,fill=BOTH)
 scrollbar.config(command=mylist.yview)
+
+get_id_btn=Button(root,text="Get ID",command=get_id)
+get_id_btn.pack()
+get_id_btn.config(width=15)
 
 Reconnect_btn=Button(root,text="Reconnect",command=Reconnect)
 Reconnect_btn.pack()

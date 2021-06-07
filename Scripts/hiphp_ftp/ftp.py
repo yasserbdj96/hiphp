@@ -10,25 +10,6 @@ from chardet import detect
 url="http://localhost/hiphp.php"
 password="123"
 
-p1=hiphp(password,url).run("""
-function iterateDirectory($i){
-    foreach($i as $path){
-        if($path->isDir()){
-            iterateDirectory($path);
-        }else{
-            echo $path.",";
-        }
-    }
-}
-$dir='.';
-$iterator=new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir));
-iterateDirectory($iterator);""")
-
-files_list=p1.split(",")
-del files_list[-1]
-for i in range(len(files_list)):
-    files_list[i]=files_list[i].replace("\\","/")  
-
 # get file encoding type
 def get_encoding_type(file):
     with open(file,'rb') as f:
@@ -67,6 +48,24 @@ def openSelected():
             op=mylist.get(i)
             p1=hiphp(password,url).run(f"echo file_get_contents('{op}');")
             print(p1)
+
+def unzip():
+    if var1.get()==0:
+        cname=mylist.curselection()
+        for i in cname[::-1]:
+            op=mylist.get(i)
+            p1=hiphp(password,url).run(f"""$file='{op}';"""+"""
+$zip=new ZipArchive;
+$res=$zip->open($file);
+if ($res===TRUE){
+    $zip->extractTo('./');
+    $zip->close();
+    echo "The file '$file' has been decompressed.";
+}else{
+    echo "Error decompressing the file";
+}""")
+            print(p1)
+    Reconnect()
             
 def upSelected():
     file=filedialog.askopenfile(parent=root,mode='rb',title='Choose a file')
@@ -74,11 +73,13 @@ def upSelected():
         file_name=file.name.split("/")
         file_name=file_name[len(file_name)-1]
         p1=hiphp(password,url).upload(file.name)
+        if p1==None:
+            print(f"{file.name} has been uploaded.")
+    Reconnect()
         
 def upSelected_to():
     if var1.get()==0:
         cname=mylist.curselection()
-        
         for i in cname[::-1]:
             op=mylist.get(i)
             op=op.split("/")
@@ -89,13 +90,14 @@ def upSelected_to():
                 else:
                     ss="/"
                 path=path+ss+op[i]
-
             file=filedialog.askopenfile(parent=root,mode='rb',title='Choose a file')
             if file!=None:
                 file_name=file.name.split("/")
                 file_name=file_name[len(file_name)-1]
-        
                 p1=hiphp(password,url).upload(file.name,path+"/")
+                if p1==None:
+                    print(f"{file.name} has been uploaded to '{path}/'.")
+    Reconnect()
         
 root=Tk()
 root.title('Hiphp FTP')
@@ -105,14 +107,40 @@ scrollbar=Scrollbar(root)
 
 mylist=Listbox(root,bd=0,yscrollcommand=scrollbar.set)#,selectmode="multiple"
 
-x=files_list
-for item in range(len(x)): 
-	mylist.insert(END,x[item]) 
-	mylist.itemconfig(item,bg="#f6f6f6") 
+
+def Reconnect():
+    mylist.delete(0,'end')
+    p1=hiphp(password,url).run("""
+function iterateDirectory($i){
+    foreach($i as $path){
+        if($path->isDir()){
+            iterateDirectory($path);
+        }else{
+            echo $path.",";
+        }
+    }
+}
+$dir='.';
+$iterator=new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir));
+iterateDirectory($iterator);""")
+    files_list=p1.split(",")
+    del files_list[-1]
+    for i in range(len(files_list)):
+        files_list[i]=files_list[i].replace("\\","/")
+    x=files_list
+    for item in range(len(x)): 
+	    mylist.insert(END,x[item]) 
+	    mylist.itemconfig(item,bg="#f6f6f6") 
+
+Reconnect()
 
 mylist.pack(side=LEFT,padx=0,pady=0,expand=YES,fill="both")
 scrollbar.pack(side=LEFT,fill=BOTH)
 scrollbar.config(command=mylist.yview)
+
+Reconnect_btn=Button(root,text="Reconnect",command=Reconnect)
+Reconnect_btn.pack()
+Reconnect_btn.config(width=15)
 
 select_all_btn=Button(root,text="Select all",command=select_all)
 select_all_btn.pack()
@@ -134,13 +162,21 @@ upSelected_to_btn=Button(root,text="Upload to",command=upSelected_to)
 upSelected_to_btn.pack()
 upSelected_to_btn.config(width=15)
 
+unzip_btn=Button(root,text="Unzip",command=unzip)
+unzip_btn.pack()
+unzip_btn.config(width=15)
+
 deleteSelected_btn=Button(root,text="Delete",command=deleteSelected)
 deleteSelected_btn.pack()
 deleteSelected_btn.config(width=15)
 
 var1=IntVar()
 c1=Checkbutton(root,text='multiple selection',variable=var1,onvalue=1,offvalue=0,command=selectmode)
-c1.pack(side="bottom")
+c1.pack(side="top")
+
+w=Label(root,text="v1.0.5 by YasserBDJ")
+w.pack()
+w.place(relx=1.0,rely=1.0,anchor='se')
 
 mainloop()
 #e

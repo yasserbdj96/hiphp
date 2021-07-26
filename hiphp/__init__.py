@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding:utf-8
 """
-#set:usage,examples,changelog
+#set:usage.py,examples.py,changelog.txt
 ##################################################################
 # USAGE :
 #s
@@ -98,49 +98,90 @@ p1.upload("picture_example.png")
 p1.upload("picture_example.png","./pictures/")
 #e
 ##################################################################
+# CHANGELOG :
+#s
+## 0.1.10
+- Fix Bugs.
+
+## 0.1.9
+ - fix bugs.
+ 
+## 0.1.7
+ - fix bugs.
+ 
+## 0.1.6
+ - fix bugs.
+ - add upload to upload any file.
+ - Simplify the use of the program.
+ 
+## 0.1.5
+ - fix bugs.
+## 0.1.4
+ - fix bugs.
+ - new build.
+ 
+## 0.1.1
+ - Import pakages by pipincluder.
+ - Fix bugs.
+ 
+## 0.1.0
+ - New build.
+ - Fix bugs.
+ 
+## 0.0.4
+ - Fix bugs.
+ 
+## 0.0.2
+ - Fix bugs.
+ - Add help list.
+ - Add Executing from files.
+ 
+## 0.0.1
+ - First public release.
+#e
+##################################################################
 """
 # VALUES :
-#s
-__version__="0.1.9"
+__version__="0.1.10"
 __name__="hiphp"
-__author__="Yasser BDJ (Ro0t96)"
-__author_email__="by.root96@gmail.com"
-__github_user_name__="byRo0t96"
+__author__="Yasser Bdj (Boudjada Yasser)"
+__author_email__="yasser.bdj96@gmail.com"
+__github_user_name__="yasserbdj96"
 __title__="hiphp for control php websites."
 __description__="A package for controlling a php-based website."
-__author_website__="https://byro0t96.github.io/"
+__author_website__=f"https://{__github_user_name__}.github.io/"
 __source_code__=f"https://github.com/{__github_user_name__}/{__name__}"
-__keywords__=['python','hiphp','php','cli']
+__keywords__=[__github_user_name__,'python']
+__keywords__.extend(__title__.split(" "))
+__keywords__.extend(__description__.split(" "))
 __install_requires__=["pipincluder",'requests','ashar','hexor']
 __Installation__="pip install "+__name__+"=="+__version__
-__license__='Apache Software License'
-__license_text__=f'''Copyright (c) 2008->Present, {__author__}
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+__license__='MIT License'
+__copyright__='Copyright © 2008->Present, '+__author__+"."
+__license_text__=f'''MIT License
 
-    http://www.apache.org/licenses/LICENSE-2.0
+{__copyright__}
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.'''
-__copyright__='Copyright 2008 -> Present, '+__author__
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-__changelog__=("## 0.1.9\n - fix bugs.\n\n")
-__changelog__=__changelog__+("## 0.1.7\n - fix bugs.\n\n")
-__changelog__=__changelog__+("## 0.1.6\n - fix bugs.\n - add upload to upload any file.\n - Simplify the use of the program.\n\n")
-__changelog__=__changelog__+("## 0.1.5\n - fix bugs.\n\n")
-__changelog__=__changelog__+("## 0.1.4\n - fix bugs.\n - new build. \n\n")
-__changelog__=__changelog__+("## 0.1.1\n- Import pakages by pipincluder.\n- Fix bugs.\n\n")
-__changelog__=__changelog__+("## 0.1.0\n- New build.\n- Fix bugs.\n\n")
-__changelog__=__changelog__+("## 0.0.4\n- Fix bugs.\n\n")
-__changelog__=__changelog__+("## 0.0.2\n- Fix bugs.\n- Add help list.\n- Add Executing from files.\n\n")
-__changelog__=__changelog__+("## 0.0.1\n- First public release.\n\n")
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+You also agree that if you become very rich you will give me 1% of your wealth.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.'''
 ##################################################################
-#e
-
 #s
 from pipincluder import pipincluder
 

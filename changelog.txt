@@ -1,5 +1,8 @@
+## 0.1.11
+ - Command interface update.
+ - Bug fixes & performance improvements.
 ## 0.1.10
-- Fix Bugs.
+ - Fix Bugs.
 ## 0.1.9
  - fix bugs.
  

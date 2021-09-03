@@ -1,7 +1,7 @@
 from setuptools import setup,find_packages
 setup(
     name="hiphp",
-    version="0.1.10",
+    version="0.1.11",
     author="Yasser Bdj (Boudjada Yasser)",
     author_email="yasser.bdj96@gmail.com",
     description='''A package for controlling a php-based website.''',

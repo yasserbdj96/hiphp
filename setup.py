@@ -1,8 +1,8 @@
 from setuptools import setup,find_packages
 setup(
     name="hiphp",
-    version="0.1.13",
-    author="Yasser Bdj (Boudjada Yasser)",
+    version="0.1.14",
+    author="Boudjada Yasser (yasserbdj96)",
     author_email="yasser.bdj96@gmail.com",
     description='''backdoor control php sites, The site is controlled by sending commands, files and codes to the site using the http or https protocol. After copying the code and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this backdoor is password protected and non-reverse encryption.''',
     long_description_content_type="text/markdown",

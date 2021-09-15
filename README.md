@@ -7,7 +7,7 @@
 <h2>Installation:</h2>
 
 ```
-pip install hiphp==0.1.13
+pip install hiphp==0.1.14
 ```
 
 <h2>Usage:</h2>
@@ -54,7 +54,6 @@ p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOA
 
 ```python
 from hiphp import hiphp
-#
 #
 p1=hiphp("123","http://localhost/index.php",False)
 #
@@ -146,16 +145,34 @@ p1.upload("picture_example.png","./pictures/")
 
 ```
 
+<h2>Screenshots:</h2>
+
+
+<div align="center">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">
+        <img alt="yasserbdj96" height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">
+    </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png">
+        <img alt="yasserbdj96" height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png">
+    </a>
+</div>
+
+
+
 <h2>Changelog:</h2>
 
 ```
 #
+## 0.1.14
+ - help menu update.
+ - Bug fixes & performance improvements.
+#
 ## 0.1.13
- - safety upgrade.
+ - Safety upgrade.
  - Bug fixes & performance improvements.
 #
 ## 0.1.12
- - safety upgrade.
+ - Safety upgrade.
  - Bug fixes & performance improvements.
 #
 ## 0.1.11

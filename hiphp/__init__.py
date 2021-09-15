@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding:utf-8
 """
-#set:usage.py,examples.py,changelog.txt
+#set:usage.py,examples.py,screenshots.md,changelog.txt
 ##################################################################
 # USAGE :
 #s
@@ -44,7 +44,6 @@ p1.upload("<THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>","./<THE_PATH_YOU_WANT_TO_UPLOA
 # EXAMPLES :
 #s
 from hiphp import hiphp
-#
 #
 p1=hiphp("123","http://localhost/index.php",False)
 #
@@ -135,15 +134,31 @@ p1.upload("picture_example.png")
 p1.upload("picture_example.png","./pictures/")
 #e
 ##################################################################
+# SCREENSHOTS :
+#s
+<div align="center">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">
+        <img alt="yasserbdj96" height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">
+    </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png">
+        <img alt="yasserbdj96" height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png">
+    </a>
+</div>
+#e
+##################################################################
 # CHANGELOG :
 #s
 #
+## 0.1.14
+ - help menu update.
+ - Bug fixes & performance improvements.
+#
 ## 0.1.13
- - safety upgrade.
+ - Safety upgrade.
  - Bug fixes & performance improvements.
 #
 ## 0.1.12
- - safety upgrade.
+ - Safety upgrade.
  - Bug fixes & performance improvements.
 #
 ## 0.1.11
@@ -193,9 +208,9 @@ p1.upload("picture_example.png","./pictures/")
 ##################################################################
 """
 # VALUES :
-__version__="0.1.13"
+__version__="0.1.14"
 __name__="hiphp"
-__author__="Yasser Bdj (Boudjada Yasser)"
+__author__="Boudjada Yasser (yasserbdj96)"
 __author_email__="yasser.bdj96@gmail.com"
 __github_user_name__="yasserbdj96"
 __title__="hiphp for control php websites."
@@ -237,7 +252,9 @@ exec(pipincluder("import requests",
                  "from hexor import hexor",
                  "import re,base64,os",
                  "import yasserbdj96",
-                 "import time").modules())
+                 "import time",
+                 "import subprocess",
+                 "import platform").modules())
 
 #start hiphp class:
 class hiphp:
@@ -271,20 +288,19 @@ class hiphp:
         p1=hexor(True,"hex")
         p2=hexor(False,"hex")
         
-        spas=" "*1
+        spas=" "*5
         logo=f"""
-{spas}   ▄█    █▄     ▄█     ▄███████▄    ▄█    █▄       ▄███████▄ 
-{spas}  ███    ███   ███    ███    ███   ███    ███     ███    ███ 
-{spas}  ███    ███   ███▌   ███    ███   ███    ███     ███    ███ 
-{spas} ▄███▄▄▄▄███▄▄ ███▌   ███    ███  ▄███▄▄▄▄███▄▄   ███    ███ 
-{spas}▀▀███▀▀▀▀███▀  ███▌ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀  
-{spas}  ███    ███   ███    ███          ███    ███     ███        
-{spas}  ███    ███   ███    ███          ███    ███     ███        
-{spas}  ███    █▀    █▀    ▄████▀        ███    █▀     ▄████▀      
+{spas}             ▄███████▄    ▄█    █▄       ▄███████▄ 
+{spas}            ███    ███   ███    ███     ███    ███ 
+{spas}╦   ╦       ███    ███   ███    ███     ███    ███ 
+{spas}║   ║ ═╦═ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀  
+{spas}╠═══╣  ║    ███          ███    ███     ███        
+{spas}║   ║  ║    ███          ███    ███     ███        
+{spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀     
 """
 
         s=[]
-        arr=[f"█:::{self.cc1}",f"▄:::{self.cc1}",f"▀:::{self.cc1}",f"▐:::{self.cc1}",f"▌:::{self.cc1}"]
+        arr=[f"█:::{self.cc1}",f"▄:::{self.cc1}",f"▀:::{self.cc1}",f"▐:::{self.cc1}",f"▌:::{self.cc1}",f"╦:::{self.cc1}",f"╠:::{self.cc1}",f"╩:::{self.cc1}",f"═:::{self.cc1}",f"╣:::{self.cc1}",f"║:::{self.cc1}"]
         for i in range(len(arr)):
             s.append(p1.c(arr[i].split(":::")[0],arr[i].split(":::")[1]))
             logo=logo.replace(arr[i].split(":::")[0],s[i])
@@ -319,9 +335,7 @@ class hiphp:
             "@"
         else:
             ch="💀"
-        
-        
-        
+
         p=p1.c(hiphp(self.pp,self.url,True).run("echo getcwd();"),f'{self.cc1}')
         
         id_url=p1.c(f'{self.key[0:10]}',f'{self.cc4}')+ch+p1.c(f'{self.url}',f'{self.cc5}')
@@ -335,9 +349,24 @@ class hiphp:
         command=input(xxr4)
         if command:
             if command=="--help":
-                print("-rf <PHP_CODE_FILE_PATH>                    |   # Run a code or line in your website from a file.")
-                print("-up <THE_PATH_OF_THE_FILE_TO_BE_UPLOADED>   |   # Upload a file to the server hosting the site.")
-                print("-up <FILE_PATH> ./<THE_PATH_YOU_WANT_TO_UPLOAD_THE_FILE_TO>/")
+                print("\nHiPHP Commands :")
+                print("════════════════\n")
+                print("         Command                                         Description")
+                print("         -------                                         -----------")
+                print("[OPTIONS]")
+                print("         --help                                      |   # Help menu.")
+                print("         --exit                                      |   # Exit the console.")
+                print("         --clear                                     |   # Clear the console.")
+                print("\n[ACTIONS]")
+                print("         -rf <PHP_CODE_FILE_PATH>                    |   # Run a code or line in your website from a file.")
+                print("         -up <PATH_OF_FILE_TO_BE_UPLOADED>           |   # Upload a file to the server hosting the site.")
+                print("         -up <FILE_PATH> ./<PATH_TO_UPLOAD_FILE_TO>/ |   # Upload the file to a specified path.\n")
+                #print("\n[DEBUG]")
+            elif command=="--exit":
+                print(p1.c("\n     Thanks for using this script. :)\n",f"{self.cc4}"))
+                exit()
+            elif command=="--clear":
+                subprocess.Popen( "cls" if platform.system() == "Windows" else "clear", shell=True)
             elif command[0:3]=="-rf":
                 hiphp.run_file(self,command[4:len(command)])
             elif command[0:3]=="-up":

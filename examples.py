@@ -1,6 +1,5 @@
 from hiphp import hiphp
 #
-#
 p1=hiphp("123","http://localhost/index.php",False)
 #
 #

@@ -23,9 +23,9 @@
 
 | Distribution | Version Check     | Python Test Version | Supported | Status      | Everything works |
 | :----------: | :---------------: | :-----------------: | :-------: | :---------: | :--------------: |
-| Ubuntu       | 20.04.3           | 3.9                 | Yes       | Working     | Yes              |
-| Windwos      | 11.6.4            | 3.9                 | Yes       | Not Working | Yes              |
-| MacOS        | 10.0.20348        | 3.9                 | Yes       | Working     | Yes              |
+| Ubuntu       | 20.04.3           | 3.6, 3.7, 3.8, 3.9  | Yes       | Working     | Yes              |
+| Windwos      | 11.6.4            | 3.6, 3.7, 3.8, 3.9  | Yes       | Not Working | No              |
+| MacOS        | 10.0.20348        | 3.6, 3.7, 3.8, 3.9  | Yes       | Working     | Yes              |
 
 <h2>Docker pull,build & run:</h2>
 

@@ -1,7 +1,6 @@
 name: Python package
 on: [push]
-defaults:
-  run:
+inputs:
     working-directory: wrdir
 jobs:
   build:
@@ -30,4 +29,4 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
       - name: Testing the Package
-        run: python examples.py
+        run: python ${{ inputs.working_directory }}/examples.py

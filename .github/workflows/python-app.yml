@@ -21,6 +21,8 @@ jobs:
       # You can test your matrix by printing the current Python version
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+      - name: mkdir
+        run: mkdir -p wrdir && mkdir -p wrdir/hiphp
       - name: copy files
         run: cp -r hiphp/* wrdir/hiphp
       - name: copy files

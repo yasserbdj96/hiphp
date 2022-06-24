@@ -1,5 +1,5 @@
 ashar
 requests
-readline
+#readline
 hexor
 asciitext

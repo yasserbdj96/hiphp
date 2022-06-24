@@ -13,7 +13,7 @@ setup(
     description='''hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the code and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.''',
     long_description_content_type="text/markdown",
     long_description=open('README.md','r').read(),
-    license='''yasserbdj96 License''',
+    license='''MIT License''',
     packages=find_packages(),
     project_urls={
         'Source Code': "https://github.com/yasserbdj96/hiphp",
@@ -25,7 +25,7 @@ setup(
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
-        "License :: yasserbdj96 License",
+        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",

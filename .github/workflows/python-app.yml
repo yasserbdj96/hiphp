@@ -1,7 +1,8 @@
 name: Python package
 on: [push]
-inputs:
-    working-directory: wrdir
+#defaults:
+#  run:
+#    working-directory: wrdir
 jobs:
   build:
     runs-on: ${{matrix.os}}
@@ -21,12 +22,12 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - name: copy files
-        run: cp -r hiphp/* ${{ inputs.working_directory }}/hiphp
+        run: cp -r hiphp/* wrdir/hiphp
       - name: copy files
-        run: cp -r examples/* ${{ inputs.working_directory }}
+        run: cp -r examples/* wrdir
       - name: pip Upgrade
         run: python -m pip install --upgrade pip
       - name: Install requirements
         run: pip install -r requirements.txt
       - name: Testing the Package
-        run: python ${{ inputs.working_directory }}/examples.py
+        run: python wrdir/examples.py

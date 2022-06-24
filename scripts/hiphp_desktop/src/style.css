@@ -1,0 +1,146 @@
+/* code by : yasserbdj96 */
+/* email : yasser.bdj96@gmail.com */
+
+/*START{*/
+* {
+   margin: 0px;
+   padding: 0px;
+   font-family: "Lucida Console", "Courier New", monospace;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+input[type=text] {
+    padding: 5px 5px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+input[type=button]{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: 3px;
+}
+
+#connected{
+    display:none;
+    background-color: #04AA6D;
+    height: 35px;
+}
+
+.add_new{
+    z-index: 1;
+    position: fixed;
+    bottom: 4px;
+    right: 4px;
+    background-color: #04aa6d;
+    padding: 15px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    color: #ffffff;
+    border: 2px solid;
+}
+
+.reconnect{
+    z-index: 1;
+    position: fixed;
+    bottom: 4px;
+    left: 4px;
+    background-color: #04aa6d;
+    padding: 15px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    color: #ffffff;
+    border: 2px solid;
+}
+
+.cat{
+    display:none;
+    width: 100vw;
+    height: calc(100vh - 33px);
+    padding: 5px;
+    background-color: #e7e7e7;
+}
+#login{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.return{
+    display: none;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 8px;
+    color:#ffffff;
+}
+.pointer{cursor: pointer;}
+
+textarea{
+    padding: 10px;
+    line-height: 1.2;
+    /*border-radius: 5px;*/
+    border: 1px solid #ccc;
+    /*box-shadow: 1px 1px 1px #999;*/
+    resize: none;
+    font-size: .8rem;
+    /*letter-spacing: 1px;*/
+    border:0px;
+   outline:0px;
+}
+
+/**/
+#ls {
+  border-collapse: collapse;
+  width: 100%;
+  position:relative;
+  margin-top:75px;
+  display:revert;
+}
+
+#ls td, #ls th {
+  /*border: 1px solid #ddd;*/
+  padding: 8px;
+}
+
+#ls tr:nth-child(even){background-color: #f2f2f2;}
+
+#ls tr:hover {background-color: #ddd;}
+
+#ls th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #5e6060;
+  color: white;
+}
+/**/
+.save{
+    display: none;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 50%;
+    color: #ffffff;
+}
+/**/
+.select{
+    position: fixed;
+    bottom: 0;
+    background-color: #04aa6d;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+/*}END.*/

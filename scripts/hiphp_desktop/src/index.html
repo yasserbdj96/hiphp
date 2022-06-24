@@ -1,0 +1,41 @@
+<!--DOCTYPE html-->
+<html>
+    <head>
+        <!-- code by : yasserbdj96 -->
+        <!-- email : yasser.bdj96@gmail.com -->
+        <title>login</title>
+        <script type="text/javascript" src="./eel.js"></script>
+        <script type="text/javascript" src="./script.js"></script>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="connected">
+            <spam id="return" class="return pointer" onclick="back()">Back</spam>
+            <spam id="save" class="save pointer" onclick="save()">Save</spam>
+            <spam id="temp" style="display:none;"></spam>
+            <spam id="add" class="add_new pointer" onclick="add()"><h1 style="margin-top:-11px;margin-left:-4px;">+</h1></spam>
+            <spam style="float:right"><input type="button" value="Deconnect" onclick="deconnect()"></spam>
+            
+            <!--spam id="down"></spam-->
+            
+            <spam id="reload" class="pointer reconnect" onclick="connect()"><h2 style="margin-top:-7px;margin-left:-3px;">R</h2></spam>
+            
+            <table id="ls"></table>
+            
+            <spam id="br"><br><br><br></spam>
+            <!--div id="check" class="select">
+                <spam><input type="checkbox">Un/Select</spam>
+                <--spam><input type="checkbox">unselect</spam>
+            </div-->
+            
+            
+            <textarea id="cat" class="cat"></textarea>
+        </div>
+
+        <div id="login">
+            <input type="text" id="key" value="123" placeholder="Key" style="width:50%;"><br>
+            <input type="text" id="url" value="http://localhost/index.php" style="width:50%;" placeholder="Url"><br>
+            <input type="button" value="Submit" onclick="connect()"><br>
+        </div>
+    </body>
+</html>

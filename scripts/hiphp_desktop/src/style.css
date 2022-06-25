@@ -13,7 +13,7 @@ body{
 }
 
 input[type=text] {
-    padding: 5px 5px;
+    padding: 5px;
     margin: 4px 0;
     box-sizing: border-box;
 }
@@ -24,7 +24,7 @@ input[type=button]{
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
-    padding: 5px 5px;
+    padding: 5px;
     border-radius: 3px;
 }
 

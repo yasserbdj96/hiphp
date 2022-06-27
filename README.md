@@ -40,6 +40,18 @@ docker build -t docker.io/yasserbdj96/hiphp:latest .
 docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
+<h2>Github Packages pull,build & run:</h2>
+
+```bash
+# pull:
+docker pull ghcr.io/yasserbdj96/hiphp:latest
+
+# build:
+docker build -t ghcr.io/yasserbdj96/hiphp:latest .
+
+# run:
+docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+```
 
 <h2>Installation:</h2>
 

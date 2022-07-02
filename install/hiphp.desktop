@@ -1,0 +1,16 @@
+# code by : yasserbdj96
+# email : yasser.bdj96@gmail.com
+
+#START{
+[Desktop Entry]
+Name=hiphp
+Comment=Open-source BackDoor to control php-based sites
+GenericName=hiphp
+Exec=sh -c '/usr/local/bin/hiphp;${SHELL:-bash}'
+Icon=/usr/share/hiphp/hiphp.png
+Type=Application
+Terminal=true
+Categories=Development;BackDoor;websites;IDE;
+MimeType=text/x-hiphp
+Keywords=backdoor;controller;
+#}END.

@@ -1,9 +1,14 @@
 # code by : yasserbdj96
 # email : yasser.bdj96@gmail.com
 
-# docker pull yasserbdj96/hiphp:latest
+# docker pull docker.io/yasserbdj96/hiphp:latest
 # docker build -t docker.io/yasserbdj96/hiphp:latest .
 # docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
+
+# docker pull ghcr.io/yasserbdj96/hiphp:latest
+# docker build -t ghcr.io/yasserbdj96/hiphp:latest .
+# docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+
 
 #START{
 FROM python:3.9

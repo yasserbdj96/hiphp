@@ -6,7 +6,7 @@
 #START{
 def help():
     help_text="""
-HiPHP Commands :
+hiphp Commands :
 ════════════════
          Command                        Description
          -------                        -----------

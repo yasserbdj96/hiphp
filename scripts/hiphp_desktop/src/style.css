@@ -13,7 +13,7 @@ body{
 }
 
 input[type=text] {
-    padding: 5px;
+    padding: 5px 5px;
     margin: 4px 0;
     box-sizing: border-box;
 }
@@ -24,7 +24,7 @@ input[type=button]{
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
-    padding: 5px;
+    padding: 5px 5px;
     border-radius: 3px;
 }
 
@@ -74,7 +74,7 @@ input[type=button]{
     height: 100px;
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);

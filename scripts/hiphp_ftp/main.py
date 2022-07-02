@@ -17,7 +17,7 @@ try:
     URL = os.environ['URL'] if "URL" in os.environ else sys.argv[2]
     KEY = os.environ['KEY'] if "KEY" in os.environ else sys.argv[1]
 except Exception as e:
-    print(f"USAGE : python3 {sys.argv[0]} <KEY> <URL>")
+    print(f"USAGE : python3 {sys.argv[0]} [KEY] [URL]")
     exit()
 
 url=URL
@@ -116,8 +116,17 @@ def upSelected_to():
     Reconnect()
         
 root=Tk()
-root.title('Hiphp FTP')
-#root.iconbitmap(r'favicon.ico')
+root.title('hiphp FTP')
+try:
+    try:
+        photo = PhotoImage(file = "./favicon.png")
+        root.iconphoto(False, photo)
+    except:
+        photo = PhotoImage(file = "/usr/share/hiphp/favicon.png")
+        root.iconphoto(False, photo)
+except:
+    pass
+#root.iconbitmap(r'favicon.png')
 root.geometry('700x500')
 scrollbar=Scrollbar(root)
 
@@ -194,7 +203,7 @@ var1=IntVar()
 c1=Checkbutton(root,text='multiple selection',variable=var1,onvalue=1,offvalue=0,command=selectmode)
 c1.pack(side="top")
 
-w=Label(root,text="v1.0.6 by yasserbdj96")
+w=Label(root,text="v1.0.7 by yasserbdj96")
 w.pack()
 w.place(relx=1.0,rely=1.0,anchor='se')
 

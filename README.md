@@ -1,5 +1,5 @@
 <p align="center">
-<img align="center" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">
+<img align="center" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png">
 </p>
 
 
@@ -53,10 +53,19 @@ docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 ```
 
-<h2>Installation:</h2>
+<h2>Python Package Installation:</h2>
 
 ```
 pip install hiphp
+```
+
+<h2>Ubuntu Installation:</h2>
+
+```
+git clone https://github.com/yasserbdj96/hiphp.git
+cd hiphp/install
+bash install.sh -i
+hiphp
 ```
 
 <h2>Usage:</h2>
@@ -111,17 +120,23 @@ p1.cli()
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_ftp/screenshot.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_ftp/screenshot.png">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_ftp/screenshot/screenshot.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_ftp/screenshot/screenshot.png">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_desktop/screenshot.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_desktop/screenshot.png">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_desktop/screenshot/screenshot.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_desktop/screenshot/screenshot.png">
+    </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_desktop/screenshot/screenshot1.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_desktop/screenshot/screenshot1.png">
     </a>
 </div>
 
 <h2>Changelog History:</h2>
 
 ```
+## 0.2.16 [02-07-2022]
+ - Bug fixes & performance improvements.
+
 ## 0.2.15 [22-06-2022]
  - New build.
  - More stability.

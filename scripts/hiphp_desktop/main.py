@@ -7,8 +7,11 @@
 import eel
 from hiphp import *
 from src.php import *
+import os
 
-eel.init('src')
+
+eel.init(f'{os.path.dirname(os.path.realpath(__file__))}/src')
+#eel.init('src')
 
 #connect:
 @eel.expose
@@ -67,5 +70,5 @@ def new_permi(key,url,path,permi):
     p1=hiphp(key,url,retu=True)
     return p1.run(php_permi(path,permi))
 
-eel.start("index.html",host="127.0.0.1",port=96,size=(850,400))
+eel.start("index.html",host="127.0.0.2",port=96,size=(850,400))
 #}END.

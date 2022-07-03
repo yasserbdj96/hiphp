@@ -120,6 +120,9 @@ p1.cli()
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png">
     </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot2.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot2.png">
+    </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_ftp/screenshot/screenshot.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_ftp/screenshot/screenshot.png">
     </a>

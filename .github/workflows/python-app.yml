@@ -4,11 +4,11 @@ on: [push]
 #  run:
 #    working-directory: wrdir
 jobs:
-  deploy:
-    runs-on: windows-latest
-    steps:
-      - name: install readline
-        run: python -m pip install readline
+  #deploy:
+  #  runs-on: windows-latest
+  #  steps:
+  #    - name: install readline
+  #      run: python -m pip install readline
   build:
     runs-on: ${{matrix.os}}
     strategy:

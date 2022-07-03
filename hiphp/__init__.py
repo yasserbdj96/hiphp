@@ -13,7 +13,7 @@ from asciitext import *
 import requests
 import re
 import ast
-import readline
+#import readline
 from os.path import exists
 
 #start hiphp class:

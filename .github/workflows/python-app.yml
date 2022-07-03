@@ -4,6 +4,11 @@ on: [push]
 #  run:
 #    working-directory: wrdir
 jobs:
+  deploy:
+    runs-on: windows-latest
+    steps:
+      - name: install readline
+        run: python -m pip install readline
   build:
     runs-on: ${{matrix.os}}
     strategy:
@@ -18,9 +23,6 @@ jobs:
           - python-version: ${{matrix.python-version}}
             # Optional - x64 or x86 architecture, defaults to x64
             architecture: 'x64'
-          - os: windows-latest
-            name: install readline
-            run: python -m pip install readline
       # You can test your matrix by printing the current Python version
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"

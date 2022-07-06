@@ -69,6 +69,14 @@ bash install.sh -i
 hiphp
 ```
 
+<h2>Run without installation:</h2>
+
+```
+git clone https://github.com/yasserbdj96/hiphp.git
+cd hiphp
+python3 run.py <KEY> <URL>
+```
+
 <h2>Usage:</h2>
 
 ```python
@@ -138,6 +146,9 @@ p1.cli()
 <h2>Changelog History:</h2>
 
 ```
+## 0.2.18 [06-07-2022]
+ - Bug fixes & performance improvements.
+
 ## 0.2.17 [03-07-2022]
  - Bug fixes on windows os.
 

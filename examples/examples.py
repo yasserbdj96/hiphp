@@ -6,19 +6,10 @@
 #START{
 from hiphp import *
 
-try:
-    import os
-    import sys
-    #
-    URL = os.environ['URL'] if "URL" in os.environ else sys.argv[2]
-    KEY = os.environ['KEY'] if "KEY" in os.environ else sys.argv[1]
-except Exception as e:
-    print(f"USAGE : python3 {sys.argv[0]} <KEY> <URL>")
-    exit()
-    #pass
-
 # connect:
-p1=hiphp(key=KEY,url=URL)#Default: retu=False.
+p1=hiphp(key="123",url="http://127.0.0.1/index.php")#Default: retu=False.
+#p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")
+#p1=hiphp(key="123",url="https://google.com/index.php")
 
 # Get the hole Code:
 p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php

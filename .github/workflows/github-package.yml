@@ -2,7 +2,7 @@ name: Github package
 on: [push]
 jobs:
   build:
-    runs-on: ${{matrix.os}}
+    runs-on: "ubuntu-latest"
     steps:
       - uses: docker-practice/actions-setup-docker@master
       - name: step 1

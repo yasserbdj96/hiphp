@@ -1,4 +1,4 @@
-name: Python package
+name: pypi project
 on: [push]
 jobs:
   build:

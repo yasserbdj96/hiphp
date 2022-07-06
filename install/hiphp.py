@@ -17,9 +17,15 @@ elif sys.argv[1]=="--geth":
     p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php
     exit()
 else:
-    # connect:
-    p1=hiphp(key=sys.argv[1],url=sys.argv[2])#Default: retu=False.
+    KEY=sys.argv[1]
+    URL=sys.argv[2]
+    p2=hiphp(key=KEY,url=URL,retu=True)
+    p1=hiphp(key=KEY,url=URL)#Default: retu=False.
     # Command line interface:
-    p1.cli()
+    if emsg_1 not in p2.cli():
+        p1.cli()
+    else:
+        # Get the hole Code:
+        p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php
 #}END.
 

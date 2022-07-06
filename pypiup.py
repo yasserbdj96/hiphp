@@ -35,6 +35,7 @@ child.sendline(passw)
 child.interact()
 child.kill(0)
 
+"""
 rmv=["build","dist",path+".egg-info"]
 
 try:
@@ -42,4 +43,5 @@ try:
         shutil.rmtree(rmv[i])
 except OSError as e:
     print("Error: %s - %s." % (e.filename, e.strerror))
+"""
 #}END.

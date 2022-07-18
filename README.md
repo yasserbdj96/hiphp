@@ -1,6 +1,4 @@
-<p align="center">
-<img align="center" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png">
-</p>
+<p align="center"><img height="250" align="center" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png"></p>
 
 
 <h1>hiphp for control php websites.</h1>
@@ -230,3 +228,7 @@ p1.cli()
         <img align="center" src="https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp">
     </a>
 </div>
+
+<br>
+<br>
+all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.

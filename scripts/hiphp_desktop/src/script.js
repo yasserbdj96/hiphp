@@ -119,7 +119,7 @@ function del(path){
 function ren(path){
     var key=document.getElementById("key").value;
     var url=document.getElementById("url").value;
-    let text;
+    //let text;
     let newname=prompt("Enter the new name/path for the file:",path.replace('./',''));
     if(newname!=null && newname!=""){
         eel.ren(key,url,path,"./"+newname)(
@@ -134,7 +134,7 @@ function ren(path){
 function add(){
     var key=document.getElementById("key").value;
     var url=document.getElementById("url").value;
-    let text;
+    //let text;
     let newfile=prompt("Enter the file name:","");
     if(newfile!=null && newfile!=""){
         eel.add_new(key,url,newfile)(

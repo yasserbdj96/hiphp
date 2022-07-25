@@ -121,10 +121,10 @@ try:
     try:
         photo = PhotoImage(file = "./favicon.png")
         root.iconphoto(False, photo)
-    except:
+    except Exception as e:
         photo = PhotoImage(file = "/usr/share/hiphp/favicon.png")
         root.iconphoto(False, photo)
-except:
+except Exception as e:
     pass
 #root.iconbitmap(r'favicon.png')
 root.geometry('700x500')

@@ -134,7 +134,7 @@ class hiphp:
                     if to[len(to)-1:len(to)]!="/":
                         to=to+"/"
                     hiphp.upload(self,file_path,to)
-                except Exception as e:
+                except ZeroDivisionError:
                     hiphp.upload(self,command[5:len(command)])
             else:
                 hiphp.do(self,self.key,self.url,self.headers,False,command)
@@ -220,7 +220,7 @@ class hiphp:
                     p="./"
                 hiphp.run(self,"if(!file_exists('"+p+to+"')){mkdir('"+p+to+"',0777,true);}")
             hiphp.run(self,f'Fwrite(fopen("{p+to+os.path.basename(path_to_upluad)}","w+"),base64_decode("{encoded_string}"));')
-        except Exception as e:
+        except ZeroDivisionError:
             self.color2.c(f"{emsg_5} '{path_to_upluad}'.",self.c_red)
 
     #get the hole:

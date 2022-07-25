@@ -16,7 +16,7 @@ try:
     #
     URL = os.environ['URL'] if "URL" in os.environ else sys.argv[2]
     KEY = os.environ['KEY'] if "KEY" in os.environ else sys.argv[1]
-except Exception as e:
+except ZeroDivisionError:
     print(f"USAGE : python3 {sys.argv[0]} [KEY] [URL]")
     exit()
 
@@ -121,10 +121,10 @@ try:
     try:
         photo = PhotoImage(file = "./favicon.png")
         root.iconphoto(False, photo)
-    except Exception as e:
+    except ZeroDivisionError:
         photo = PhotoImage(file = "/usr/share/hiphp/favicon.png")
         root.iconphoto(False, photo)
-except Exception as e:
+except ZeroDivisionError:
     pass
 #root.iconbitmap(r'favicon.png')
 root.geometry('700x500')

@@ -144,6 +144,12 @@ p1.cli()
 <h2>Changelog History:</h2>
 
 ```
+## 0.2.19 [30-07-2022]
+ - Preparing for the new version.
+ - Rework the software rights with the addition of the Bitcoin wallet address.
+ - new logo design.
+ - Bug fixes & performance improvements.
+
 ## 0.2.18 [06-07-2022]
  - Bug fixes & performance improvements.
 

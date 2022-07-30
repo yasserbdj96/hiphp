@@ -1,7 +1,15 @@
 #!/usr/bin/env python
 # coding:utf-8
-# code by : yasserbdj96
-# email : yasser.bdj96@gmail.com
+#   |                                                          |
+# --+----------------------------------------------------------+--
+#   |   Code by : yasserbdj96                                  |
+#   |   Email   : yasser.bdj96@gmail.com                       |
+#   |   Github  : https://github.com/yasserbdj96               |
+#   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
+# --+----------------------------------------------------------+--  
+#   |        all posts #yasserbdj96 ,all views my own.         |
+# --+----------------------------------------------------------+--
+#   |                                                          |
 
 #START{
 from hiphp.hiphpcoding import rot13,tobase64,tomd5
@@ -56,7 +64,7 @@ class hiphp:
 {spas}║   ║ ═╦═ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀  
 {spas}╠═══╣  ║    ███          ███    ███     ███        
 {spas}║   ║  ║    ███          ███    ███     ███        
-{spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀  V0.2.18\n""",self.c_red)
+{spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀  V0.2.19\n""",self.c_red)
             logo+=self.color.c(" "*37+"Code by -> ",self.c_yellow)+self.color.c("yasserbdj96\n",self.c_green)
             logo+=self.color.c("\n - You are now connected safety. You can print the PHP commands below for comprehensive control of the site.\n",self.c_blue)
             logo+=self.color.c(" - If you are having difficulties controlling the program, you can type '--help' for more informations.\n",self.c_yellow)

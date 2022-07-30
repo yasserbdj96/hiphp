@@ -1,8 +1,5 @@
-<p align="center"><img height="250" align="center" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png"></p>
-
-
+<img align="right" height="250" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png">
 <h1>hiphp for control php websites.</h1>
-
 <p>hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the code and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.</p>
 
 [![Python package](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml) [![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml) [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp) [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp)](https://github.com/yasserbdj96/hiphp)
@@ -62,8 +59,8 @@ pip install hiphp
 
 ```
 git clone https://github.com/yasserbdj96/hiphp.git
-cd hiphp/install
-bash install.sh -i
+pip install -r hiphp/requirements.txt
+bash hiphp/install/install.sh -i
 hiphp
 ```
 
@@ -72,6 +69,7 @@ hiphp
 ```
 git clone https://github.com/yasserbdj96/hiphp.git
 cd hiphp
+pip install -r requirements.txt
 python3 run.py <KEY> <URL>
 ```
 
@@ -227,11 +225,14 @@ p1.cli()
 
 <h1></h1> 
 
-<div align="center">
-    <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
-</div>
 
-<br>
+
+Don't forget to star ⭐ this repository
 <br>
 
 all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
+
+<br>
+<div align="center">
+    <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
+</div>

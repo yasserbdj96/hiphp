@@ -1,6 +1,6 @@
 <img align="right" height="250" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
 <h1>hiphp for control php websites.</h1>
-<p>hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the code and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.</p>
+<p>hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the hiphp_hole_code and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.</p>
 
 [![Python package](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml) [![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml) [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp) [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp)](https://github.com/yasserbdj96/hiphp)
 

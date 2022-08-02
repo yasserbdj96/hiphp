@@ -59,8 +59,10 @@ pip install hiphp
 
 ```
 git clone https://github.com/yasserbdj96/hiphp.git
-pip install -r hiphp/requirements.txt
-bash hiphp/install/install.sh -i
+pip install -r ./hiphp/requirements.txt
+cd ./hiphp/install/
+chmod +x install.sh
+sudo bash ./install.sh -i
 hiphp
 ```
 

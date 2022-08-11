@@ -129,7 +129,7 @@ p1.cli()
 #}END.
 ```
 
-<h2>Screenshot:</h2>
+<h2>Screenshots:</h2>
 
 <div align="center">
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">

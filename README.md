@@ -5,10 +5,10 @@
 [![Python package](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml) [![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml) [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp) [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp)](https://github.com/yasserbdj96/hiphp)
 
 <h2>You can use this version of the project as:</h2>
-[✓] Command line interface CLI.
-[✓] Graphical user interface GUI (beta).
-[✓] Python Module.
-[✓] Script.
+[✓] Command line interface CLI.<br>
+[✓] Graphical user interface GUI (beta).<br>
+[✓] Python Module.<br>
+[✓] Script.<br>
 [✓] Container.
 
 <h2>Languages:</h2>

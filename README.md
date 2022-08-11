@@ -9,7 +9,7 @@
 [✓] Graphical user interface GUI (beta).<br>
 [✓] Python Module.<br>
 [✓] Script.<br>
-[✓] Container.
+[✓] Docker Container.
 
 <h2>Languages:</h2>
 * python3<br>

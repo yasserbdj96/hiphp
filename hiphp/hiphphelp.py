@@ -21,7 +21,9 @@ hiphp Commands :
 [OPTIONS]
          --help                         | # Display this help.
          --exit                         | # Exit this console.
-         --geth                         | # Get the hole Code.
+         --geth                         | # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
+         --cls                          | # Clear console.
+
 [ACTIONS]
          --ls                           | # List information about the FILEs (the current directory by default).
          Usage: --ls [OPTION] [PATH]
@@ -49,7 +51,9 @@ hiphp Commands :
          Mandatory arguments to long options:
            --up [FILE_PATH]             | # Upload a file to the current directory.
            --up [FILE_PATH] [PATH]      | # Upload a file to a specified directory.
-[DEBUG]
-         None"""
+
+[ABOUT]
+         --license                      | # This project license.
+         --about                        | # About this project."""
     return help_text
 #}END.

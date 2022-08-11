@@ -1,8 +1,15 @@
 <img align="right" height="250" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
 <h1>hiphp for control php websites.</h1>
-<p>hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the hiphp_hole_code and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.</p>
+<p>hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.</p>
 
 [![Python package](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml) [![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml) [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp) [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp)](https://github.com/yasserbdj96/hiphp)
+
+<h2>You can use this version of the project as:</h2>
+[✓] Command line interface CLI.
+[✓] Graphical user interface GUI (beta).
+[✓] Python Module.
+[✓] Script.
+[✓] Container.
 
 <h2>Languages:</h2>
 * python3<br>
@@ -52,17 +59,21 @@ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 <h2>Python Package Installation:</h2>
 
 ```
+# install from pypi:
 pip install hiphp
+
+# local install:
+git clone https://github.com/yasserbdj96/hiphp.git
+cd hiphp
+sudo python setup.py install
 ```
 
 <h2>Ubuntu Installation:</h2>
 
 ```
 git clone https://github.com/yasserbdj96/hiphp.git
-pip install -r ./hiphp/requirements.txt
-cd ./hiphp/install/
-chmod +x ./install.sh
-sudo bash ./install.sh -i
+pip install -r hiphp/requirements.txt
+bash hiphp/install/install.sh -i
 hiphp
 ```
 
@@ -75,7 +86,7 @@ pip install -r requirements.txt
 python3 run.py <KEY> <URL>
 ```
 
-<h2>Usage:</h2>
+<h2>Script Usage:</h2>
 
 ```python
 from hiphp import *
@@ -84,7 +95,7 @@ from hiphp import *
 p1=hiphp(key="<KEY>",url="<URL>")
 ```
 
-<h2>Examples:</h2>
+<h2>Script Examples:</h2>
 
 ```python
 #START{
@@ -124,6 +135,9 @@ p1.cli()
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
     </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot0.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot0.png" alt="hiphp by yasserbdj96">
+    </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png" alt="hiphp by yasserbdj96">
     </a>
@@ -144,6 +158,13 @@ p1.cli()
 <h2>Changelog History:</h2>
 
 ```
+## 0.2.20 [10-08-2022]
+ - Change the display of files in the command "--ls"
+ - Fix "HIPHP_HOLE_CODE".
+ - Add "--cls" to clear console.
+ - Slight change to the command line interface logo.
+ - Bug fixes & performance improvements.
+
 ## 0.2.19 [30-07-2022]
  - Preparing for the new version.
  - Rework the software rights with the addition of the Bitcoin wallet address.

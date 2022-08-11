@@ -19,6 +19,8 @@
     echo "\n";
     echo "Server Name : ".$_SERVER['HTTP_HOST'];
     echo "\n";
+    echo "Request_Method : ".$_SERVER['REQUEST_METHOD'];
+    echo "\n";
     echo "Admin Server : ".$_SERVER['SERVER_ADMIN'];
     echo "\n";
     echo "Server port : ".htmlentities($_SERVER['SERVER_PORT'], ENT_QUOTES, 'UTF-8');

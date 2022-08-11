@@ -248,9 +248,8 @@ p1.cli()
 
 <h1></h1> 
 
-
-
 Don't forget to star ⭐ this repository
+
 <br>
 
 all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.

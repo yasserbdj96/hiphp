@@ -28,7 +28,7 @@ setup(
         'Author WebSite': "https://yasserbdj96.github.io/",
         'Instagram': "https://www.instagram.com/yasserbdj96/",
     },
-    install_requires=["ashar","requests","hexor","asciitext"],
+    install_requires=["ashar","requests","hexor","asciitext","biglibrary"],
     keywords=['yasserbdj96', 'python', 'hiphp', 'php', 'backdoor.', 'http/https'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",

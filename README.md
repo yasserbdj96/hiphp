@@ -34,13 +34,13 @@
 
 ```bash
 # pull:
-docker pull yasserbdj96/hiphp:latest
+>>> docker pull yasserbdj96/hiphp:latest
 
 # build:
-docker build -t docker.io/yasserbdj96/hiphp:latest .
+>>> docker build -t docker.io/yasserbdj96/hiphp:latest .
 
 # run:
-docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
+>>> docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
 <h2>Github Packages pull,build & run:</h2>

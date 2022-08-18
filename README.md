@@ -175,7 +175,6 @@ p1.cli()
 ## 0.2.21 [18-08-2022]
  - Fix not being able to install internally on Nethunter.
  - Fix some issues in uploading files.
- - Add Update option.
  - Bug fixes & performance improvements.
 
 ## 0.2.20 [10-08-2022]
@@ -231,6 +230,9 @@ p1.cli()
 ## 0.1.9
  - fix bugs.
 
+## 0.1.8
+ - Fix bugs.
+
 ## 0.1.7
  - fix bugs.
 
@@ -246,6 +248,12 @@ p1.cli()
  - fix bugs.
  - new build.
 
+## 0.1.3
+ - Fix bugs.
+
+## 0.1.2
+ - Fix bugs.
+
 ## 0.1.1
  - Import pakages by pipincluder.
  - Fix bugs.
@@ -255,6 +263,9 @@ p1.cli()
  - Fix bugs.
 
 ## 0.0.4
+ - Fix bugs.
+
+## 0.0.3
  - Fix bugs.
 
 ## 0.0.2

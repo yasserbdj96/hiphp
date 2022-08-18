@@ -14,8 +14,7 @@
 # app name:
 appname="hiphp"
 
-# install:
-if [ "$1" == "-i" ] ; then
+install() {
     chmod +x "$appname.sh";
     sudo mkdir "/usr/share/$appname";
     sudo cp -r "../$appname/." "/usr/share/$appname/$appname";
@@ -33,17 +32,32 @@ if [ "$1" == "-i" ] ; then
     sudo cp "../scripts/hiphp_desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
     sudo cp -r "../scripts/hiphp_desktop/src/." "/usr/share/$appname/src";
     pip install -r "../scripts/hiphp_desktop/requirements.txt";
+}
+
+uninstall() {
+    sudo rm -r "/usr/share/$appname";
+    sudo rm "/usr/share/applications/$appname.desktop";
+    sudo rm "/usr/local/bin/$appname";
+}
+
+# install:
+if [ "$1" == "-i" ] ; then
+    install
 
 # uninstall:
 elif [ "$1" == "-u" ] ; then
-    sudo rm -r "/usr/share/$appname";
-    #sudo rm "/usr/share/$appname/$appname.png";
-    sudo rm "/usr/share/applications/$appname.desktop";
-    sudo rm "/usr/local/bin/$appname";
+    uninstall
+
+# update:
+elif [ "$1" == "-up" ] ; then
+    uninstall
+    install
+
 # usage:
 else
     echo "Usage: bash $0 [OPTION]";
     echo "       -i   | # for install.";
     echo "       -u   | # for uninstall.";
+    echo "       -up  | # for update.";
 fi
 #}END.

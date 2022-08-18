@@ -15,7 +15,7 @@
 from setuptools import setup,find_packages
 setup(
     name="hiphp",
-    version="0.2.20",
+    version="0.2.21",
     author="yasserbdj96",
     author_email="yasser.bdj96@gmail.com",
     description='''hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the code and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.''',

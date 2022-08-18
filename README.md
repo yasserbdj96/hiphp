@@ -2,14 +2,14 @@
 <h1>hiphp for control php websites.</h1>
 <p>hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.</p>
 
-[![Python package](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml) [![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml) [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp) [![pages-build-deployment](https://github.com/yasserbdj96/hiphp/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pages/pages-build-deployment) [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp)](https://github.com/yasserbdj96/hiphp) [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Python package](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml) [![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml) [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp) [![pages-build-deployment](https://github.com/yasserbdj96/hiphp/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pages/pages-build-deployment) [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp)](https://github.com/yasserbdj96/hiphp)
 
 <h2>You can use this version of the project as:</h2>
 [✓] Command line interface CLI.<br>
 [✓] Graphical user interface GUI (beta).<br>
 [✓] Python Module.<br>
 [✓] Script.<br>
-[✓] Docker Container.
+[✓] Container.
 
 <h2>Languages:</h2>
 * python3<br>
@@ -28,10 +28,7 @@
 | Ubuntu           | 20.04.4       | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 | Windwos          | 10.0.20348    | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 | MacOS            | 11.6.6        | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-| Android (termux) | 10 (0.118.0)  | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-| Android (nethunter) | 10 (2022.3)| 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-
-
+| Android (termux) | 10            | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 
 <h2>Docker pull,build & run:</h2>
 
@@ -132,47 +129,7 @@ p1.cli()
 #}END.
 ```
 
-<h2>Help for Command line interface:</h2>
-
-```python
-hiphp Commands :
-════════════════
-         Command                        Description
-         -------                        -----------
-[OPTIONS]
-         --help                         | # Display this help.
-         --exit                         | # Exit this console.
-         --geth                         | # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
-         --cls                          | # Clear console.
-[ACTIONS]
-         --ls                           | # List information about the FILEs (the current directory by default).
-         Usage: --ls [OPTION] [PATH]
-         Mandatory arguments to long options:
-           --ls                         | # Get a list of all files and folders from the current directory.
-           --ls [PATH]                  | # Get a list of all files and folders from a specified directory.
-           --ls -all                    | # Get a list of all files, folders and subfolders from the current directory.
-           --ls -all [PATH]             | # Get a list of all files, folders and subfolders from a specified directory.
-         --cat                          | # Concatenate FILE to standard output.
-         Usage: --cat [FILE_PATH]
-         --set                          | # Create a code that is always saved on during work.
-         Usage: --set [PHP_CODE]
-         You can return the initial value with "--dset".
-         --rf                           | # Run code from file.
-         Usage: --rf [FILE_PATH] [VARIABLES]
-         Mandatory arguments to long options:
-           --rf [FILE_PATH]             | # Run code from file.
-           --rf [FILE_PATH] [VARIABLES] | # Run code from file with variables, EX: --rf example.php var==1 var2==hello
-         --up                           | # Upload a file.
-         Usage: --up [FILE_PATH] [PATH]
-         Mandatory arguments to long options:
-           --up [FILE_PATH]             | # Upload a file to the current directory.
-           --up [FILE_PATH] [PATH]      | # Upload a file to a specified directory.
-[ABOUT]
-         --license                      | # This project license.
-         --about                        | # About this project.
-```
-
-<h2>Screenshots:</h2>
+<h2>Screenshot:</h2>
 
 <div align="center">
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">
@@ -201,6 +158,10 @@ hiphp Commands :
 <h2>Changelog History:</h2>
 
 ```
+## 0.2.21 [18-08-2022]
+ - Fix not being able to install internally on Nethunter.
+ - Bug fixes & performance improvements.
+
 ## 0.2.20 [10-08-2022]
  - Change the display of files in the command "--ls"
  - Fix "HIPHP_HOLE_CODE".
@@ -290,6 +251,9 @@ hiphp Commands :
 ```
 
 <h1></h1> 
+
+
+
 Don't forget to star ⭐ this repository
 <br>
 

@@ -13,6 +13,7 @@
 #START{
 #help:
 if [ -z "$1" ]; then
+    python3 "/usr/share/hiphp/hiphp/hiphplogo.py" "ok_view";
     echo "Usage: hiphp [OPTION]";
     echo "";
     echo "ex:    hiphp --help               | # hiphp cli help.";
@@ -23,22 +24,22 @@ if [ -z "$1" ]; then
 
 #cli help:
 elif [ "$1" == "--help" ] ; then
-    python "/usr/share/hiphp/hiphp.py" "--help";
+    python3 "/usr/share/hiphp/hiphp.py" "--help";
 
 #hiphp_ftp:
 elif [ "$1" == "--ftp" ] ; then
-    python "/usr/share/hiphp/hiphp_ftp.py" "$2" "$3";
+    python3 "/usr/share/hiphp/hiphp_ftp.py" "$2" "$3";
 
 #hiphp_desktop:
 elif [ "$1" == "--dst" ] ; then
-    python "/usr/share/hiphp/hiphp_desktop.py";
+    python3 "/usr/share/hiphp/hiphp_desktop.py";
 
 #cli:
 else
     if [ "$1" == "--geth" ] ; then
-        python "/usr/share/hiphp/hiphp.py" $1 $2 $3;
+        python3 "/usr/share/hiphp/hiphp.py" $1 $2 $3;
     else
-        python "/usr/share/hiphp/hiphp.py" $1 $2;
+        python3 "/usr/share/hiphp/hiphp.py" $1 $2;
     fi
 fi
 #}END.

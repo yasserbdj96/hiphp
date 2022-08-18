@@ -1,3 +1,7 @@
+## 0.2.21 [18-08-2022]
+ - Fix not being able to install internally on Nethunter.
+ - Bug fixes & performance improvements.
+
 ## 0.2.20 [10-08-2022]
  - Change the display of files in the command "--ls"
  - Fix "HIPHP_HOLE_CODE".

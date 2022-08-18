@@ -18,6 +18,7 @@ from hiphp.hiphphelp import help
 from hiphp.hiphpmsgs import *
 from hiphp.hiphplicense import license
 from hiphp.hiphpabout import about
+from hiphp.hiphplogo import *
 from ashar import *
 from hexor import *
 from asciitext import *
@@ -57,23 +58,9 @@ class hiphp:
     #cli:
     def cli(self):
         #
-        logo=""
+        logox=""
         if self.do_x==0:
-            spas=" "*5
-            code_by=self.color.c("Code by -> ",self.c_yellow)+self.color.c("yasserbdj96",self.c_green)
-            logo+=self.color.c(f"""
-{spas}             ▄███████▄    ▄█    █▄       ▄███████▄ 
-{spas}            ███    ███   ███    ███     ███    ███ 
-{spas}╦   ╦       ███    ███   ███    ███     ███    ███ 
-{spas}║   ║ ═╦═ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀  
-{spas}╠═══╣  ║    ███          ███    ███     ███        
-{spas}║   ║  ║    ███  V0.2.20 ███    ███     ███ 
-{spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀ {code_by}\n""",self.c_red)
-            logo+=self.color.c(" "*17+"https://github.com/yasserbdj96\n",self.c_blue)
-            #logo+=self.color.c(" "*37+"Code by -> ",self.c_yellow)+self.color.c("yasserbdj96\n",self.c_green)
-            #logo+=self.color.c("\n - You are now connected safety. You can print the PHP commands below for comprehensive control of the site.\n",self.c_blue)
-            logo+=self.color.c("\n - '--help' for more informations.\n",self.c_yellow)
-            logo+=self.color.c(" - '--exit' OR 'Ctrl+C' for exit :)\n\n",self.c_yellow)
+            logox=logo()
             self.do_x+=1
         #
         reee=hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();")
@@ -90,7 +77,7 @@ class hiphp:
         key_w_color=self.color.c(self.key,self.c_red)
         url_w_color=self.color.c(self.url_w,self.c_yellow)
         at=self.color.c("|",self.c_white_red)
-        print(logo+xxr1+key_w_color+at+url_w_color+xxr2+getcwd+xxr3)
+        print(logox+xxr1+key_w_color+at+url_w_color+xxr2+getcwd+xxr3)
 
         #try:
         command=input(xxr4)

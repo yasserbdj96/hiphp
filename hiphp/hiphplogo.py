@@ -12,6 +12,8 @@
 #   |                                                          |
 
 #START{
+from hexor import *
+
 # logo:
 def logo():
     logo=""
@@ -43,7 +45,6 @@ def logo():
 try:
     import sys
     if sys.argv[1]=="ok_view":
-        from hexor import *
         print(logo())
 except:
     pass

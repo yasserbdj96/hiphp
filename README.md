@@ -9,7 +9,7 @@
 [✓] Graphical user interface GUI (beta).<br>
 [✓] Python Module.<br>
 [✓] Script.<br>
-[✓] Container.
+[✓] Docker Container.
 
 <h2>Languages:</h2>
 * python3<br>
@@ -28,7 +28,7 @@
 | Ubuntu           | 20.04.4       | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 | Windwos          | 10.0.20348    | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 | MacOS            | 11.6.6        | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-| Android (termux) | 10            | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
+| Android (termux) | 10 (0.118.0)  | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 | Android (nethunter)| 10 (2022.3) | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 
 <h2>Docker pull,build & run:</h2>
@@ -143,7 +143,7 @@ p1.cli()
 #}END.
 ```
 
-<h2>Screenshot:</h2>
+<h2>Screenshots:</h2>
 
 <div align="center">
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">

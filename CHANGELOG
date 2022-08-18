@@ -1,5 +1,6 @@
 ## 0.2.21 [18-08-2022]
  - Fix not being able to install internally on Nethunter.
+ - Fix some issues in uploading files.
  - Bug fixes & performance improvements.
 
 ## 0.2.20 [10-08-2022]

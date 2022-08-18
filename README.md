@@ -47,43 +47,51 @@
 
 ```bash
 # pull:
-docker pull ghcr.io/yasserbdj96/hiphp:latest
+>>> docker pull ghcr.io/yasserbdj96/hiphp:latest
 
 # build:
-docker build -t ghcr.io/yasserbdj96/hiphp:latest .
+>>> docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 
 # run:
-docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+>>> docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 ```
 
 <h2>Python Package Installation:</h2>
 
 ```
 # install from pypi:
-pip install hiphp
+>>> pip install hiphp
 
 # local install:
-git clone https://github.com/yasserbdj96/hiphp.git
-cd hiphp
-sudo python setup.py install
+>>> git clone https://github.com/yasserbdj96/hiphp.git
+>>> cd hiphp
+>>> sudo python setup.py install
+
+# uninstall:
+>>> pip uninstall hiphp
 ```
 
 <h2>Ubuntu Installation:</h2>
 
 ```
-git clone https://github.com/yasserbdj96/hiphp.git
-pip install -r hiphp/requirements.txt
-bash hiphp/install/install.sh -i
-hiphp
+>>> git clone https://github.com/yasserbdj96/hiphp.git
+>>> pip install -r hiphp/requirements.txt
+>>> cd hiphp/install
+>>> bash install.sh -i
+>>> hiphp
+
+# uninstall:
+>>> cd hiphp/install
+>>> bash install.sh -u
 ```
 
 <h2>Run without installation:</h2>
 
 ```
-git clone https://github.com/yasserbdj96/hiphp.git
-cd hiphp
-pip install -r requirements.txt
-python3 run.py <KEY> <URL>
+>>> git clone https://github.com/yasserbdj96/hiphp.git
+>>> cd hiphp
+>>> pip install -r requirements.txt
+>>> python3 run.py <KEY> <URL>
 ```
 
 <h2>Script Usage:</h2>
@@ -160,6 +168,7 @@ p1.cli()
 ```
 ## 0.2.21 [18-08-2022]
  - Fix not being able to install internally on Nethunter.
+ - Fix some issues in uploading files.
  - Bug fixes & performance improvements.
 
 ## 0.2.20 [10-08-2022]

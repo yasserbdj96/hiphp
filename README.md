@@ -74,11 +74,16 @@
 <h2>Ubuntu Installation:</h2>
 
 ```
+# install:
 >>> git clone https://github.com/yasserbdj96/hiphp.git
 >>> pip install -r hiphp/requirements.txt
 >>> cd hiphp/install
 >>> bash install.sh -i
 >>> hiphp
+
+# update:
+>>> cd hiphp/install
+>>> bash install.sh -up
 
 # uninstall:
 >>> cd hiphp/install
@@ -169,6 +174,7 @@ p1.cli()
 ## 0.2.21 [18-08-2022]
  - Fix not being able to install internally on Nethunter.
  - Fix some issues in uploading files.
+ - Add Update option.
  - Bug fixes & performance improvements.
 
 ## 0.2.20 [10-08-2022]

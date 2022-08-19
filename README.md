@@ -1,4 +1,4 @@
-<img align="right" height="250" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
+<img align="right" height="200" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
 <h1>hiphp for control php websites.</h1>
 <p>hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.</p>
 
@@ -143,6 +143,59 @@ p1.cli()
 #}END.
 ```
 
+<h2>Help for Command Line interface (CLI):</h2>
+
+```
+hiphp Commands :
+════════════════
+         Command                    Description
+         -------                    -----------
+[OPTIONS]─────┐
+  ┌───────────┘
+  ├─> --help                        ─> # Display this help.
+  ├─> --exit                        ─> # Exit this console.
+  ├─> --geth                        ─> # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
+  ├─> --cls                         ─> # Clear console.
+┌─┘
+└[ACTIONS]────┐
+  ┌───────────┘
+  ├─> --ls                          ─> # List information about the FILEs (the current directory by default).
+  ├─> Usage: --ls [OPTION] [PATH]
+  ├┬> Mandatory arguments to long options:
+  │├─> --ls                         ─> # Get a list of all files and folders from the current directory.
+  │├─> --ls [PATH]                  ─> # Get a list of all files and folders from a specified directory.
+  │├─> --ls -all                    ─> # Get a list of all files, folders and subfolders from the current directory.
+  │└─> --ls -all [PATH]             ─> # Get a list of all files, folders and subfolders from a specified directory.
+  ├─────────────────────────── ─ ─ ─
+  ├─> --cat                         ─> # Concatenate FILE to standard output.
+  ├─> Usage: --cat [FILE_PATH]
+  ├─────────────────────────── ─ ─ ─
+  ├─> --set                         ─> # Create a code that is always saved on during work.
+  ├─> Usage: --set [PHP_CODE]
+  ├─> You can return the initial value with "--dset".
+  ├─────────────────────────── ─ ─ ─
+  ├─> --rf                          ─> # Run code from file.
+  ├─> Usage: --rf [FILE_PATH] [VARIABLES]
+  ├┬> Mandatory arguments to long options:
+  │├─> --rf [FILE_PATH]             ─> # Run code from file.
+  │└─> --rf [FILE_PATH] [VARIABLES] ─> # Run code from file with variables, EX: --rf example.php var==1 var2==hello
+  ├─────────────────────────── ─ ─ ─
+  ├─> --up                          ─> # Upload a file.
+  ├─> Usage: --up [FILE_PATH] [PATH]
+  ├┬> Mandatory arguments to long options:
+  │├─> --up [FILE_PATH]             ─> # Upload a file to the current directory.
+  │└─> --up [FILE_PATH] [PATH]      ─> # Upload a file to a specified directory.
+┌─┘
+└[ABOUT]─────┐
+  ┌──────────┘
+  ├─> --license                     ─> # This project license.
+  ├─> --about                       ─> # About this project.
+  .
+  .
+  .
+```
+
+
 <h2>Screenshots:</h2>
 
 <div align="center">
@@ -278,7 +331,6 @@ p1.cli()
 ```
 
 <h1></h1> 
-
 
 
 Don't forget to star ⭐ this repository

@@ -61,7 +61,7 @@ class hiphp:
         #
         logox=""
         if self.do_x==0:
-            logox=logo()
+            logox=logo(__version__)
             self.do_x+=1
         #
         reee=hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();")

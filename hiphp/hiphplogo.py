@@ -13,10 +13,9 @@
 
 #START{
 from hexor import *
-from hiphpversion import __version__
 
 # logo:
-def logo():
+def logo(__version__):
     logo=""
     c_red="#ea4335"#red
     c_blue="#4285f4"#blue
@@ -44,8 +43,9 @@ def logo():
 #
 try:
     import sys
+    from hiphpversion import __version__
     if sys.argv[1]=="ok_view":
-        print(logo())
+        print(logo(__version__))
 except:
     pass
 #}END.

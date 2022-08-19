@@ -161,6 +161,7 @@ hiphp Commands :
   ├─> --exit                        ─> # Exit this console.
   ├─> --geth                        ─> # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
   ├─> --cls                         ─> # Clear console.
+  ├─> --phpinfo                     ─> # Some information about the server.
 ┌─┘
 └[ACTIONS]────┐
   ┌───────────┘
@@ -231,6 +232,7 @@ hiphp Commands :
 
 ```
 ## 0.2.21 [18-08-2022]
+ - Add "--phpinfo" command.
  - Fix not being able to install internally on Nethunter.
  - Fix some issues in uploading files.
  - Bug fixes & performance improvements.

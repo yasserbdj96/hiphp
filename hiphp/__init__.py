@@ -133,6 +133,10 @@ class hiphp:
                 dirx=command[6:]
                 command=file_get_contents(dirx)
                 hiphp.do(self,self.key,self.url,self.headers,False,command)
+            #php_info:
+            elif command=="--phpinfo":
+                command=php_info()
+                hiphp.do(self,self.key,self.url,self.headers,False,command)
             #rf
             elif command[0:4]=="--rf":
                 varss=command.split(" ")

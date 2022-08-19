@@ -24,6 +24,7 @@ hiphp Commands :
   ├─> --exit                        ─> # Exit this console.
   ├─> --geth                        ─> # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
   ├─> --cls                         ─> # Clear console.
+  ├─> --phpinfo                     ─> # Some information about the server.
 ┌─┘
 └[ACTIONS]────┐
   ┌───────────┘

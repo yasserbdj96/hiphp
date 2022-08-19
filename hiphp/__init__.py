@@ -19,6 +19,7 @@ from hiphp.hiphpmsgs import *
 from hiphp.hiphplicense import license
 from hiphp.hiphpabout import about
 from hiphp.hiphplogo import *
+from hiphp.hiphpversion import __version__
 from ashar import *
 from hexor import *
 from asciitext import *
@@ -96,6 +97,27 @@ class hiphp:
             #about
             elif command[0:7]=="--about":
                 print(about())
+            #update
+            elif command=="--update":
+                r = "https://raw.githubusercontent.com/yasserbdj96/hiphp/main/version.txt"
+                version = requests.get(r).text
+                version=version.replace('\n', ' ').replace('\r', '').replace(' ', '')
+                if version==__version__:
+                    new=False
+                else:
+                    p1,p2,p3=version.split(".")
+                    s1,s2,s3=__version__.split(".")
+                    if p1>=s1 and p2>=s2 and p3>s3:
+                        new=True
+                    elif p1>=s1 and p2>s2 and p3<=s3:
+                        new=True
+                    else:
+                        new=False
+                if new==True:
+                    print(f"There is a new update {version}")
+                    print("Download the new version from 'https://github.com/yasserbdj96/hiphp'")
+                else:
+                    print("No updates available")
             #ls
             elif command[0:4]=="--ls":
                 if len(command)==4:

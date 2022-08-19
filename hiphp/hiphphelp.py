@@ -21,10 +21,10 @@ hiphp Commands :
 [OPTIONS]─────┐
   ┌───────────┘
   ├─> --help                        ─> # Display this help.
-  ├─> --exit                        ─> # Exit this console.
   ├─> --geth                        ─> # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
-  ├─> --cls                         ─> # Clear console.
   ├─> --phpinfo                     ─> # Some information about the server.
+  ├─> --cls                         ─> # Clear console.
+  ├─> --exit                        ─> # Exit this console.
 ┌─┘
 └[ACTIONS]────┐
   ┌───────────┘
@@ -57,6 +57,7 @@ hiphp Commands :
 ┌─┘
 └[ABOUT]─────┐
   ┌──────────┘
+  ├─> --update                      ─> # check for updates.
   ├─> --license                     ─> # This project license.
   ├─> --about                       ─> # About this project.
   .

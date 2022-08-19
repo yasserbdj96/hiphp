@@ -1,4 +1,5 @@
 ## 0.2.21 [18-08-2022]
+ - Add "--update" command.
  - Add "--phpinfo" command.
  - Fix not being able to install internally on Nethunter.
  - Fix some issues in uploading files.

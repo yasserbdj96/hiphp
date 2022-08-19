@@ -32,8 +32,8 @@
 | Android (nethunter)| 10 (2022.3) | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 
 <h2>Important Notes:</h2>
-- When you use the program for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.
-- In order for the program to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.
+- When you use the program for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>
+- In order for the program to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
 - The program will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.
 
 <h2>Docker pull,build & run:</h2>

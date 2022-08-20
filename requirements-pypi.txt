@@ -1,7 +1,1 @@
 twine
-ashar
-requests
-#readline
-hexor
-asciitext
-biglibrary

@@ -29,7 +29,7 @@ setup(
         'Source': "https://github.com/yasserbdj96/hiphp",
         'Documentation': "https://yasserbdj96.github.io/hiphp",
         'Chat': "https://gitter.im/yasserbdj96/hiphp",
-        '':""
+        'WebSite':"https://yasserbdj96.github.io/"
     },
     install_requires=["ashar","requests","hexor","asciitext","biglibrary"],
     keywords=['yasserbdj96', 'python', 'hiphp', 'php', 'backdoor.', 'http/https','onion'],
@@ -50,9 +50,8 @@ setup(
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
         "Topic :: Software Development :: Build Tools",
-        "Topic :: Software Development :: Libraries"
+        "Topic :: Software Development :: Libraries",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        'Topic :: Communications :: Email',
         "Topic :: Internet :: WWW/HTTP"
     ],
     python_requires=">=3.x.x"

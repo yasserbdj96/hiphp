@@ -245,6 +245,11 @@ hiphp Commands :
 <h2>Changelog History:</h2>
 
 ```
+## 0.2.22 [20-08-2022]
+ - Update some info on pypi.
+ - Fix "setup.py" windows os.
+ - Bug fixes & performance improvements.
+
 ## 0.2.21 [18-08-2022]
  - Add "--update" command.
  - Add "--phpinfo" command.

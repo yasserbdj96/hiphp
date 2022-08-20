@@ -16,10 +16,10 @@
 * php
 
 <h2>Requirements</h2>
-[✓] ashar<br>
+[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br>
 [✓] requests<br>
-[✓] hexor<br>
-[✓] asciitext
+[✓] <a href="https://github.com/yasserbdj96/hexor">hexor</a><br>
+[✓] <a href="https://github.com/yasserbdj96/asciitext">asciitext</a>
 
 <h2>Supported Distributions:</h2>
 
@@ -156,7 +156,7 @@ hiphp Commands :
          Command                    Description
          -------                    -----------
 [OPTIONS]─────┐
-  ┌──────────┘
+  ┌───────────┘
   ├─> --help                        ─> # Display this help.
   ├─> --geth                        ─> # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
   ├─> --phpinfo                     ─> # Some information about the server.
@@ -164,7 +164,7 @@ hiphp Commands :
   ├─> --exit                        ─> # Exit this console.
 ┌─┘
 └[ACTIONS]────┐
-  ┌──────────┘
+  ┌───────────┘
   ├─> --ls                          ─> # List information about the FILEs (the current directory by default).
   ├─> Usage: --ls [OPTION] [PATH]
   ├┬> Mandatory arguments to long options:
@@ -193,7 +193,7 @@ hiphp Commands :
   │└─> --up [FILE_PATH] [PATH]      ─> # Upload a file to a specified directory.
 ┌─┘
 └[ABOUT]─────┐
-  ┌─────────┘
+  ┌──────────┘
   ├─> --update                      ─> # check for updates.
   ├─> --license                     ─> # This project license.
   ├─> --about                       ─> # About this project.

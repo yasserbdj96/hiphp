@@ -1,0 +1,7 @@
+contact_links:
+- name: 🤔 Have questions or need support?
+  url: https://github.com/yasserbdj96/hiphp/discussions
+  about: This is a place for the community to exchange ideas and recipes
+- name: 💬 gitter (chat)
+  url: https://gitter.im/yasserbdj96/hiphp
+  about: Chat with devs

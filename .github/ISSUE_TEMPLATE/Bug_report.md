@@ -1,6 +1,12 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: 🐛 Bug report
+description: >-
+  Create a report to help us improve when
+  something is not working correctly
+title: '[BUG] '
+labels:
+- bug
+- Needs Triage
 
 ---
 

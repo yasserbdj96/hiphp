@@ -1,5 +1,5 @@
 ---
-name: hiphp for Help
+name: 💢 Need Guidance
 about: Guidance on using hiphp.
 
 ---

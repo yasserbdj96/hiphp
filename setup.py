@@ -25,23 +25,33 @@ setup(
     license='''MIT License''',
     packages=find_packages(),
     project_urls={
-        'Source Code': "https://github.com/yasserbdj96/hiphp",
-        'Author WebSite': "https://yasserbdj96.github.io/",
-        'Instagram': "https://www.instagram.com/yasserbdj96/",
+        'Source': "https://github.com/yasserbdj96/hiphp",
+        'Documentation': "https://yasserbdj96.github.io/hiphp",
+        'Chat': "https://gitter.im/yasserbdj96/hiphp",
     },
     install_requires=["ashar","requests","hexor","asciitext","biglibrary"],
-    keywords=['yasserbdj96', 'python', 'hiphp', 'php', 'backdoor.', 'http/https'],
+    keywords=['yasserbdj96', 'python', 'hiphp', 'php', 'backdoor.', 'http/https','onion'],
     classifiers=[
+        "Environment :: Web Environment",
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3 :: Only",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
         "Topic :: Software Development :: Build Tools",
+        "Topic :: Software Development :: Libraries"
         "Topic :: Software Development :: Libraries :: Python Modules",
-        'Topic :: Communications :: Email'
+        'Topic :: Communications :: Email',
+        "Topic :: Internet :: WWW/HTTP"
     ],
     python_requires=">=3.x.x"
 )

@@ -13,7 +13,6 @@
 
 #START{
 from hexor import *
-import os
 
 # logo:
 def logo(__version__):
@@ -27,9 +26,7 @@ def logo(__version__):
 
     spas=" "*5
     code_by=color.c("Code by -> ",c_yellow)+color.c("yasserbdj96",c_green)
-
-    if os.name != 'nt':
-        logo+=color.c(f"""
+    logo+=color.c(f"""
 {spas}             ▄███████▄    ▄█    █▄       ▄███████▄ 
 {spas}            ███    ███   ███    ███     ███    ███ 
 {spas}╦   ╦       ███    ███   ███    ███     ███    ███ 
@@ -37,7 +34,6 @@ def logo(__version__):
 {spas}╠═══╣  ║    ███          ███    ███     ███        
 {spas}║   ║  ║    ███  V{__version__} ███    ███     ███ 
 {spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀ {code_by}\n""",c_red)
-
     logo+=color.c(" "*17+"https://github.com/yasserbdj96\n",c_blue)
     #logo+=self.color.c(" "*37+"Code by -> ",self.c_yellow)+self.color.c("yasserbdj96\n",self.c_green)
     #logo+=self.color.c("\n - You are now connected safety. You can print the PHP commands below for comprehensive control of the site.\n",self.c_blue)

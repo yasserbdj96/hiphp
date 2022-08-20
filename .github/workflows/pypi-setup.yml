@@ -1,4 +1,4 @@
-name: Python package
+name: pypi-setup
 on: [push]
 #defaults:
 #  run:

@@ -14,6 +14,7 @@
 #START{
 from hiphp.hiphpversion import __version__
 from setuptools import setup,find_packages
+
 setup(
     name="hiphp",
     version=__version__,
@@ -28,6 +29,7 @@ setup(
         'Source': "https://github.com/yasserbdj96/hiphp",
         'Documentation': "https://yasserbdj96.github.io/hiphp",
         'Chat': "https://gitter.im/yasserbdj96/hiphp",
+        '':""
     },
     install_requires=["ashar","requests","hexor","asciitext","biglibrary"],
     keywords=['yasserbdj96', 'python', 'hiphp', 'php', 'backdoor.', 'http/https','onion'],
@@ -43,7 +45,6 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
-
         "Programming Language :: Python :: 3 :: Only",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",

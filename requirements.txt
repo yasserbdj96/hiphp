@@ -1,6 +1,5 @@
 ashar
-requests
-#readline
 hexor
 asciitext
 biglibrary
+requests

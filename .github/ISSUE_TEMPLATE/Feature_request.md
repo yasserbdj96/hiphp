@@ -1,7 +1,8 @@
 ---
 name: ✨ Feature request
-description: Suggest an idea for hiphp
-title: '[FR]'
+about: Suggest an idea for setuptools
+title: '[FR] '
+
 ---
 
 we accepting feature at this time.

@@ -1,6 +1,7 @@
 ---
-name: Feature hiphp
-about: Suggest an idea for this project
+name: ✨ Feature request
+description: Suggest an idea for hiphp
+title: '[FR]'
 
 ---
 

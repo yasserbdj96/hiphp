@@ -1,6 +1,6 @@
 ---
 name: ✨ Feature request
-about: Suggest an idea for setuptools
+about: Suggest an idea for hiphp
 title: '[FR] '
 
 ---

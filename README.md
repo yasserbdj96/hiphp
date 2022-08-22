@@ -1,5 +1,5 @@
 <img align="right" height="200" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
-<h1>hiphp for control php websites.</h1>
+<h2>hiphp for control php websites.</h2>
 <p>hiphp is BackDoor to control php based sites and hiphp can be controlled by sending commands, files and tokens to the site using http/https protocol. After copying HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it and read all files, delete, download and even upload new files to it. Hiphp also enables you to connect to ".onion" sites. Also, this back door is password protected.</p>
 
 [![Test on Ubuntu latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
@@ -14,29 +14,29 @@
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp)](https://github.com/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-<h1>How hiphp works?</h1>
+<h2>How hiphp works?</h2>
 <div align="center">
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/how_hiphp_works.png" alt="hiphp by yasserbdj96">
 </div>
 
-<h1>How do you use this version of the project?</h1>
+<h2>How do you use this version of the project?</h2>
 [✓] Command line interface CLI.<br>
 [✓] Graphical user interface GUI (beta).<br>
 [✓] Python Module.<br>
 [✓] Script.<br>
 [✓] Docker Container.
 
-<h1>Languages:</h1>
+<h2>Languages:</h2>
 * python3<br>
 * php
 
-<h1>Requirements</h1>
+<h2>Requirements</h2>
 [✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br>
 [✓] <a href="https://github.com/psf/requests">requests</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hexor">hexor</a><br>
 [✓] <a href="https://github.com/yasserbdj96/biglibrary">biglibrary</a>
 
-<h1>Supported Distributions:</h1>
+<h2>Supported Distributions:</h2>
 
 | Distribution     | Version Check | Python Test Version       | Supported | Status    | Everything works |
 | :--------------: | :-----------: | :-----------------------: | :-------: | :-------: | :--------------: |
@@ -46,7 +46,6 @@
 | Android (termux) | 10 (0.118.0)  | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 | Android (nethunter)| 10 (2022.3) | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 
-<h1>Usage Download and install:</h1>
 <h2>Docker pull,build & run:</h2>
 
 ```bash

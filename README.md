@@ -30,7 +30,7 @@
 * python3<br>
 * php
 
-<h2>Requirements</h2>
+<h2>Requirements:</h2>
 [✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br>
 [✓] <a href="https://github.com/psf/requests">requests</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hexor">hexor</a><br>

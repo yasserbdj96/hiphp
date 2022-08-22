@@ -8,9 +8,7 @@
 [![ubuntu install](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
 [![pages-build-deployment](https://github.com/yasserbdj96/hiphp/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pages/pages-build-deployment)
 [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp)
-
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
-
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp)](https://github.com/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -174,7 +172,7 @@ hiphp Commands :
          Command                    Description
          -------                    -----------
 [OPTIONS]─────┐
-  ┌──────────┘
+  ┌───────────┘
   ├─> --help                        ─> # Display this help.
   ├─> --help [ACTIONS]              ─> # Help for a specific command.
   ├─> --geth                        ─> # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
@@ -183,7 +181,7 @@ hiphp Commands :
   ├─> --exit                        ─> # Exit this console.
 ┌─┘
 └[ACTIONS]────┐
-  ┌──────────┘
+  ┌───────────┘
   ├─> --ls                          ─> # List information about the FILEs (the current directory by default).
   ├─> Usage: --ls [OPTION] [PATH]
   ├┬> Mandatory arguments to long options:
@@ -229,7 +227,7 @@ hiphp Commands :
   ├─────────────────────────── ─ ─ ─
 ┌─┘
 └[ABOUT]─────┐
-  ┌─────────┘
+  ┌──────────┘
   ├─> --update                      ─> # check for updates.
   ├─> --license                     ─> # This project license.
   ├─> --about                       ─> # About this project.
@@ -404,6 +402,12 @@ all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
 <br>
 <div align="center">
     <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
+    <br>
+    <a href="https://ko-fi.com/L3L34CEPV">
+        <img height="100" src="https://ko-fi.com/img/githubbutton_sm.svg" alt="hiphp by yasserbdj96">
+    </a>
+    <br>
+    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9
 </div>
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L34CEPV)
+

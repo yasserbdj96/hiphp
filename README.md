@@ -404,7 +404,7 @@ all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
     <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
     <br>
     <a href="https://ko-fi.com/L3L34CEPV">
-        <img height="100" src="https://ko-fi.com/img/githubbutton_sm.svg" alt="hiphp by yasserbdj96">
+        <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="hiphp by yasserbdj96">
     </a>
     <br>
     BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9

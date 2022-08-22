@@ -24,6 +24,10 @@ def rot13(text):
 def tobase64(data):
     return base64.b64encode(data.encode('utf-8')).decode('utf-8')
 
+#from base64:
+def fromb64(text):
+    return base64.b64decode(text.encode('utf-8')).decode('utf-8')
+
 #tomd5:
 def tomd5(data):
     return hashlib.md5(data.encode('utf-8')).hexdigest()

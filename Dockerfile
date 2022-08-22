@@ -32,7 +32,9 @@ WORKDIR /wrdir
 COPY ./run.py /wrdir
 COPY ./hiphp /wrdir/hiphp
 COPY ./requirements.txt /wrdir/requirements.txt
+#COPY ./config_file.json /wrdir/config_file.json
 
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /wrdir/requirements.txt
 
 CMD ["python", "run.py"]

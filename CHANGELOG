@@ -1,11 +1,18 @@
+## 0.2.23 [22-08-2022][Last Version]
+ - Fix the entry with uppercase and lowercase letters.
+ - Add "--down" command for Download files & folders.
+ - Add "--zip" command for Compress files & folders.
+ - Update "--help" to "--help [ACTION]".
+ - Update the help list and enable it to display help when something goes wrong.
+
 ## 0.2.22 [20-08-2022]
  - Update some info on pypi.
  - Fix "setup.py" windows os.
  - Bug fixes & performance improvements.
 
 ## 0.2.21 [18-08-2022]
- - Add "--update" command.
- - Add "--phpinfo" command.
+ - Add "--update" command for check updates.
+ - Add "--phpinfo" command for check some server informations.
  - Fix not being able to install internally on Nethunter.
  - Fix some issues in uploading files.
  - Bug fixes & performance improvements.
@@ -13,7 +20,7 @@
 ## 0.2.20 [10-08-2022]
  - Change the display of files in the command "--ls"
  - Fix "HIPHP_HOLE_CODE".
- - Add "--cls" to clear console.
+ - Add "--cls" command to clear console.
  - Slight change to the command line interface logo.
  - Bug fixes & performance improvements.
 
@@ -29,10 +36,10 @@
 ## 0.2.17 [03-07-2022]
  - Bug fixes on windows os.
 
-## 0.2.16 [02-07-2022]
+## 0.2.16 [02-07-2022][Version cancelled]
  - Bug fixes & performance improvements.
 
-## 0.2.15 [22-06-2022]
+## 0.2.15 [22-06-2022][Version cancelled]
  - New build.
  - More stability.
  - Command interface update.
@@ -41,70 +48,70 @@
  - help menu update.
  - Bug fixes & performance improvements.
 
-## 0.1.14
+## 0.1.14 [06-11-2021][Version cancelled]
  - help menu update.
  - Bug fixes & performance improvements.
 
-## 0.1.13
+## 0.1.13 [09-11-2021][Version cancelled]
  - Safety upgrade.
  - Bug fixes & performance improvements.
 
-## 0.1.12
+## 0.1.12 [09-11-2021][Version cancelled]
  - Safety upgrade.
  - Bug fixes & performance improvements.
 
-## 0.1.11
+## 0.1.11 [03-11-2021][Version cancelled]
  - Command interface update.
  - Bug fixes & performance improvements.
 
-## 0.1.10
+## 0.1.10 [26-07-2021][Version cancelled]
  - Fix Bugs.
 
-## 0.1.9
+## 0.1.9 [07-06-2021][Version cancelled]
  - fix bugs.
 
-## 0.1.8
+## 0.1.8 [2021][Version cancelled]
  - Fix bugs.
 
-## 0.1.7
+## 0.1.7 [04-06-2021][Version cancelled]
  - fix bugs.
 
-## 0.1.6
+## 0.1.6 [04-06-2021][Version cancelled]
  - fix bugs.
  - add upload to upload any file.
  - Simplify the use of the program.
 
-## 0.1.5
+## 0.1.5 [26-05-2021][Version cancelled]
  - fix bugs.
 
-## 0.1.4
+## 0.1.4 [15-05-2021][Version cancelled]
  - fix bugs.
  - new build.
 
-## 0.1.3
+## 0.1.3 [12-05-2021][Version cancelled]
  - Fix bugs.
 
-## 0.1.2
+## 0.1.2 [10-05-2021][Version cancelled]
  - Fix bugs.
 
-## 0.1.1
+## 0.1.1 [06-05-2021][Version cancelled]
  - Import pakages by pipincluder.
  - Fix bugs.
 
-## 0.1.0
+## 0.1.0 [18-04-2021][Version cancelled]
  - New build.
  - Fix bugs.
 
-## 0.0.4
+## 0.0.4 [06-04-2021][Version cancelled]
  - Fix bugs.
 
-## 0.0.3
+## 0.0.3 [06-04-2021][Version cancelled]
  - Fix bugs.
 
-## 0.0.2
+## 0.0.2 [05-04-2021][Version cancelled]
  - Fix bugs.
  - Add help list.
  - Add Executing from files.
 
-## 0.0.1
+## 0.0.1 [05-04-2021][Version cancelled]
  - First public release.

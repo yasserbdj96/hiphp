@@ -1,6 +1,6 @@
 ashar
 requests
-#readline
+#readline # this is just for linux.
 hexor
 asciitext
 biglibrary

@@ -37,6 +37,16 @@ p1.upload("./examples.php")# Upload a file to the current directory.
 p1.upload("./examples.php","./upload_path/")# Upload a file to a specific directory.
 
 # Example:4
+# Compress a path:
+p1.compress()# Compress the current directory.
+p1.compress("./example/")# Compress a specific directory.
+
+# Example:5
+# download a file:
+p1.download("example.zip")# download a specific file to the current directory.
+p1.download("example.zip","<OUT_PATH>")# download a specific file to specific directory.
+
+# Example:6
 # Command line interface:
 p1.cli()
 #}END.

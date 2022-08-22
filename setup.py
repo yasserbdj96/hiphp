@@ -20,7 +20,7 @@ setup(
     version=__version__,
     author="yasserbdj96",
     author_email="yasser.bdj96@gmail.com",
-    description='''hiphp is BackDoor to control php-based sites hiphp can be controlled by sending commands, files, and tokens to the site using the http/https protocol. After copying the code and placing it in any php file on the target website, you will have permissions to enter it, read all files, delete and even upload new files to it. Also, this back door is password protected.''',
+    description='''BackDoor to control php-based sites In the normal internet or .onion''',
     long_description_content_type="text/markdown",
     long_description=open('README.md','r', encoding="utf8").read(),
     license='''MIT License''',
@@ -31,7 +31,7 @@ setup(
         'Chat': "https://gitter.im/yasserbdj96/hiphp",
         'WebSite':"https://yasserbdj96.github.io/"
     },
-    install_requires=["ashar","requests","hexor","asciitext","biglibrary"],
+    install_requires=["ashar","requests","hexor","biglibrary"],
     keywords=['yasserbdj96', 'python', 'hiphp', 'php', 'backdoor.', 'http/https','onion'],
     classifiers=[
         "Environment :: Web Environment",

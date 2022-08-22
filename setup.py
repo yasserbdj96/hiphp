@@ -32,7 +32,7 @@ setup(
         'WebSite':"https://yasserbdj96.github.io/"
     },
     install_requires=["ashar","requests","hexor","biglibrary"],
-    keywords=['yasserbdj96', 'python', 'hiphp', 'php', 'backdoor.', 'http/https','onion'],
+    keywords=['yasserbdj96','python','hiphp','php','backdoor','http','https','onion','remoteaccess','controller','revisioncontrol'],
     classifiers=[
         "Environment :: Web Environment",
         "Development Status :: 5 - Production/Stable",

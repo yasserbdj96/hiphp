@@ -2,7 +2,9 @@
 <h1>hiphp for control php websites.</h1>
 <p>hiphp is BackDoor to control php based sites and hiphp can be controlled by sending commands, files and tokens to the site using http/https protocol. After copying HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it and read all files, delete, download and even upload new files to it. Hiphp also enables you to connect to ".onion" sites. Also, this back door is password protected.</p>
 
-[![Python package](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app.yml)
+[![Test on Ubuntu latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
+[![Test on Windows latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
+[![Test on MacOS latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
 [![pypi-setup](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml)
 [![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
 [![ubuntu install](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
@@ -410,5 +412,3 @@ all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
     <br>
     <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
 </div>
-
-

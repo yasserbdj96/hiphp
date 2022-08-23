@@ -27,6 +27,15 @@ function connect(){
                     for (let i = 0; i < retu.length; i++) {
                         var xx=retu[i].split(':');
                         var pathxx=xx[0];
+
+                        
+                        var file_type=(/[.]/.exec(pathxx)) ? /[^.]+$/.exec(pathxx) : undefined;
+                        if (file_type=="php"){
+                            var img_icon="";//"<img class='img_icon' src='./icons/php.png'>";
+                        }else{
+                            var img_icon="";
+                        }
+
                         var permxx='<a class="pointer" onclick="permi('+"'"+pathxx+"',"+"'"+xx[1]+"'"+')">'+xx[1]+'</a>';
                         var s=' ';//space
                         var edit='<a class="pointer" onclick="cat('+"'"+pathxx+"'"+')">✏️</a>'+s;
@@ -34,7 +43,7 @@ function connect(){
                         var ren='<a class="pointer" onclick="ren('+"'"+pathxx+"'"+')">🎨</a>'+s;
                         var check='<input type="checkbox">';
                         //var down='<a class="pointer" onclick="down('+"'"+pathxx+"'"+')">dddd</a>'+s;
-                        ls+='<tr><td>'+check+" "+pathxx+'</td><td>'+permxx+'</td><td>'+edit+ren+del+'</td></tr>';
+                        ls+='<tr><td>'+check+" "+img_icon+pathxx+'</td><td>'+permxx+'</td><td>'+edit+ren+del+'</td></tr>';
                     }
                     document.getElementById("ls").innerHTML=ls;
                 })

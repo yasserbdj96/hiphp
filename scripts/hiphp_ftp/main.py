@@ -18,18 +18,21 @@ from tkinter import *
 from tkinter import filedialog
 from chardet import detect
 
+usage_msg=f"USAGE : python3 {sys.argv[0]} [KEY] [URL]"
+
 try:
     import os
     import sys
     #
-    URL = os.environ['URL'] if "URL" in os.environ else sys.argv[2]
-    KEY = os.environ['KEY'] if "KEY" in os.environ else sys.argv[1]
-except ZeroDivisionError:
-    print(f"USAGE : python3 {sys.argv[0]} [KEY] [URL]")
-    exit()
+    url = os.environ['URL'] if "URL" in os.environ else sys.argv[2]
+    password = os.environ['KEY'] if "KEY" in os.environ else sys.argv[1]
 
-url=URL
-password=KEY
+    if url=="" or password=="":
+        print(usage_msg)
+        exit()
+except ZeroDivisionError:
+    print(usage_msg)
+    exit()
 
 # get file encoding type
 def get_encoding_type(file):
@@ -129,8 +132,8 @@ try:
     try:
         photo = PhotoImage(file = "./favicon.png")
         root.iconphoto(False, photo)
-    except ZeroDivisionError:
-        photo = PhotoImage(file = "/usr/share/hiphp/favicon.png")
+    except:
+        photo = PhotoImage(file = os.path.dirname(os.path.abspath(__file__))+"/favicon.png")
         root.iconphoto(False, photo)
 except ZeroDivisionError:
     pass

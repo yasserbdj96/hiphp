@@ -242,6 +242,11 @@ hiphp Commands :
   .
 ```
 
+<h2>HIPHP_HOLE_CODE</h2>
+<div align="center">
+    <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/HIPHP_HOLE_CODE.png" alt="hiphp by yasserbdj96">
+</div>
+
 
 <h2>Screenshots:</h2>
 
@@ -410,7 +415,9 @@ all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
 <div align="center">
     <a href="https://ko-fi.com/yasserbdj96">
         <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="hiphp by yasserbdj96">
-    </a><br>
-    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9<br>
+    </a>
+    <br>
+    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9
+    <br>
     <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
 </div>

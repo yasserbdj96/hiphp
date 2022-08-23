@@ -41,7 +41,7 @@ input[type=button]{
 #connected{
     display:none;
     background-color: #04AA6D;
-    height: 35px;
+    height: 40px;
 }
 
 .add_new{
@@ -58,7 +58,7 @@ input[type=button]{
     border: 2px solid;
 }
 
-.reconnect{
+.reconnectx{
     z-index: 1;
     position: fixed;
     bottom: 4px;
@@ -72,10 +72,27 @@ input[type=button]{
     border: 2px solid;
 }
 
+spam{
+  color:#ffffff;
+}
+
+spam:hover {
+  background-color: #035638;
+}
+
+.padding_10{
+  padding: 10px;
+}
+
+.padding_9{
+  padding: 9px;
+}
+
 .cat{
+    margin-top: -40px;
     display:none;
-    width: 100vw;
-    height: calc(100vh - 33px);
+    width: 100%;
+    height: calc(100vh - 40px);
     padding: 5px;
     background-color: #e7e7e7;
 }
@@ -92,11 +109,15 @@ input[type=button]{
 .return{
     display: none;
     position: absolute;
-    margin-top: 8px;
-    margin-left: 8px;
+    /*margin-top: 8px;*/
+    margin-left: 0px;
     color:#ffffff;
 }
 .pointer{cursor: pointer;}
+
+.img_icon{
+  width: 20px;
+}
 
 textarea{
     padding: 10px;
@@ -140,7 +161,7 @@ textarea{
 .save{
     display: none;
     position: absolute;
-    margin-top: 8px;
+    /*margin-top: 8px;*/
     margin-left: 50%;
     color: #ffffff;
 }

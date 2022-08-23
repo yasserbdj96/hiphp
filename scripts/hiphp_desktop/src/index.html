@@ -11,15 +11,17 @@
     </head>
     <body>
         <div id="connected">
-            <spam id="return" class="return pointer" onclick="back()">Back</spam>
-            <spam id="save" class="save pointer" onclick="save()">Save</spam>
+            <spam id="return" class="return pointer padding_9" onclick="back()">⬅️</spam>
+            <spam id="save" class="save pointer padding_9" onclick="save()">💾</spam>
             <spam id="temp" style="display:none;"></spam>
             <spam id="add" class="add_new pointer" onclick="add()"><h1 style="margin-top:-11px;margin-left:-4px;">+</h1></spam>
-            <spam style="float:right"><input type="button" value="Deconnect" onclick="deconnect()"></spam>
             
+            
+            <spam style="float:right" class="pointer padding_10" onclick="deconnect()">Deconnect</spam>
+            <spam style="float:right" class="pointer padding_10" onclick="connect()">Reconnect</spam>
             <!--spam id="down"></spam-->
             
-            <spam id="reload" class="pointer reconnect" onclick="connect()"><h2 style="margin-top:-7px;margin-left:-3px;">R</h2></spam>
+            <!--spam id="reload" class="pointer reconnect " onclick="connect()"><h2 style="margin-top:-7px;margin-left:-3px;">R</h2></spam-->
             
             <table id="ls"></table>
             

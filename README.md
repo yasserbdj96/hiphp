@@ -242,7 +242,7 @@ hiphp Commands :
   .
 ```
 
-<h2>HIPHP_HOLE_CODE</h2>
+<h2>HIPHP_HOLE_CODE:</h2>
 <div align="center">
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/HIPHP_HOLE_CODE.png" alt="hiphp by yasserbdj96">
 </div>

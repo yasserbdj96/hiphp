@@ -18,7 +18,7 @@ emsg_3="[✗] We could not contact the site"
 emsg_4="[✗] The file you entered does not exist."
 emsg_5="[✗] We could not upload the file"
 
-msg_1="[!] Copy the code below to the website path you entered:"
+msg_1="[!] Copy the PHP code below to the website path you entered:"
 msg_2="[!] There is a new update "
 msg_3="[!] Download the new version from 'https://github.com/yasserbdj96/hiphp'"
 msg_4="[!] No updates available"

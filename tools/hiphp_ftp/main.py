@@ -14,9 +14,12 @@
 #START{
 import os
 from hiphp import *
+from hiphp.hiphpversion import __version__
 from tkinter import *
 from tkinter import filedialog
 from chardet import detect
+
+ftp_version="1.0.8"
 
 usage_msg=f"USAGE : python3 {sys.argv[0]} [KEY] [URL]"
 
@@ -176,45 +179,45 @@ scrollbar.config(command=mylist.yview)
 
 get_id_btn=Button(root,text="Get ID",command=get_id)
 get_id_btn.pack()
-get_id_btn.config(width=15)
+get_id_btn.config(width=17)
 
 Reconnect_btn=Button(root,text="Reconnect",command=Reconnect)
 Reconnect_btn.pack()
-Reconnect_btn.config(width=15)
+Reconnect_btn.config(width=17)
 
 select_all_btn=Button(root,text="Select all",command=select_all)
 select_all_btn.pack()
-select_all_btn.config(width=15)#,height=2
+select_all_btn.config(width=17)#,height=2
 
 unselect_all_btn=Button(root,text="Unselect all",command=unselect_all)
 unselect_all_btn.pack()
-unselect_all_btn.config(width=15)
+unselect_all_btn.config(width=17)
 
 openSelected_btn=Button(root,text="Open",command=openSelected)
 openSelected_btn.pack()
-openSelected_btn.config(width=15)
+openSelected_btn.config(width=17)
 
 upSelected_btn=Button(root,text="Upload",command=upSelected)
 upSelected_btn.pack()
-upSelected_btn.config(width=15)
+upSelected_btn.config(width=17)
 
 upSelected_to_btn=Button(root,text="Upload to",command=upSelected_to)
 upSelected_to_btn.pack()
-upSelected_to_btn.config(width=15)
+upSelected_to_btn.config(width=17)
 
 unzip_btn=Button(root,text="Unzip",command=unzip)
 unzip_btn.pack()
-unzip_btn.config(width=15)
+unzip_btn.config(width=17)
 
 deleteSelected_btn=Button(root,text="Delete",command=deleteSelected)
 deleteSelected_btn.pack()
-deleteSelected_btn.config(width=15)
+deleteSelected_btn.config(width=17)
 
 var1=IntVar()
 c1=Checkbutton(root,text='multiple selection',variable=var1,onvalue=1,offvalue=0,command=selectmode)
 c1.pack(side="top")
 
-w=Label(root,text="v1.0.7 by yasserbdj96")
+w=Label(root,text=f"hiphp V{__version__} ftp V{ftp_version}")
 w.pack()
 w.place(relx=1.0,rely=1.0,anchor='se')
 

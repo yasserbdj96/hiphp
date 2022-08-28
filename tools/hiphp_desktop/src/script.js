@@ -38,9 +38,9 @@ function connect(){
 
                         var permxx='<a class="pointer" onclick="permi('+"'"+pathxx+"',"+"'"+xx[1]+"'"+')">'+xx[1]+'</a>';
                         var s=' ';//space
-                        var edit='<a class="pointer" onclick="cat('+"'"+pathxx+"'"+')">✏️</a>'+s;
+                        var edit='<a class="pointer" onclick="cat('+"'"+pathxx+"'"+')">📝</a>'+s;
                         var del='<a class="pointer" onclick="del('+"'"+pathxx+"'"+')">❌</a>'+s;
-                        var ren='<a class="pointer" onclick="ren('+"'"+pathxx+"'"+')">🎨</a>'+s;
+                        var ren='<a class="pointer" onclick="ren('+"'"+pathxx+"'"+')">✏️</a>'+s;
                         var check='<input type="checkbox">';
                         //var down='<a class="pointer" onclick="down('+"'"+pathxx+"'"+')">dddd</a>'+s;
                         ls+='<tr><td>'+check+" "+img_icon+pathxx+'</td><td>'+permxx+'</td><td>'+edit+ren+del+'</td></tr>';
@@ -175,6 +175,18 @@ function permi(path,perm){
             }
         )
     }
+}
+
+//version:
+function version(){
+    eel.version()(
+            function(retu){
+                var ver = document.getElementById("version");
+                var hiphp_version=retu[1];
+                var hiphp_desktop=retu[0];
+                ver.innerText=hiphp_version+", "+hiphp_desktop;
+            }
+        )
 }
 
 /*

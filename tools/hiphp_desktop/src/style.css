@@ -174,4 +174,12 @@ textarea{
     padding: 10px;
     text-align: center;
 }
+
+.version{
+  position: fixed;     
+  text-align: left;    
+  bottom: -250px; 
+  width: 100%;
+  font-size: 10px;
+}
 /*}END.*/

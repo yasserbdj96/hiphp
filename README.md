@@ -32,7 +32,7 @@
 * php
 
 <h2>Requirements:</h2>
-[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br>
+<!--[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br-->
 [✓] <a href="https://github.com/psf/requests">requests</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hexor">hexor</a><br>
 [✓] <a href="https://github.com/yasserbdj96/biglibrary">biglibrary</a>
@@ -118,6 +118,25 @@
 >>> python3 run.py <KEY> <URL>
 ```
 
+<h2>Run with tools:</h2>
+```
+# run with hiphp_desktop tool:
+>>> git clone https://github.com/yasserbdj96/hiphp.git
+>>> cd hiphp
+>>> cp -r "hiphp" "tools/hiphp_desktop/"
+>>> cd tools/hiphp_desktop/
+>>> pip install -r requirements.txt
+>>> python3 main.py
+
+# run with hiphp_ftp tool:
+>>> git clone https://github.com/yasserbdj96/hiphp.git
+>>> cd hiphp
+>>> cp -r "hiphp" "tools/hiphp_ftp/"
+>>> cd tools/hiphp_ftp/
+>>> pip install -r requirements.txt
+>>> python3 main.py <KEY> <URL>
+```
+
 <h2>Script Usage:</h2>
 
 ```python
@@ -176,74 +195,73 @@ p1.cli()
 ```
 hiphp Commands :
 ════════════════
-         Command                    Description
-         -------                    -----------
-[OPTIONS]─────┐
-  ┌───────────┘
-  ├─> --help                        ─> # Display this help.
-  ├─> --help [ACTIONS]              ─> # Help for a specific command.
-  ├─> --geth                        ─> # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
-  ├─> --phpinfo                     ─> # Some information about the server.
-  ├─> --cls                         ─> # Clear console.
-  ├─> --exit                        ─> # Exit this console.
-┌─┘
-└[ACTIONS]────┐
-  ┌───────────┘
-  ├─> --ls                          ─> # List information about the FILEs (the current directory by default).
-  ├─> Usage: --ls [OPTION] [PATH]
-  ├┬> Mandatory arguments to long options:
-  │├─> --ls                         ─> # Get a list of all files and folders from the current directory.
-  │├─> --ls [PATH]                  ─> # Get a list of all files and folders from a specified directory.
-  │├─> --ls -all                    ─> # Get a list of all files, folders and subfolders from the current directory.
-  │└─> --ls -all [PATH]             ─> # Get a list of all files, folders and subfolders from a specified directory.
-  ├─────────────────────────── ─ ─ ─
-  ├─> --cat                         ─> # Concatenate FILE to standard output.
-  ├─> Usage: --cat [FILE_PATH]
-  ├─────────────────────────── ─ ─ ─
-  ├─> --set                         ─> # Create a code that is always saved on during work.
-  ├─> Usage: --set [PHP_CODE]
-  ├─> You can return the initial value with "--dset".
-  ├─────────────────────────── ─ ─ ─
-  ├─> --rf                          ─> # Run code from file.
-  ├─> Usage: --rf [FILE_PATH] [VARIABLES]
-  ├┬> Mandatory arguments to long options:
-  │├─> --rf [FILE_PATH]             ─> # Run code from file.
-  │└─> --rf [FILE_PATH] [VARIABLES] ─> # Run code from file with variables, EX: --rf example.php var==1 var2==hello
-  ├─────────────────────────── ─ ─ ─
-  ├─> --up                          ─> # Upload a file.
-  ├─> Usage: --up [FILE_PATH] [PATH]
-  ├┬> Mandatory arguments to long options:
-  │├─> --up [FILE_PATH]             ─> # Upload a file to the current directory.
-  │└─> --up [FILE_PATH] [PATH]      ─> # Upload a file to a specified directory.
-  ├─────────────────────────── ─ ─ ─
-  ├─> --down                            ─> # download a file.
-  ├─> Usage: --down [-f/-d] [FILE/DIR_PATH] [OUT_PATH]
-  ├┬> Mandatory arguments to long options:
-  │├─> --down -f [FILE_PATH]            ─> # Download a file to the current directory.
-  │├─> --down -f [FILE_PATH] [OUT_PATH] ─> # Download file to a specified directory.
-  │├─> --down -d [DIR_PATH]             ─> # Download a folder to the current directory.
-  │├─> --down -d [DIR_PATH] [OUT_PATH]  ─> # Download folder to a specified directory.
-  │├─> --down -all                      ─> # Download all files to the current directory.
-  │└─> --down -all [OUT_PATH]           ─> # Download all files to a specified directory.
-  ├─────────────────────────── ─ ─ ─
-  ├─> --zip                        ─> # Compress a directory.
-  ├─> Usage: --zip [DIR_PATH]
-  ├┬> Mandatory arguments to long options:
-  │├─> --zip                       ─> # Compress the current directory.
-  │└─> --zip [DIR_PATH]            ─> # Compress a specific directory.
-  ├─────────────────────────── ─ ─ ─
-┌─┘
-└[ABOUT]─────┐
-  ┌──────────┘
-  ├─> --update                      ─> # check for updates.
-  ├─> --license                     ─> # This project license.
-  ├─> --about                       ─> # About this project.
-  .
-  .
-  .
+  Command                            Description
+  -------                            -----------
+[OPTIONS]
+
+  --help, help                       ─> # Display this help.
+  --help [ACTIONS], help [ACTIONS]   ─> # Help for a specific command.
+  --geth, geth                       ─> # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
+  --phpinfo, phpinfo                 ─> # Some information about the server.
+  --cls, cls                         ─> # Clear console.
+  --exit, exit                       ─> # Exit this console.
+
+[ACTIONS]
+
+  --ls, ls                           ─> # List information about the FILEs (the current directory by default).
+  Usage: --ls [OPTION] [PATH], ls [OPTION] [PATH]
+  Mandatory arguments to long options:
+    --ls                             ─> # Get a list of all files and folders from the current directory.
+    --ls [PATH]                      ─> # Get a list of all files and folders from a specified directory.
+    --ls -all                        ─> # Get a list of all files, folders and subfolders from the current directory.
+    --ls -all [PATH]                 ─> # Get a list of all files, folders and subfolders from a specified directory.
+
+  --cat, cat                         ─> # Concatenate FILE to standard output.
+  Usage: --cat [FILE_PATH]
+
+  --set, set                         ─> # Create a code that is always saved on during work.
+  Usage: --set [PHP_CODE]
+  You can return the initial value with "--dset" or "dset".
+
+  --cd, cd                           ─> # Change directory.
+  Usage: --cd [PATH]
+
+  --rf, rf                           ─> # Run code from file.
+  Usage: --rf [FILE_PATH] [VARIABLES]
+  Mandatory arguments to long options:
+    --rf [FILE_PATH]                 ─> # Run code from file.
+    --rf [FILE_PATH] [VARIABLES]     ─> # Run code from file with variables, EX: --rf example.php var==hello
+  
+  --up, up                           ─> # Upload a file.
+  Usage: --up [FILE_PATH] [PATH]
+  Mandatory arguments to long options:
+    --up [FILE_PATH]                 ─> # Upload a file to the current directory.
+    --up [FILE_PATH] [PATH]          ─> # Upload a file to a specified directory.
+
+  --down, down                       ─> # download a file.
+  Usage: --down [-f/-d] [FILE/DIR_PATH] [OUT_PATH]
+  Mandatory arguments to long options:
+    --down -f [FILE_PATH]            ─> # Download a file to the current directory.
+    --down -f [FILE_PATH] [OUT_PATH] ─> # Download file to a specified directory.
+    --down -d [DIR_PATH]             ─> # Download a folder to the current directory.
+    --down -d [DIR_PATH] [OUT_PATH]  ─> # Download folder to a specified directory.
+    --down -all                      ─> # Download all files to the current directory.
+    --down -all [OUT_PATH]           ─> # Download all files to a specified directory.
+
+  --zip, zip                         ─> # Compress a directory.
+  Usage: --zip [DIR_PATH]
+  Mandatory arguments to long options:
+    --zip                            ─> # Compress the current directory.
+    --zip [DIR_PATH]                 ─> # Compress a specific directory.
+
+[ABOUT]
+
+  --update, update                   ─> # check for updates.
+  --license, license                 ─> # This project license.
+  --about, about                     ─> # About this project.
 ```
 
-<h2>HIPHP_HOLE_CODE:</h2>
+<h2>HIPHP_HOLE_CODE Example:</h2>
 <div align="center">
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/HIPHP_HOLE_CODE.png" alt="hiphp by yasserbdj96">
 </div>
@@ -267,26 +285,38 @@ hiphp Commands :
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot3.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot3.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_ftp/screenshot/screenshot.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_ftp/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_ftp/screenshot/screenshot.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_ftp/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_desktop/screenshot/screenshot.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_desktop/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_desktop/screenshot/screenshot1.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/scripts/hiphp_desktop/screenshot/screenshot1.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot1.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot1.png" alt="hiphp by yasserbdj96">
+    </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot2.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot2.png" alt="hiphp by yasserbdj96">
     </a>
 </div>
 
 <h2>Changelog History:</h2>
 
 ```
-## 0.2.23 [22-08-2022][Last Version]
+## 0.2.24 [01-09-2022][Last Version]
+ - Fix "hiphp --ftp"
+ - Add "--cd" command for Change directory.
+ - Update all commands from "--command" to "command" (You can use both).
+ - Update & fix bugs in "hiphp --dst".
+ - Update help menu.
+ - Bug fixes & performance improvements.
+
+## 0.2.23 [22-08-2022]
  - Fix the entry with uppercase and lowercase letters.
  - Add "--down" command for Download files & folders.
  - Add "--zip" command for Compress files & folders.
  - Update "--help" to "--help [ACTION]".
  - Update the help list and enable it to display help when something goes wrong.
+ - Bug fixes & performance improvements.
 
 ## 0.2.22 [20-08-2022]
  - Update some info on pypi.
@@ -415,7 +445,7 @@ all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
 <br>
 <div align="center">
     <a href="https://ko-fi.com/yasserbdj96">
-        <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi">
+        <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="hiphp by yasserbdj96">
     </a>
     <br>
     BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9

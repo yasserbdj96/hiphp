@@ -34,11 +34,13 @@
             <textarea id="cat" class="cat"></textarea>
         </div>
 
-        <div id="login">
-            <img src="./hiphp_logo.png" style="width: 160px;"><br>
-            <input type="text" id="key" value="123" placeholder="Key" style="width:50%;"><br>
+        <div id="login" >
+            <img src="./hiphp_logo.png" style="width: 160px;" onload="version()"><br>
             <input type="text" id="url" value="http://localhost/index.php" style="width:50%;" placeholder="Url"><br>
+            <input type="text" id="key" value="123" placeholder="Key" style="width:50%;"><br>
             <input type="button" value="Login" onclick="connect()"><br>
+            <div class="version" id="version"></div>
         </div>
+        
     </body>
 </html>

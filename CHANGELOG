@@ -1,9 +1,18 @@
-## 0.2.23 [22-08-2022][Last Version]
+## 0.2.24 [01-09-2022][Last Version]
+ - Fix "hiphp --ftp"
+ - Add "--cd" command for Change directory.
+ - Update all commands from "--command" to "command" (You can use both).
+ - Update & fix bugs in "hiphp --dst".
+ - Update help menu.
+ - Bug fixes & performance improvements.
+
+## 0.2.23 [22-08-2022]
  - Fix the entry with uppercase and lowercase letters.
  - Add "--down" command for Download files & folders.
  - Add "--zip" command for Compress files & folders.
  - Update "--help" to "--help [ACTION]".
  - Update the help list and enable it to display help when something goes wrong.
+ - Bug fixes & performance improvements.
 
 ## 0.2.22 [20-08-2022]
  - Update some info on pypi.

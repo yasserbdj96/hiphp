@@ -24,14 +24,14 @@ install() {
     sudo cp "$appname.sh" "/usr/local/bin/$appname";
 
     # install hiphp_ftp script:
-    sudo cp "../scripts/hiphp_ftp/main.py" "/usr/share/$appname/hiphp_ftp.py";
-    sudo cp "../scripts/hiphp_ftp/favicon.png" "/usr/share/$appname/favicon.png";
-    pip install -r "../scripts/hiphp_ftp/requirements.txt";
+    sudo cp "../tools/hiphp_ftp/main.py" "/usr/share/$appname/hiphp_ftp.py";
+    sudo cp "../tools/hiphp_ftp/favicon.png" "/usr/share/$appname/favicon.png";
+    pip install -r "../tools/hiphp_ftp/requirements.txt";
 
     # install hiphp_desktop script:
-    sudo cp "../scripts/hiphp_desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
-    sudo cp -r "../scripts/hiphp_desktop/src/." "/usr/share/$appname/src";
-    pip install -r "../scripts/hiphp_desktop/requirements.txt";
+    sudo cp "../tools/hiphp_desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
+    sudo cp -r "../tools/hiphp_desktop/src/." "/usr/share/$appname/src";
+    pip install -r "../tools/hiphp_desktop/requirements.txt";
 }
 
 uninstall() {

@@ -25,20 +25,20 @@ def logo(__version__):
     color=hexor(True,"hex")
 
     spas=" "*5
-    code_by=color.c("Code by -> ",c_yellow)+color.c("yasserbdj96",c_green)
+    code_by=color.c("A PHP BackDoor by ",c_yellow)+color.c("yasserbdj96",c_green)
     logo+=color.c(f"""
 {spas}             ▄███████▄    ▄█    █▄       ▄███████▄ 
 {spas}            ███    ███   ███    ███     ███    ███ 
 {spas}╦   ╦       ███    ███   ███    ███     ███    ███ 
 {spas}║   ║ ═╦═ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀  
-{spas}╠═══╣  ║    ███          ███    ███     ███        
+{spas}╠═══╣  ║    ███          ███    ███     ███
 {spas}║   ║  ║    ███  V{__version__} ███    ███     ███ 
 {spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀ {code_by}\n""",c_red)
-    logo+=color.c(" "*17+"https://github.com/yasserbdj96\n",c_blue)
+    logo+=color.c(" "*17+"https://github.com/yasserbdj96/hiphp\n",c_blue)
     #logo+=self.color.c(" "*37+"Code by -> ",self.c_yellow)+self.color.c("yasserbdj96\n",self.c_green)
     #logo+=self.color.c("\n - You are now connected safety. You can print the PHP commands below for comprehensive control of the site.\n",self.c_blue)
     logo+=color.c("\n - '--help' for more informations.\n",c_yellow)
-    logo+=color.c(" - '--exit' OR 'Ctrl+C' for exit :)\n\n",c_yellow)
+    logo+=color.c(" - '--exit' OR 'Ctrl+C' for exit.\n\n",c_yellow)
     return logo
 #
 try:

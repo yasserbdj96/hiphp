@@ -14,9 +14,12 @@
 #START{
 import eel
 from hiphp import *
+from hiphp.hiphpversion import __version__
 from src.php import *
 import os
 
+
+hiphp_desktop_version="0.2.0"
 
 eel.init(f'{os.path.dirname(os.path.realpath(__file__))}/src')
 #eel.init('src')
@@ -35,6 +38,11 @@ def connect(key,url):
     except:
         hole=p1.get_hole()
         return hole
+
+#ls:
+@eel.expose
+def version():
+    return "Desktop V"+hiphp_desktop_version,"hiphp V"+__version__
 
 #ls:
 @eel.expose

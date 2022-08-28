@@ -29,9 +29,19 @@ Don't forget to star ⭐ this repository.
 [✓] Script.<br>
 [✓] Docker Container.
 
-<h2>Languages:</h2>
-* python3<br>
-* php
+<h2>All languages used in this project:</h2>
+* Python3<br>
+* PHP<br>
+* Shell (bash)<br>
+* JavaScript<br>
+* CSS<br>
+* HTML
+
+<h2>Where can you find this project?</h2>
+[✓] <a href="https://pypi.org/project/hiphp">https://pypi.org/</a><br>
+[✓] <a href="https://hub.docker.com/r/yasserbdj96/hiphp">https://www.docker.com/</a><br>
+[✓] <a href="https://github.com/yasserbdj96/hiphp">https://github.com/</a><br>
+[✓] <a href="https://github.com/yasserbdj96/hiphp/pkgs/container/hiphp">Github Packages</a>
 
 <h2>Requirements:</h2>
 <!--[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br-->

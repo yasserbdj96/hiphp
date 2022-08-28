@@ -15,6 +15,8 @@
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp)](https://github.com/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+Don't forget to star ⭐ this repository.
+
 <!--h2>How hiphp works?</h2>
 <div align="center">
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/how_hiphp_works.png" alt="hiphp by yasserbdj96">
@@ -436,8 +438,7 @@ hiphp Commands :
 - In order for the program to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
 - The program will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.<br>
 - If you use hiphp on .onion sites, you must run tor services or tor browser.<br>
-- I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.<br>
-- Don't forget to star ⭐ this repository.
+- I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
 
 <h1></h1> 
 

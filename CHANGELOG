@@ -1,4 +1,4 @@
-## 0.2.24 [01-09-2022][Last Version]
+## 0.2.24 [28-08-2022][Last Version]
  - Fix "hiphp --ftp"
  - Add "--cd" command for Change directory.
  - Update all commands from "--command" to "command" (You can use both).

@@ -20,7 +20,7 @@ from hiphp.hiphplicense import license
 from hiphp.hiphpabout import about
 from hiphp.hiphplogo import *
 from hiphp.hiphpversion import __version__
-from ashar import *
+#from ashar import *
 from hexor import *
 #from asciitext import *
 import requests

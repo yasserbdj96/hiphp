@@ -21,7 +21,7 @@ jobs:
       - name: Create Workspace Folder
         run: mkdir -p wrdir
       - name: Copy Files & folders to Workspace Folder
-        run: cp -r ./hiphp ./wrdir && cp -r ./install ./wrdir && cp -r ./scripts ./wrdir && cp -r ./requirements.txt ./wrdir
+        run: cp -r ./hiphp ./wrdir && cp -r ./install ./wrdir && cp -r ./tools ./wrdir && cp -r ./requirements.txt ./wrdir
       - name: pip Upgrade
         run: python -m pip install --upgrade pip
       - name: Install requirements

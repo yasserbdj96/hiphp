@@ -31,7 +31,7 @@ setup(
         'Chat': "https://gitter.im/yasserbdj96/hiphp",
         'WebSite':"https://yasserbdj96.github.io/"
     },
-    install_requires=["ashar","requests","hexor","biglibrary"],
+    install_requires=["requests","hexor","biglibrary"],
     keywords=['yasserbdj96','python','hiphp','php','backdoor','http','https','onion','remoteaccess','controller','revisioncontrol'],
     classifiers=[
         "Environment :: Web Environment",

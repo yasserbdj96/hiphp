@@ -57,9 +57,9 @@ Don't forget to star ⭐ this repository.
 
 | Distribution     | Version Check | Python Test Version       | Supported | Status    | Everything works |
 | :--------------: | :-----------: | :-----------------------: | :-------: | :-------: | :--------------: |
-| Ubuntu           | latest        | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-| Windwos          | latest        | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-| MacOS            | latest        | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
+| Ubuntu           | Latest        | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
+| Windwos          | Latest        | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
+| MacOS            | Latest        | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 | Android (termux) | 10 (0.118.0)  | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 | Android (nethunter)| 10 (2022.3) | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
 

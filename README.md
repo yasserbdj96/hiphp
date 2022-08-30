@@ -62,68 +62,77 @@ Don't forget to star ⭐ this repository.
 <h2>Docker pull,build & run:</h2>
 
 ```bash
-# pull:
+# Pull:
 >>> docker pull yasserbdj96/hiphp:latest
 
-# build:
+# Build:
 >>> docker build -t docker.io/yasserbdj96/hiphp:latest .
 
-# run:
+# Run:
 >>> docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
-<h2>Github Packages pull,build & run:</h2>
+<h2>Docker & Github Packages pull,build & run:</h2>
 
 ```bash
-# pull:
+# Pull:
 >>> docker pull ghcr.io/yasserbdj96/hiphp:latest
 
-# build:
+# Build:
 >>> docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 
-# run:
+# Run:
 >>> docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 ```
 
 <h2>Python Package Installation:</h2>
 
-```
-# install from pypi:
+```bash
+# Install from pypi:
 >>> pip install hiphp
 # OR
 >>> python -m pip install hiphp
 
-# local install:
+# Local install:
 >>> git clone https://github.com/yasserbdj96/hiphp.git
 >>> cd hiphp
 >>> sudo python setup.py install
 
-# uninstall:
+# Uninstall:
 >>> pip uninstall hiphp
 ```
 
 <h2>Ubuntu Installation:</h2>
 
-```
-# install:
+```bash
+# Install:
 >>> git clone https://github.com/yasserbdj96/hiphp.git
 >>> pip install -r hiphp/requirements.txt
 >>> cd hiphp/install
 >>> bash install.sh -i
 >>> hiphp
 
-# update:
+# Update:
 >>> cd hiphp/install
 >>> bash install.sh -up
 
-# uninstall:
+# Usage:
+>>> hiphp [OPTION]
+>>> hiphp --help                # hiphp cli help.
+>>> hiphp --geth [KEY] [URL]    # Get the hole Code.
+>>> hiphp [KEY] [URL]           # Connect to the victim's website.
+>>> hiphp --ftp [KEY] [URL]     # Run hiphp as GUI with 'tools/hiphp_ftp' script.
+>>> hiphp --dst                 # Run hiphp as GUI with 'tools/hiphp_desktop' script.
+
+
+# Uninstall:
 >>> cd hiphp/install
 >>> bash install.sh -u
 ```
 
 <h2>Run without installation:</h2>
 
-```
+```bash
 >>> git clone https://github.com/yasserbdj96/hiphp.git
 >>> cd hiphp
 >>> pip install -r requirements.txt
@@ -132,8 +141,8 @@ Don't forget to star ⭐ this repository.
 
 <h2>Run with tools:</h2>
 
-```
-# run with hiphp_desktop tool:
+```bash
+# Run with hiphp_desktop tool:
 >>> git clone https://github.com/yasserbdj96/hiphp.git
 >>> cd hiphp
 >>> cp -r "hiphp" "tools/hiphp_desktop/"
@@ -155,7 +164,7 @@ Don't forget to star ⭐ this repository.
 ```python
 from hiphp import *
 
-# connect:
+# Connect:
 p1=hiphp(key="<KEY>",url="<URL>")
 ```
 
@@ -165,7 +174,7 @@ p1=hiphp(key="<KEY>",url="<URL>")
 #START{
 from hiphp import *
 
-# connect:
+# Connect:
 p1=hiphp(key="123",url="http://127.0.0.1/index.php")#Default: retu=False.
 #p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")
 #p1=hiphp(key="123",url="https://google.com/index.php")

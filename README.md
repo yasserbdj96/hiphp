@@ -326,7 +326,7 @@ hiphp Commands :
 
 <h2>Changelog History:</h2>
 
-```
+```bash
 ## 0.2.24 [28-08-2022][Last Version]
  - Fix "hiphp --ftp"
  - Add "--cd" command for Change directory.

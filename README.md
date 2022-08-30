@@ -49,6 +49,10 @@ Don't forget to star ⭐ this repository.
 [✓] <a href="https://github.com/yasserbdj96/hexor">hexor</a><br>
 [✓] <a href="https://github.com/yasserbdj96/biglibrary">biglibrary</a>
 
+<h3>Other Requirements:</h3>
+[✓] <a href="">tk</a><br>
+[✓] <a href="https://github.com/ChrisKnott/Eel">eel</a><br>
+
 <h2>Supported Distributions:</h2>
 
 | Distribution     | Version Check | Python Test Version       | Supported | Status    | Everything works |

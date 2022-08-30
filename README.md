@@ -128,7 +128,6 @@ Don't forget to star ⭐ this repository.
 >>> hiphp --ftp [KEY] [URL]     # Run hiphp as GUI with 'tools/hiphp_ftp' script.
 >>> hiphp --dst                 # Run hiphp as GUI with 'tools/hiphp_desktop' script.
 
-
 # Uninstall:
 >>> cd hiphp/install
 >>> bash install.sh -u

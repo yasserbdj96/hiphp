@@ -55,13 +55,13 @@ Don't forget to star ⭐ this repository.
 
 <h2>Supported Distributions:</h2>
 
-| Distribution     | Version Check | Python Test Version       | Supported | Status    | Everything works |
-| :--------------: | :-----------: | :-----------------------: | :-------: | :-------: | :--------------: |
-| Ubuntu           | Last version  | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-| Windwos          | Last version  | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-| MacOS            | Last version  | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-| Android (termux) | 10 (0.118.0)  | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
-| Android (nethunter)| 10 (2022.3) | 3.6, 3.7, 3.8, 3.9, 3.10  | Yes       | Working   | Yes              |
+| Distribution     | Version Check | Python Test Version       | Supported | Everything works |
+| :--------------: | :-----------: | :-----------------------: | :-------: | :--------------: |
+| Ubuntu           | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
+| Windwos          | Last version  | 3.6 --> 3.10              | ✓         | ✗               |
+| MacOS            | Last version  | 3.6 --> 3.10              | ✓         | ✗               |
+| Android-termux   | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
+| Nethunter        | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 
 <h2>Docker pull,build & run:</h2>
 

@@ -63,6 +63,9 @@ class hiphp:
         self.cd=""
         self.do_x=0
 
+        #
+        self.sep=os.sep
+
     #cli:
     def cli(self):
         #logo
@@ -374,8 +377,8 @@ class hiphp:
         if outpath=="":
             outpath=os.path.abspath(os.getcwd())
         
-        if outpath[-1]!="/":
-            outpath+="/"
+        if outpath[-1]!=self.sep:
+            outpath+=self.sep
 
         down_path=outpath+""+path_x
 

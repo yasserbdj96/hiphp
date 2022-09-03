@@ -30,9 +30,10 @@ from os.path import exists
 from biglibrary import *
 import base64
 
-#import os
-#if os.name != 'nt':
-#    import readline
+import os
+if os.name == 'nt':
+    os.system('color')
+    #    import readline
 
 #start hiphp class:
 class hiphp:

@@ -35,7 +35,8 @@ Don't forget to star ⭐ this repository.
 <h2>All languages used in this project:</h2>
 * Python3<br>
 * PHP<br>
-* Shell (bash)<br>
+* Shell (Bash)<br>
+* Shell (Batch)<br>
 * JavaScript<br>
 * CSS<br>
 * HTML
@@ -61,7 +62,7 @@ Don't forget to star ⭐ this repository.
 | Distribution     | Version Check | Python Test Version       | Supported | Everything works |
 | :--------------: | :-----------: | :-----------------------: | :-------: | :--------------: |
 | Ubuntu           | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
-| Windwos          | Last version  | 3.6 --> 3.10              | ✓         | ✗               |
+| Windwos          | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 | MacOS            | Last version  | 3.6 --> 3.10              | ✓         | ✗               |
 | Android-termux   | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 | Nethunter        | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
@@ -142,7 +143,13 @@ Don't forget to star ⭐ this repository.
 >>> git clone https://github.com/yasserbdj96/hiphp.git
 >>> cd hiphp
 >>> pip install -r requirements.txt
+
+# default run on any os:
 >>> python3 run.py <KEY> <URL>
+
+# In case you encounter some errors on Windows os:
+## In this case the python must be installed to path.
+>>> run.bat <KEY> <URL>
 ```
 
 <h2>Run with tools:</h2>
@@ -330,7 +337,12 @@ hiphp Commands :
 <h2>Changelog History:</h2>
 
 ```
-## 0.2.24 [28-08-2022][Last Version]
+## 0.2.25 [03-09-2022][Last Version]
+ - Fix "--down" command on windows os.
+ - Color correction in the command line interface on windows os.
+ - Bug fixes & performance improvements.
+
+## 0.2.24 [28-08-2022]
  - Fix "hiphp --ftp"
  - Add "--cd" command for Change directory.
  - Update all commands from "--command" to "command" (You can use both).

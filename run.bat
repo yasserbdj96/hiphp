@@ -1,3 +1,4 @@
+@echo off
 rem    .                                                          .
 rem  --+----------------------------------------------------------+--
 rem    .   Code by : yasserbdj96                                  .
@@ -10,7 +11,7 @@ rem  --+----------------------------------------------------------+--
 rem    .                                                          .
 
 rem START{
-@echo off
+cls
 Setlocal EnableDelayedExpansion
 
 rem make symbels true:

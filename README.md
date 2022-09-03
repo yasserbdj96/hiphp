@@ -482,6 +482,8 @@ hiphp Commands :
 
 <h1></h1> 
 
+I hope you enjoyed this repository 😇.
+
 all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
 
 <br>

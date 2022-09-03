@@ -332,8 +332,8 @@ hiphp Commands :
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot2.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot2.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot4.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot4.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png" alt="hiphp by yasserbdj96">
     </a>
 </div>
 

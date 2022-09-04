@@ -225,6 +225,7 @@ p1.cli()
 #}END.
 ```
 
+
 <h2>Help for Command Line interface (CLI):</h2>
 
 ```
@@ -295,6 +296,12 @@ hiphp Commands :
   --license, license                 ─> # This project license.
   --about, about                     ─> # About this project.
 ```
+
+<div align="center">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
+        <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">
+    </a>
+</div>
 
 <h2>HIPHP_HOLE_CODE Example:</h2>
 <div align="center">

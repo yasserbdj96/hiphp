@@ -20,6 +20,12 @@
 Don't forget to star ⭐ this repository.
 
 
+<div align="center">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
+        <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">
+    </a>
+</div>
+
 <!--h2>How hiphp works?</h2>
 <div align="center">
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/how_hiphp_works.png" alt="hiphp by yasserbdj96">
@@ -297,11 +303,6 @@ hiphp Commands :
   --about, about                     ─> # About this project.
 ```
 
-<div align="center">
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
-        <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">
-    </a>
-</div>
 
 <h2>HIPHP_HOLE_CODE Example:</h2>
 <div align="center">

@@ -51,10 +51,11 @@
 * HTML
 
 <h2>Where can you find this project?</h2>
-[✓] <a href="https://pypi.org/project/hiphp">https://pypi.org/</a><br>
-[✓] <a href="https://hub.docker.com/r/yasserbdj96/hiphp">https://www.docker.com/</a><br>
-[✓] <a href="https://github.com/yasserbdj96/hiphp">https://github.com/</a><br>
-[✓] <a href="https://github.com/yasserbdj96/hiphp/pkgs/container/hiphp">Github Packages</a>
+[✓] <a href="https://pypi.org/project/hiphp">https://pypi.org/project/hiphp/</a><br>
+[✓] <a href="https://hub.docker.com/r/yasserbdj96/hiphp">https://hub.docker.com/r/yasserbdj96/hiphp</a><br>
+[✓] <a href="https://github.com/yasserbdj96/hiphp">https://github.com/yasserbdj96/hiphp</a><br>
+[✓] <a href="https://github.com/yasserbdj96/hiphp/pkgs/container/hiphp">Github Packages</a><br>
+[✓] <a href="https://gitlab.com/yasserbdj96/hiphp">https://gitlab.com/yasserbdj96/hiphp</a>
 
 <h2>Requirements:</h2>
 <!--[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br-->

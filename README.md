@@ -73,113 +73,119 @@
 | :--------------: | :-----------: | :-----------------------: | :-------: | :--------------: |
 | Ubuntu           | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 | Windwos          | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
-| MacOS            | Last version  | 3.6 --> 3.10              | ✓         | ✗               |
+| MacOS            | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 | Android-termux   | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 | Nethunter        | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 
-<h2>Docker pull,build & run:</h2>
+<h2>Docker Hub pull,build & run:</h2>
 
 ```bash
 # Pull:
->>> docker pull yasserbdj96/hiphp:latest
+❯ docker pull yasserbdj96/hiphp:latest
 
 # Build:
->>> docker build -t docker.io/yasserbdj96/hiphp:latest .
+❯ docker build -t docker.io/yasserbdj96/hiphp:latest .
 
-# Run:
->>> docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
+# Run as CLI:
+❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
+
+# Run as GUI:
+❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
-<h2>Docker & Github Packages pull,build & run:</h2>
+<h2>GitHub container registry (GHCR) pull,build & run:</h2>
 
 ```bash
 # Pull:
->>> docker pull ghcr.io/yasserbdj96/hiphp:latest
+❯ docker pull ghcr.io/yasserbdj96/hiphp:latest
 
 # Build:
->>> docker build -t ghcr.io/yasserbdj96/hiphp:latest .
+❯ docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 
-# Run:
->>> docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+# Run as CLI:
+❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+
+# Run as GUI:
+❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
 ```
 
 <h2>Python Package Installation:</h2>
 
 ```bash
 # Install from pypi:
->>> pip install hiphp
+❯ pip install hiphp
 # OR
->>> python -m pip install hiphp
+❯ python -m pip install hiphp
 
 # Local install:
->>> git clone https://github.com/yasserbdj96/hiphp.git
->>> cd hiphp
->>> sudo python setup.py install
+❯ git clone https://github.com/yasserbdj96/hiphp.git
+❯ cd hiphp
+❯ sudo python setup.py install
 
 # Uninstall:
->>> pip uninstall hiphp
+❯ pip uninstall hiphp
 ```
 
 <h2>Ubuntu Installation:</h2>
 
 ```bash
 # Install:
->>> git clone https://github.com/yasserbdj96/hiphp.git
->>> pip install -r hiphp/requirements.txt
->>> cd hiphp/install
->>> bash install.sh -i
->>> hiphp
+❯ git clone https://github.com/yasserbdj96/hiphp.git
+❯ pip install -r hiphp/requirements.txt
+❯ cd hiphp/install
+❯ bash install.sh -i
+❯ hiphp
 
 # Update:
->>> cd hiphp/install
->>> bash install.sh -up
+❯ cd hiphp/install
+❯ bash install.sh -up
 
 # Usage:
->>> hiphp [OPTION]
->>> hiphp --help                # hiphp cli help.
->>> hiphp --geth [KEY] [URL]    # Get the hole Code.
->>> hiphp [KEY] [URL]           # Connect to the victim's website.
->>> hiphp --ftp [KEY] [URL]     # Run hiphp as GUI with 'tools/hiphp_ftp' script.
->>> hiphp --dst                 # Run hiphp as GUI with 'tools/hiphp_desktop' script.
+❯ hiphp [OPTION]
+❯ hiphp --help                # hiphp cli help.
+❯ hiphp --geth [KEY] [URL]    # Get the hole Code.
+❯ hiphp [KEY] [URL]           # Connect to the victim's website.
+❯ hiphp --ftp [KEY] [URL]     # Run hiphp as GUI with 'tools/hiphp_ftp' script.
+❯ hiphp --dst                 # Run hiphp as GUI with 'tools/hiphp_desktop' script.
 
 # Uninstall:
->>> cd hiphp/install
->>> bash install.sh -u
+❯ cd hiphp/install
+❯ bash install.sh -u
 ```
 
 <h2>Run without installation:</h2>
 
 ```bash
->>> git clone https://github.com/yasserbdj96/hiphp.git
->>> cd hiphp
->>> pip install -r requirements.txt
+❯ git clone https://github.com/yasserbdj96/hiphp.git
+❯ cd hiphp
+❯ pip install -r requirements.txt
 
 # default run on any os:
->>> python3 run.py <KEY> <URL>
+❯ python3 run.py <KEY> <URL>
 
 # In case you encounter some errors on Windows os:
-## In this case the python must be installed to path.
->>> run.bat <KEY> <URL>
+❯ run.bat <KEY> <URL>
+# In this case the python must be installed to path.
 ```
 
 <h2>Run with tools:</h2>
 
 ```bash
 # Run with hiphp_desktop tool:
->>> git clone https://github.com/yasserbdj96/hiphp.git
->>> cd hiphp
->>> cp -r "hiphp" "tools/hiphp_desktop/"
->>> cd tools/hiphp_desktop/
->>> pip install -r requirements.txt
->>> python3 main.py
+❯ git clone https://github.com/yasserbdj96/hiphp.git
+❯ cd hiphp
+❯ cp -r "hiphp" "tools/hiphp_desktop/"
+❯ cd tools/hiphp_desktop/
+❯ pip install -r requirements.txt
+❯ python3 main.py
 
 # run with hiphp_ftp tool:
->>> git clone https://github.com/yasserbdj96/hiphp.git
->>> cd hiphp
->>> cp -r "hiphp" "tools/hiphp_ftp/"
->>> cd tools/hiphp_ftp/
->>> pip install -r requirements.txt
->>> python3 main.py <KEY> <URL>
+❯ git clone https://github.com/yasserbdj96/hiphp.git
+❯ cd hiphp
+❯ cp -r "hiphp" "tools/hiphp_ftp/"
+❯ cd tools/hiphp_ftp/
+❯ pip install -r requirements.txt
+❯ python3 main.py <KEY> <URL>
 ```
 
 <h2>Script Usage:</h2>
@@ -352,6 +358,11 @@ hiphp Commands :
 <h2>Changelog History:</h2>
 
 ```
+## 0.2.26 [xx-xx-2022][In Progress]
+ - Upgraded Docker files in order to be able to work from outside the container.
+ - Add download option in hiphp_desktop.
+ - Bug fixes & performance improvements.
+
 ## 0.2.25 [03-09-2022][Last Version]
  - Fix "--down" command on windows os.
  - Color correction in the command line interface on windows os.

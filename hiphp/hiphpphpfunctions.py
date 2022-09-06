@@ -96,8 +96,8 @@ echo $hash.".zip";"""
 def file_to_b64(path):
     code="""
 $file='"""+path+"""';
-$fp = fopen($file, "rb");
-$binary = fread($fp, filesize($file));
+$fp=fopen($file, "rb");
+$binary=fread($fp,filesize($file));
 echo base64_encode($binary);"""
     return code
 

@@ -106,4 +106,13 @@ readfile($filename);
 die();"""
     return x
 '''
+#
+def down_from_path(path):
+    x=f"""
+$cont=base64_encode(file_get_contents('{path}'));
+$type=mime_content_type('{path}');
+$file=basename('{path}');
+$cont_type=array("file"=>$file,"type"=>$type,"cont"=>$cont);
+echo json_encode($cont_type);"""
+    return x
 #}END.

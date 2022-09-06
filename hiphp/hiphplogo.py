@@ -25,7 +25,7 @@ def logo(__version__):
     color=hexor(True,"hex")
 
     spas=" "*5
-    code_by=color.c("A PHP BackDoor by ",c_yellow)+color.c("yasserbdj96",c_green)
+    code_by=color.c("¢σ∂є∂ ву ",c_yellow)+color.c("yasserbdj96",c_green)
     logo+=color.c(f"""
 {spas}             ▄███████▄    ▄█    █▄       ▄███████▄ 
 {spas}            ███    ███   ███    ███     ███    ███ 

@@ -15,12 +15,22 @@
 from hiphp import *
 
 try:
+    #
     import os
     import sys
     #
+    try:
+        DST=os.environ['DST'] if "DST" in os.environ else False
+        if DST!=False:
+            os.system("python main.py")
+            exit()
+    except:
+        pass
+    #
     URL = os.environ['URL'] if "URL" in os.environ else sys.argv[2]
     KEY = os.environ['KEY'] if "KEY" in os.environ else sys.argv[1]
-except Exception as e:
+
+except:
     print(f"USAGE : python3 {sys.argv[0]} <KEY> <URL>")
     exit()
     #pass

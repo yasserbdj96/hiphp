@@ -41,9 +41,10 @@ function connect(){
                         var edit='<a class="pointer" onclick="cat('+"'"+pathxx+"'"+')">📝</a>'+s;
                         var del='<a class="pointer" onclick="del('+"'"+pathxx+"'"+')">❌</a>'+s;
                         var ren='<a class="pointer" onclick="ren('+"'"+pathxx+"'"+')">✏️</a>'+s;
+                        var down='<a class="pointer" onclick="download_file('+"'"+pathxx+"'"+')">📥</a>'+s;
                         var check='<input type="checkbox">';
                         //var down='<a class="pointer" onclick="down('+"'"+pathxx+"'"+')">dddd</a>'+s;
-                        ls+='<tr><td>'+check+" "+img_icon+pathxx+'</td><td>'+permxx+'</td><td>'+edit+ren+del+'</td></tr>';
+                        ls+='<tr><td>'+check+" "+img_icon+pathxx+'</td><td>'+permxx+'</td><td>'+edit+ren+down+del+'</td></tr>';
                     }
                     document.getElementById("ls").innerHTML=ls;
                 })
@@ -175,6 +176,39 @@ function permi(path,perm){
             }
         )
     }
+}
+
+//download:
+function download_file(path){
+    var key=document.getElementById("key").value;
+    var url=document.getElementById("url").value;
+    if(path!=null && path!=""){
+        eel.download_file(key,url,path)(
+            function(retu){
+                //download("x.txt",retu)
+                const obj = JSON.parse(retu);
+
+                //console.log(obj.file);
+
+
+                download(obj.file,obj.cont,obj.type)
+                connect();
+            }
+        )
+    }
+}
+
+function download(filename, text,mime_content_type){
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:'+mime_content_type+';charset=utf-8,' + encodeURIComponent(atob(text)));
+    element.setAttribute('download', filename);
+  
+    element.style.display = 'none';
+    document.body.appendChild(element);
+  
+    element.click();
+  
+    document.body.removeChild(element);
 }
 
 //version:

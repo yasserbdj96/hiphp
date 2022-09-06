@@ -16,11 +16,11 @@ if [ -z "$1" ]; then
     python3 "/usr/share/hiphp/hiphp/hiphplogo.py" "ok_view";
     echo "Usage: hiphp [OPTION]";
     echo "";
-    echo "ex: ──┬─> hiphp --help               | # hiphp cli help.";
-    echo "      ├─> hiphp --geth [KEY] [URL]   | # Get the hole Code.";
-    echo "      ├─> hiphp [KEY] [URL]          | # Connect to the victim's website.";
-    echo "      ├─> hiphp --ftp [KEY] [URL]    | # Run hiphp as GUI in 'hiphp_ftp' script.";
-    echo "      └─> hiphp --dst                | # Run hiphp as GUI in 'hiphp_desktop' script.";
+    echo "ex:  hiphp --help               | # hiphp cli help.";
+    echo "     hiphp --geth [KEY] [URL]   | # Get the hole Code.";
+    echo "     hiphp [KEY] [URL]          | # Connect to the victim's website.";
+    echo "     hiphp --ftp [KEY] [URL]    | # Run hiphp as GUI with 'tools/hiphp_ftp' script.";
+    echo "     hiphp --dst                | # Run hiphp as GUI with 'tools/hiphp_desktop' script.";
 
 #cli help:
 elif [ "$1" == "--help" ] ; then

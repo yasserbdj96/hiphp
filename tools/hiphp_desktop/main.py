@@ -86,5 +86,16 @@ def new_permi(key,url,path,permi):
     p1=hiphp(key,url,retu=True)
     return p1.run(php_permi(path,permi))
 
-eel.start("index.html",host="127.0.0.2",port=96,size=(850,400))
+#down_from_path:
+@eel.expose
+def download_file(key,url,path):
+    p1=hiphp(key,url,retu=True)
+    return p1.run(down_from_path(path))
+
+host_ip="0.0.0.0"
+host_port=8080
+
+print(f"local link: {host_ip}:{host_port}")
+
+eel.start("index.html",host=host_ip,port=host_port,size=(850,400))
 #}END.

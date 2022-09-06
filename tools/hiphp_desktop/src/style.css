@@ -181,5 +181,6 @@ textarea{
   bottom: -250px; 
   width: 100%;
   font-size: 10px;
+  display: none;
 }
 /*}END.*/

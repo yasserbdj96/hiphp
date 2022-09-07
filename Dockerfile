@@ -44,7 +44,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
 # Updating apt to see and install Google Chrome
-RUN apt-get -y update
+RUN apt-get update -y
 
 # Magic happens
 RUN apt-get install -y google-chrome-stable
@@ -55,7 +55,7 @@ RUN apt-get install -yqq unzip
 # Download the Chrome Driver
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-RUN apt-get -y update
+RUN apt-get update -y
 RUN apt-get install -y google-chrome-stable
 
 # install chromedriver
@@ -68,7 +68,7 @@ WORKDIR /wrdir
 
 COPY ./run.py /wrdir
 COPY ./hiphp /wrdir/hiphp
-COPY ./hiphp-desktop/requirements.txt /wrdir/requirements-dst.txt
+#COPY ./hiphp-desktop/requirements.txt /wrdir/requirements-dst.txt
 COPY ./hiphp-desktop /wrdir
 COPY ./requirements.txt /wrdir/requirements.txt
 #COPY ./config_file.json /wrdir/config_file.json

@@ -31,7 +31,7 @@ install() {
     # install hiphp-desktop script:
     sudo cp "../hiphp-desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
     sudo cp -r "../hiphp-desktop/src/." "/usr/share/$appname/src";
-    pip install -r "../hiphp-desktop/requirements.txt";
+    pip install -r "../hiphp-desktop/requirements-dst.txt";
 }
 
 uninstall() {

@@ -28,10 +28,10 @@ install() {
     sudo cp "../tools/hiphp_ftp/favicon.png" "/usr/share/$appname/favicon.png";
     pip install -r "../tools/hiphp_ftp/requirements.txt";
 
-    # install hiphp_desktop script:
-    sudo cp "../tools/hiphp_desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
-    sudo cp -r "../tools/hiphp_desktop/src/." "/usr/share/$appname/src";
-    pip install -r "../tools/hiphp_desktop/requirements.txt";
+    # install hiphp-desktop script:
+    sudo cp "../hiphp-desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
+    sudo cp -r "../hiphp-desktop/src/." "/usr/share/$appname/src";
+    pip install -r "../hiphp-desktop/requirements.txt";
 }
 
 uninstall() {

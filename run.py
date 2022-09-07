@@ -14,7 +14,10 @@
 #START{
 from hiphp import *
 
+
+
 try:
+    docker_check=False
     #
     import os
     import sys
@@ -23,7 +26,7 @@ try:
         DST=os.environ['DST'] if "DST" in os.environ else False
         if DST!=False:
             os.system("python main.py")
-            exit()
+            docker_check=True
     except:
         pass
     #
@@ -31,7 +34,8 @@ try:
     KEY = os.environ['KEY'] if "KEY" in os.environ else sys.argv[1]
 
 except:
-    print(f"USAGE : python3 {sys.argv[0]} <KEY> <URL>")
+    if docker_check==False:
+        print(f"USAGE : python3 {sys.argv[0]} <KEY> <URL>")
     exit()
     #pass
 

@@ -168,17 +168,21 @@
 # In this case the python must be installed to path.
 ```
 
-<h2>Run with tools:</h2>
+<h2>Run with hiphp-desktop:</h2>
 
 ```bash
 # Run with hiphp_desktop tool:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
 ❯ cd hiphp
-❯ cp -r "hiphp" "tools/hiphp_desktop/"
-❯ cd tools/hiphp_desktop/
+❯ cp -r "hiphp" "hiphp-desktop/"
+❯ cd hiphp-desktop/
 ❯ pip install -r requirements.txt
 ❯ python3 main.py
+```
 
+<h2>Run with hiphp_ftp:</h2>
+
+```bash
 # run with hiphp_ftp tool:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
 ❯ cd hiphp
@@ -344,14 +348,14 @@ hiphp Commands :
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_ftp/screenshot/screenshot.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_ftp/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot1.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot1.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot1.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot1.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot2.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_desktop/screenshot/screenshot2.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot2.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot2.png" alt="hiphp by yasserbdj96">
     </a>
 </div>
 

@@ -1,4 +1,4 @@
-name: Test on Windows latest
+name: Run on Windows latest
 on: [push]
 #defaults:
 #  run:

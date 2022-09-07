@@ -1,4 +1,4 @@
-name: Test on Ubuntu latest
+name: Run on Ubuntu latest
 on: [push]
 #defaults:
 #  run:

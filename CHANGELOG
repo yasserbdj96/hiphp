@@ -1,9 +1,9 @@
-## 0.2.26 [xx-xx-2022][In Progress]
+## 0.2.26 [07-09-2022][Last Version]
  - Upgraded Docker files in order to be able to work from outside the container.
  - Add download option in hiphp_desktop.
  - Bug fixes & performance improvements.
 
-## 0.2.25 [03-09-2022][Last Version]
+## 0.2.25 [03-09-2022]
  - Fix "--down" command on windows os.
  - Color correction in the command line interface on windows os.
  - Bug fixes & performance improvements.

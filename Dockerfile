@@ -68,9 +68,9 @@ WORKDIR /wrdir
 
 COPY ./run.py /wrdir
 COPY ./hiphp /wrdir/hiphp
-COPY ./tools/hiphp_desktop /wrdir
+COPY ./hiphp-desktop/requirements.txt /wrdir/requirements-dst.txt
+COPY ./hiphp-desktop /wrdir
 COPY ./requirements.txt /wrdir/requirements.txt
-COPY ./tools/hiphp_desktop/requirements.txt /wrdir/requirements-dst.txt
 #COPY ./config_file.json /wrdir/config_file.json
 
 RUN pip install --no-cache-dir --upgrade pip

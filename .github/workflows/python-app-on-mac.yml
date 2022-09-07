@@ -1,4 +1,4 @@
-name: Test on MacOS latest
+name: Run on MacOS latest
 on: [push]
 #defaults:
 #  run:

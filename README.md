@@ -120,6 +120,7 @@
 # Local install:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
 ❯ cd hiphp
+❯ pip install -r requirements-pypi.txt
 ❯ sudo python setup.py install
 
 # Uninstall:
@@ -173,10 +174,11 @@
 ```bash
 # Run with hiphp_desktop tool:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
+❯ pip install -r requirements.txt
 ❯ cd hiphp
 ❯ cp -r "hiphp" "hiphp-desktop/"
 ❯ cd hiphp-desktop/
-❯ pip install -r requirements.txt
+❯ pip install -r requirements-dst.txt
 ❯ python3 main.py
 ```
 

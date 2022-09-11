@@ -13,6 +13,7 @@
 
 #START{
 from hexor import *
+from biglibrary import *
 
 # logo:
 def logo(__version__):
@@ -21,25 +22,38 @@ def logo(__version__):
     c_blue="#4285f4"#blue
     c_yellow="#fbbc05"#yellow
     c_green="#34a853"#green
+    c_white="#f7f7f7"
 
     color=hexor(True,"hex")
+    bl=biglibrary(returning=True)
+    logox="\n"
+    logox+=color.c(bl.center("             ▄███████▄    ▄█    █▄       ▄███████▄"),c_red)
+    logox+="\n"
+    logox+=color.c(bl.center("            ███    ███   ███    ███     ███    ███"),c_red)
+    logox+="\n"
+    logox+=color.c(bl.center("╦   ╦       ███    ███   ███    ███     ███    ███"),c_red)
+    logox+="\n"
+    logox+=color.c(bl.center("║   ║ ═╦═ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀ "),c_red)
+    logox+="\n"
+    logox+=color.c(bl.center("╠═══╣  ║    ███          ███    ███     ███       "),c_red)
+    logox+="\n"
+    logox+=color.c(bl.center("║   ║  ║    ███          ███    ███     ███       "),c_red)
+    logox+="\n"
+    logox+=color.c(bl.center("╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀     "),c_red)
+    logox+="\n"
+    logox+=color.c(bl.center("+------------------------------------------------------+"),c_red)
+    logox+="\n"
+    logox+=color.c(bl.center(f"hiphp v{__version__} by yasserbdj96"),c_green)
+    logox+="\n"
+    logox+=color.c(bl.center(f"https://yasserbdj96.github.io/hiphp/"),c_blue)
+    logox+="\n"
+    logox+=color.c(bl.center("+------------------------------------------------------+"),c_red)
+    logox+="\n"
+    logox+=color.c("\n [!] '--help' for more informations.\n",c_yellow)
+    logox+=color.c(" [!] '--exit' OR 'Ctrl+C' for exit.\n",c_yellow)
+    #logox+="\n"
 
-    spas=" "*5
-    code_by=color.c("¢σ∂є∂ ву ",c_yellow)+color.c("yasserbdj96",c_green)
-    logo+=color.c(f"""
-{spas}             ▄███████▄    ▄█    █▄       ▄███████▄ 
-{spas}            ███    ███   ███    ███     ███    ███ 
-{spas}╦   ╦       ███    ███   ███    ███     ███    ███ 
-{spas}║   ║ ═╦═ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀  
-{spas}╠═══╣  ║    ███          ███    ███     ███
-{spas}║   ║  ║    ███  V{__version__} ███    ███     ███ 
-{spas}╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀ {code_by}\n""",c_red)
-    logo+=color.c(" "*17+"https://github.com/yasserbdj96/hiphp\n",c_blue)
-    #logo+=self.color.c(" "*37+"Code by -> ",self.c_yellow)+self.color.c("yasserbdj96\n",self.c_green)
-    #logo+=self.color.c("\n - You are now connected safety. You can print the PHP commands below for comprehensive control of the site.\n",self.c_blue)
-    logo+=color.c("\n - '--help' for more informations.\n",c_yellow)
-    logo+=color.c(" - '--exit' OR 'Ctrl+C' for exit.\n\n",c_yellow)
-    return logo
+    return logox
 #
 try:
     import sys

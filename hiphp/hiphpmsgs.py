@@ -12,17 +12,21 @@
 #   |                                                          |
 
 #START{
-emsg_1="[✗] We were unable to recognize the hiphp identifier."
-emsg_2="[✗] Command not found!"
-emsg_3="[✗] We could not contact the site"
-emsg_4="[✗] The file you entered does not exist."
-emsg_5="[✗] We could not upload the file"
+errx="[✗]"
+emsg_1=f"{errx} We were unable to recognize the hiphp identifier."
+emsg_2=f"{errx} Command not found!"
+emsg_3=f"{errx} We could not contact the site"
+emsg_4=f"{errx} The file you entered does not exist."
+emsg_5=f"{errx} We could not upload the file"
+emsg_6=": Command does not exist or ended with a server error."
 
-msg_1="[!] Copy the PHP code below to the website path you entered:"
-msg_2="[!] There is a new update "
-msg_3="[!] Download the new version from 'https://github.com/yasserbdj96/hiphp'"
-msg_4="[!] No updates available"
+msgi="[!]"
+msg_1=f"{msgi} Copy the PHP code below to the website path you entered:"
+msg_2=f"{msgi} There is a new update "
+msg_3=f"{msgi} Download the new version from 'https://github.com/yasserbdj96/hiphp'"
+msg_4=f"{msgi} No updates available"
 
-smsg_1="[✓] File downloaded in: "
-smsg_2="[✓] The path has been compressed into: "
+msgs="[✓]"
+smsg_1=f"{msgs} File downloaded in: "
+smsg_2=f"{msgs} The path has been compressed into: "
 #}END.

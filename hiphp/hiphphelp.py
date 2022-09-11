@@ -12,13 +12,14 @@
 #   |                                                          |
 
 #START{
-def help(opt=""):
+def help(__version__,opt=""):
   #
   spsbar=""""""
 
   #
-  header="""hiphp Commands :
-════════════════
+  header=f"""hiphp V{__version__} - (C) 2010-2022 yasserbdj96
+https://github.com/yasserbdj96/hiphp
+
   Command                            Description
   -------                            -----------"""
 

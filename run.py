@@ -12,19 +12,16 @@
 #   |                                                          |
 
 #START{
-from hiphp import *
-
-
+import sys
+import os
 
 try:
     docker_check=False
     #
-    import os
-    import sys
-    #
     try:
         DST=os.environ['DST'] if "DST" in os.environ else False
         if DST!=False:
+            os.chdir("hiphp-desktop")
             os.system("python main.py")
             docker_check=True
     except:
@@ -38,6 +35,15 @@ except:
         print(f"USAGE : python3 {sys.argv[0]} <KEY> <URL>")
     exit()
     #pass
+
+try:
+    sys.path.insert(0,f'.{os.sep}hiphp')
+    from hiphp import *
+    from hiphp.hiphpversion import __version__
+except:
+    sys.path.insert(0, '.')
+    from hiphp import *
+    from hiphp.hiphpversion import __version__
 
 # connect:
 p1=hiphp(key=KEY,url=URL)#Default: retu=False.

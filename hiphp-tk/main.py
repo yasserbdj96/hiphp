@@ -12,7 +12,18 @@
 #   |                                                          |
 
 #START{
+import sys
 import os
+
+try:
+    sys.path.insert(0,f'..{os.sep}hiphp')
+    from hiphp import *
+    from hiphp.hiphpversion import __version__
+except:
+    sys.path.insert(0, '..')
+    from hiphp import *
+    from hiphp.hiphpversion import __version__
+
 from hiphp import *
 from hiphp.hiphpversion import __version__
 from tkinter import *
@@ -130,7 +141,7 @@ def upSelected_to():
     Reconnect()
         
 root=Tk()
-root.title('hiphp FTP')
+root.title('hiphp TK')
 try:
     try:
         photo = PhotoImage(file = "./favicon.png")
@@ -217,7 +228,7 @@ var1=IntVar()
 c1=Checkbutton(root,text='multiple selection',variable=var1,onvalue=1,offvalue=0,command=selectmode)
 c1.pack(side="top")
 
-w=Label(root,text=f"hiphp V{__version__} ftp V{ftp_version}")
+w=Label(root,text=f"hiphp V{__version__} tk V{ftp_version}")
 w.pack()
 w.place(relx=1.0,rely=1.0,anchor='se')
 

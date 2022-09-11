@@ -12,6 +12,7 @@
 #   |                                                          |
 
 #START{
+from hiphp.hiphpversion import __version__
 from hiphp.hiphpcoding import rot13,tobase64,tomd5
 from hiphp.hiphpphpfunctions import *
 from hiphp.hiphphelp import help
@@ -19,7 +20,6 @@ from hiphp.hiphpmsgs import *
 from hiphp.hiphplicense import license
 from hiphp.hiphpabout import about
 from hiphp.hiphplogo import *
-from hiphp.hiphpversion import __version__
 #from ashar import *
 from hexor import *
 #from asciitext import *
@@ -90,8 +90,8 @@ class hiphp:
         #
         key_w_color=self.color.c(self.key,self.c_red)
         url_w_color=self.color.c(self.url_w,self.c_yellow)
-        at=self.color.c("|",self.c_white_red)
-        print(logox+xxr1+key_w_color+at+url_w_color+xxr2+getcwd+xxr3)
+        at=self.color.c("||",self.c_blue)
+        print(logox+"\n"+xxr1+key_w_color+at+url_w_color+xxr2+getcwd+xxr3)
 
         #try:
         command=input(xxr4)
@@ -102,9 +102,9 @@ class hiphp:
             if command[0:6].lower()=="--help" or command[0:4].lower()=="help":
                 help_c=command.split(" ")
                 try:
-                    help(help_c[1])
+                    help(__version__,help_c[1])
                 except:
-                    print(help())
+                    print(help(__version__))
             #exit
             elif command[0:6].lower()=="--exit" or command[0:4].lower()=="exit":
                 exit()
@@ -155,7 +155,7 @@ class hiphp:
                         print(smsg_1+hiphp.download(self,zip_file_name,out_path))
 
                 except:
-                    help("--down")
+                    help(__version__,"--down")
             #zip
             elif command[0:5].lower()=="--zip" or command[0:3].lower()=="zip":
                 ziping=command.split(" ")
@@ -253,7 +253,6 @@ class hiphp:
             #rf
             elif command[0:4].lower()=="--rf" or command[0:2].lower()=="rf":
                 varss=command.split(" ")
-                
                 if varss[len(varss)-1]=="":
                     del varss[len(varss)-1]
                 print(hiphp.run_file(self,varss[1],varss[2:]))
@@ -272,7 +271,11 @@ class hiphp:
                 else:
                     hiphp.upload(self,command.split(" ")[1])
             else:
-                hiphp.do(self,self.key,self.url,self.headers,False,command)
+                comand_return=hiphp.do(self,self.key,self.url,self.headers,True,command)
+                if comand_return!="":
+                    print(comand_return)
+                else:
+                    self.color2.c(errx+" "+command+emsg_6,self.c_red)
         else:
             self.color2.c(emsg_2,self.c_red)
         hiphp.cli(self)

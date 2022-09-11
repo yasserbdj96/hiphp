@@ -19,20 +19,20 @@ if [ -z "$1" ]; then
     echo "ex:  hiphp --help               | # hiphp cli help.";
     echo "     hiphp --geth [KEY] [URL]   | # Get the hole Code.";
     echo "     hiphp [KEY] [URL]          | # Connect to the victim's website.";
-    echo "     hiphp --ftp [KEY] [URL]    | # Run hiphp as GUI with 'tools/hiphp_ftp' script.";
-    echo "     hiphp --dst                | # Run hiphp as GUI with 'tools/hiphp_desktop' script.";
+    echo "     hiphp --tk [KEY] [URL]     | # Run hiphp as GUI with 'hiphp-tk' script.";
+    echo "     hiphp --dst                | # Run hiphp as GUI with 'hiphp-desktop'.";
 
 #cli help:
 elif [ "$1" == "--help" ] ; then
     python3 "/usr/share/hiphp/hiphp.py" "--help";
 
-#hiphp_ftp:
-elif [ "$1" == "--ftp" ] ; then
-    python3 "/usr/share/hiphp/hiphp_ftp.py" "$2" "$3";
+#hiphp_tk:
+elif [ "$1" == "--tk" ] ; then
+    python3 "/usr/share/hiphp/hiphp-tk/main.py" "$2" "$3";
 
 #hiphp_desktop:
 elif [ "$1" == "--dst" ] ; then
-    python3 "/usr/share/hiphp/hiphp_desktop.py";
+    python3 "/usr/share/hiphp/hiphp-desktop/main.py";
 
 #cli:
 else

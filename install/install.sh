@@ -22,15 +22,17 @@ install() {
     sudo cp "$appname.png" "/usr/share/$appname/$appname.png";
     sudo cp "$appname.desktop" "/usr/share/applications/$appname.desktop";
     sudo cp "$appname.sh" "/usr/local/bin/$appname";
+    #sudo cp -r "../src/." "/usr/share/$appname/src";
 
-    # install hiphp_ftp script:
-    sudo cp "../tools/hiphp_ftp/main.py" "/usr/share/$appname/hiphp_ftp.py";
-    sudo cp "../tools/hiphp_ftp/favicon.png" "/usr/share/$appname/favicon.png";
-    pip install -r "../tools/hiphp_ftp/requirements.txt";
+    # install hiphp-tk script:
+    #sudo cp "../hiphp-tk/main.py" "/usr/share/$appname/hiphp_tk.py";
+    #sudo cp "../hiphp-tk/favicon.png" "/usr/share/$appname/favicon.png";
+    sudo cp -r "../hiphp-tk/." "/usr/share/$appname/hiphp-tk";
+    pip install -r "../hiphp-tk/requirements-tk.txt";
 
     # install hiphp-desktop script:
-    sudo cp "../hiphp-desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
-    sudo cp -r "../hiphp-desktop/src/." "/usr/share/$appname/src";
+    #sudo cp "../hiphp-desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
+    sudo cp -r "../hiphp-desktop/." "/usr/share/$appname/hiphp-desktop";
     pip install -r "../hiphp-desktop/requirements-dst.txt";
 }
 

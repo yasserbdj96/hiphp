@@ -12,11 +12,21 @@
 #   |                                                          |
 
 #START{
-import eel
-from hiphp import *
-from hiphp.hiphpversion import __version__
-from src.php import *
+import sys
 import os
+
+try:
+    sys.path.insert(0,f'..{os.sep}hiphp')
+    from hiphp import *
+    from hiphp.hiphpversion import __version__
+except:
+    sys.path.insert(0, '..')
+    from hiphp import *
+    from hiphp.hiphpversion import __version__
+
+import eel
+from src.php import *
+
 
 
 hiphp_desktop_version="0.2.0"

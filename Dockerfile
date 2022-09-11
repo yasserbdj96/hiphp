@@ -34,7 +34,8 @@
 
 #START{
 FROM python:3.10
-
+#FROM ubuntu
+#FROM debian:jessie
 
 # start install google-chrome:
 # Adding trusting keys to apt for repositories
@@ -43,25 +44,36 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 # Adding Google Chrome to the repositories
 RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
-# Updating apt to see and install Google Chrome
+# Updating apt to see
 RUN apt-get update -y
 
-# Magic happens
+# install Google Chrome
 RUN apt-get install -y google-chrome-stable
 
 # Installing Unzip
-RUN apt-get install -yqq unzip
+#RUN apt-get install -yqq unzip
 
 # Download the Chrome Driver
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-RUN apt-get update -y
-RUN apt-get install -y google-chrome-stable
+#RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+#RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+#RUN apt-get update -y
+#RUN apt-get install -y google-chrome-stable
 
 # install chromedriver
 RUN apt-get install -yqq unzip
 RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
 RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
+
+
+#ENV CHROME_VERSION "google-chrome-stable"
+#RUN sed -i -- 's&deb http://deb.debian.org/debian jessie-updates main&#deb http://deb.debian.org/debian jessie-updates main&g' /etc/apt/sources.list \
+#  && apt-get update && apt-get install wget -y
+#ENV CHROME_VERSION "google-chrome-stable"
+#RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+#  && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list \
+#  && apt-get update && apt-get -qqy install ${CHROME_VERSION:-google-chrome-stable}
+
+
 # end install google-chrome.
 
 WORKDIR /wrdir
@@ -69,13 +81,13 @@ WORKDIR /wrdir
 COPY ./run.py /wrdir
 COPY ./hiphp /wrdir/hiphp
 #COPY ./hiphp-desktop/requirements.txt /wrdir/requirements-dst.txt
-COPY ./hiphp-desktop /wrdir
+COPY ./hiphp-desktop /wrdir/hiphp-desktop
 COPY ./requirements.txt /wrdir/requirements.txt
 #COPY ./config_file.json /wrdir/config_file.json
 
 RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /wrdir/requirements.txt
-RUN pip install --no-cache-dir --upgrade -r /wrdir/requirements-dst.txt
+RUN pip install --no-cache-dir --upgrade -r /wrdir/hiphp-desktop/requirements-dst.txt
 
 EXPOSE 8080
 

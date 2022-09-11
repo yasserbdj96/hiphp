@@ -130,8 +130,9 @@
 <h2>Ubuntu Installation:</h2>
 
 ```bash
-# Install:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
+
+# Install:
 ❯ pip install -r hiphp/requirements.txt
 ❯ cd hiphp/install
 ❯ bash install.sh -i
@@ -146,8 +147,8 @@
 ❯ hiphp --help                # hiphp cli help.
 ❯ hiphp --geth [KEY] [URL]    # Get the hole Code.
 ❯ hiphp [KEY] [URL]           # Connect to the victim's website.
-❯ hiphp --ftp [KEY] [URL]     # Run hiphp as GUI with 'tools/hiphp_ftp' script.
-❯ hiphp --dst                 # Run hiphp as GUI with 'tools/hiphp_desktop' script.
+❯ hiphp --tk [KEY] [URL]      # Run hiphp as GUI with 'hiphp-tk' script.
+❯ hiphp --dst                 # Run hiphp as GUI with 'hiphp-desktop'.
 
 # Uninstall:
 ❯ cd hiphp/install
@@ -172,26 +173,31 @@
 <h2>Run with hiphp-desktop:</h2>
 
 ```bash
-# Run with hiphp_desktop tool:
+# Run with hiphp-desktop tool:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
-❯ pip install -r requirements.txt
 ❯ cd hiphp
-❯ cp -r "hiphp" "hiphp-desktop/"
-❯ cd hiphp-desktop/
+❯ pip install -r requirements.txt
+❯ cd hiphp-desktop
 ❯ pip install -r requirements-dst.txt
 ❯ python3 main.py
+
+# Or if you install it on Ubuntu:
+❯ hiphp --dst
 ```
 
-<h2>Run with hiphp_ftp:</h2>
+<h2>Run with hiphp-tk:</h2>
 
 ```bash
-# run with hiphp_ftp tool:
+# run with hiphp-tk tool:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
 ❯ cd hiphp
-❯ cp -r "hiphp" "tools/hiphp_ftp/"
-❯ cd tools/hiphp_ftp/
 ❯ pip install -r requirements.txt
+❯ cd hiphp-tk
+❯ pip install -r requirements-tk.txt
 ❯ python3 main.py <KEY> <URL>
+
+# Or if you install it on Ubuntu:
+❯ hiphp --tk <KEY> <URL>
 ```
 
 <h2>Script Usage:</h2>
@@ -347,8 +353,8 @@ hiphp Commands :
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_ftp/screenshot/screenshot.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/tools/hiphp_ftp/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-tk/screenshot/screenshot.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-tk/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
@@ -364,6 +370,11 @@ hiphp Commands :
 <h2>Changelog History:</h2>
 
 ```
+## 0.2.27-beta [xx-09-2022][In Progress]
+ - Updated some CLI Errors messages.
+ - Updated CLI logo.
+ - Bug fixes & performance improvements.
+
 ## 0.2.26 [07-09-2022][Last Version]
  - Upgraded Docker files in order to be able to work from outside the container.
  - Add download option in hiphp_desktop.

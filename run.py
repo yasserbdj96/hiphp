@@ -37,13 +37,17 @@ except:
     #pass
 
 try:
-    sys.path.insert(0,f'.{os.sep}hiphp')
+
     from hiphp import *
     from hiphp.hiphpversion import __version__
 except:
-    sys.path.insert(0, '.')
+    sys.path.insert(0,f'.{os.sep}hiphp')
+
     from hiphp import *
+
     from hiphp.hiphpversion import __version__
+
+
 
 # connect:
 p1=hiphp(key=KEY,url=URL)#Default: retu=False.

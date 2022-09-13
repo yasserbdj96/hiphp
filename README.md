@@ -8,6 +8,7 @@
 [![Test on MacOS latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
 [![pypi-setup](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml)
 [![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
+[![Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)
 [![ubuntu install](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
 [![Deploy static content to Pages](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml)
 [![CodeQL](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)

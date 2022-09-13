@@ -3,7 +3,7 @@ name: Github Container Registry
 on:
   push:
     branches:
-      - server
+      - main
 
 jobs:
   dockerloginbuildpush:

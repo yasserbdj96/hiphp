@@ -370,12 +370,14 @@ hiphp Commands :
 <h2>Changelog History:</h2>
 
 ```
-## 0.2.27-beta [xx-09-2022][In Progress]
+## 0.2.27 [13-09-2022][Last Version]
  - Updated some CLI Errors messages.
  - Updated CLI logo.
+ - Delete unused codes.
+ - Upgrading php-desktop in order to avoid errors that occur with various systems.
  - Bug fixes & performance improvements.
 
-## 0.2.26 [07-09-2022][Last Version]
+## 0.2.26 [07-09-2022]
  - Upgraded Docker files in order to be able to work from outside the container.
  - Add download option in hiphp_desktop.
  - Bug fixes & performance improvements.

@@ -34,46 +34,18 @@
 
 #START{
 FROM python:3.10
-#FROM ubuntu
-#FROM debian:jessie
 
 # start install google-chrome:
-# Adding trusting keys to apt for repositories
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-
-# Adding Google Chrome to the repositories
-RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-
-# Updating apt to see
-RUN apt-get update -y
-
-# install Google Chrome
-RUN apt-get install -y google-chrome-stable
-
-# Installing Unzip
-#RUN apt-get install -yqq unzip
-
 # Download the Chrome Driver
-#RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-#RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-#RUN apt-get update -y
-#RUN apt-get install -y google-chrome-stable
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+RUN apt-get update -y
+RUN apt-get install -y google-chrome-stable
 
 # install chromedriver
 RUN apt-get install -yqq unzip
 RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
 RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
-
-
-#ENV CHROME_VERSION "google-chrome-stable"
-#RUN sed -i -- 's&deb http://deb.debian.org/debian jessie-updates main&#deb http://deb.debian.org/debian jessie-updates main&g' /etc/apt/sources.list \
-#  && apt-get update && apt-get install wget -y
-#ENV CHROME_VERSION "google-chrome-stable"
-#RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-#  && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list \
-#  && apt-get update && apt-get -qqy install ${CHROME_VERSION:-google-chrome-stable}
-
-
 # end install google-chrome.
 
 WORKDIR /wrdir

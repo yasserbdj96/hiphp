@@ -22,7 +22,7 @@ try:
         DST=os.environ['DST'] if "DST" in os.environ else False
         if DST!=False:
             os.chdir("hiphp-desktop")
-            os.system("python main.py")
+            os.system("python main.py docker")
             docker_check=True
     except:
         pass

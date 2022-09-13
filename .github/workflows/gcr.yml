@@ -1,0 +1,22 @@
+name: Github Container Registry
+
+on:
+  push:
+    branches:
+      - server
+
+jobs:
+  dockerloginbuildpush:
+    runs-on: ubuntu-latest
+    steps:
+      - name: login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.CR_PAT }}
+      - uses: actions/checkout@v2
+      - name: create image from repository
+        run: docker build -t ghcr.io/${{ github.actor }}/hiphp .
+      - name: push image to GitHub Container Registry
+        run: docker push ghcr.io/${{ github.actor }}/hiphp:latest

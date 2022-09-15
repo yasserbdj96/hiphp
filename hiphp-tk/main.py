@@ -17,17 +17,22 @@ import os
 
 try:
     try:
-        from hiphp import *
-        from hiphp.hiphpversion import __version__
-    except:
         sys.path.insert(0,f'..{os.sep}hiphp')
         from hiphp import *
         from hiphp.hiphpversion import __version__
+    except:
+        # this just if hiphp installed on ubuntu:
+        sys.path.insert(0, '/usr/share/hiphp/')
+        from hiphp import *
+        from hiphp.hiphpversion import __version__
 except:
-    # this just if hiphp installed on ubuntu:
-    sys.path.insert(0, '/usr/share/hiphp/')
-    from hiphp import *
-    from hiphp.hiphpversion import __version__
+    try:
+        from hiphp import *
+        from hiphp.hiphpversion import __version__
+    except:
+        sys.path.insert(0, '..')
+        from hiphp import *
+        from hiphp.hiphpversion import __version__
 
 from tkinter import *
 from tkinter import filedialog

@@ -30,21 +30,26 @@ function connect(){
 
                         
                         var file_type=(/[.]/.exec(pathxx)) ? /[^.]+$/.exec(pathxx) : undefined;
-                        if (file_type=="php"){
-                            var img_icon="";//"<img class='img_icon' src='./icons/php.png'>";
-                        }else{
-                            var img_icon="";
+                        if (file_type=="zip" || file_type=="rar"){
+                            var img_icon='<i class="fa fa-file-archive-o c_green"></i>';//"<img class='img_icon' src='./icons/php.png'>";
+                        }else if (file_type=="png" || file_type=="jpg" || file_type=="jpeg" || file_type=="gif"){
+                            var img_icon='<i class="fa fa-file-image-o c_red"></i>';
+                        }else if (file_type=="txt" || file_type=="htaccess"){
+                            var img_icon='<i class="fa fa-file-text-o c_orange"></i>';
+                        }
+                        else{
+                            var img_icon='<i class="fa fa-file-o c_blue"></i>';
                         }
 
                         var permxx='<a class="pointer" onclick="permi('+"'"+pathxx+"',"+"'"+xx[1]+"'"+')">'+xx[1]+'</a>';
                         var s=' ';//space
-                        var edit='<a class="pointer" onclick="cat('+"'"+pathxx+"'"+')">📝</a>'+s;
-                        var del='<a class="pointer" onclick="del('+"'"+pathxx+"'"+')">❌</a>'+s;
-                        var ren='<a class="pointer" onclick="ren('+"'"+pathxx+"'"+')">✏️</a>'+s;
-                        var down='<a class="pointer" onclick="download_file('+"'"+pathxx+"'"+')">📥</a>'+s;
+                        var edit='<a class="pointer" onclick="cat('+"'"+pathxx+"'"+')"><i class="fa fa-pencil c_blue"></i></a>'+s;
+                        var del='<a class="pointer" onclick="del('+"'"+pathxx+"'"+')"><i class="fa fa-trash-o c_red"></i></a>'+s;
+                        var ren='<a class="pointer" onclick="ren('+"'"+pathxx+"'"+')"><i class="fa fa-i-cursor c_orange"></i></a>'+s;
+                        var down='<a class="pointer" onclick="download_file('+"'"+pathxx+"'"+')"><i class="fa fa-download c_green"></i></a>'+s;
                         var check='<input type="checkbox">';
                         //var down='<a class="pointer" onclick="down('+"'"+pathxx+"'"+')">dddd</a>'+s;
-                        ls+='<tr><td>'+check+" "+img_icon+pathxx+'</td><td>'+permxx+'</td><td>'+edit+ren+down+del+'</td></tr>';
+                        ls+='<tr><td>'+check+" "+img_icon+" "+pathxx+'</td><td>'+permxx+'</td><td>'+edit+ren+down+del+'</td></tr>';
                     }
                     document.getElementById("ls").innerHTML=ls;
                 })

@@ -27,7 +27,7 @@ input[type=text] {
     margin: 4px 0;
     box-sizing: border-box;
 }
-input[type=button]{
+input[type=button],.button{
     background-color: #04AA6D;
     border: none;
     color: white;
@@ -78,6 +78,10 @@ spam{
 
 spam:hover {
   background-color: #035638;
+}
+
+.padding_11{
+  padding: 11px;
 }
 
 .padding_10{
@@ -183,4 +187,18 @@ textarea{
   font-size: 10px;
   display: none;
 }
+.c_red{
+  color:red;
+}
+.c_blue{
+  color:rgb(101 101 227);
+}
+.c_orange{
+  color: rgb(219, 126, 19);
+}
+.c_green{
+  color: #08a76d;
+}
+
+
 /*}END.*/

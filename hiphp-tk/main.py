@@ -16,16 +16,19 @@ import sys
 import os
 
 try:
-    sys.path.insert(0,f'..{os.sep}hiphp')
-    from hiphp import *
-    from hiphp.hiphpversion import __version__
+    try:
+        from hiphp import *
+        from hiphp.hiphpversion import __version__
+    except:
+        sys.path.insert(0,f'..{os.sep}hiphp')
+        from hiphp import *
+        from hiphp.hiphpversion import __version__
 except:
-    sys.path.insert(0, '..')
+    # this just if hiphp installed on ubuntu:
+    sys.path.insert(0, '/usr/share/hiphp/')
     from hiphp import *
     from hiphp.hiphpversion import __version__
 
-from hiphp import *
-from hiphp.hiphpversion import __version__
 from tkinter import *
 from tkinter import filedialog
 from chardet import detect

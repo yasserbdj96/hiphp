@@ -40,13 +40,13 @@ class hiphp:
     #__init__:
     def __init__(self,key,url,retu=False):
         #
-        self.key=tomd5(key)# Encrypt the 'key' with 'md5'.
-        self.url=url
+        self.key=tomd5(str(key))# Encrypt the 'key' with 'md5'.
+        self.url=str(url)
         self.retu=retu
 
         #
         url_w=re.compile(r"https?://(www\.)?")
-        self.url_w=url_w.sub('',url).strip().strip('/')
+        self.url_w=url_w.sub('',str(url)).strip().strip('/')
         self.headers={'User-Agent':self.key}
 
         #colors with hexor:

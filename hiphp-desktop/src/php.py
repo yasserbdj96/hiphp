@@ -35,6 +35,33 @@ echo json_encode(getDirContents('./'));"""
 def php_cat(path):
     x=f"echo file_get_contents('{path}');"
     return x
+#info:
+def php_file_info(path):
+    x="""
+    function formatSizeUnits($bytes){
+        if ($bytes >= 1073741824){
+            $bytes = number_format($bytes / 1073741824, 2) . ' GB';
+        }elseif ($bytes >= 1048576){
+            $bytes = number_format($bytes / 1048576, 2) . ' MB';
+        }elseif ($bytes >= 1024){
+            $bytes = number_format($bytes / 1024, 2) . ' KB';
+        }elseif ($bytes > 1){
+            $bytes = $bytes . ' bytes';
+        }elseif ($bytes == 1){
+            $bytes = $bytes . ' byte';
+        }else{
+            $bytes = '0 bytes';
+        }
+        return $bytes;
+    }"""+f"""
+    $filepath = '{path}';
+    echo  'File Size: '.formatSizeUnits(filesize($filepath)).'\n';
+    $path_parts = pathinfo($filepath);
+    echo 'Dir Name: '.$path_parts['dirname'], "\n";
+    echo 'Base Name: '.$path_parts['basename'], "\n";
+    echo 'Extension: '.$path_parts['extension'], "\n";
+    echo 'File Name: '.$path_parts['filename'], "\n";"""
+    return x
 #save:
 def php_save(path,content):
     x="""$path=str_replace("./","/",'"""+path+"""');

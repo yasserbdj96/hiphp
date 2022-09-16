@@ -354,17 +354,17 @@ hiphp Commands :
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-tk/screenshot/screenshot.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-tk/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot5.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot5.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot6.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot6.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot1.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot1.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot7.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot7.png" alt="hiphp by yasserbdj96">
     </a>
-    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot2.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/hiphp-desktop/screenshot/screenshot2.png" alt="hiphp by yasserbdj96">
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot8.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot8.png" alt="hiphp by yasserbdj96">
     </a>
 </div>
 
@@ -373,8 +373,10 @@ hiphp Commands :
 ```
 ## 0.2.28 [XX-09-2022][In Progress]
  - Add "font-awesome" to "php-desktop".
+ - Add icons to "php-desktop".
+ - Add auto login to "php-desktop".
+ - Add file information to "php-desktop".
  - Fix "hiphp --dst" & "hiphp --tk" after installation on Ubuntu.
- - New icons for "php-desktop".
  - Bug fixes & performance improvements.
 
 ## 0.2.27 [13-09-2022][Last Version]

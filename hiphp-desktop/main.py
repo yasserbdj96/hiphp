@@ -86,6 +86,12 @@ def delte(key,url,path):
     p1=hiphp(key,url,retu=True)
     return p1.run(php_delte(path))
 
+#info:
+@eel.expose
+def info(key,url,path):
+    p1=hiphp(key,url,retu=True)
+    return p1.run(php_file_info(path))
+
 #rename:
 @eel.expose
 def ren(key,url,path,newname):

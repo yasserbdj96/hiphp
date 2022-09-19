@@ -122,6 +122,7 @@ function back(){
         pass(); // pass exception object to error handler
     }
     document.getElementById("br").style.display='block';
+    document.getElementById("settings").style.display='none';
     var url=document.getElementById("url").value;
     if(url!=""){
         document.title=url;
@@ -323,4 +324,12 @@ function eraseCookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 25 Jan 1996 00:00:01 GMT;';
 }
 function pass(){}
+
+//
+function settings(){
+    document.getElementById("return").style.display='block';
+    document.getElementById("ls").style.display='none';
+    document.getElementById("settings").style.display='block';
+    //document.getElementById("br").style.display='none';
+}
 //}END.

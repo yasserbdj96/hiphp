@@ -19,22 +19,46 @@
             
             
             <spam style="float:right" class="pointer padding_11" onclick="deconnect()"><i class="fa fa-sign-out"></i></spam>
+            <spam style="float:right" class="pointer padding_11" onclick="settings()"><i class="fa fa-cogs"></i></spam>
             <spam style="float:right" class="pointer padding_11" onclick="connect()"><i class="fa fa-undo"></i></spam>
-            
             <spam id="add" style="float:right" class="pointer padding_11" onclick="add()"><i class="fa fa-plus"></i></spam>
             <!--spam id="down"></spam-->
             
             <!--spam id="reload" class="pointer reconnect " onclick="connect()"><h2 style="margin-top:-7px;margin-left:-3px;">R</h2></spam-->
             
+            <!--ls-->
             <table id="ls"></table>
             
-            <spam id="br"><br><br><br></spam>
+            <!--header-->
+            <div id="br"><br><br><br></div>
+
             <!--div id="check" class="select">
                 <spam><input type="checkbox">Un/Select</spam>
                 <--spam><input type="checkbox">unselect</spam>
             </div-->
             
+            <!--edit-->
             <textarea id="cat" class="cat"></textarea>
+
+            <div id="settings" class="settings">
+                <div class="holder">
+                    <table width="100%">
+                        <tr>
+                            <td>Dark Mode</td>
+                            <td><div><input type="checkbox" /><span></span></div></td>
+                        </tr>
+                        <tr>
+                            <td>Let my friends see my phone number</td>
+                            <td><div><input type="checkbox" checked="" /><span></span></div></td>
+                        </tr>
+                        <tr>
+                            <td>Let my friends see my email address</td>
+                            <td><div><input type="checkbox" /><span></span></div></td>
+                        </tr>
+                    </table>
+                    <center><button class="button" onclick=""><i class="fa fa-floppy-o"></i> Save Settings</button></center>
+                </div>
+            </div>
         </div>
 
         <div id="login" >

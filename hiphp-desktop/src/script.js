@@ -35,7 +35,7 @@ function connect(how=""){
     eel.connect(key,url)(
         function(ret){
             if(ret=="connected"){
-                document.title=url;
+                document.title="hiphp : "+url;
                 document.getElementById("login").style.display='none';
                 document.getElementById("connected").style.display='block';
                 eel.ls(key,url)(function(retu){
@@ -102,7 +102,7 @@ function cat(path){
                 pass(); // pass exception object to error handler
             }
             document.getElementById("br").style.display='none';
-            document.title=path;
+            document.title="hiphp : "+path;
         }
     )
 }
@@ -125,7 +125,7 @@ function back(){
     document.getElementById("settings").style.display='none';
     var url=document.getElementById("url").value;
     if(url!=""){
-        document.title=url;
+        document.title="hiphp : "+url;
     }else{
         document.title=originalTitle;
     }
@@ -338,5 +338,6 @@ function settings(){
     document.getElementById("settings").style.display='block';
     document.getElementById("add").style.display='none';
     //document.getElementById("br").style.display='none';
+    document.title="hiphp : settings";
 }
 //}END.

@@ -52,6 +52,17 @@ input[type=button],.button{
   text-align: center;
 }
 
+.fs20{
+  font-size: 20px;
+}
+
+.ls_list{
+  position: absolute;
+  margin: 12px;
+}
+.inline-block{
+  display: inline-block;
+}
 .add_new{
     z-index: 1;
     position: fixed;

@@ -40,7 +40,7 @@ function connect(how=""){
                 document.getElementById("connected").style.display='block';
                 eel.ls(key,url)(function(retu){
                     var retu=JSON.parse(retu);
-                    ls="<tr><th>Path</th><th>Permissions</th><th>Options</th></tr>";
+                    ls="<tr><th style='width:75%;'>Path</th><th>Permissions</th><th>Options</th></tr>";
                     for (let i = 0; i < retu.length; i++) {
                         var xx=retu[i].split(':');
                         var pathxx=xx[0];
@@ -60,14 +60,14 @@ function connect(how=""){
 
                         var permxx='<a class="pointer" onclick="permi('+"'"+pathxx+"',"+"'"+xx[1]+"'"+')">'+xx[1]+'</a>';
                         var s=' ';//space
-                        var edit='<a class="pointer" onclick="cat('+"'"+pathxx+"'"+')"><i class="fa fa-pencil c_blue"></i></a>'+s;
-                        var del='<a class="pointer" onclick="del('+"'"+pathxx+"'"+')"><i class="fa fa-trash-o c_red"></i></a>'+s;
-                        var ren='<a class="pointer" onclick="ren('+"'"+pathxx+"'"+')"><i class="fa fa-i-cursor c_orange"></i></a>'+s;
-                        var down='<a class="pointer" onclick="download_file('+"'"+pathxx+"'"+')"><i class="fa fa-download c_green"></i></a>'+s;
-                        var info='<a class="pointer" onclick="file_info('+"'"+pathxx+"'"+')"><i class="fa fa-info-circle c_orange"></i></a>'+s;
-                        var check='<input type="checkbox">';
+                        var edit='<a class="pointer fs20" onclick="cat('+"'"+pathxx+"'"+')"><i class="fa fa-pencil c_blue"></i></a>'+s;
+                        var del='<a class="pointer fs20" onclick="del('+"'"+pathxx+"'"+')"><i class="fa fa-trash-o c_red"></i></a>'+s;
+                        var ren='<a class="pointer fs20" onclick="ren('+"'"+pathxx+"'"+')"><i class="fa fa-i-cursor c_orange"></i></a>'+s;
+                        var down='<a class="pointer fs20" onclick="download_file('+"'"+pathxx+"'"+')"><i class="fa fa-download c_green"></i></a>'+s;
+                        var info='<a class="pointer fs20" onclick="file_info('+"'"+pathxx+"'"+')"><i class="fa fa-info-circle c_orange"></i></a>'+s;
+                        var check='<div class="inline-block"><input type="checkbox"/><span></span></div>';
                         //var down='<a class="pointer" onclick="down('+"'"+pathxx+"'"+')">dddd</a>'+s;
-                        ls+='<tr><td>'+check+" "+img_icon+" "+pathxx+'</td><td>'+permxx+'</td><td>'+edit+ren+down+del+info+'</td></tr>';
+                        ls+='<tr><td>'+check+" <div class='ls_list inline-block'>"+img_icon+" "+pathxx+'</div></td><td>'+permxx+'</td><td>'+edit+ren+down+del+info+'</td></tr>';
                     }
                     document.getElementById("ls").innerHTML=ls;
                 })

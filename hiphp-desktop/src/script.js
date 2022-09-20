@@ -327,9 +327,16 @@ function pass(){}
 
 //
 function settings(){
+    try {
+        document.getElementById("cat").style.display='none';
+        document.getElementById("ls").style.display='none';
+      } catch (e) {
+        pass(); // pass exception object to error handler
+    }
+    document.getElementById("br").style.display='block';
     document.getElementById("return").style.display='block';
-    document.getElementById("ls").style.display='none';
     document.getElementById("settings").style.display='block';
+    document.getElementById("add").style.display='none';
     //document.getElementById("br").style.display='none';
 }
 //}END.

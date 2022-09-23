@@ -340,4 +340,22 @@ function settings(){
     //document.getElementById("br").style.display='none';
     document.title="hiphp : settings";
 }
+
+/*
+function check(clickedElement){
+        var checked_var=clickedElement;
+        //var checked_var=event.target;
+        //alert(checked_var);
+        if (checked_var.checked) {
+            checked_var.checked = false;
+            alert("false");
+        } else {
+            checked_var.checked = true;
+            alert("true");
+        }
+        //console.log(event.srcElement.id);
+    //}
+    //window.addEventListener('click',onClick);
+    //.checked = true;
+}*/
 //}END.

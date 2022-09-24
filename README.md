@@ -377,6 +377,7 @@ hiphp Commands :
  - Add icons to "php-desktop".
  - Add auto login to "php-desktop".
  - Add file information to "php-desktop".
+ - Add line numbering to textarea editor in "php-desktop".
  - Fix "hiphp --dst" & "hiphp --tk" after installation on Ubuntu.
  - Bug fixes & performance improvements.
 

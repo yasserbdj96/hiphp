@@ -89,8 +89,10 @@ function cat(path){
         function(ret){
             document.getElementById("temp").innerText=path;
             document.getElementById("cat").style.display='block';
+            document.getElementById("codeEditor").style.display='block';
             document.getElementById("cat").value=ret;
             document.getElementById("cat").innerHTML=ret;
+            lineCounter(ret);
             document.getElementById("return").style.display='block';
             document.getElementById("save").style.display='block';
             document.getElementById("ls").style.display='none';
@@ -103,6 +105,7 @@ function cat(path){
             }
             document.getElementById("br").style.display='none';
             document.title="hiphp : "+path;
+           
         }
     )
 }
@@ -111,6 +114,7 @@ function back(){
     document.getElementById("ls").style.display='revert';
     document.getElementById("add").style.display='block';
     document.getElementById("cat").innerHTML='';
+    document.getElementById("codeEditor").style.display='none';
     document.getElementById("temp").innerText='';
     document.getElementById("cat").style.display='none';
     document.getElementById("return").style.display='none';
@@ -330,6 +334,8 @@ function settings(){
     try {
         document.getElementById("cat").style.display='none';
         document.getElementById("ls").style.display='none';
+        document.getElementById("codeEditor").style.display='none';
+        document.getElementById("save").style.display='none';
       } catch (e) {
         pass(); // pass exception object to error handler
     }
@@ -358,4 +364,51 @@ function check(clickedElement){
     //window.addEventListener('click',onClick);
     //.checked = true;
 }*/
+
+
+/**/
+function lineCounter(code){
+    var htmlTemplateStr = code;
+			var codeEditor = document.getElementById('cat');
+			var lineCounter = document.getElementById('lineCounter');
+			
+			var lineCountCache = 0;
+			function line_counter() {
+		        var lineCount = codeEditor.value.split('\n').length;
+		        var outarr = new Array();
+		        if (lineCountCache != lineCount) {
+		            for (var x = 0; x < lineCount; x++) {
+		                outarr[x] = (x + 1) + '.';
+		            }
+		            lineCounter.value = outarr.join('\n');
+		        }
+		        lineCountCache = lineCount;
+			}
+
+			codeEditor.addEventListener('scroll', () => {
+				lineCounter.scrollTop = codeEditor.scrollTop;
+			    lineCounter.scrollLeft = codeEditor.scrollLeft;
+                //alert("1");
+			});
+
+			codeEditor.addEventListener('input', () => {
+				line_counter();
+                //alert("2");
+			});
+
+			codeEditor.addEventListener('keydown', (e) => {
+			    let { keyCode } = e;
+			    let { value, selectionStart, selectionEnd } = codeEditor;
+
+			    if (keyCode === 9) {  // TAB = 9
+			      e.preventDefault();
+			      codeEditor.value = value.slice(0, selectionStart) + '\t' + value.slice(selectionEnd);
+			      codeEditor.setSelectionRange(selectionStart+2, selectionStart+1)
+			    }
+                //alert("3");
+		  	});
+
+		  	codeEditor.value = htmlTemplateStr;
+		  	line_counter();
+}
 //}END.

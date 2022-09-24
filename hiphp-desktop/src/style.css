@@ -43,7 +43,9 @@ input[type=button],.button{
     background-color: #04AA6D;
     height: 39px;
 }
-
+#codeEditor{
+  display:none;
+}
 .w15{
   width: 15px;
 }
@@ -111,14 +113,6 @@ spam:hover {
   padding: 9px;
 }
 
-.cat{
-    margin-top: -40px;
-    display:none;
-    width: 100%;
-    height: calc(100vh - 40px);
-    padding: 5px;
-    background-color: #e7e7e7;
-}
 .settings{
   margin-top: -14px;
   display:none;
@@ -150,18 +144,18 @@ spam:hover {
   width: 20px;
 }
 
-textarea{
+/*textarea{
     padding: 10px;
     line-height: 1.2;
     /*border-radius: 5px;*/
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;
     /*box-shadow: 1px 1px 1px #999;*/
-    resize: none;
+    /*resize: none;
     font-size: .8rem;
     /*letter-spacing: 1px;*/
-    border:0px;
+    /*border:0px;
     outline:0px;
-}
+}*/
 
 /**/
 #ls {
@@ -330,4 +324,52 @@ input[type=submit] {
   text-align: center;
   padding: 12px 20px 14px;
 }*/
+
+/**/
+#cat, #lineCounter {
+  font-family: lucida console, courier new, courier, monospace;
+  margin: 0;
+    padding: 10px 0;
+    height: 75vh;
+    border-radius: 0;
+    resize: none;
+    font-size: 16px;
+    line-height: 1.2;
+    outline: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#cat {
+    padding-left: calc(3.5rem + 5px);
+    width:100%;
+    /* Determine appearance of code editor */
+    background-color:#272822;
+    border-color:#272822;
+    color:#ffffff;
+    height: calc(100vh - 38px);
+    padding-top: calc(12px);
+}
+#lineCounter {
+    display: flex;
+    border-color: transparent;
+    overflow-y: hidden;
+    text-align: right;
+    box-shadow: none;
+    color: #707070;
+    background-color: #d8d8d8;
+    position: absolute;
+    width: 3.5rem;
+    /* Determine appearance of line counter */
+    background-color:#3E3D32;
+    border-color:#3E3D32;
+    color:#928869;
+    margin-top: 38px;
+    /*display:none;*/
+    height: calc(100vh - 38px);
+}
+#lineCounter:focus-visible,
+#cat:focus-visible {
+    outline:none;
+}
 /*}END.*/

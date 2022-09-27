@@ -17,6 +17,8 @@ jobs:
         pip install
         build
         --user
+    - name: Install twine
+      run: pip install twine
     - name: Build a binary wheel and a source tarball
       run: >-
         python -m

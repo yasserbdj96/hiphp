@@ -19,4 +19,4 @@ jobs:
       - name: create image from repository
         run: docker build -t ghcr.io/${{ github.actor }}/hiphp .
       - name: push image to GitHub Container Registry
-        run: docker push ghcr.io/${{ github.actor }}/hiphp:latest
+        run: docker push gchr.io/${{ github.actor }}/hiphp:latest

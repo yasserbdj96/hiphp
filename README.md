@@ -372,7 +372,7 @@ hiphp Commands :
 <h2>Changelog History:</h2>
 
 ```
-## 0.2.28 [XX-09-2022][In Progress]
+## 0.2.28 [27-09-2022][Last Version]
  - Add "font-awesome" to "php-desktop".
  - Add icons to "php-desktop".
  - Add auto login to "php-desktop".
@@ -381,7 +381,7 @@ hiphp Commands :
  - Fix "hiphp --dst" & "hiphp --tk" after installation on Ubuntu.
  - Bug fixes & performance improvements.
 
-## 0.2.27 [13-09-2022][Last Version]
+## 0.2.27 [13-09-2022]
  - Updated some CLI Errors messages.
  - Updated CLI logo.
  - Delete unused codes.

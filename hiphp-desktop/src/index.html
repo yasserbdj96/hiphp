@@ -44,15 +44,15 @@
                     <table width="100%">
                         <tr>
                             <td>Dark Mode</td>
-                            <td><div><input type="checkbox" onclick="check(this)"/><span></span></div></td>
+                            <td><div class="tc"><input type="checkbox" onclick="check(this)"/><span></span></div></td>
                         </tr>
                         <tr>
                             <td>Option 1</td>
-                            <td><div><input type="checkbox" onclick="check(this)"/><span></span></div></td>
+                            <td><div class="tc"><input type="checkbox" onclick="check(this)"/><span></span></div></td>
                         </tr>
                         <tr>
                             <td>Option 2</td>
-                            <td><div><input type="checkbox" onclick="check(this)"/><span></span></div></td>
+                            <td><div class="tc"><input type="checkbox" onclick="check(this)"/><span></span></div></td>
                         </tr>
                     </table>
                     <center><button class="button" onclick=""><i class="fa fa-floppy-o"></i> Save Settings</button></center>
@@ -62,8 +62,8 @@
 
         <div id="login" >
             <img src="./hiphp_logo.png" style="width: 160px;" onload="version()"><br>
-            <input type="text" id="url" value="http://localhost/index.php" style="width:50%;" placeholder="Url"><br>
-            <input type="text" id="key" value="123" placeholder="Key" style="width:50%;"><br>
+            <input type="text" id="url" value="" style="width:50%;" placeholder="Url EX: http://localhost/index.php"><br>
+            <input type="text" id="key" placeholder="Key" style="width:50%;"><br>
             <button class="button" onclick="connect()"><i class="fa fa-sign-in"></i> Login</button><br>
             <div class="version" id="version"></div>
         </div>

@@ -11,7 +11,8 @@ jobs:
     steps:
       #- uses: docker/login-action@v2
       - name: login to GitHub Container Registry
-        run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.CR_PAT }}
+        run: export CR_PAT=${{ secrets.CR_PAT }}
+        run: echo $CR_PAT | docker login ghcr.io --username ${{ github.actor }} --password-stdin
       - uses: actions/checkout@v2
       - name: create image from repository
         run: docker build -t ghcr.io/${{ github.actor }}/hiphp .

@@ -79,6 +79,8 @@ input[type=button],.button{
     border: 2px solid;
 }
 
+.tc{text-align:center;}
+
 .reconnectx{
     z-index: 1;
     position: fixed;

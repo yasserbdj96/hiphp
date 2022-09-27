@@ -15,6 +15,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.CR_PAT }}
+      - run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - uses: actions/checkout@v2
       - name: create image from repository
         run: docker build -t ghcr.io/${{ github.actor }}/hiphp .

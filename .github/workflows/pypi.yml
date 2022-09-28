@@ -29,7 +29,7 @@ jobs:
       - name: Create Workspace Folder
         run: mkdir -p wrdir && mkdir -p wrdir/hiphp
       - name: Copy Files to Workspace Folder
-        run: cp -r hiphp/* wrdir/hiphp && cp setup.py wrdir/setup.py && cp setup.cfg wrdir/setup.cfg && cp pipup.py wrdir/pipup.py
+        run: cp -r hiphp/* wrdir/hiphp && cp setup.py wrdir/setup.py && cp setup.cfg wrdir/setup.cfg && cp pypiup.py wrdir/pypiup.py
       - name: pip Upgrade
         run: python -m pip install --upgrade pip
       #- name: Install twine
@@ -37,4 +37,4 @@ jobs:
       - name: Install pypi requirements
         run: pip install -r requirements-pypi.txt
       - name: Run setup.py File
-        run: python wrdir/pipup.py ${{ github.actor }} ${{ secrets.PYPI_API_TOKEN }}
+        run: python wrdir/pypiup.py ${{ github.actor }} ${{ secrets.PYPI_API_TOKEN }}

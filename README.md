@@ -1,8 +1,10 @@
-<img align="right" height="200" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
-<h2>hiphp for control php websites.</h2>
-<p>hiphp is BackDoor to control php based sites and hiphp can be controlled by sending commands, files and tokens to the site using http/https protocol. After copying HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it and read all files, delete, download and even upload new files to it. Hiphp also enables you to connect to ".onion" sites. Also, this back door is password protected.</p>
-
-
+<div align="center">
+  <br><img align="right" height="200" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
+  <h1>Hiphp</h1>
+  <strong>For Control PHP Websites</strong>
+</div>
+<br>
+  
 [![Test on Ubuntu latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
 [![Test on Windows latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
 [![Test on MacOS latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
@@ -16,6 +18,9 @@
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
+<p>hiphp is BackDoor to control php based sites and hiphp can be controlled by sending commands, files and tokens to the site using http/https protocol. After copying HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it and read all files, delete, download and even upload new files to it. Hiphp also enables you to connect to ".onion" sites. Also, this back door is password protected.</p>
 
 <table>
 	<tr>

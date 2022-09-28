@@ -82,6 +82,19 @@
 <h2>Docker Hub pull,build & run:</h2>
 
 ```bash
+# Build:
+❯ docker build -t hiphp:latest .
+
+# Run as CLI:
+❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t hiphp:latest
+
+# Run as GUI:
+❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
+```
+
+<h2>Docker Hub pull,build & run:</h2>
+
+```bash
 # Pull:
 ❯ docker pull yasserbdj96/hiphp:latest
 

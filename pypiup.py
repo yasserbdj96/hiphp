@@ -13,7 +13,7 @@ except:
     print(f"USAGE : python3 {sys.argv[0]} <CONFIG_FILE> <PATH>")
     exit()
 
-os.chdir(path)
+#os.chdir(path)
 
 child=pexpect.spawn("python setup.py sdist bdist_wheel")
 #child.before

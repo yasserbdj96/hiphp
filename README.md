@@ -5,7 +5,7 @@
 </div>
 <br>
 
-<h2 id="what-is-hiphp">What is Hiphp?</h2>
+<h2>What is Hiphp?</h2>
 <p>hiphp is BackDoor to control php based sites and hiphp can be controlled by sending commands, files and tokens to the site using http/https protocol. After copying HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it and read all files, delete, download and even upload new files to it. Hiphp also enables you to connect to ".onion" sites. Also, this back door is password protected.</p>
 
 <table>
@@ -40,7 +40,7 @@
 - [Requirements](#Requirements)
 - [Supported Distributions](#Supported-Distributions)
 - [Hiphp with Docker](#Hiphp-with-Docker)
-    - [Docker pull build and run](#Docker-pull-build-and-run)
+    - [Docker pull build & run](#Docker-pull,build-&-run)
     - [Docker Hub pull build and run](#Docker-Hub-pull-build-and-run)
     - [GitHub container registry pull build and run](#GitHub-container-registry-pull-build-and-run)
 - [Python Package Installation](#Python-Package-Installation)
@@ -61,7 +61,7 @@
 - [](#)
 
 
-<h2 id="Video">Video explaining how to use the command line interface:</h2>
+<h2>Video explaining how to use the command line interface:</h2>
 <div align="center">
     <!--a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
         <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">
@@ -74,14 +74,14 @@
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/how_hiphp_works.png" alt="hiphp by yasserbdj96">
 </div-->
 
-<h2 id="#How-do-you-use-this-version-of-the-project">How do you use this version of the project?</h2>
+<h2>How do you use this version of the project?</h2>
 [✓] Command line interface CLI.<br>
 [✓] Graphical user interface GUI (beta).<br>
 [✓] Python Module.<br>
 [✓] Script.<br>
 [✓] Docker Container.
 
-<h2 id="#All-languages-used-in-this-project">All languages used in this project:</h2>
+<h2>All languages used in this project:</h2>
 * Python3<br>
 * PHP<br>
 * Shell (Bash)<br>
@@ -90,14 +90,14 @@
 * CSS<br>
 * HTML
 
-<h2 id="#Where-can-you-find-this-project">Where can you find this project?</h2>
+<h2>Where can you find this project?</h2>
 [✓] <a href="https://pypi.org/project/hiphp">https://pypi.org/project/hiphp/</a><br>
 [✓] <a href="https://hub.docker.com/r/yasserbdj96/hiphp">https://hub.docker.com/r/yasserbdj96/hiphp</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hiphp">https://github.com/yasserbdj96/hiphp</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hiphp/pkgs/container/hiphp">Github Packages</a><br>
 [✓] <a href="https://gitlab.com/yasserbdj96/hiphp">https://gitlab.com/yasserbdj96/hiphp</a>
 
-<h2 id="Requirements">Requirements:</h2>
+<h2>Requirements:</h2>
 <!--[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br-->
 [✓] <a href="https://github.com/psf/requests">requests</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hexor">hexor</a><br>
@@ -105,7 +105,7 @@
 [✓] <a href="">tk</a><br>
 [✓] <a href="https://github.com/ChrisKnott/Eel">eel</a>
 
-<h2 id="Supported-Distributions">Supported Distributions:</h2>
+<h2>Supported Distributions:</h2>
 
 | Distribution     | Version Check | Python Test Version       | Supported | Everything works |
 | :--------------: | :-----------: | :-----------------------: | :-------: | :--------------: |
@@ -115,9 +115,9 @@
 | Android-termux   | Last version  | 3.6 --> 3.10              | ✓         | ✓                |
 | Nethunter        | Last version  | 3.6 --> 3.10              | ✓         | ✓                |
 
-<h2 id="Hiphp-with-Docker">Hiphp with Docker:</h2>
+<h2>Hiphp with Docker:</h2>
 
-<h3 id="#Docker-pull-build-and-run">Docker pull,build & run:</h3>
+<h3>Docker pull,build & run:</h3>
 
 ```bash
 # Build:
@@ -130,7 +130,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
 ```
 
-<h3 id="#Docker-Hub-pull-build-and-run">Docker Hub pull,build & run:</h3>
+<h3>Docker Hub pull,build & run:</h3>
 
 ```bash
 # Pull:
@@ -146,7 +146,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
-<h3 id="#GitHub-container-registry-pull-build-and-run">GitHub container registry (GHCR) pull,build & run:</h3>
+<h3>GitHub container registry (GHCR) pull,build & run:</h3>
 
 ```bash
 # Pull:
@@ -162,7 +162,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
 ```
 
-<h2 id="#Python-Package-Installation">Python Package Installation:</h2>
+<h2>Python Package Installation:</h2>
 
 ```bash
 # Install from pypi:
@@ -180,7 +180,7 @@
 ❯ pip uninstall hiphp
 ```
 
-<h2 id="#Ubuntu-Installation">Ubuntu Installation:</h2>
+<h2>Ubuntu Installation:</h2>
 
 ```bash
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
@@ -208,7 +208,7 @@
 ❯ bash install.sh -u
 ```
 
-<h2 id="#Run-without-installation">Run without installation:</h2>
+<h2>Run without installation:</h2>
 
 ```bash
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
@@ -223,7 +223,7 @@
 # In this case the python must be installed to path.
 ```
 
-<h2 id="#Run-with-hiphp-desktop">Run with hiphp-desktop:</h2>
+<h2>Run with hiphp-desktop:</h2>
 
 ```bash
 # Run with hiphp-desktop tool:
@@ -238,7 +238,7 @@
 ❯ hiphp --dst
 ```
 
-<h2 id="#Run-with-hiphp-tk">Run with hiphp-tk:</h2>
+<h2>Run with hiphp-tk:</h2>
 
 ```bash
 # run with hiphp-tk tool:
@@ -253,7 +253,7 @@
 ❯ hiphp --tk <KEY> <URL>
 ```
 
-<h2 id="#Script-Usage">Script Usage:</h2>
+<h2>Script Usage:</h2>
 
 ```python
 from hiphp import *
@@ -262,7 +262,7 @@ from hiphp import *
 p1=hiphp(key="<KEY>",url="<URL>")
 ```
 
-<h2 id="#Script-Examples">Script Examples:</h2>
+<h2>Script Examples:</h2>
 
 ```python
 #START{
@@ -307,7 +307,7 @@ p1.cli()
 ```
 
 
-<h2 id="#Help-for-Command-Line-interface">Help for Command Line interface (CLI):</h2>
+<h2>Help for Command Line interface (CLI):</h2>
 
 ```
 hiphp Commands :
@@ -379,13 +379,13 @@ hiphp Commands :
 ```
 
 
-<h2 id="#HIPHP_HOLE_CODE-Example">HIPHP_HOLE_CODE Example:</h2>
+<h2>HIPHP_HOLE_CODE Example:</h2>
 <div align="center">
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/HIPHP_HOLE_CODE.png" alt="hiphp by yasserbdj96">
 </div>
 
 
-<h2 id="Screenshots">Screenshots:</h2>
+<h2>Screenshots:</h2>
 
 <div align="center">
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">
@@ -420,7 +420,7 @@ hiphp Commands :
     </a>
 </div>
 
-<h2 id="Changelog-History">Changelog History:</h2>
+<h2>Changelog History:</h2>
 
 ```
 ## 0.2.28 [27-09-2022][Last Version]

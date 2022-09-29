@@ -39,9 +39,9 @@
 - [Where can you find this project?](#Where-can-you-find-this-project)
 - [Requirements](#Requirements)
 - [Supported Distributions](#Supported-Distributions)
-- [Docker pull,build & run](#Docker-pull-build-&-run)
-- [Docker Hub pull,build & run](#Docker-Hub-pull-build-&-run)
-- [GitHub container registry pull,build & run](#GitHub-container-registry-pull-build-&-run)
+- [Docker pull,build and run](#Docker-pull-build-and-run)
+- [Docker Hub pull,build and run](#Docker-Hub-pull-build-and-run)
+- [GitHub container registry pull,build and run](#GitHub-container-registry-pull-build-and-run)
 - [Python Package Installation](#Python-Package-Installation)
 - [Ubuntu Installation](#Ubuntu-Installation)
 - [Run without installation](#Run-without-installation)
@@ -49,7 +49,7 @@
 - [Run with hiphp-tk](#Run-with-hiphp-tk)
 - [Script Usage](#Script-Usage)
 - [Script Examples](#Script-Examples)
-- [Help for Command Line interface (CLI)](#Help-for-Command-Line-interface)
+- [Help for Command Line interface CLI](#Help-for-Command-Line-interface)
 - [HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Example)
 - [Screenshots](#Screenshots)
 - [Changelog History](#Changelog-History)
@@ -108,7 +108,7 @@
 | Android-termux   | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 | Nethunter        | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 
-<h2 id="#Docker-pull-build-&-run">Docker pull,build & run:</h2>
+<h2 id="#Docker-pull-build-and-run">Docker pull,build & run:</h2>
 
 ```bash
 # Build:
@@ -121,7 +121,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
 ```
 
-<h2 id="#Docker-Hub-pull-build-&-run">Docker Hub pull,build & run:</h2>
+<h2 id="#Docker-Hub-pull-build-and-run">Docker Hub pull,build & run:</h2>
 
 ```bash
 # Pull:
@@ -137,7 +137,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
-<h2 id="#GitHub-container-registry-pull-build-&-run">GitHub container registry (GHCR) pull,build & run:</h2>
+<h2 id="#GitHub-container-registry-pull-build-and-run">GitHub container registry (GHCR) pull,build & run:</h2>
 
 ```bash
 # Pull:

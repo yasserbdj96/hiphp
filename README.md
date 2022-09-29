@@ -29,7 +29,7 @@
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
-<h2 id="#Table-of-Contents">Table of Contents:</h2>
+<h2>Table of Contents:</h2>
 
 - [What is Hipip?](#what-is-hiphp)
 - [Table of Contents](#Table-of-Contents)
@@ -39,9 +39,10 @@
 - [Where can you find this project?](#Where-can-you-find-this-project)
 - [Requirements](#Requirements)
 - [Supported Distributions](#Supported-Distributions)
-- [Docker pull,build and run](#Docker-pull-build-and-run)
-- [Docker Hub pull,build and run](#Docker-Hub-pull-build-and-run)
-- [GitHub container registry pull,build and run](#GitHub-container-registry-pull-build-and-run)
+- [Hiphp with Docker](#Hiphp-with-Docker)
+    - [Docker pull build and run](#Docker-pull-build-and-run)
+    - [Docker Hub pull build and run](#Docker-Hub-pull-build-and-run)
+    - [GitHub container registry pull build and run](#GitHub-container-registry-pull-build-and-run)
 - [Python Package Installation](#Python-Package-Installation)
 - [Ubuntu Installation](#Ubuntu-Installation)
 - [Run without installation](#Run-without-installation)
@@ -53,6 +54,12 @@
 - [HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Example)
 - [Screenshots](#Screenshots)
 - [Changelog History](#Changelog-History)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+- [](#)
+
 
 <h2 id="Video">Video explaining how to use the command line interface:</h2>
 <div align="center">
@@ -94,7 +101,7 @@
 <!--[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br-->
 [✓] <a href="https://github.com/psf/requests">requests</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hexor">hexor</a><br>
-[✓] <a href="https://github.com/yasserbdj96/biglibrary">biglibrary</a>
+[✓] <a href="https://github.com/yasserbdj96/biglibrary">biglibrary</a><br>
 [✓] <a href="">tk</a><br>
 [✓] <a href="https://github.com/ChrisKnott/Eel">eel</a>
 
@@ -102,14 +109,15 @@
 
 | Distribution     | Version Check | Python Test Version       | Supported | Everything works |
 | :--------------: | :-----------: | :-----------------------: | :-------: | :--------------: |
-| Ubuntu           | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
-| Windwos          | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
-| MacOS            | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
-| Android-termux   | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
-| Nethunter        | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
-<br>
+| Ubuntu           | Last version  | 3.6 --> 3.10              | ✓         | ✓                |
+| Windwos          | Last version  | 3.6 --> 3.10              | ✓         | ✓                |
+| MacOS            | Last version  | 3.6 --> 3.10              | ✓         | ✓                |
+| Android-termux   | Last version  | 3.6 --> 3.10              | ✓         | ✓                |
+| Nethunter        | Last version  | 3.6 --> 3.10              | ✓         | ✓                |
 
-<h2 id="#Docker-pull-build-and-run">Docker pull,build & run:</h2>
+<h2 id="Hiphp-with-Docker">Hiphp with Docker:</h2>
+
+<h3 id="#Docker-pull-build-and-run">Docker pull,build & run:</h3>
 
 ```bash
 # Build:
@@ -122,7 +130,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
 ```
 
-<h2 id="#Docker-Hub-pull-build-and-run">Docker Hub pull,build & run:</h2>
+<h3 id="#Docker-Hub-pull-build-and-run">Docker Hub pull,build & run:</h3>
 
 ```bash
 # Pull:
@@ -138,7 +146,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
-<h2 id="#GitHub-container-registry-pull-build-and-run">GitHub container registry (GHCR) pull,build & run:</h2>
+<h3 id="#GitHub-container-registry-pull-build-and-run">GitHub container registry (GHCR) pull,build & run:</h3>
 
 ```bash
 # Pull:
@@ -591,3 +599,5 @@ all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
     BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9<br>
     <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
 </div>
+
+[⬆ Back to Top](#Table-of-contents)

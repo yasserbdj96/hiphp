@@ -5,6 +5,7 @@
 </div>
 <br>
 
+<h2 id="what-is-hiphp">What is Hiphp?</h2>
 <p>hiphp is BackDoor to control php based sites and hiphp can be controlled by sending commands, files and tokens to the site using http/https protocol. After copying HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it and read all files, delete, download and even upload new files to it. Hiphp also enables you to connect to ".onion" sites. Also, this back door is password protected.</p>
 
 <table>
@@ -26,6 +27,11 @@
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
+<h2>Table of Contents:</h2>
+
+- [What is Hipip?](#what-is-hiphp)
 
 <div align="center">
     <!--a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">

@@ -107,6 +107,7 @@
 | MacOS            | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 | Android-termux   | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
 | Nethunter        | Last version  | 3.6 --> 3.10              | ✓         | ✓               |
+<br>
 
 <h2 id="#Docker-pull-build-and-run">Docker pull,build & run:</h2>
 

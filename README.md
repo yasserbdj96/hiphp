@@ -1,5 +1,5 @@
 <div align="center">
-  <br><img align="right" height="200" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
+  <br><img align="center" height="200" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
   <h1>Hiphp</h1>
   <strong>For Control PHP Websites</strong>
 </div>
@@ -594,5 +594,8 @@ all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
     BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9<br>
     <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
 </div>
+
+<br><br>
+
 
 [⬆ Back to Top](#Table-of-contents)

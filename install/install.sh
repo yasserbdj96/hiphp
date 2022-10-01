@@ -54,7 +54,7 @@ termux_install(){
     termux-setup-storage
 
     # INSTALL SOME PROGRAMS
-    for each_pac in "git" "python3" "zip" "unzip"; do
+    for each_pac in "git" "python3"; do
         pkg install $each_pac -y
     done
 
@@ -86,12 +86,20 @@ termux_install(){
 
     # MORE
     # remove Termux welcome text
-    rm /data/data/com.termux/files/usr/etc/motd
+    #rm /data/data/com.termux/files/usr/etc/motd
 
 
     clear
     echo "Termux setup complete!"
-    exit 0
+    chmod +x /data/data/com.termux/files/usr/bin/hiphp
+    hiphp
+    #exit 0
+}
+
+termux_uninstall(){
+    rm -rf "${PREFIX}/share/hiphp";
+    rm "${PREFIX}/share/hiphp.py";
+    rm "${PREFIX}/bin/hiphp";
 }
 
 # install:
@@ -108,7 +116,16 @@ elif [ "$1" == "-up" ] ; then
     install
 
 # termux_install:
-elif [ "$1" == "-t" ] ; then
+elif [ "$1" == "-ti" ] ; then
+    termux_install
+
+# termux_uninstall:
+elif [ "$1" == "-tu" ] ; then
+    termux_uninstall
+
+# termux_update:
+elif [ "$1" == "-tup" ] ; then
+    termux_uninstall
     termux_install
 
 # usage:
@@ -117,5 +134,8 @@ else
     echo "       -i   | # for install.";
     echo "       -u   | # for uninstall.";
     echo "       -up  | # for update.";
+    echo "       -ti  | # for install hiphp on termux.";
+    echo "       -tu  | # for uninstall hiphp from termux.";
+    echo "       -tup | # for update hiphp on termux.";
 fi
 #}END.

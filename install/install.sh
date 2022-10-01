@@ -42,6 +42,58 @@ uninstall() {
     sudo rm "/usr/local/bin/$appname";
 }
 
+termux_install(){
+    #!/data/data/com.termux/files/usr/bin/bash
+
+    # My Termux setup
+
+    # update, upgrade
+    pkg update && pkg upgrade -y
+
+    # configure storage
+    termux-setup-storage
+
+    # INSTALL SOME PROGRAMS
+    for each_pac in "git" "python3" "zip" "unzip"; do
+        pkg install $each_pac -y
+    done
+
+    # if your device is rooted, you can install package 'tsu' to be able to use 'sudo' command, for this uncomment next command:
+    #pkg install tsu
+
+    # CONFIGURE SOME PROGRAMS
+
+    # confifure vim
+    # install monokai color scheme 
+    #git clone https://github.com/sickill/vim-monokai 
+
+    mkdir -p ${PREFIX}/bin/hiphp
+
+    cp -r "../hiphp/." "${PREFIX}/bin/hiphp";
+    cp "hiphp.py" "${PREFIX}/bin/";
+    cp "hiphp-termux.sh" "${PREFIX}/bin/";
+
+
+    #cp -r *.sh ${PREFIX}/bin
+    pip install -r "../requirements.txt";
+
+    #mv ../colors/monokai.vim ~/.vim/colors && rm -rf vim-monokai/
+
+    # upgrade pip and install some modules
+    #pip install --upgrade pip
+    #pip install setuptools
+    #pip install requests
+
+    # MORE
+    # remove Termux welcome text
+    rm /data/data/com.termux/files/usr/etc/motd
+
+
+    clear
+    echo "Termux setup complete!"
+    exit 0
+}
+
 # install:
 if [ "$1" == "-i" ] ; then
     install
@@ -54,6 +106,10 @@ elif [ "$1" == "-u" ] ; then
 elif [ "$1" == "-up" ] ; then
     uninstall
     install
+
+# termux_install:
+elif [ "$1" == "-t" ] ; then
+    termux_install
 
 # usage:
 else

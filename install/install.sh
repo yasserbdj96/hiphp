@@ -48,7 +48,7 @@ termux_install(){
     # My Termux setup
 
     # update, upgrade
-    pkg update && pkg upgrade -y
+    pkg update -y && pkg upgrade -y
 
     # configure storage
     termux-setup-storage
@@ -67,11 +67,11 @@ termux_install(){
     # install monokai color scheme 
     #git clone https://github.com/sickill/vim-monokai 
 
-    mkdir -p ${PREFIX}/bin/hiphp
+    mkdir -p ${PREFIX}/share/hiphp
 
-    cp -r "../hiphp/." "${PREFIX}/bin/hiphp";
-    cp "hiphp.py" "${PREFIX}/bin/";
-    cp "hiphp-termux.sh" "${PREFIX}/bin/";
+    cp -r "../hiphp/." "${PREFIX}/share/hiphp";
+    cp "hiphp.py" "${PREFIX}/share/";
+    cp "hiphp-termux.sh" "${PREFIX}/bin/hiphp";
 
 
     #cp -r *.sh ${PREFIX}/bin

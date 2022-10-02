@@ -22,6 +22,7 @@ install() {
     sudo cp "$appname.png" "/usr/share/$appname/$appname.png";
     sudo cp "$appname.desktop" "/usr/share/applications/$appname.desktop";
     sudo cp "$appname.sh" "/usr/local/bin/$appname";
+    pip install -r "../requirements.txt";
     #sudo cp -r "../src/." "/usr/share/$appname/src";
 
     # install hiphp-tk script:

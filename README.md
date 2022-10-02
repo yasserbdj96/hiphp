@@ -40,16 +40,19 @@
 - [Requirements](#Requirements)
 - [Supported Distributions](#Supported-Distributions)
 - [Hiphp with Docker](#Hiphp-with-Docker)
-    - [Docker pull build & run](#Docker)
-    - [Docker Hub pull build and run](#Docker-Hub)
-    - [GitHub container registry pull build and run](#GitHub-container-registry)
-- [Python Package Installation](#Python-Package-Installation)
-- [Ubuntu Installation](#Ubuntu-Installation)
+    - [Docker pull build and run](#Docker-pull-build-and-run)
+    - [Docker Hub pull build and run](#Docker-Hub-pull-build-and-run)
+    - [GitHub container registry pull build and run](#GitHub-container-registry-pull-build-and-run)
+- [Installation](#Installation)
+    - [Python Package Installation](#Python-Package-Installation)
+    - [Ubuntu Installation](#Ubuntu-Installation)
+    - [Termux Installation](#Termux-Installation)
 - [Run without installation](#Run-without-installation)
 - [Run with hiphp-desktop](#Run-with-hiphp-desktop)
 - [Run with hiphp-tk](#Run-with-hiphp-tk)
-- [Script Usage](#Script-Usage)
-- [Script Examples](#Script-Examples)
+- [Use As Script](#Use-As-Script)
+    - [Script Usage](#Script-Usage)
+    - [Script Examples](#Script-Examples)
 - [Help for Command Line interface CLI](#help-for-command-Line-interface)
 - [HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Example)
 - [Screenshots](#Screenshots)
@@ -112,7 +115,7 @@
 
 <h2>Hiphp with Docker:</h2>
 
-<h3>Docker pull,build & run:</h3>
+<h3>Docker pull build and run:</h3>
 
 ```bash
 # Build:
@@ -125,7 +128,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
 ```
 
-<h3>Docker Hub pull,build & run:</h3>
+<h3>Docker Hub pull build and run:</h3>
 
 ```bash
 # Pull:
@@ -141,7 +144,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
-<h3>GitHub container registry (GHCR) pull,build & run:</h3>
+<h3>GitHub container registry pull build and run:</h3>
 
 ```bash
 # Pull:
@@ -157,7 +160,8 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
 ```
 
-<h2>Python Package Installation:</h2>
+<h2>Installation:</h2>
+<h3>Python Package Installation:</h3>
 
 ```bash
 # Install from pypi:
@@ -175,19 +179,19 @@
 ❯ pip uninstall hiphp
 ```
 
-<h2>Ubuntu Installation:</h2>
+<h3>Ubuntu Installation:</h3>
 
 ```bash
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
 
-# Install:
-❯ pip install -r hiphp/requirements.txt
+# Go to Installation folder:
 ❯ cd hiphp/install
+
+# Install:
 ❯ bash install.sh -i
 ❯ hiphp
 
 # Update:
-❯ cd hiphp/install
 ❯ bash install.sh -up
 
 # Usage:
@@ -199,8 +203,32 @@
 ❯ hiphp --dst                 # Run hiphp as GUI with 'hiphp-desktop'.
 
 # Uninstall:
-❯ cd hiphp/install
 ❯ bash install.sh -u
+```
+
+<h3>Termux Installation:</h3>
+
+```bash
+❯ git clone https://github.com/yasserbdj96/hiphp.git
+
+# Go to Installation folder:
+❯ cd hiphp/install
+
+# Install:
+❯ bash install.sh -ti
+❯ hiphp
+
+# Update:
+❯ bash install.sh -tup
+
+# Usage:
+❯ hiphp [OPTION]
+❯ hiphp --help                # hiphp cli help.
+❯ hiphp --geth [KEY] [URL]    # Get the hole Code.
+❯ hiphp [KEY] [URL]           # Connect to the victim's website.
+
+# Uninstall:
+❯ bash install.sh -tu
 ```
 
 <h2>Run without installation:</h2>
@@ -248,7 +276,8 @@
 ❯ hiphp --tk <KEY> <URL>
 ```
 
-<h2>Script Usage:</h2>
+<h2>Use As Script:</h2>
+<h3>Script Usage:</h3>
 
 ```python
 from hiphp import *
@@ -257,7 +286,7 @@ from hiphp import *
 p1=hiphp(key="<KEY>",url="<URL>")
 ```
 
-<h2>Script Examples:</h2>
+<h3>Script Examples:</h3>
 
 ```python
 #START{
@@ -418,6 +447,9 @@ hiphp Commands :
 <h2>Changelog History:</h2>
 
 ```
+## 0.2.29 [XX-10-2022][In Progress]
+ - Add the ability to install hiphp on termux Android.
+
 ## 0.2.28 [27-09-2022][Last Version]
  - Add "font-awesome" to "php-desktop".
  - Add icons to "php-desktop".

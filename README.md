@@ -451,7 +451,7 @@ hiphp Commands :
 <h2>Changelog History:</h2>
 
 <details>
-  <summary>See changelog History</summary>
+  <summary>Click to See changelog History</summary>
 
 ```
 ## 0.2.29 [XX-10-2022][In Progress]

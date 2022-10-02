@@ -450,6 +450,9 @@ hiphp Commands :
 
 <h2>Changelog History:</h2>
 
+<details>
+  <summary>See changelog History</summary>
+
 ```
 ## 0.2.29 [XX-10-2022][In Progress]
  - Add the ability to install hiphp on termux Android.
@@ -607,6 +610,8 @@ hiphp Commands :
 ## 0.0.1 [05-04-2021][Version cancelled]
  - First public release.
 ```
+
+</details>
 
 <h2>Important Notes:</h2>
 - When you use the program for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>

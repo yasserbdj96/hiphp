@@ -33,7 +33,7 @@
 
 - [What is Hipip?](#what-is-hiphp)
 - [Table of Contents](#Table-of-Contents)
-- [Video explaining how to use the command line interface](#Video)
+- [Demo](#Demo)
 - [How do you use this version of the project?](#How-do-you-use-this-version-of-the-project)
 - [All languages used in this project](#All-languages-used-in-this-project)
 - [Where can you find this project?](#Where-can-you-find-this-project)
@@ -59,7 +59,7 @@
 - [Changelog History](#Changelog-History)
 
 
-<h2>Video explaining how to use the command line interface:</h2>
+<h2>Demo:</h2>
 <div align="center">
     <!--a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
         <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">

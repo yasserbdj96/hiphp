@@ -53,7 +53,7 @@
 - [Use As Script](#Use-As-Script)
     - [Script Usage](#Script-Usage)
     - [Script Examples](#Script-Examples)
-- [Help for Command Line interface CLI](#help-for-command-Line-interface)
+- [Help for Command Line interface](#help-for-command-Line-interface)
 - [HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Example)
 - [Screenshots](#Screenshots)
 - [Changelog History](#Changelog-History)
@@ -113,9 +113,10 @@
 | Android-termux   | Last version  | 3.6 --> 3.10              | ✓         | ✓                |
 | Nethunter        | Last version  | 3.6 --> 3.10              | ✓         | ✓                |
 
+<br>
 <h2>Hiphp with Docker:</h2>
 
-<h3>Docker pull build and run:</h3>
+<h4>Docker pull build and run:</h4>
 
 ```bash
 # Build:
@@ -128,7 +129,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
 ```
 
-<h3>Docker Hub pull build and run:</h3>
+<h4>Docker Hub pull build and run:</h4>
 
 ```bash
 # Pull:
@@ -144,7 +145,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
-<h3>GitHub container registry pull build and run:</h3>
+<h4>GitHub container registry pull build and run:</h4>
 
 ```bash
 # Pull:
@@ -160,8 +161,9 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
 ```
 
+<br>
 <h2>Installation:</h2>
-<h3>Python Package Installation:</h3>
+<h4>Python Package Installation:</h4>
 
 ```bash
 # Install from pypi:
@@ -179,7 +181,7 @@
 ❯ pip uninstall hiphp
 ```
 
-<h3>Ubuntu Installation:</h3>
+<h4>Ubuntu Installation:</h4>
 
 ```bash
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
@@ -206,7 +208,7 @@
 ❯ bash install.sh -u
 ```
 
-<h3>Termux Installation:</h3>
+<h4>Termux Installation:</h4>
 
 ```bash
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
@@ -231,6 +233,7 @@
 ❯ bash install.sh -tu
 ```
 
+<br>
 <h2>Run without installation:</h2>
 
 ```bash
@@ -276,6 +279,7 @@
 ❯ hiphp --tk <KEY> <URL>
 ```
 
+<br>
 <h2>Use As Script:</h2>
 <h3>Script Usage:</h3>
 
@@ -330,8 +334,8 @@ p1.cli()
 #}END.
 ```
 
-
-<h2>Help for Command Line interface (CLI):</h2>
+<br>
+<h2>Help for Command Line interface:</h2>
 
 ```
 hiphp Commands :

@@ -611,9 +611,9 @@ hiphp Commands :
 ```
 
 <h2>Important Notes:</h2>
-- When you use the program for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>
-- In order for the program to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
-- The program will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.<br>
+- When you use hiphp for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>
+- In order for hiphp to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
+- hiphp will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.<br>
 - If you use hiphp on .onion sites, you must run tor services or tor browser.<br>
 - I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
 

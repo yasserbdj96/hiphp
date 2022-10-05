@@ -6,7 +6,7 @@
 <br>
 
 <h2>What is Hiphp?</h2>
-<p>hiphp is BackDoor to control PHP-based sites & it can be controlled by sending commands, files, and tokens to the site using HTTP/HTTPS protocol with the POST/GET method from port 80. After copying HIPHP_HOLE_CODE and placing it in any PHP file on the target website, you will have permission to access it, read all files, edit, delete, download, and even upload new files to it. hiphp allows you to connect to ".onion" sites or normal sites. Also, this back door is password protected.</p>
+<p>hiphp is BackDoor to control php based sites and hiphp can be controlled by sending commands, files and tokens to the site using http/https protocol. After copying HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it and read all files, delete, download and even upload new files to it. Hiphp also enables you to connect to ".onion" sites. Also, this back door is password protected.</p>
 
 <table>
 	<tr>
@@ -33,7 +33,7 @@
 
 - [What is Hipip?](#what-is-hiphp)
 - [Table of Contents](#Table-of-Contents)
-- [Demo](#Demo)
+- [Video explaining how to use the command line interface](#Video)
 - [How do you use this version of the project?](#How-do-you-use-this-version-of-the-project)
 - [All languages used in this project](#All-languages-used-in-this-project)
 - [Where can you find this project?](#Where-can-you-find-this-project)
@@ -57,9 +57,11 @@
 - [HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Example)
 - [Screenshots](#Screenshots)
 - [Changelog History](#Changelog-History)
+- [Important Notes](#Important-Notes)
+- [Thank You](#Thank-You)
 
 
-<h2>Demo:</h2>
+<h2>Video explaining how to use the command line interface:</h2>
 <div align="center">
     <!--a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
         <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">
@@ -450,9 +452,6 @@ hiphp Commands :
 
 <h2>Changelog History:</h2>
 
-<details>
-  <summary>Click to See changelog History</summary>
-
 ```
 ## 0.2.29 [XX-10-2022][In Progress]
  - Add the ability to install hiphp on termux Android.
@@ -611,8 +610,6 @@ hiphp Commands :
  - First public release.
 ```
 
-</details>
-
 <h2>Important Notes:</h2>
 - When you use the program for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>
 - In order for the program to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
@@ -620,8 +617,8 @@ hiphp Commands :
 - If you use hiphp on .onion sites, you must run tor services or tor browser.<br>
 - I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
 
-
-<h1></h1> 
+<br><br>
+<h1 align="center">Thank You</h1> 
 
 I hope you enjoyed this repository 😇.
 

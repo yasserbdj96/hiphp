@@ -27,12 +27,16 @@
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
 [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%99%A5-red)](https://github.com/yasserbdj96/hiphp)
-[![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=0.2.28&x2=0)](https://github.com/yasserbdj96/hiphp)
 [![Stars](https://img.shields.io/github/stars/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Forks](https://img.shields.io/github/forks/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Watching](https://img.shields.io/github/watchers/yasserbdj96/hiphp?label=Watchers&color=red&style=flat-square)](https://github.com/yasserbdj96/hiphp)
+![GitHub contributors](https://img.shields.io/github/contributors/yasserbdj96/hiphp)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/yasserbdj96/hiphp)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/yasserbdj96/hiphp)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/yasserbdj96/hiphp)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/yasserbdj96/hiphp)
+[![GitHub license](https://img.shields.io/github/license/yasserbdj96/hiphp)](https://github.com/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 
 <h2>Table of Contents:</h2>
 

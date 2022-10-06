@@ -667,7 +667,7 @@ Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
 
 <p align="center">
 	<a href="http://yasserbdj96.github.io/">
-		<img title="yasserbdj96" src="https://img.shields.io/badge/D4RK4RMY-%23E4405F.svg?&style=for-the-badge&logo=web&logoColor=white">
+		<img title="yasserbdj96" src="https://img.shields.io/badge/yasserbdj96-%23E4405F.svg?&style=for-the-badge&logo=web&logoColor=white">
 	</a>
 </p>
 

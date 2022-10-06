@@ -1,7 +1,7 @@
 <div align="center">
   <br><img align="center" height="200" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
   <h1>Hiphp</h1>
-  <strong>For Control PHP Websites</strong>
+  <strong>Free & Open source project for create a BackDoor to control PHP-based sites.</strong>
 </div>
 <br>
 
@@ -33,6 +33,12 @@
 <h2>What is Hiphp?</h2>
 <p>hiphp is BackDoor to control php based sites and hiphp can be controlled by sending commands, files and tokens to the site using http/https protocol. After copying HIPHP_HOLE_CODE and placing it in any php file on the target website, you will have permissions to enter it and read all files, delete, download and even upload new files to it. Hiphp also enables you to connect to ".onion" sites. Also, this back door is password protected.</p>
 
+<table>
+	<tr>
+		<td>Don't forget to star ⭐ this repository</td>
+	</tr>
+</table>
+
 <h2>Table of Contents:</h2>
 
 - [What is Hipip?](#what-is-hiphp)
@@ -62,7 +68,7 @@
 - [Screenshots](#Screenshots)
 - [Changelog History](#Changelog-History)
 - [Important Notes](#Important-Notes)
-- [Thank You](#Thank-You)
+- [You like the tool](#You-like-the-tool)
 
 
 <h2>Video explaining how to use the command line interface:</h2>
@@ -626,20 +632,10 @@ hiphp Commands :
 - If you use hiphp on .onion sites, you must run tor services or tor browser.<br>
 - I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
 
-<br><br>
-<h1 align="center">Thank You</h1> 
-
-I hope you enjoyed this repository 😇.
-
-<table>
-	<tr>
-		<td>Don't forget to star ⭐ this repository</td>
-	</tr>
-</table>
-
-all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
-
 <br>
+
+<h1>You like the tool ?</h1>
+
 <div align="center">
     <a href="https://ko-fi.com/yasserbdj96">
         <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="hiphp by yasserbdj96">
@@ -648,7 +644,10 @@ all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
     <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
 </div>
 
-<br><br>
+<br>
 
+all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
+
+<br><br>
 
 [⬆ Back to Top](#Table-of-contents)

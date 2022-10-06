@@ -13,17 +13,24 @@
 
 #START{
 from hiphp import *
+from hiphp.hiphpversion import __version__
 import sys
 
+#help
 if sys.argv[1]=="--help":
     from hiphp.hiphphelp import *
     print(help())
     exit()
+#geth
 elif sys.argv[1]=="--geth":
     p1=hiphp(key=sys.argv[2],url=sys.argv[3])
     # Get the hole Code:
     p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php
     exit()
+#version
+elif sys.argv[1]=="--version":
+    print(__version__)
+#
 else:
     KEY=sys.argv[1]
     URL=sys.argv[2]

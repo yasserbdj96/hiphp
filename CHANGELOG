@@ -1,5 +1,7 @@
 ## 0.2.29 [XX-10-2022][In Progress]
  - Add the ability to install hiphp on termux Android.
+ - Add "--version" command.
+ - Bug fixes & performance improvements.
 
 ## 0.2.28 [27-09-2022][Last Version]
  - Add "font-awesome" to "php-desktop".

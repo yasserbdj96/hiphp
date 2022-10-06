@@ -105,6 +105,9 @@ class hiphp:
                     help(__version__,help_c[1])
                 except:
                     print(help(__version__))
+            #version
+            elif command[0:9].lower()=="--version" or command[0:7].lower()=="version":
+                print(__version__)
             #exit
             elif command[0:6].lower()=="--exit" or command[0:4].lower()=="exit":
                 exit()

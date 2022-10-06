@@ -138,7 +138,7 @@
     <!--a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
         <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">
     </a-->
-    <a href="https://asciinema.org/a/523450" target="_blank"><img src="https://asciinema.org/a/523450.svg" /></a>
+    <a href="https://asciinema.org/a/523450" target="_blank"><img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/demo.png" /></a>
 </div>
 
 <!--h2>How hiphp works?</h2>

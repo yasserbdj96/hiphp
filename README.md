@@ -646,12 +646,12 @@ hiphp Commands :
 - I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
 
 <br>
-<h2>Development By :</h2>
+<h2>Development By:</h2>
 
 Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
 
 <br>
-<h2>You like the tool ?</h2>
+<h2>You like the tool?</h2>
 
 <div align="center">
     <a href="https://ko-fi.com/yasserbdj96">

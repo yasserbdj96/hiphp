@@ -21,6 +21,7 @@ if [ -z "$1" ]; then
     echo "     hiphp [KEY] [URL]          | # Connect to the victim's website.";
     echo "     hiphp --tk [KEY] [URL]     | # Run hiphp as GUI with 'hiphp-tk' script.";
     echo "     hiphp --dst                | # Run hiphp as GUI with 'hiphp-desktop'.";
+    echo "     hiphp --version            | # Get the version number you are working with.";
 
 #cli help:
 elif [ "$1" == "--help" ] ; then
@@ -33,6 +34,10 @@ elif [ "$1" == "--tk" ] ; then
 #hiphp_desktop:
 elif [ "$1" == "--dst" ] ; then
     python3 "/usr/share/hiphp/hiphp-desktop/main.py";
+
+#version:
+elif [ "$1" == "--version" ] ; then
+    python3 "/usr/share/hiphp/hiphp.py" "--version";
 
 #cli:
 else

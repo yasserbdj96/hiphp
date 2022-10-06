@@ -17,8 +17,7 @@ def help(__version__,opt=""):
   spsbar=""""""
 
   #
-  header=f"""hiphp V{__version__} - (C) 2010-2022 yasserbdj96
-https://github.com/yasserbdj96/hiphp
+  header=f"""hiphp V{__version__} - (C) 2010-2022 yasserbdj96 https://github.com/yasserbdj96/hiphp
 
   Command                            Description
   -------                            -----------"""
@@ -115,7 +114,8 @@ https://github.com/yasserbdj96/hiphp
 
   --update, update                   ─> # check for updates.
   --license, license                 ─> # This project license.
-  --about, about                     ─> # About this project."""
+  --about, about                     ─> # About this project.
+  --version, version                 ─> # Get the version number you are working with."""
   if opt=="":
     return header+OPTIONS+ACTIONS+ls_c+spsbar+cat_c+spsbar+set_c+spsbar+cd_c+spsbar+rf_c+spsbar+up_c+spsbar+down_c+spsbar+zip_c+spsbar+ABOUT
   else:

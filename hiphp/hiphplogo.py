@@ -41,13 +41,15 @@ def logo(__version__):
     logox+="\n"
     logox+=color.c(bl.center("╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀     "),c_red)
     logox+="\n"
-    logox+=color.c(bl.center("+------------------------------------------------------+"),c_red)
+    logox+=color.c(bl.center("+-----------------------------------------------------------------------------------+"),c_red)
+    logox+="\n"
+    logox+=color.c(bl.center(f"hiphp - free & open source project for create a BackDoor to control PHP-based sites."),c_yellow)
     logox+="\n"
     logox+=color.c(bl.center(f"hiphp v{__version__} by yasserbdj96"),c_green)
     logox+="\n"
     logox+=color.c(bl.center(f"https://yasserbdj96.github.io/hiphp/"),c_blue)
     logox+="\n"
-    logox+=color.c(bl.center("+------------------------------------------------------+"),c_red)
+    logox+=color.c(bl.center("+-----------------------------------------------------------------------------------+"),c_red)
     logox+="\n"
     logox+=color.c("\n [!] '--help' for more informations.\n",c_yellow)
     logox+=color.c(" [!] '--exit' OR 'Ctrl+C' for exit.\n",c_yellow)

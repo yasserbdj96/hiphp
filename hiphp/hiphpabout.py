@@ -13,7 +13,12 @@
 
 #START{
 def about():
-    about="""soon"""
+    about="""
+Code by -> 
+            ─┼─┼─╦ ╦┌─┐┌─┐┌─┐┌─┐┬─┐╔╗ ╔╦╗ ╦┌─┐┌─┐ 
+            ─┼─┼─╚╦╝├─┤└─┐└─┐├┤ ├┬┘╠╩╗ ║║ ║└─┤├─┐
+                  ╩ ┴ ┴└─┘└─┘└─┘┴└─╚═╝═╩╝╚╝└─┘└─┘
+                   https://github.com/yasserbdj96"""
 
     return about
 #}END.

@@ -39,11 +39,12 @@
 	</tr>
 </table>
 
+<br>
 <h2>Table of Contents:</h2>
 
 - [What is Hipip?](#what-is-hiphp)
 - [Table of Contents](#Table-of-Contents)
-- [Video explaining how to use the command line interface](#Video)
+- [Demo](#Demo)
 - [How do you use this version of the project?](#How-do-you-use-this-version-of-the-project)
 - [All languages used in this project](#All-languages-used-in-this-project)
 - [Where can you find this project?](#Where-can-you-find-this-project)
@@ -68,10 +69,12 @@
 - [Screenshots](#Screenshots)
 - [Changelog History](#Changelog-History)
 - [Important Notes](#Important-Notes)
+- [Development By](#Development-By)
 - [You like the tool](#You-like-the-tool)
 
 
-<h2>Video explaining how to use the command line interface:</h2>
+<br>
+<h2>Demo:</h2>
 <div align="center">
     <!--a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
         <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">
@@ -84,6 +87,7 @@
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/how_hiphp_works.png" alt="hiphp by yasserbdj96">
 </div-->
 
+<br>
 <h2>How do you use this version of the project?</h2>
 [✓] Command line interface CLI.<br>
 [✓] Graphical user interface GUI (beta).<br>
@@ -91,6 +95,7 @@
 [✓] Script.<br>
 [✓] Docker Container.
 
+<br>
 <h2>All languages used in this project:</h2>
 * Python3<br>
 * PHP<br>
@@ -100,6 +105,7 @@
 * CSS<br>
 * HTML
 
+<br>
 <h2>Where can you find this project?</h2>
 [✓] <a href="https://pypi.org/project/hiphp">https://pypi.org/project/hiphp/</a><br>
 [✓] <a href="https://hub.docker.com/r/yasserbdj96/hiphp">https://hub.docker.com/r/yasserbdj96/hiphp</a><br>
@@ -107,6 +113,7 @@
 [✓] <a href="https://github.com/yasserbdj96/hiphp/pkgs/container/hiphp">Github Packages</a><br>
 [✓] <a href="https://gitlab.com/yasserbdj96/hiphp">https://gitlab.com/yasserbdj96/hiphp</a>
 
+<br>
 <h2>Requirements:</h2>
 <!--[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br-->
 [✓] <a href="https://github.com/psf/requests">requests</a><br>
@@ -115,6 +122,7 @@
 [✓] <a href="">tk</a><br>
 [✓] <a href="https://github.com/ChrisKnott/Eel">eel</a>
 
+<br>
 <h2>Supported Distributions:</h2>
 
 | Distribution   | Version Check | Python Test Version | Supported | Installation | Everything works |
@@ -261,6 +269,7 @@
 # In this case the python must be installed to path.
 ```
 
+<br>
 <h2>Run with hiphp-desktop:</h2>
 
 ```bash
@@ -276,6 +285,7 @@
 ❯ hiphp --dst
 ```
 
+<br>
 <h2>Run with hiphp-tk:</h2>
 
 ```bash
@@ -419,12 +429,13 @@ hiphp Commands :
 ```
 
 
+<br>
 <h2>HIPHP_HOLE_CODE Example:</h2>
 <div align="center">
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/HIPHP_HOLE_CODE.png" alt="hiphp by yasserbdj96">
 </div>
 
-
+<br>
 <h2>Screenshots:</h2>
 
 <div align="center">
@@ -460,6 +471,7 @@ hiphp Commands :
     </a>
 </div>
 
+<br>
 <h2>Changelog History:</h2>
 
 <details>
@@ -625,6 +637,7 @@ hiphp Commands :
 
 </details>
 
+<br>
 <h2>Important Notes:</h2>
 - When you use hiphp for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>
 - In order for hiphp to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
@@ -633,18 +646,32 @@ hiphp Commands :
 - I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
 
 <br>
+<h2>Development By :</h2>
 
-<h1>You like the tool ?</h1>
+Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
+
+<br>
+<h2>You like the tool ?</h2>
 
 <div align="center">
     <a href="https://ko-fi.com/yasserbdj96">
         <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="hiphp by yasserbdj96">
     </a><br>
     BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9<br>
-    <a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a>
+    <!--a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a-->
 </div>
 
 <br>
+
+<h2 align="center">🔥 Visit 🔥</h2>
+
+<p align="center">
+	<a href="http://yasserbdj96.github.io/">
+		<img title="yasserbdj96" src="https://img.shields.io/badge/D4RK4RMY-%23E4405F.svg?&style=for-the-badge&logo=web&logoColor=white">
+	</a>
+</p>
+
+<br><br>
 
 all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
 

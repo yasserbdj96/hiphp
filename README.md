@@ -487,6 +487,7 @@ hiphp Commands :
   --update, update                   ─> # check for updates.
   --license, license                 ─> # This project license.
   --about, about                     ─> # About this project.
+  --version, version                 ─> # Get the version number you are working with.
 ```
 
 
@@ -548,7 +549,7 @@ hiphp Commands :
 ## 0.2.29 [XX-10-2022][In Progress]
  - Add the ability to install hiphp on termux Android.
  - Add "--version" command.
- - Add Dark Mode template to "php-desktop".
+ - Add Dark Mode template to "hiphp-desktop".
  - Bug fixes & performance improvements.
 
 ## 0.2.28 [27-09-2022][Last Version]

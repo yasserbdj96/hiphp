@@ -530,6 +530,12 @@ hiphp Commands :
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot8.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot8.png" alt="hiphp by yasserbdj96">
     </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot9.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot9.png" alt="hiphp by yasserbdj96">
+    </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot10.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot10.png" alt="hiphp by yasserbdj96">
+    </a>
 </div>
 
 <br>
@@ -542,6 +548,7 @@ hiphp Commands :
 ## 0.2.29 [XX-10-2022][In Progress]
  - Add the ability to install hiphp on termux Android.
  - Add "--version" command.
+ - Add Dark Mode template to "php-desktop".
  - Bug fixes & performance improvements.
 
 ## 0.2.28 [27-09-2022][Last Version]

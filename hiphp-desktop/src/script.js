@@ -13,6 +13,7 @@
 var originalTitle=document.title;
 //
 function connect_with_cookie(){
+    settings_opt();
     if (getCookie("url")!="" && getCookie("key")!=""){
         connect(how="connect_with_cookie");
     }
@@ -410,5 +411,34 @@ function lineCounter(code){
 
 		  	codeEditor.value = htmlTemplateStr;
 		  	line_counter();
+}
+
+//
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+
+//
+function settings_opt(){
+    readTextFile("config.json", function(text){
+        var data = JSON.parse(text);
+
+        if(data["Dark Mode"]=="False"){
+            include("white.css","css");
+        }else{
+            include("dark.css","css");
+        }
+        
+
+        //console.log(data["Dark Mode"]);
+    });
 }
 //}END.

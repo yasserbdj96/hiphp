@@ -59,6 +59,7 @@ class hiphp:
         self.c_blue="#4285f4"#blue
         self.c_yellow="#fbbc05"#yellow
         self.c_green="#34a853"#green
+        self.c_white="#ffffff"
         #
         self.set=""
         self.cd=""
@@ -86,7 +87,7 @@ class hiphp:
         xxr1=self.color.c('┌──(',self.c_blue)
         xxr2=self.color.c(')──[',self.c_blue)
         xxr3=self.color.c(']',self.c_blue)
-        xxr4=self.color.c('└─|>',self.c_blue)
+        xxr4=self.color.c('└─',self.c_blue)+" "
         #
         key_w_color=self.color.c(self.key,self.c_red)
         url_w_color=self.color.c(self.url_w,self.c_yellow)

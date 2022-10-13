@@ -33,7 +33,7 @@ setup(
         'Author WebSite':"https://yasserbdj96.github.io/"
     },
     install_requires=["requests","hexor","biglibrary"],
-    keywords=["python","windows","macos","linux","docker","cli","php","remoteaccess","gui","backdoor","controller","https","hacking","http-requests","onion","termux","payload","website-hacking","yasserbdj96","revisioncontrol"],
+    keywords=["python","windows","macos","linux","docker","cli","php","remoteaccess","website","gui","backdoor","controller","https","declarative","hacking","http-requests","onion","termux","payload","revisioncontrol"],
     classifiers=[
         "Environment :: Web Environment",
         "Development Status :: 5 - Production/Stable",

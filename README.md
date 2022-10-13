@@ -3,7 +3,6 @@
   <h1>Hiphp</h1>
   <strong>Free & Open source project for create a BackDoor to control PHP-based sites.</strong>
 </div>
-
 <br>
 
 [![Test on Ubuntu latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
@@ -547,13 +546,13 @@ hiphp Commands :
   <summary>Click to See changelog History</summary>
 
 ```
-## 0.2.29 [XX-10-2022][In Progress]
+## 0.2.29 [13-10-2022][Last Version]
  - Add the ability to install hiphp on termux Android.
  - Add "--version" command.
  - Add Dark Mode template to "hiphp-desktop".
  - Bug fixes & performance improvements.
 
-## 0.2.28 [27-09-2022][Last Version]
+## 0.2.28 [27-09-2022]
  - Add "font-awesome" to "php-desktop".
  - Add icons to "php-desktop".
  - Add auto login to "php-desktop".

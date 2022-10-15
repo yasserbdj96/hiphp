@@ -14,7 +14,7 @@ var originalTitle=document.title;
 //
 function connect_with_cookie(){
     settings_opt();
-    if (getCookie("url")!="" && getCookie("key")!=""){
+    if (getCookie("url")!=null && getCookie("key")!=null && getCookie("url")!="undefined" && getCookie("key")!="undefined"){
         connect(how="connect_with_cookie");
     }
 }
@@ -98,6 +98,7 @@ function cat(path){
             document.getElementById("save").style.display='block';
             document.getElementById("ls").style.display='none';
             document.getElementById("add").style.display='none';
+            document.getElementById("up").style.display='none';
             try {
                 document.getElementById("reload").style.display='none';
                 document.getElementById("check").style.display='none';
@@ -114,6 +115,7 @@ function cat(path){
 function back(){
     document.getElementById("ls").style.display='revert';
     document.getElementById("add").style.display='block';
+    document.getElementById("up").style.display='block';
     document.getElementById("cat").innerHTML='';
     document.getElementById("codeEditor").style.display='none';
     document.getElementById("temp").innerText='';
@@ -189,7 +191,7 @@ function file_info(path){
         eel.info(key,url,path)(
             function(retu){
                 alert(retu);
-                connect();
+                //connect();
             }
         )
     }
@@ -283,13 +285,13 @@ function download(filename, text,mime_content_type){
 //version:
 function version(){
     eel.version()(
-            function(retu){
-                var ver = document.getElementById("version");
-                var hiphp_version=retu[1];
-                var hiphp_desktop=retu[0];
-                ver.innerText=hiphp_version+", "+hiphp_desktop;
-            }
-        )
+        function(retu){
+            var ver = document.getElementById("version");
+            var hiphp_version=retu[1];
+            var hiphp_desktop=retu[0];
+            ver.innerText=hiphp_version+", "+hiphp_desktop;
+        }
+    )
 }
 
 /*
@@ -344,6 +346,7 @@ function settings(){
     document.getElementById("return").style.display='block';
     document.getElementById("settings").style.display='block';
     document.getElementById("add").style.display='none';
+    document.getElementById("up").style.display='none';
     //document.getElementById("br").style.display='none';
     document.title="hiphp : settings";
 }
@@ -432,13 +435,30 @@ function settings_opt(){
         var data = JSON.parse(text);
 
         if(data["Dark Mode"]=="False"){
+            //document.getElementById("darkmode").checked = false;
             include("white.css","css");
         }else{
+            document.getElementById("darkmode").checked=true;
             include("dark.css","css");
         }
-        
-
         //console.log(data["Dark Mode"]);
     });
+}
+
+//
+function darkmode_check(){
+    eel.darkmode()(
+        function(retu){
+            if(retu=="False"){
+                var pp=document.getElementById("dark");
+                    pp.remove();
+                    include("white.css","css");
+            }else{
+                var pp=document.getElementById("white");
+                    pp.remove();
+                    include("dark.css","css");
+            }
+        }
+    )
 }
 //}END.

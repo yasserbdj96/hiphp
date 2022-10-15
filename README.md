@@ -537,6 +537,12 @@ hiphp Commands :
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot10.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot10.png" alt="hiphp by yasserbdj96">
     </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot11.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot11.png" alt="hiphp by yasserbdj96">
+    </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot12.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot12.png" alt="hiphp by yasserbdj96">
+    </a>
 </div>
 
 <br>
@@ -546,6 +552,12 @@ hiphp Commands :
   <summary>Click to See changelog History</summary>
 
 ```
+## 0.2.30 [XX-10-2022][In Progress]
+ - Fix auto login in "hiphp-desktop".
+ - Fix file info in "hiphp-desktop".
+ - Add Dark Mode option to settings in "hiphp-desktop".
+ - Bug fixes & performance improvements.
+
 ## 0.2.29 [13-10-2022][Last Version]
  - Add the ability to install hiphp on termux Android.
  - Add "--version" command.
@@ -940,8 +952,23 @@ Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
         <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="hiphp by yasserbdj96">
     </a><br>
     BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9<br>
-    <!--a href="http://yasserbdj96.github.io/">Go to this link to get more information.</a-->
 </div>
+
+<p align="center">
+  <samp>
+    <a href="https://yasserbdj96.github.io/">website</a> .
+    <a href="https://www.linkedin.com/in/yasserbdj96">linkedin</a> .
+    <a href="https://twitter.com/yasserbdj96">twitter</a> .
+    <a href="https://instagram.com/yasserbdj96">instagram</a> .
+    <a href="https://www.facebook.com/yasserbdj96">facebook</a> .
+    <a href="https://www.youtube.com/channel/UC53dtKxc84BNPyDb51rtRPg">youtube</a> .
+    <a href="https://pypi.org/user/yasserbdj96">pypi</a> .
+    <a href="https://hub.docker.com/u/yasserbdj96">docker</a> .
+    <a href="https://gitter.im/yasserbdj96/yasserbdj96">gitter</a> .
+    <a href="mailto:yasser.bdj96@gmail.com">e-mail</a> .
+    <a href="https://ko-fi.com/yasserbdj96">sponsor</a>
+  </samp>
+</p>
 
 <br>
 
@@ -960,8 +987,14 @@ Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
 
 <br><br-->
 
+<!--
+
 all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
 
 <br><br>
 
 [⬆ Back to Top](#Table-of-contents)
+
+
+
+-->

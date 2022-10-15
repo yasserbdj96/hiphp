@@ -1,3 +1,9 @@
+## 0.2.30 [XX-10-2022][In Progress]
+ - Fix auto login in "hiphp-desktop".
+ - Fix file info in "hiphp-desktop".
+ - Add Dark Mode option to settings in "hiphp-desktop".
+ - Bug fixes & performance improvements.
+
 ## 0.2.29 [13-10-2022][Last Version]
  - Add the ability to install hiphp on termux Android.
  - Add "--version" command.

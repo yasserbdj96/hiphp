@@ -96,16 +96,16 @@ input[type=checkbox]:checked + span {
 }
 
 #cat {
-    background-color:#272822;
-    border-color:#272822;
+    background-color:#0d1117;
+    border-color:#30363d;
     color:#ffffff;
 }
 
 #lineCounter {
     color: #707070;
     background-color: #d8d8d8;
-    background-color:#3E3D32;
-    border-color:#3E3D32;
+    background-color:#262a30;
+    border-color:#30363d;
     color:#928869;
 }
 

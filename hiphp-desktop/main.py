@@ -14,6 +14,7 @@
 #START{
 import sys
 import os
+import json
 
 try:
     try:
@@ -116,6 +117,21 @@ def download_file(key,url,path):
     p1=hiphp(key,url,retu=True)
     return p1.run(down_from_path(path))
 
+#darkmode:
+@eel.expose
+def darkmode():
+    with open('src/config.json', 'r+') as f:
+        data = json.load(f)
+        if data['Dark Mode']=="True":
+            data['Dark Mode']="False"
+        else:
+            data['Dark Mode']="True"
+        how=data['Dark Mode']
+        f.seek(0)        # <--- should reset file position to the beginning.
+        json.dump(data, f, indent=4)
+        f.truncate()  
+    return how
+
 try:
     if sys.argv[1]:
         host_ip="0.0.0.0"
@@ -126,5 +142,7 @@ except:
 
 print(f"hiphp run on local link: {host_ip}:{host_port}")
 
-eel.start("index.html",host=host_ip,port=host_port,mode='default',size=(850,400))
+
+eel.start("index.html",host=host_ip,port=host_port,size=(1050,500))
+#eel.start("index.html",host=host_ip,port=host_port,mode='default')
 #}END.

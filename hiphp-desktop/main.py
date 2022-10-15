@@ -120,7 +120,8 @@ def download_file(key,url,path):
 #darkmode:
 @eel.expose
 def darkmode():
-    with open('src/config.json', 'r+') as f:
+    thispath=os.path.dirname(os.path.abspath(__file__))
+    with open(f'{thispath}/src/config.json', 'r+') as f:
         data = json.load(f)
         if data['Dark Mode']=="True":
             data['Dark Mode']="False"

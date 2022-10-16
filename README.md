@@ -736,6 +736,10 @@ Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
 <br>
 <h2>License:</h2>
 
+<p>Copyright © 2008->Present, yasserbdj96 (Boudjada Yasser)
+<br>
+The content of this repository is bound by the following license:</p>
+
 <details>
   <summary>Click to See Apache-2.0 license</summary>
 

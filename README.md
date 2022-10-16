@@ -126,10 +126,10 @@
 - [HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Example)
 - [Screenshots](#Screenshots)
 - [Changelog History](#Changelog-History)
-- [Important Notes](#Important-Notes)
+- [Limitations](#Limitations)
 - [Development By](#Development-By)
 - [License](#License)
-- [You like the tool](#You-like-the-tool)
+- [Support](#Support)
 
 
 <br>
@@ -721,12 +721,12 @@ hiphp Commands :
 </details>
 
 <br>
-<h2>Important Notes:</h2>
-- When you use hiphp for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>
-- In order for hiphp to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
-- hiphp will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.<br>
-- If you use hiphp on .onion sites, you must run tor services or tor browser.<br>
-- I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
+<h2>Limitations:</h2>
+1. When you use hiphp for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>
+2. In order for hiphp to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
+3. hiphp will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.<br>
+4. If you use hiphp on .onion sites, you must run tor services or tor browser.<br>
+5. I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
 
 <br>
 <h2>Development By:</h2>
@@ -945,14 +945,16 @@ Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
 </details>
 
 <br>
-<h2>You like the Project?</h2>
-
+<h2>Support:</h2>
+<p>If you like `hiphp` and want to see it improve furthur or want me to create intresting projects , You can buy me a coffee </p>
 <div align="center">
     <a href="https://ko-fi.com/yasserbdj96">
         <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="hiphp by yasserbdj96">
     </a><br>
     BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9<br>
 </div>
+
+<br><br>
 
 <p align="center">
   <samp>

@@ -963,6 +963,8 @@ The content of this repository is bound by the following license:</p>
 <p align="center">
   <samp>
     <a href="https://yasserbdj96.github.io/">website</a> .
+    <a href="https://github.com/yasserbdj96">github</a> .
+    <a href="https://gitlab.com/yasserbdj96">gitlab</a> .
     <a href="https://www.linkedin.com/in/yasserbdj96">linkedin</a> .
     <a href="https://twitter.com/yasserbdj96">twitter</a> .
     <a href="https://instagram.com/yasserbdj96">instagram</a> .

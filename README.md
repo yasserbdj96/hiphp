@@ -482,6 +482,12 @@ hiphp Commands :
     --zip                            ─> # Compress the current directory.
     --zip [DIR_PATH]                 ─> # Compress a specific directory.
 
+  --edt, edt                         ─> # To edit files.
+  Usage: --edt [FILE_PATH]
+  Mandatory arguments to long options:
+    CTRL+q                           ─> # To exit.
+    CTRL+s                           ─> # To save.
+
 [ABOUT]
 
   --update, update                   ─> # check for updates.
@@ -556,6 +562,8 @@ hiphp Commands :
  - Fix auto login in "hiphp-desktop".
  - Fix file info in "hiphp-desktop".
  - Add Dark Mode option to settings in "hiphp-desktop".
+ - Add "--edt" command to edit files.
+ - Fix "--down" command.
  - Bug fixes & performance improvements.
 
 ## 0.2.29 [13-10-2022][Last Version]

@@ -60,7 +60,8 @@ def php_file_info(path):
     echo 'Dir Name: '.$path_parts['dirname'], "\n";
     echo 'Base Name: '.$path_parts['basename'], "\n";
     echo 'Extension: '.$path_parts['extension'], "\n";
-    echo 'File Name: '.$path_parts['filename'], "\n";"""
+    echo 'File Name: '.$path_parts['filename'], "\n";
+    echo "Last update: " . date ("F/d/Y H:i:s.", filemtime($path_parts['filename']));"""
     return x
 #save:
 def php_save(path,content):

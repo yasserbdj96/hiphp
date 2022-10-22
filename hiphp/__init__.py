@@ -20,6 +20,7 @@ from hiphp.hiphpmsgs import *
 from hiphp.hiphplicense import license
 from hiphp.hiphpabout import about
 from hiphp.hiphplogo import *
+from hiphp.hiphpeditor import editor
 #from ashar import *
 from hexor import *
 #from asciitext import *
@@ -87,7 +88,8 @@ class hiphp:
         xxr1=self.color.c('┌──(',self.c_blue)
         xxr2=self.color.c(')──[',self.c_blue)
         xxr3=self.color.c(']',self.c_blue)
-        xxr4=self.color.c('└─',self.c_blue)+" "
+        #xxr4=self.color.c('└─',self.c_blue)+" "
+        xxr4=self.color.c('└─HIPHP>',self.c_blue)+" "
         #
         key_w_color=self.color.c(self.key,self.c_red)
         url_w_color=self.color.c(self.url_w,self.c_yellow)
@@ -250,6 +252,29 @@ class hiphp:
                     dirx=command[4:]
                 command=file_get_contents(dirx)
                 hiphp.do(self,self.key,self.url,self.headers,False,command)
+            #cat
+            elif command[0:5].lower()=="--edt" or command[0:3].lower()=="edt":
+                if command[0:5].lower()=="--edt":
+                    dirx=command[6:]
+                else:
+                    dirx=command[4:]
+                
+                try:
+                    from_path=os.path.dirname(dirx)
+                except:
+                    from_path="."
+                #print(from_path)
+                out_path=hiphp.download(self,dirx,"")
+                editor(out_path)
+                hiphp.run(self,f"unlink('{dirx}');")
+                if from_path=="":
+                    hiphp.upload(self,out_path)
+                else:
+                    hiphp.upload(self,out_path,from_path+"/")
+                os.remove(out_path)
+                #os.system('cls' if os.name == 'nt' else 'clear')
+                #print(out_path)
+
             #php_info:
             elif command[0:9].lower()=="--phpinfo" or command[0:7].lower()=="phpinfo":
                 command=php_info()
@@ -380,7 +405,11 @@ class hiphp:
 
     #download:
     def download(self,path_x,outpath=""):
+
+    
         new_command=file_to_b64(path_x)
+        
+        path_x=os.path.basename(path_x)
         
         if outpath=="":
             outpath=os.path.abspath(os.getcwd())

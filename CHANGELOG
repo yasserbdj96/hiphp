@@ -2,6 +2,8 @@
  - Fix auto login in "hiphp-desktop".
  - Fix file info in "hiphp-desktop".
  - Add Dark Mode option to settings in "hiphp-desktop".
+ - Add "--edt" command to edit files.
+ - Fix "--down" command.
  - Bug fixes & performance improvements.
 
 ## 0.2.29 [13-10-2022][Last Version]

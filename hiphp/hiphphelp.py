@@ -108,6 +108,15 @@ def help(__version__,opt=""):
     --zip                            ─> # Compress the current directory.
     --zip [DIR_PATH]                 ─> # Compress a specific directory.
 """
+
+#
+  edt_c="""
+  --edt, edt                         ─> # To edit files.
+  Usage: --edt [FILE_PATH]
+  Mandatory arguments to long options:
+    CTRL+q                           ─> # To exit.
+    CTRL+s                           ─> # To save.
+"""
   #
   ABOUT="""
 [ABOUT]
@@ -117,7 +126,7 @@ def help(__version__,opt=""):
   --about, about                     ─> # About this project.
   --version, version                 ─> # Get the version number you are working with."""
   if opt=="":
-    return header+OPTIONS+ACTIONS+ls_c+spsbar+cat_c+spsbar+set_c+spsbar+cd_c+spsbar+rf_c+spsbar+up_c+spsbar+down_c+spsbar+zip_c+spsbar+ABOUT
+    return header+OPTIONS+ACTIONS+ls_c+spsbar+cat_c+spsbar+set_c+spsbar+cd_c+spsbar+rf_c+spsbar+up_c+spsbar+down_c+spsbar+zip_c+spsbar+edt_c+spsbar+ABOUT
   else:
     opt=opt.replace("--","")
     opt=opt+"_c"

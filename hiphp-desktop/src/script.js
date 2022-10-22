@@ -41,6 +41,12 @@ function connect(how=""){
                 document.getElementById("connected").style.display='block';
                 eel.ls(key,url)(function(retu){
                     var retu=JSON.parse(retu);
+
+                    var xxp=tree(retu);
+                    //console.log(retu);
+                    //var data = xxp;
+                    //document.body.appendChild(getList(data));
+
                     ls="<tr><th style='width:75%;'>Path</th><th>Permissions</th><th>Options</th></tr>";
                     for (let i = 0; i < retu.length; i++) {
                         var xx=retu[i].split(':');
@@ -80,6 +86,39 @@ function connect(how=""){
         }
     )
 }
+//tree:
+function tree(paths){
+
+let agg = {
+  temp: []
+};
+
+paths.forEach(path => {
+  path.split('/').reduce((agg, part, level, parts) => {
+    if (!agg[part]) {
+      agg[part] = {
+        temp: []
+      };
+      agg.temp.push({
+        id: parts.slice(0, level + 1).join("/"),
+        //level: level + 1,
+        children: agg[part].temp
+      })
+      // console.log(agg)
+    }
+    return agg[part];
+  }, agg)
+})
+
+var result = agg.temp;
+//console.dir(result);
+
+console.log(result)
+//traverse(result);
+
+}
+
+
 //cat:
 function cat(path){
     var url = getCookie("url");

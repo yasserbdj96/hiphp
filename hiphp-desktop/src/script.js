@@ -42,7 +42,7 @@ function connect(how=""){
                 eel.ls(key,url)(function(retu){
                     var retu=JSON.parse(retu);
 
-                    var xxp=tree(retu);
+                    //var xxp=tree(retu);
                     //console.log(retu);
                     //var data = xxp;
                     //document.body.appendChild(getList(data));
@@ -86,6 +86,7 @@ function connect(how=""){
         }
     )
 }
+/*
 //tree:
 function tree(paths){
 
@@ -117,7 +118,7 @@ console.log(result)
 //traverse(result);
 
 }
-
+*/
 
 //cat:
 function cat(path){

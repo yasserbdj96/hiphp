@@ -71,7 +71,7 @@ def help(__version__,opt=""):
 
   #
   rf_c="""
-  --rf, rf                           ─> # Run code from file.
+  --rf, rf, run                      ─> # Run code from file.
   Usage: --rf [FILE_PATH] [VARIABLES]
   Mandatory arguments to long options:
     --rf [FILE_PATH]                 ─> # Run code from file.
@@ -80,7 +80,7 @@ def help(__version__,opt=""):
 
   #
   up_c="""
-  --up, up                           ─> # Upload a file.
+  --up, up, upload                   ─> # Upload a file.
   Usage: --up [FILE_PATH] [PATH]
   Mandatory arguments to long options:
     --up [FILE_PATH]                 ─> # Upload a file to the current directory.
@@ -89,7 +89,7 @@ def help(__version__,opt=""):
 
   #
   down_c="""
-  --down, down                       ─> # download a file.
+  --down, down, download             ─> # download a file.
   Usage: --down [-f/-d] [FILE/DIR_PATH] [OUT_PATH]
   Mandatory arguments to long options:
     --down -f [FILE_PATH]            ─> # Download a file to the current directory.
@@ -111,7 +111,7 @@ def help(__version__,opt=""):
 
 #
   edt_c="""
-  --edt, edt                         ─> # To edit files.
+  --edt, edt, edit                   ─> # To edit files.
   Usage: --edt [FILE_PATH]
   Mandatory arguments to long options:
     CTRL+q                           ─> # To exit.

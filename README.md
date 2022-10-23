@@ -454,19 +454,19 @@ hiphp Commands :
   --cd, cd                           ─> # Change directory.
   Usage: --cd [PATH]
 
-  --rf, rf                           ─> # Run code from file.
+  --rf, rf, run                      ─> # Run code from file.
   Usage: --rf [FILE_PATH] [VARIABLES]
   Mandatory arguments to long options:
     --rf [FILE_PATH]                 ─> # Run code from file.
     --rf [FILE_PATH] [VARIABLES]     ─> # Run code from file with variables, EX: --rf example.php var==hello
   
-  --up, up                           ─> # Upload a file.
+  --up, up, upload                   ─> # Upload a file.
   Usage: --up [FILE_PATH] [PATH]
   Mandatory arguments to long options:
     --up [FILE_PATH]                 ─> # Upload a file to the current directory.
     --up [FILE_PATH] [PATH]          ─> # Upload a file to a specified directory.
 
-  --down, down                       ─> # download a file.
+  --down, down, download             ─> # download a file.
   Usage: --down [-f/-d] [FILE/DIR_PATH] [OUT_PATH]
   Mandatory arguments to long options:
     --down -f [FILE_PATH]            ─> # Download a file to the current directory.
@@ -482,7 +482,7 @@ hiphp Commands :
     --zip                            ─> # Compress the current directory.
     --zip [DIR_PATH]                 ─> # Compress a specific directory.
 
-  --edt, edt                         ─> # To edit files.
+  --edt, edt, edit                   ─> # To edit files.
   Usage: --edt [FILE_PATH]
   Mandatory arguments to long options:
     CTRL+q                           ─> # To exit.
@@ -564,6 +564,8 @@ hiphp Commands :
  - Add Dark Mode option to settings in "hiphp-desktop".
  - Add "--edt" command to edit files.
  - Fix "--down" command.
+ - Fix default slash on windows server.
+ - Improve some commands.
  - Bug fixes & performance improvements.
 
 ## 0.2.29 [13-10-2022][Last Version]

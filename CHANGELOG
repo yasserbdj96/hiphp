@@ -4,6 +4,8 @@
  - Add Dark Mode option to settings in "hiphp-desktop".
  - Add "--edt" command to edit files.
  - Fix "--down" command.
+ - Fix default slash on windows server.
+ - Improve some commands.
  - Bug fixes & performance improvements.
 
 ## 0.2.29 [13-10-2022][Last Version]

@@ -573,6 +573,7 @@ hiphp Commands :
  - Fix default slash on windows server.
  - Change name of archive files.
  - Add "--rm" command to Delete files and folders.
+ - Add a full site extractor and auto login in case of HIPHP_HOLE_CODE in a file.
  - Improve some commands.
  - Bug fixes & performance improvements.
 

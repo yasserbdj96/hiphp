@@ -103,9 +103,50 @@ $binary=fread($fp,filesize($file));
 echo base64_encode($binary);"""
     return code
 
+#
 def DIRECTORY_SEPARATOR():
     code="echo DIRECTORY_SEPARATOR;"
     return code
+
+#
+def rm(t,path):
+    code1="""
+$filename = '"""+path+"""';
+if (unlink($filename)){
+	echo 'The file "'.$filename.'" was deleted successfully!';
+} else {
+	echo 'There was a error deleting the file "'.$filename.'"';
+}"""
+    code2="""
+function deleteDirectory($dir) {
+    if (!file_exists($dir)) {
+        return true;
+    }
+    if (!is_dir($dir)) {
+        return unlink($dir);
+    }
+    foreach (scandir($dir) as $item) {
+        if ($item == '.' || $item == '..') {
+            continue;
+        }
+        if (!deleteDirectory($dir . DIRECTORY_SEPARATOR . $item)) {
+            return false;
+        }
+    }
+    if (rmdir($dir)){
+        echo 'The Directory "'.$dir.'" was deleted successfully!';
+    }else{
+        echo 'There was a error deleting the Directory "'.$dir.'"';
+    }
+}
+deleteDirectory('"""+path+"""');
+"""
+    if t=="-f":
+        return code1
+    elif t=="-d":
+        return code2
+
+
 #
 def php_info():
     code="""header('Content-type: text/plain');

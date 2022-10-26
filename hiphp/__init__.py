@@ -281,6 +281,14 @@ class hiphp:
                 #os.system('cls' if os.name == 'nt' else 'clear')
                 #print(out_path)
 
+            #remove:
+            elif command[0:4].lower()=="--rm" or command[0:2].lower()=="rm" or command[0:6].lower()=="delete":
+                dirx=command.split(" ")
+                try:
+                    command=rm(dirx[1],dirx[2])
+                    hiphp.do(self,self.key,self.url,self.headers,False,command)
+                except:
+                    help(__version__,"--rm")
             #php_info:
             elif command[0:9].lower()=="--phpinfo" or command[0:7].lower()=="phpinfo":
                 command=php_info()

@@ -21,6 +21,7 @@ from hiphp.hiphplicense import license
 from hiphp.hiphpabout import about
 from hiphp.hiphplogo import *
 from hiphp.hiphpeditor import editor
+from hiphp.hiphplinkextractor import *
 #from ashar import *
 from hexor import *
 #from asciitext import *
@@ -81,9 +82,65 @@ class hiphp:
 
         #getcwd
         getcwd=""
-        reee=hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();")
-        if emsg_1 in reee:
-            return reee
+        try:
+            reee=hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();")
+        except:
+            reee="none"
+        if emsg_1 in reee or reee=="none":
+            scanner=input(f"Scan '{self.url}' to gain entry (y/n):")
+            if scanner=="y":
+                
+                def crawl(url):
+                    #all_links=[]
+                    #print(f"[*] Crawling: {url}")
+                    links = get_all_website_links(url)
+                    for link in links:
+                        check_hiphp_in(link)
+                        crawl(link)
+
+                def check_hiphp_in(url):
+                    #self.url=str(url)
+
+                    p1=hiphp.do(self,self.key,url,self.headers,True,f"echo '{self.key}';")
+
+                    #p0=hiphp(key=self.key,url=url,retu=True)
+                    #p1=p0.run(f"mkdir('ccccccc');")
+                    #print(p1)
+                    if p1!=self.key:
+                        self.color2.c(url+" unsucceed!",self.c_red)
+                        #print(url+" unsucceed!")
+                    else:
+                        self.color2.c(url+" Succeed!",self.c_green)
+                        self.url=url
+                        hiphp.cli(self)
+                        #print(url+" Succeed!")
+                        exit()
+                crawl(self.url)
+                exit()
+                """
+                import requests
+                from bs4 import BeautifulSoup
+ 
+                urls_list=[]
+                urls = self.url
+                grab = requests.get(urls)
+                soup = BeautifulSoup(grab.text, 'html.parser')
+                for link in soup.find_all("a"):
+                    data = link.get('href')
+                    urls_list.append(data)
+                    #print(data)
+                for i in range(len(urls_list)):
+                    p1=hiphp(key=self.key,url=urls_list[i],retu=True).run(f"echo '{self.key}';")
+                    if p1!=self.key:
+                        print(urls_list[i]+" unsucceed!")
+                    else:
+                        print(urls_list[i]+" Succeed!")
+                        exit()
+                    #print(p1)
+                exit()
+                """
+            else:
+                return reee
         else:
             getcwd=self.color.c(reee,self.c_green)
         #
@@ -357,8 +414,12 @@ class hiphp:
                         hexor().c(emsg_1,self.c_red)
                         exit()
         except:
-            hexor().c(emsg_3+" '"+url+"'.",self.c_red)
-            exit()
+            emsg=emsg_3+" '"+url+"'."
+            if retu==True:
+                return emsg
+            else:
+                hexor().c(emsg,self.c_red)
+                exit()
 
     #run_file:
     def run_file(self,file_path,*opts):        

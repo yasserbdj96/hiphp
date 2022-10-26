@@ -4,3 +4,4 @@ requests
 hexor
 asciitext
 biglibrary
+BeautifulSoup4

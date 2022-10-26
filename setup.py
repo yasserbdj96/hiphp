@@ -32,7 +32,7 @@ setup(
         'Chat': "https://gitter.im/yasserbdj96/hiphp",
         'Author WebSite':"https://yasserbdj96.github.io/"
     },
-    install_requires=["requests","hexor","biglibrary"],
+    install_requires=["requests","hexor","biglibrary","BeautifulSoup4"],
     keywords=["python","windows","macos","linux","docker","cli","php","remoteaccess","website","gui","backdoor","controller","https","declarative","hacking","http-requests","onion","termux","payload","revisioncontrol"],
     classifiers=[
         "Environment :: Web Environment",

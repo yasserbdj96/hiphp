@@ -488,6 +488,12 @@ hiphp Commands :
     CTRL+q                           ─> # To exit.
     CTRL+s                           ─> # To save.
 
+  --rm, rm, delete                   ─> # To delete files and folders.
+  Usage: --rm [-f/-d] [FILE/DIR_PATH]
+  Mandatory arguments to long options:
+    --rm -f [FILE_PATH]              ─> # Delete a file.
+    --rm -d [DIR_PATH]               ─> # Delete a folder.
+
 [ABOUT]
 
   --update, update                   ─> # check for updates.
@@ -565,6 +571,8 @@ hiphp Commands :
  - Add "--edt" command to edit files.
  - Fix "--down" command.
  - Fix default slash on windows server.
+ - Change name of archive files.
+ - Add "--rm" command to Delete files and folders.
  - Improve some commands.
  - Bug fixes & performance improvements.
 

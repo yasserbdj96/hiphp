@@ -5,6 +5,8 @@
  - Add "--edt" command to edit files.
  - Fix "--down" command.
  - Fix default slash on windows server.
+ - Change name of archive files.
+ - Add "--rm" command to Delete files and folders.
  - Improve some commands.
  - Bug fixes & performance improvements.
 

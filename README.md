@@ -994,6 +994,7 @@ The content of this repository is bound by the following license:</p>
     <a href="https://www.youtube.com/channel/UC53dtKxc84BNPyDb51rtRPg">youtube</a> .
     <a href="https://pypi.org/user/yasserbdj96">pypi</a> .
     <a href="https://hub.docker.com/u/yasserbdj96">docker</a> .
+    <a href="https://t.me/yasserbdj96">telegram</a> .
     <a href="https://gitter.im/yasserbdj96/yasserbdj96">gitter</a> .
     <a href="mailto:yasser.bdj96@gmail.com">e-mail</a> .
     <a href="https://ko-fi.com/yasserbdj96">sponsor</a>

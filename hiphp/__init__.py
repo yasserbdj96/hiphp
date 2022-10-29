@@ -85,11 +85,13 @@ class hiphp:
         try:
             reee=hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();")
         except:
-            reee="none"
-        if emsg_1 in reee or reee=="none":
-            scanner=input(f"Scan '{self.url}' to gain entry (y/n):")
-            if scanner=="y":
-                
+            reee=None
+        
+        if (emsg_1 in reee) or (reee==None) or (emsg_3 in reee):
+            #print(reee)
+            #exit()
+            scanner=input(f"Scan '{self.url}' to find HIPHP_HOLE_CODE (Y/N):")
+            if scanner.lower()=="y":
                 def crawl(url):
                     #all_links=[]
                     #print(f"[*] Crawling: {url}")
@@ -101,16 +103,16 @@ class hiphp:
                 def check_hiphp_in(url):
                     #self.url=str(url)
 
-                    p1=hiphp.do(self,self.key,url,self.headers,True,f"echo '{self.key}';")
+                    pp11=hiphp.do(self,self.key,url,self.headers,True,f"echo '{self.key}';")
 
                     #p0=hiphp(key=self.key,url=url,retu=True)
                     #p1=p0.run(f"mkdir('ccccccc');")
-                    #print(p1)
-                    if p1!=self.key:
-                        self.color2.c(url+" unsucceed!",self.c_red)
+                    #print(pp11)
+                    if pp11!=self.key:
+                        self.color2.c(errx+" "+url,self.c_red)
                         #print(url+" unsucceed!")
                     else:
-                        self.color2.c(url+" Succeed!",self.c_green)
+                        self.color2.c(msgs+" "+url,self.c_green)
                         self.url=url
                         hiphp.cli(self)
                         #print(url+" Succeed!")

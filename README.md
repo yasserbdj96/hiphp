@@ -528,6 +528,9 @@ hiphp Commands :
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot3.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot3.png" alt="hiphp by yasserbdj96">
     </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot13.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot13.png" alt="hiphp by yasserbdj96">
+    </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png" alt="hiphp by yasserbdj96">
     </a>
@@ -573,7 +576,7 @@ hiphp Commands :
  - Fix default slash on windows server.
  - Change name of archive files.
  - Add "--rm" command to Delete files and folders.
- - Add a full site extractor and auto login in case of HIPHP_HOLE_CODE in a file.
+ - Add a full site extractor to find HIPHP_HOLE_CODE.
  - Improve some commands.
  - Bug fixes & performance improvements.
 

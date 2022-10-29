@@ -45,8 +45,9 @@ def get_all_website_links(url):
                 external_urls.add(href)
             continue
         #print(f"[*] Internal link: {href}")
-        urls.add(href)
-        internal_urls.add(href)
+        if "mailto://" not in href:
+            urls.add(href)
+            internal_urls.add(href)
     return urls
 
 #print(crawl("https://asciinema.org/"))

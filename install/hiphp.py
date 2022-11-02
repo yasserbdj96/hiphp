@@ -19,7 +19,7 @@ import sys
 #help
 if sys.argv[1]=="--help":
     from hiphp.hiphphelp import *
-    print(help())
+    print(help(__version__))
     exit()
 #geth
 elif sys.argv[1]=="--geth":

@@ -567,7 +567,7 @@ hiphp Commands :
   <summary>Click to See changelog History</summary>
 
 ```
-## 0.2.30 [XX-10-2022][In Progress]
+## 0.2.30 [02-11-2022][Last Version]
  - Fix auto login in "hiphp-desktop".
  - Fix file info in "hiphp-desktop".
  - Add Dark Mode option to settings in "hiphp-desktop".
@@ -577,10 +577,11 @@ hiphp Commands :
  - Change name of archive files.
  - Add "--rm" command to Delete files and folders.
  - Add a full site extractor to find HIPHP_HOLE_CODE.
+ - Fix "hiphp --help" command.
  - Improve some commands.
  - Bug fixes & performance improvements.
 
-## 0.2.29 [13-10-2022][Last Version]
+## 0.2.29 [13-10-2022]
  - Add the ability to install hiphp on termux Android.
  - Add "--version" command.
  - Add Dark Mode template to "hiphp-desktop".
@@ -991,7 +992,7 @@ The content of this repository is bound by the following license:</p>
     <a href="https://twitter.com/yasserbdj96">twitter</a> .
     <a href="https://instagram.com/yasserbdj96">instagram</a> .
     <a href="https://www.facebook.com/yasserbdj96">facebook</a> .
-    <a href="https://www.youtube.com/channel/UC53dtKxc84BNPyDb51rtRPg">youtube</a> .
+    <a href="https://www.youtube.com/@yasserbdj96">youtube</a> .
     <a href="https://pypi.org/user/yasserbdj96">pypi</a> .
     <a href="https://hub.docker.com/u/yasserbdj96">docker</a> .
     <a href="https://t.me/yasserbdj96">telegram</a> .

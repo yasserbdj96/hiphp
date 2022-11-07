@@ -17,6 +17,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
+[![Docker pulls](https://img.shields.io/docker/pulls/yasserbdj96/hiphp)](https://hub.docker.com/r/yasserbdj96/hiphp/)
 [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%99%A5-red)](https://github.com/yasserbdj96/hiphp)
 [![Stars](https://img.shields.io/github/stars/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Forks](https://img.shields.io/github/forks/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)

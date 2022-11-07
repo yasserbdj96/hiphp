@@ -28,7 +28,9 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/yasserbdj96/hiphp)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/yasserbdj96/hiphp)
 [![GitHub license](https://img.shields.io/github/license/yasserbdj96/hiphp)](https://github.com/yasserbdj96/hiphp)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 <br>
 <h2>What is Hiphp?</h2>

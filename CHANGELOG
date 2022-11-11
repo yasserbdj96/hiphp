@@ -1,3 +1,7 @@
+## 0.2.31-beta [Beta Version]
+ - Add PWA (Service Worker) to "hiphp-desktop".
+ - Bug fixes & performance improvements.
+
 ## 0.2.30 [02-11-2022][Last Version]
  - Fix auto login in "hiphp-desktop".
  - Fix file info in "hiphp-desktop".

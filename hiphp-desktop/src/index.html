@@ -1,17 +1,23 @@
 <!--DOCTYPE html-->
-<html>
+<html lang="en">
     <head>
         <!-- code by : yasserbdj96 -->
         <!-- email : yasser.bdj96@gmail.com -->
         <title>hiphp : login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
         <script type="text/javascript" src="./eel.js"></script>
         <script type="text/javascript" src="./script.js"></script>
         <script type="text/javascript" src="./include.js"></script>
         <link rel="stylesheet" href="./style.css">
         <link rel="icon" href="./favicon.ico">
         <link rel="stylesheet" type="text/css" href="./font-awesome/font-awesome.min.css" />
+        <script src="./index.js" defer></script>
+        <link rel="manifest" href="./manifest.webmanifest">
+        <meta name="theme-color" content="#0d1117" />
     </head>
     <body onload="connect_with_cookie()">
+        <div class="download_pwa"><button class="button">install</button></div>
         <div id="connected">
             <spam id="return" class="return pointer padding_11 w15 text_center" onclick="back()"><i class="fa fa-arrow-left"></i></spam>
             <spam id="save" class="save pointer padding_11 w15 text_center" onclick="save()"><i class="fa fa-floppy-o"></i></spam>
@@ -63,7 +69,7 @@
         </div>
 
         <div id="login" >
-            <img src="./hiphp_logo.png" style="width: 160px;" onload="version()"><br>
+            <img src="./hiphp_logo.png" style="width: 160px;" onload="version()" alt="hiphp logo"><br>
             <input type="text" id="url" value="" style="width:50%;" placeholder="Url EX: http://localhost/index.php"><br>
             <input type="text" id="key" placeholder="Key" style="width:50%;"><br>
             <button class="button" onclick="connect()"><i class="fa fa-sign-in"></i> Login</button><br>

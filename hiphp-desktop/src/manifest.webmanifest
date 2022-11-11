@@ -1,0 +1,17 @@
+{
+    "short_name": "Hiphp - Desktop",
+    "name": "Hiphp - Desktop",
+    "description": "hiphp - free & open source project for create a BackDoor to control PHP-based sites.",
+    "start_url": "./",
+    "display": "standalone",
+    "theme_color": "#0d1117",
+    "background_color": "#0d1117",
+    "icons": [
+        {
+            "src": "./hiphp_logo.png",
+            "type": "image/png",
+            "sizes": "600x600",
+            "purpose": "any maskable"
+        }
+    ]
+}

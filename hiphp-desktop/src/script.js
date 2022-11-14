@@ -11,11 +11,37 @@
 
 //START{
 var originalTitle=document.title;
+
+//iswork:
+function iswork_f(){
+    try {
+        eel.iswork()(
+            function(ret){
+                return ret;
+            }
+        )
+        return "True";
+    } catch(err) {
+        console.log(err.message);
+        return "False";
+    }
+}
+
+
 //
 function connect_with_cookie(){
     settings_opt();
-    if (getCookie("url")!=null && getCookie("key")!=null && getCookie("url")!="undefined" && getCookie("key")!="undefined"){
-        connect(how="connect_with_cookie");
+    var iswork=iswork_f();
+    //console.log(iswork);
+    if (iswork!=="False"){
+        if (getCookie("url")!=null && getCookie("key")!=null && getCookie("url")!="undefined" && getCookie("key")!="undefined"){
+            connect(how="connect_with_cookie");
+        }
+    }else{
+        //console.log("false");
+        document.getElementById('connected').style.display='none';
+        document.getElementById('login').style.display='none';
+        document.getElementById('notwork').style.display='block';
     }
 }
 //connect:

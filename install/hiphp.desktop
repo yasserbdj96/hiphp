@@ -11,8 +11,8 @@
 
 #START{
 [Desktop Entry]
-Name=hiphp
-Comment=Open-source BackDoor to control php-based sites
+Name=Hiphp - CLI
+Comment=hiphp - free & open source project for create a BackDoor to control PHP-based sites.
 GenericName=hiphp
 Exec=sh -c '/usr/local/bin/hiphp;${SHELL:-bash}'
 Icon=/usr/share/hiphp/hiphp.png

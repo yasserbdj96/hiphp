@@ -41,6 +41,9 @@ input[type=button],.button{
 #codeEditor{
   display:none;
 }
+#notwork{
+  display:none;
+}
 .w15{
   width: 15px;
 }
@@ -321,5 +324,16 @@ input[type=submit] {
 #cat:focus-visible {
     outline:none;
 }
-/*}END.*/
 
+/**/
+#notwork {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+}
+
+/*}END.*/

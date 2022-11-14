@@ -141,6 +141,11 @@ except:
     host_ip="127.0.0.1"
     host_port=8080
 
+#iswork:
+@eel.expose
+def iswork():
+    return "True"
+
 print(f"hiphp run on local link: {host_ip}:{host_port}")
 
 #eel.start("index.html",host=host_ip,port=host_port,size=(1050,500))

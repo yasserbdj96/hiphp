@@ -49,7 +49,7 @@ termux_install(){
     # My Termux setup
 
     # update, upgrade
-    pkg update -y && pkg upgrade -y
+    #pkg update -y && pkg upgrade -y
 
     # configure storage
     termux-setup-storage

@@ -1,3 +1,17 @@
+/*
+   |                                                          |
+ --+----------------------------------------------------------+--
+   |   Code by : yasserbdj96                                  |
+   |   Email   : yasser.bdj96@gmail.com                       |
+   |   Github  : https://github.com/yasserbdj96               |
+   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
+ --+----------------------------------------------------------+--  
+   |        all posts #yasserbdj96 ,all views my own.         |
+ --+----------------------------------------------------------+--
+   |                                                          |
+*/
+
+/*START{*/
 body{
     background-color: #0d1117;
 }
@@ -130,3 +144,4 @@ input[type=checkbox]:checked + span {
 ::-webkit-scrollbar-thumb:hover {
     background: #3c3d3d; 
 }
+/*}END.*/

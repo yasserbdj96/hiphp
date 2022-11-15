@@ -37,7 +37,6 @@ if os.name == 'nt':
     os.system('color')
     #    import readline
 
-
 #start hiphp class:
 class hiphp:
     #__init__:
@@ -483,8 +482,6 @@ class hiphp:
 
     #download:
     def download(self,path_x,outpath=""):
-
-    
         new_command=file_to_b64(path_x)
         
         path_x=os.path.basename(path_x)

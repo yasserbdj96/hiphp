@@ -105,4 +105,5 @@ self.addEventListener('activate', function (event) {
       })
   )
 });
+
 //}END.

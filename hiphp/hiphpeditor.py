@@ -71,4 +71,5 @@ def editor(stdscr):
   curses.endwin()
 #editor("vvvv.py")
 #curses.wrapper(main)
+
 #}END.

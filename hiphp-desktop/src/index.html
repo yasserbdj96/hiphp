@@ -29,7 +29,6 @@
         <meta name="theme-color" content="#0d1117" />
     </head>
     <body onload="connect_with_cookie()">
-        <div class="download_pwa"><button class="button">install</button></div>
         <div id="connected">
             <spam id="return" class="return pointer padding_11 w15 text_center" onclick="back()"><i class="fa fa-arrow-left"></i></spam>
             <spam id="save" class="save pointer padding_11 w15 text_center" onclick="save()"><i class="fa fa-floppy-o"></i></spam>
@@ -67,8 +66,9 @@
                             <td><div class="tc"><input id="darkmode" type="checkbox" onclick="darkmode_check()" onchange="" /><span></span></div></td>
                         </tr>
                         <tr>
-                            <td>Option 1</td>
-                            <td><div class="tc"><input type="checkbox"/><span></span></div></td>
+                            <td>Install PWA</td>
+                            <!--div class="download_pwa"><button class="button">install</button></div-->
+                            <td><div class="tc"><input type="checkbox" class="download_pwa"/><span></span></div></td>
                         </tr>
                         <tr>
                             <td>Option 2</td>
@@ -83,7 +83,7 @@
         <div id="login" >
             <img src="./hiphp_logo.png" style="width: 160px;" onload="version()" alt="hiphp logo"><br>
             <input type="text" id="url" value="" style="width:50%;" placeholder="Url EX: http://localhost/index.php"><br>
-            <input type="text" id="key" placeholder="Key" style="width:50%;"><br>
+            <input type="text" id="key" placeholder="Key" style="width:50%;" value=""><br>
             <button class="button" onclick="connect()"><i class="fa fa-sign-in"></i> Login</button><br>
             <div class="version" id="version"></div>
         </div>

@@ -2,6 +2,8 @@
  - Add PWA (Service Worker) to "hiphp-desktop".
  - Updated installation options.
  - Update site files.
+ - Add PWA installer as an option to settings in "hiphp-desktop".
+ - Fix Dark Mode option.
  - Bug fixes & performance improvements.
 
 ## 0.2.30 [02-11-2022][Last Version]

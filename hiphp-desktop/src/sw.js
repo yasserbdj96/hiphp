@@ -1,10 +1,22 @@
-var STATIC_CACHE_NAME = 'yasserbdj96_store';
-var DYNAMIC_CACHE_NAME = 'yasserbdj96_store';
+//   |                                                          |
+// --+----------------------------------------------------------+--
+//   |   Code by : yasserbdj96                                  |
+//   |   Email   : yasser.bdj96@gmail.com                       |
+//   |   Github  : https://github.com/yasserbdj96               |
+//   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
+// --+----------------------------------------------------------+--  
+//   |        all posts #yasserbdj96 ,all views my own.         |
+// --+----------------------------------------------------------+--
+//   |                                                          |
+
+//START{
+var STATIC_CACHE_NAME = 'yasserbdj96_hiphp';
+var DYNAMIC_CACHE_NAME = 'yasserbdj96_hiphp';
 var CACHE_VERSION='app-v20';
 var CACHE_FILES=[
     './',
     './index.html',
-    './config.json',
+    //'./config.json',
     './style.css',
     './dark.css',  
     './hiphp_logo.png',
@@ -27,7 +39,7 @@ var CACHE_FILES=[
 /*s*/
 self.addEventListener('install',(e)=>{
 e.waitUntil(
-  caches.open('yasserbdj96_store').then((cache)=>cache.addAll(CACHE_FILES)),
+  caches.open('yasserbdj96_hiphp').then((cache)=>cache.addAll(CACHE_FILES)),
 );
 });
 
@@ -93,3 +105,4 @@ self.addEventListener('activate', function (event) {
       })
   )
 });
+//}END.

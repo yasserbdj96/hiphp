@@ -47,5 +47,4 @@ else
         python3 "/usr/share/hiphp/hiphp.py" $1 $2;
     fi
 fi
-
 #}END.

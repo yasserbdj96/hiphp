@@ -29,5 +29,4 @@ msg_4=f"{msgi} No updates available"
 msgs="[✓]"
 smsg_1=f"{msgs} File downloaded in: "
 smsg_2=f"{msgs} The path has been compressed into: "
-
 #}END.

@@ -150,5 +150,4 @@ print(f"hiphp run on local link: {host_ip}:{host_port}")
 
 #eel.start("index.html",host=host_ip,port=host_port,size=(1050,500))
 eel.start("index.html",host=host_ip,port=host_port,mode='default')
-
 #}END.

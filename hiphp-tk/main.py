@@ -241,5 +241,4 @@ w.pack()
 w.place(relx=1.0,rely=1.0,anchor='se')
 
 mainloop()
-
 #}END.

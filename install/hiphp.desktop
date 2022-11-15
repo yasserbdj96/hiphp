@@ -26,5 +26,4 @@ Keywords=backdoor;controller;
 Name=hiphp-desktop
 Exec=bash /usr/local/bin/hiphp --dst
 Icon=/usr/share/hiphp/hiphp.png
-
 #}END.

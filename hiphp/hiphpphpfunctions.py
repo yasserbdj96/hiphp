@@ -12,7 +12,6 @@
 #   |                                                          |
 
 #START{
-
 #
 def scandir(dirx="./"):
     x="""
@@ -33,7 +32,6 @@ if($handle=opendir($path)){
 }
 echo json_encode($fileList);"""
     return x
-
 #
 def scandir_all(dirx="./"):
     x="""
@@ -53,11 +51,9 @@ function getDirContents($dir="./",$relativePath=false){
 }
 echo json_encode(getDirContents('"""+dirx+"""'));"""
     return x
-
 #
 def file_get_contents(dirx):
     return f"""echo file_get_contents('{dirx}');"""
-
 
 #
 def zip_path(path="./"):
@@ -150,6 +146,7 @@ deleteDirectory('"""+path+"""');
     elif t=="-d":
         return code2
 
+
 #
 def php_info():
     code="""header('Content-type: text/plain');
@@ -221,5 +218,4 @@ def php_info():
     echo "\n";
     echo "DIRECTORY_SEPARATOR : ".DIRECTORY_SEPARATOR;"""
     return code
-
 #}END.

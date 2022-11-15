@@ -12,5 +12,6 @@
 
     #START{
     phpinfo();
+	
     #}END.
 ?>

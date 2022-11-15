@@ -531,4 +531,5 @@ function darkmode_check(){
 
 //
 console.log("%c %c %c yasserbdj96 %c  %c  https://yasserbdj96.github.io/  ","background: #0f81c1; padding:5px 0;","background: #0f81c1; padding:5px 0;","color: #0f81c1; background: #3b434b; padding:5px 0;","background: #0f81c1; padding:5px 0;","background: #2aaf49; padding:5px 0;");
+
 //}END.

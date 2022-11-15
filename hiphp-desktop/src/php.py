@@ -12,7 +12,6 @@
 #   |                                                          |
 
 #START{
-
 #ls:
 def php_ls():
     x="""function getDirContents($dir="./",$relativePath=false){
@@ -143,4 +142,5 @@ $file=basename('{path}');
 $cont_type=array("file"=>$file,"type"=>$type,"cont"=>$cont);
 echo json_encode($cont_type);"""
     return x
+
 #}END.

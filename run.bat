@@ -18,6 +18,11 @@ rem make symbels true:
 for /F "tokens=2 delims=:" %%C in ('chcp') do set /A "$CP=%%C"
 chcp 437 > nul
 
-python run.py %1 %2
+set mypath="%~dp0"
+
+rem config.ini:
+FOR /F "tokens=*" %%A IN ('type !mypath!"config.ini"') DO set %%A
+
+!python_default_path! run.py %1 %2
 
 rem }END.

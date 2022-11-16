@@ -39,7 +39,9 @@
             <spam style="float:right" class="pointer padding_11 w15 text_center" onclick="settings()"><i class="fa fa-cogs"></i></spam>
             <spam style="float:right" class="pointer padding_11 w15 text_center" onclick="connect()"><i class="fa fa-undo"></i></spam>
             <spam style="float:right" class="pointer padding_11 w15 text_center" onclick="alert('soon');"><i class="fa fa-terminal"></i></spam>
+            <spam style="float:right" class="pointer padding_11 w15 text_center" onclick="get_selected('delete')"><i class="fa fa-trash-o"></i></spam>
             <spam id="up" style="float:right" class="pointer padding_11 w15 text_center" onclick="alert('soon');"><i class="fa fa-upload"></i></spam>
+            <spam style="float:right" class="pointer padding_11 w15 text_center" onclick="get_selected('download')"><i class="fa fa-download"></i></spam>
             <spam id="add" style="float:right" class="pointer padding_11 w15 text_center" onclick="add()"><i class="fa fa-plus"></i></spam>
             
             <!--ls-->
@@ -70,10 +72,10 @@
                             <!--div class="download_pwa"><button class="button">install</button></div-->
                             <td><div class="tc"><input type="checkbox" class="download_pwa"/><span></span></div></td>
                         </tr>
-                        <tr>
+                        <!--tr>
                             <td>Option 2</td>
-                            <td><div class="tc"><input type="checkbox"/><span></span></div></td>
-                        </tr>
+                            <td><div class="tc"><input type="checkbox" onclick="pwa_uninstall()"/><span></span></div></td>
+                        </tr-->
                     </table>
                     <!--center><button class="button" onclick=""><i class="fa fa-floppy-o"></i> Save Settings</button></center-->
                 </div>
@@ -82,8 +84,8 @@
 
         <div id="login" >
             <img src="./hiphp_logo.png" style="width: 160px;" onload="version()" alt="hiphp logo"><br>
-            <input type="text" id="url" value="" style="width:50%;" placeholder="Url EX: http://localhost/index.php"><br>
-            <input type="text" id="key" placeholder="Key" style="width:50%;" value=""><br>
+            <input type="text" id="url" value="http://127.0.0.1/vvv2.php" style="width:50%;" placeholder="Url EX: http://localhost/index.php"><br>
+            <input type="password" id="key" placeholder="Key" style="width:50%;" value="123"><br>
             <button class="button" onclick="connect()"><i class="fa fa-sign-in"></i> Login</button><br>
             <div class="version" id="version"></div>
         </div>

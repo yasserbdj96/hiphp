@@ -27,7 +27,6 @@ function iswork_f(){
     }
 }
 
-
 //
 function connect_with_cookie(){
     settings_opt();
@@ -62,7 +61,8 @@ function connect(how=""){
     eel.connect(key,url)(
         function(ret){
             if(ret=="connected"){
-                document.title="hiphp : "+url;
+                //document.title="hiphp : "+url;
+                include("hiphp : "+url,"title");
                 document.getElementById("login").style.display='none';
                 document.getElementById("connected").style.display='block';
                 eel.ls(key,url)(function(retu){
@@ -98,7 +98,7 @@ function connect(how=""){
                         var ren='<a class="pointer fs20" onclick="ren('+"'"+pathxx+"'"+')"><i class="fa fa-i-cursor c_orange"></i></a>'+s;
                         var down='<a class="pointer fs20" onclick="download_file('+"'"+pathxx+"'"+')"><i class="fa fa-download c_green"></i></a>'+s;
                         var info='<a class="pointer fs20" onclick="file_info('+"'"+pathxx+"'"+')"><i class="fa fa-info-circle c_orange"></i></a>'+s;
-                        var check='<div class="inline-block"><input type="checkbox"/><span></span></div>';
+                        var check='<div class="inline-block"><input name="fileschecked" type="checkbox" value="'+pathxx+'"/><span></span></div>';
                         //var down='<a class="pointer" onclick="down('+"'"+pathxx+"'"+')">dddd</a>'+s;
                         ls+='<tr><td>'+check+" <div class='ls_list inline-block'>"+img_icon+" "+pathxx+'</div></td><td>'+permxx+'</td><td>'+edit+ren+down+del+info+'</td></tr>';
                     }
@@ -109,6 +109,7 @@ function connect(how=""){
                 document.getElementById("login").style.display='block';
                 document.getElementById("connected").style.display='none';
             }
+            //include(document.title,"title");
         }
     )
 }
@@ -172,7 +173,9 @@ function cat(path){
                 pass(); // pass exception object to error handler
             }
             document.getElementById("br").style.display='none';
-            document.title="hiphp : "+path;
+            //document.title="hiphp : "+path;
+            include("hiphp : "+path,"title");
+            
            
         }
     )
@@ -198,9 +201,11 @@ function back(){
     document.getElementById("settings").style.display='none';
     var url=document.getElementById("url").value;
     if(url!=""){
-        document.title="hiphp : "+url;
+        //document.title="hiphp : "+url;
+        include("hiphp : "+url,"title");
     }else{
-        document.title=originalTitle;
+        //document.title=originalTitle;
+        include(originalTitle,"title");
     }
     
 }
@@ -328,7 +333,7 @@ function download_file(path){
                 //console.log(obj.file);
 
 
-                download(obj.file,obj.cont,obj.type)
+                download(obj.file,obj.cont,obj.type);
                 connect();
             }
         )
@@ -414,7 +419,8 @@ function settings(){
     document.getElementById("add").style.display='none';
     document.getElementById("up").style.display='none';
     //document.getElementById("br").style.display='none';
-    document.title="hiphp : settings";
+    include("hiphp : settings","title");
+    //document.title="hiphp : settings";
 }
 
 /*
@@ -528,6 +534,23 @@ function darkmode_check(){
     )
 }
 
+//
+function get_selected(todo){
+    //
+    var el = document.querySelectorAll('input[name=fileschecked]:checked');
+    //const selected_list = [];
+    for(var i = 0; i < el.length; i++) {
+        //selected_list.push(el[i].value);
+        if (todo=="download"){
+            download_file(el[i].value);
+        } else if (todo=="delete"){
+            del(el[i].value);
+        }
+        //alert(el[i].value);
+        
+        
+    }
+}
 
 //
 console.log("%c %c %c yasserbdj96 %c  %c  https://yasserbdj96.github.io/  ","background: #0f81c1; padding:5px 0;","background: #0f81c1; padding:5px 0;","color: #0f81c1; background: #3b434b; padding:5px 0;","background: #0f81c1; padding:5px 0;","background: #2aaf49; padding:5px 0;");

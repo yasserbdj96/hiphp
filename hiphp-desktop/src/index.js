@@ -81,11 +81,14 @@ if (download_pwa.length > 0){
   });
 }
 
-/*
-function pwa_uninstall(){
+
+/*function pwa_uninstall(){
+  
+  // given the above, is anything like the following possible?
+window.addEventListener('appuninstalled', function(e) {
+  console.log('onappuninstalled', e)
+  localStorage.setItem('APP_INSTALLED', '0')
+})
   alert("hiii");
-  window.addEventListener('beforeinstallprompt', function(e) {
-    localStorage.removeItem('http://127.0.0.1:8080/')
-  })
 }*/
 //}END.

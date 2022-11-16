@@ -110,6 +110,7 @@
 - [All languages used in this project](#All-languages-used-in-this-project)
 - [Where can you find this project?](#Where-can-you-find-this-project)
 - [Requirements](#Requirements)
+- [Install all Requirements](#Install-all-Requirements)
 - [Supported Distributions](#Supported-Distributions)
 - [Hiphp with Docker](#Hiphp-with-Docker)
     - [Docker pull build and run](#Docker-pull-build-and-run)
@@ -183,6 +184,17 @@
 [✓] <a href="https://github.com/yasserbdj96/biglibrary">biglibrary</a><br>
 [✓] <a href="">tk</a><br>
 [✓] <a href="https://github.com/ChrisKnott/Eel">eel</a>
+
+<br>
+<h2>Install all Requirements:</h2>
+
+```bash
+# For Linux:
+❯ bash install_all_requirements_linux.sh
+
+# For Windows:
+❯ install_all_requirements_win.bat
+```
 
 <br>
 <h2>Supported Distributions:</h2>
@@ -329,8 +341,8 @@
 ❯ python3 run.py <KEY> <URL>
 
 # In case you encounter some errors on Windows os:
+# You must enter the installation path of your Python program in the "config.ini" file.
 ❯ run.bat <KEY> <URL>
-# In this case the python must be installed to path.
 ```
 
 <br>
@@ -347,6 +359,10 @@
 
 # Or if you install it on Ubuntu:
 ❯ hiphp --dst
+
+# Just on windows:
+# You must enter the installation path of your Python program in the "config.ini" file.
+❯ run-hiphp-desktop.bat
 ```
 
 <br>
@@ -762,11 +778,12 @@ hiphp Commands :
 
 <br>
 <h2>Limitations:</h2>
-1. When you use hiphp for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/ex.php'.<br>
+1. When you use hiphp for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/example.php'.<br>
 2. In order for hiphp to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
 3. hiphp will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.<br>
 4. If you use hiphp on .onion sites, you must run tor services or tor browser.<br>
-5. I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
+5. If you are a Windows user, you must modify the "config.ini" file.<br>
+6. I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
 
 <br>
 <h2>Development By:</h2>

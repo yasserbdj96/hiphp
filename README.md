@@ -579,6 +579,9 @@ hiphp Commands :
  - Update site files.
  - Add PWA installer as an option to settings in "hiphp-desktop".
  - Fix Dark Mode option.
+ - Fix File Creation, Modification and Access Date in "hiphp-desktop".
+ - Add a multiple selector in "hiphp-desktop".
+ - Fix running on Windows.
  - Bug fixes & performance improvements.
 
 ## 0.2.30 [02-11-2022][Last Version]

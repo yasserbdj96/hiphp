@@ -55,13 +55,16 @@ def php_file_info(path):
         return $bytes;
     }"""+f"""
     $filepath = '{path}';
+    $file_stats = stat($filepath);
     echo  'File Size: '.formatSizeUnits(filesize($filepath)).'\n';
     $path_parts = pathinfo($filepath);
     echo 'Dir Name: '.$path_parts['dirname'], "\n";
     echo 'Base Name: '.$path_parts['basename'], "\n";
     echo 'Extension: '.$path_parts['extension'], "\n";
     echo 'File Name: '.$path_parts['filename'], "\n";
-    echo "Last update: " . date ("F/d/Y H:i:s.", filemtime($path_parts['filename']));"""
+    echo 'Created on: '.date('d-m-Y H:m:i',$file_stats["ctime"]).PHP_EOL;
+    echo 'Last modified on: '.date('d-m-Y H:m:i',$file_stats["mtime"]).PHP_EOL;
+    echo 'Last accessed on: '.date('d-m-Y H:m:i',$file_stats["atime"]).PHP_EOL;"""
     return x
 #save:
 def php_save(path,content):

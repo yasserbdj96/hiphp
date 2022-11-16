@@ -21,7 +21,7 @@ input[type=button],.button{
     color: white;
 }
 
-input[type=text]{
+input[type=text],input[type=password]{
     background-color: #fff;
     color: #30363d;
     border: 1px solid #30363d;

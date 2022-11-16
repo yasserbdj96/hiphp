@@ -187,13 +187,13 @@
 <br>
 <h2>Supported Distributions:</h2>
 
-| Distribution   | Version Check | Python Test Version | Supported | Installation | Everything works |
-| :------------: | :-----------: | :-----------------: | :-------: | :----------: | :--------------: |
-| Ubuntu         | Last version  | 3.6 --> 3.10        | ✓         | ✓            | ✓                |
-| Windwos        | Last version  | 3.6 --> 3.10        | ✓         | ✗            | ✓                |
-| MacOS          | Last version  | 3.6 --> 3.10        | ✓         | ✗            | ✓                |
-| Android-termux | Last version  | 3.6 --> 3.10        | ✓         | ✓            | ✓                |
-| Nethunter      | Last version  | 3.6 --> 3.10        | ✓         | ✓            | ✓                |
+| Distribution   | Version Check | Python Test Version | Supported | Installation | Test in Browser    |
+| :------------: | :-----------: | :-----------------: | :-------: | :----------: | :----------------: |
+| Ubuntu         | Last version  | 3.6 --> 3.10        | ✓         | ✓            | chrome, firfox     |
+| Windwos        | Last version  | 3.6 --> 3.10        | ✓         | ✗            | chrome, firfox     |
+| MacOS          | Last version  | 3.6 --> 3.10        | ✓         | ✗            | chrome, firfox     |
+| Android-termux | Last version  | 3.6 --> 3.10        | ✓         | ✓            | ✗                  |
+| Nethunter      | Last version  | 3.6 --> 3.10        | ✓         | ✓            | ✗                  |
 
 <br>
 <h2>Hiphp with Docker:</h2>

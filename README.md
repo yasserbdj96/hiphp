@@ -189,9 +189,9 @@
 
 | Distribution   | Version Check | Python Test Version | Supported | Installation | Test in Browser    |
 | :------------: | :-----------: | :-----------------: | :-------: | :----------: | :----------------: |
-| Ubuntu         | Last version  | 3.6 --> 3.10        | ✓         | ✓            | chrome, firfox     |
-| Windwos        | Last version  | 3.6 --> 3.10        | ✓         | ✗            | chrome, firfox     |
-| MacOS          | Last version  | 3.6 --> 3.10        | ✓         | ✗            | chrome, firfox     |
+| Ubuntu         | Last version  | 3.6 --> 3.10        | ✓         | ✓            | chrome, firefox    |
+| Windwos        | Last version  | 3.6 --> 3.10        | ✓         | ✗            | chrome, firefox    |
+| MacOS          | Last version  | 3.6 --> 3.10        | ✓         | ✗            | chrome, firefox    |
 | Android-termux | Last version  | 3.6 --> 3.10        | ✓         | ✓            | ✗                  |
 | Nethunter      | Last version  | 3.6 --> 3.10        | ✓         | ✓            | ✗                  |
 

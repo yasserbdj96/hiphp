@@ -295,7 +295,7 @@
 ❯ hiphp --help                # hiphp cli help.
 ❯ hiphp --geth [KEY] [URL]    # Get the hole Code.
 ❯ hiphp [KEY] [URL]           # Connect to the victim's website.
-❯ hiphp --tk [KEY] [URL]      # Run hiphp as GUI with 'hiphp-tk' script.
+❯ hiphp --tk                  # Run hiphp as GUI with 'hiphp-tk' script.
 ❯ hiphp --dst                 # Run hiphp as GUI with 'hiphp-desktop'.
 ❯ hiphp --version             # Get the version number you are working with.
 
@@ -375,9 +375,11 @@
 ❯ pip install -r requirements.txt
 ❯ cd hiphp-tk
 ❯ pip install -r requirements-tk.txt
-❯ python3 main.py <KEY> <URL>
+❯ python3 main.py
 
 # Or if you install it on Ubuntu:
+❯ hiphp --tk
+#OR
 ❯ hiphp --tk <KEY> <URL>
 ```
 
@@ -598,6 +600,7 @@ hiphp Commands :
  - Fix File Creation, Modification and Access Date in "hiphp-desktop".
  - Add a multiple selector in "hiphp-desktop".
  - Fix running on Windows.
+ - Add login window on "hiphp-tk".
  - Bug fixes & performance improvements.
 
 ## 0.2.30 [02-11-2022][Last Version]

@@ -7,6 +7,7 @@
  - Fix File Creation, Modification and Access Date in "hiphp-desktop".
  - Add a multiple selector in "hiphp-desktop".
  - Fix running on Windows.
+ - Add login window on "hiphp-tk".
  - Bug fixes & performance improvements.
 
 ## 0.2.30 [02-11-2022][Last Version]

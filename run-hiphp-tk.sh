@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# coding:utf-8
+#!/bin/bash
 #   |                                                          |
 # --+----------------------------------------------------------+--
 #   |   Code by : yasserbdj96                                  |
@@ -12,8 +11,6 @@
 #   |                                                          |
 
 #START{
-import sys
-
-open('config.ini', 'w+').write('python_default_path='+sys.executable)
+python hiphp-tk/main.py
 
 #}END.

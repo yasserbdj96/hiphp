@@ -1,4 +1,4 @@
-name: Run on Windows latest
+name: Run on Windows
 on: [push]
 #defaults:
 #  run:

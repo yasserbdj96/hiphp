@@ -32,7 +32,7 @@ jobs:
         run: cp install_all_requirements_win.bat wrdir/install_all_requirements_win.bat && cp requirements.txt wrdir/requirements.txt && cp requirements-pypi.txt wrdir/requirements-pypi.txt && cp hiphp-desktop/requirements-dst.txt wrdir/hiphp-desktop/requirements-dst.txt && cp hiphp-tk/requirements-tk.txt wrdir/hiphp-tk/requirements-tk.txt && cp requirements-win.txt wrdir/requirements-win.txt
       - name: Create Config.ini file
         run: |
-            python -c "import sys; open('wrdir/config.ini', 'a').write('python_default_path='+sys.executable)"
+            python -c "import sys; open('wrdir/config.ini', 'w+').write('python_default_path='+sys.executable)"
       - name: pip Upgrade
         run: python -m pip install --upgrade pip
       - name: Run

@@ -149,7 +149,7 @@ def upSelected_to():
 root=Tk()
 top = Toplevel() #Creates the toplevel window
 top.title('hiphp-TK login')
-top.geometry('300x250')
+top.geometry('300x140')
 
 root.title('hiphp-TK')
 

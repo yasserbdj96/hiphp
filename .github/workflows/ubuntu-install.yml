@@ -1,4 +1,4 @@
-name: ubuntu install
+name: Ubuntu install
 on: [push]
 jobs:
   build:

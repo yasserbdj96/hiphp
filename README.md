@@ -195,7 +195,7 @@
 ❯ bash install_all_requirements_linux.sh
 
 # For Windows:
-# Do not forget to modify the "config.ini" file or use the following command -->python -c "import sys; open('config.ini', 'a').write('python_default_path='+sys.executable)"
+# Do not forget to modify the "config.ini" file or use the following command -->python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
 ❯ install_all_requirements_win.bat
 ```
 
@@ -344,7 +344,7 @@
 ❯ python3 run.py <KEY> <URL>
 
 # In case you encounter some errors on Windows os:
-# You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'a').write('python_default_path='+sys.executable)"
+# You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
 ❯ run.bat <KEY> <URL>
 ```
 
@@ -364,7 +364,7 @@
 ❯ hiphp --dst
 
 # Just on windows:
-# You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'a').write('python_default_path='+sys.executable)"
+# You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
 ❯ run-hiphp-desktop.bat
 ```
 
@@ -793,7 +793,7 @@ hiphp Commands :
 5. If you are a Windows user, you must modify the "config.ini" file or use this command:
 
 ```
-python -c "import sys; open('config.ini', 'a').write('python_default_path='+sys.executable)"
+python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
 ```
 
 

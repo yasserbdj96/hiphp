@@ -7,6 +7,7 @@
  - Fix File Creation, Modification and Access Date in "hiphp-desktop".
  - Add a multiple selector in "hiphp-desktop".
  - Fix running on Windows.
+ - Activate the arrow feature to return to previous commands (only for Linux).
  - Add login window on "hiphp-tk".
  - Bug fixes & performance improvements.
 

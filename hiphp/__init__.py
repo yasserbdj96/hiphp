@@ -36,6 +36,11 @@ import os
 if os.name == 'nt':
     os.system('color')
     #    import readline
+else:
+    try:
+        import readline
+    except:
+        pass
 
 #start hiphp class:
 class hiphp:

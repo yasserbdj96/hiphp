@@ -27,7 +27,7 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - name: Create Workspace Folder
-        run: mkdir -p wrdir && mkdir -p hiphp-tk && mkdir hiphp-desktop
+        run: mkdir -p wrdir && mkdir -p wrdir/hiphp-tk && mkdir -p wrdir/hiphp-desktop
       - name: Copy Files & folders to Workspace Folder
         run: cp install_all_requirements_linux.sh wrdir/install_all_requirements_linux.sh && cp requirements.txt wrdir/requirements.txt && cp requirements-pypi.txt wrdir/requirements-pypi.txt && cp hiphp-desktop/requirements-dst.txt wrdir/hiphp-desktop/requirements-dst.txt && cp hiphp-tk/requirements-tk.txt wrdir/hiphp-tk/requirements-tk.txt && cp requirements-linux.txt wrdir/requirements-linux.txt
       - name: pip Upgrade

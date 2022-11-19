@@ -791,6 +791,7 @@ hiphp Commands :
 4. If you use hiphp on .onion sites, you must run tor services or tor browser.<br>
 <!--6. I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.-->
 5. If you are a Windows user, you must modify the "config.ini" file or use this command:
+
 ```
 python -c "import sys; open('config.ini', 'a').write('python_default_path='+sys.executable)"
 ```

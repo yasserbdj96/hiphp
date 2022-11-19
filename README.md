@@ -8,6 +8,8 @@
 [![Test on Ubuntu latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
 [![Test on Windows latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
 [![Test on MacOS latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
+[![Test requirements windows](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml)
+[![Test requirements linux](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml)
 [![pypi-setup](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml)
 [![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
 [![Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)
@@ -16,7 +18,7 @@
 [![CodeQL](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
-[![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp)](https://github.com/yasserbdj96/hiphp)
+[![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
 [![Docker pulls](https://img.shields.io/docker/pulls/yasserbdj96/hiphp)](https://hub.docker.com/r/yasserbdj96/hiphp/)
 [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%99%A5-red)](https://github.com/yasserbdj96/hiphp)
 [![Stars](https://img.shields.io/github/stars/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
@@ -193,6 +195,7 @@
 ❯ bash install_all_requirements_linux.sh
 
 # For Windows:
+# Do not forget to modify the "config.ini" file or use the following command -->python -c "import sys; open('config.ini', 'a').write('python_default_path='+sys.executable)"
 ❯ install_all_requirements_win.bat
 ```
 
@@ -341,7 +344,7 @@
 ❯ python3 run.py <KEY> <URL>
 
 # In case you encounter some errors on Windows os:
-# You must enter the installation path of your Python program in the "config.ini" file.
+# You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'a').write('python_default_path='+sys.executable)"
 ❯ run.bat <KEY> <URL>
 ```
 
@@ -361,7 +364,7 @@
 ❯ hiphp --dst
 
 # Just on windows:
-# You must enter the installation path of your Python program in the "config.ini" file.
+# You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'a').write('python_default_path='+sys.executable)"
 ❯ run-hiphp-desktop.bat
 ```
 
@@ -600,6 +603,7 @@ hiphp Commands :
  - Fix File Creation, Modification and Access Date in "hiphp-desktop".
  - Add a multiple selector in "hiphp-desktop".
  - Fix running on Windows.
+ - Activate the arrow feature to return to previous commands (only for Linux).
  - Add login window on "hiphp-tk".
  - Bug fixes & performance improvements.
 
@@ -785,8 +789,12 @@ hiphp Commands :
 2. In order for hiphp to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
 3. hiphp will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.<br>
 4. If you use hiphp on .onion sites, you must run tor services or tor browser.<br>
-5. If you are a Windows user, you must modify the "config.ini" file.<br>
-6. I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
+<!--6. I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.-->
+5. If you are a Windows user, you must modify the "config.ini" file or use this command:
+```
+python -c "import sys; open('config.ini', 'a').write('python_default_path='+sys.executable)"
+```
+
 
 <br>
 <h2>Development By:</h2>

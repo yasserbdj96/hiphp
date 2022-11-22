@@ -11,6 +11,6 @@
 #   |                                                          |
 
 #START{
-python hiphp-tk/main.py
+python hiphp-tk/main.py $1 $2
 
 #}END.

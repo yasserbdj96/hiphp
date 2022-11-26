@@ -45,7 +45,84 @@ function getDirContents($dir="./",$relativePath=false){
             $path=str_replace($dir,'',$path);
             $path=ltrim($path, '/');
         }
-        $fileList[]=$path;
+
+        $perms = fileperms($path);
+
+        switch ($perms & 0xF000) {
+            case 0xC000: // socket
+                $info = 's';
+                break;
+            case 0xA000: // symbolic link
+                $info = 'l';
+                break;
+            case 0x8000: // regular
+                $info = 'r';
+                break;
+            case 0x6000: // block special
+                $info = 'b';
+                break;
+            case 0x4000: // directory
+                $info = 'd';
+                break;
+            case 0x2000: // character special
+                $info = 'c';
+                break;
+            case 0x1000: // FIFO pipe
+                $info = 'p';
+                break;
+            default: // unknown
+                $info = 'u';
+        }
+
+        // Owner
+        $info .= (($perms & 0x0100) ? 'r' : '-');
+        $info .= (($perms & 0x0080) ? 'w' : '-');
+        $info .= (($perms & 0x0040) ?
+                    (($perms & 0x0800) ? 's' : 'x' ) :
+                    (($perms & 0x0800) ? 'S' : '-'));
+
+        // Group
+        $info .= (($perms & 0x0020) ? 'r' : '-');
+        $info .= (($perms & 0x0010) ? 'w' : '-');
+        $info .= (($perms & 0x0008) ?
+                    (($perms & 0x0400) ? 's' : 'x' ) :
+                    (($perms & 0x0400) ? 'S' : '-'));
+
+        // World
+        $info .= (($perms & 0x0004) ? 'r' : '-');
+        $info .= (($perms & 0x0002) ? 'w' : '-');
+        $info .= (($perms & 0x0001) ?
+                    (($perms & 0x0200) ? 't' : 'x' ) :
+                    (($perms & 0x0200) ? 'T' : '-'));
+
+        $file_stats = stat($path);
+
+        //
+        $last_use=date('M d H:m',$file_stats["mtime"]);
+
+        //
+        $bytes=filesize($path);
+        if ($bytes >= 1073741824){
+            $bytes = number_format($bytes / 1073741824, 2) . ' GB';
+        }elseif ($bytes >= 1048576){
+            $bytes = number_format($bytes / 1048576, 2) . ' MB';
+        }elseif ($bytes >= 1024){
+            $bytes = number_format($bytes / 1024, 2) . ' KB';
+        }elseif ($bytes > 1){
+            $bytes = $bytes . ' bytes';
+        }elseif ($bytes == 1){
+                $bytes = $bytes . ' byte';
+        }else{
+            $bytes = '0 bytes';
+        }
+
+        if(strlen($bytes)<11){
+            $s=11-strlen($bytes);
+            $bytes=str_repeat(" ",$s).$bytes;
+        }
+
+        //
+        $fileList[]=$info." ".$last_use." ".$bytes." ".$path;
     }
     return $fileList;
 }

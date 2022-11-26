@@ -594,7 +594,7 @@ hiphp Commands :
   <summary>Click to See changelog History</summary>
 
 ```
-## 0.2.31-beta [Beta Version]
+## 0.2.31 [27-11-2022][Last Version]
  - Add PWA (Service Worker) to "hiphp-desktop".
  - Updated installation options.
  - Update site files.
@@ -605,9 +605,10 @@ hiphp Commands :
  - Fix running on Windows.
  - Activate the arrow feature to return to previous commands (only for Linux).
  - Add login window on "hiphp-tk".
+ - Update List information about the FILEs "hiphp-cli".
  - Bug fixes & performance improvements.
 
-## 0.2.30 [02-11-2022][Last Version]
+## 0.2.30 [02-11-2022]
  - Fix auto login in "hiphp-desktop".
  - Fix file info in "hiphp-desktop".
  - Add Dark Mode option to settings in "hiphp-desktop".

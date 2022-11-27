@@ -290,7 +290,11 @@ class hiphp:
                 for i in range(len(x)):
                     if x[i]!="." and x[i]!="..":
                         x[i]=x[i].replace("\/","/")
-                biglibrary().lslist(x,separator=" | ")
+                if len(x)>1:
+                    separators=" | "
+                else:
+                    separators=""
+                biglibrary().lslist(x,separator=separators)
             #set
             elif command[0:4].lower()=="--cd" or command[0:2].lower()=="cd":
                 self.cd=""

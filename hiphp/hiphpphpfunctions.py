@@ -15,8 +15,13 @@
 #
 def scandir(dirx="./"):
     x="""
-$fileList=array();
 $path='"""+dirx+"""';
+if(!is_dir($path)) {
+    echo json_encode(["[✗] The Directory '{$path}' not exists"]);
+    exit();
+}
+
+$fileList=array();
 if($handle=opendir($path)){
     while(false!==($entry=readdir($handle))){
         if($entry!="." && $entry!=".."){
@@ -36,6 +41,11 @@ echo json_encode($fileList);"""
 def scandir_all(dirx="./"):
     x="""
 function getDirContents($dir="./",$relativePath=false){
+
+    if(!is_dir($dir)) {
+        return ["[✗] The Directory '{$dir}' not exists"];
+    }
+
     $fileList=array();
     $iterator=new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir));
     foreach($iterator as $file){

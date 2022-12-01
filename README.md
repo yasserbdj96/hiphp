@@ -343,9 +343,13 @@
 # default run on any os:
 ❯ python3 run.py <KEY> <URL>
 
+# Run with Makefile:
+❯ make run arg="cli" url="<URL>" key="<KEY>"
+
 # In case you encounter some errors on Windows os:
 # You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
 ❯ run.bat <KEY> <URL>
+
 ```
 
 <br>
@@ -363,9 +367,13 @@
 # Or if you install it on Ubuntu:
 ❯ hiphp --dst
 
+# Run with Makefile:
+❯ make run arg="dst" url="<URL>" key="<KEY>"
+
 # Just on windows:
 # You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
 ❯ run-hiphp-desktop.bat
+
 ```
 
 <br>
@@ -384,6 +392,14 @@
 ❯ hiphp --tk
 #OR
 ❯ hiphp --tk <KEY> <URL>
+
+# Run with Makefile:
+❯ make run arg="tk" url="<URL>" key="<KEY>"
+
+# Just on windows:
+# You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
+❯ run-hiphp-tk.bat
+
 ```
 
 <br>

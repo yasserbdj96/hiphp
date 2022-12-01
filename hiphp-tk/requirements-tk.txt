@@ -1,1 +1,2 @@
 tk
+chardet

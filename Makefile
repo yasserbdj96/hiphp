@@ -14,14 +14,22 @@ VENV = venv
 PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
 
-run: $(VENV)/bin/activate
-# \
-	$(PYTHON) run.py
-# 
-	$(PYTHON) hiphp-desktop/main.py
-# \
-	$(PYTHON) hiphp-tk/main.py
+ifeq ($(arg),cli)
+	RUN = run.py $(key) $(url)
+else
+	ifeq ($(arg),tk)
+		RUN = hiphp-tk/main.py $(key) $(url)
+	else
+		ifeq ($(arg),dst)
+			RUN = hiphp-desktop/main.py
+		else
+			RUN = makefile_errors.py
+		endif
+	endif
+endif
 
+run: $(VENV)/bin/activate
+	$(PYTHON) $(RUN)
 
 $(VENV)/bin/activate: requirements.txt
 	python3 -m venv $(VENV)
@@ -30,6 +38,8 @@ $(VENV)/bin/activate: requirements.txt
 	$(PIP) install -r ./hiphp-desktop/requirements-dst.txt
 	$(PIP) install -r ./hiphp-tk/requirements-tk.txt
 	$(PIP) install -r ./requirements-linux.txt
+
+
 
 clean:
 	rm -rf hiphp/__pycache__

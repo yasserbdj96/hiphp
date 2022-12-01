@@ -26,7 +26,7 @@
         <link rel="stylesheet" type="text/css" href="./font-awesome/font-awesome.min.css" />
         <script src="./index.js" defer></script>
         <link rel="manifest" href="./manifest.webmanifest">
-        <meta name="theme-color" content="#0d1117" />
+        <meta name="theme-color" content="#474b85" />
     </head>
     <body onload="connect_with_cookie()">
         <div id="connected">
@@ -84,8 +84,22 @@
 
         <div id="login" >
             <img src="./hiphp_logo.png" style="width: 160px;" onload="version()" alt="hiphp logo"><br>
-            <input type="text" id="url" value="" style="width:50%;" placeholder="Url EX: http://localhost/index.php"><br>
-            <input type="password" id="key" placeholder="Key" style="width:50%;" value=""><br>
+
+            <center>
+                <div class="form__group field">
+                    <input type="text" class="form__field" placeholder="Url EX: http://localhost/index.php" name="url" id='url' required />
+                    <label for="url" class="form__label">Url</label>
+                </div>
+
+                <div class="form__group field">
+                    <input type="password" class="form__field" placeholder="password" name="password" id='key' required />
+                    <label for="password" class="form__label">Password</label>
+                </div>
+            </center>
+            <br>
+
+            <!--input type="text" id="url" value="http://127.0.0.1/vvv2.php" style="width:50%;" placeholder="Url EX: http://localhost/index.php"><br>
+            <input type="password" id="key" placeholder="Key" style="width:50%;" value="123"><br-->
             <button class="button" onclick="connect()"><i class="fa fa-sign-in"></i> Login</button><br>
             <div class="version" id="version"></div>
         </div>

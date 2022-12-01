@@ -37,6 +37,23 @@ var CACHE_FILES=[
 ];
 
 /*s*/
+const offlineFallbackPage = "index.html";
+
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
+});
+
+/*
+workbox. routing. registerRoute(
+  new RegExp('/*'),
+  new workbox. strategies.StaleWhileRevalidate({
+    cacheName: CACHE
+  })
+);
+*/
+
 self.addEventListener('install',(e)=>{
 e.waitUntil(
   caches.open('yasserbdj96_hiphp').then((cache)=>cache.addAll(CACHE_FILES)),

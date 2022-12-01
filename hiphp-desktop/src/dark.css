@@ -17,26 +17,34 @@ body{
 }
 
 input[type=button],.button{
-    background-color: #04AA6D;
+    background-color: #474b85;
     color: white;
 }
 
-input[type=text],input[type=password]{
+/*input[type=text],input[type=password]{
     background-color: #30363d;
     color: white;
     border: 1px solid #30363d;
+}*/
+
+input[type=text],input[type=password]{
+    color: white;
+}
+
+.form__label {
+    color: #9b9b9b;
 }
 
 #connected{
-    background-color: #04AA6D;
+    background-color: #474b85;
 }
 .add_new{
-    background-color: #04aa6d;
+    background-color: #474b85;
     color: #ffffff;
 }
 
 .reconnectx{
-    background-color: #04aa6d;
+    background-color: #474b85;
     color: #ffffff;
 }
 
@@ -45,7 +53,8 @@ spam{
 }
   
 spam:hover {
-    background-color: #035638;
+    background-color: #777bb3;
+    height: 18px;
 }
 
 .settings{
@@ -75,7 +84,7 @@ table{
 }
 
 .select{
-    background-color: #04aa6d;
+    background-color: #474b85;
 }
 
 .c_red{
@@ -106,7 +115,7 @@ input[type=checkbox] + span::before, input[type=checkbox] + span::after{
 }
 
 input[type=checkbox]:checked + span {
-    background:#04aa6d;			    
+    background:#474b85;			    
 }
 
 #cat {

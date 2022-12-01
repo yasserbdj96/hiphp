@@ -15,9 +15,9 @@ PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
 
 run: $(VENV)/bin/activate
-#
-	$(PYTHON) run.py
 # \
+	$(PYTHON) run.py
+# 
 	$(PYTHON) hiphp-desktop/main.py
 # \
 	$(PYTHON) hiphp-tk/main.py

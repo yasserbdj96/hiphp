@@ -585,6 +585,9 @@ hiphp Commands :
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot12.png">
         <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot12.png" alt="hiphp by yasserbdj96">
     </a>
+    <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot15.png">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot15.png" alt="hiphp by yasserbdj96">
+    </a>
 </div>
 
 <br>
@@ -594,6 +597,10 @@ hiphp Commands :
   <summary>Click to See changelog History</summary>
 
 ```
+## 0.2.31.1 [In Progress]
+ - Update template in "hiphp-desktop".
+ - Bug fixes & performance improvements.
+
 ## 0.2.31 [27-11-2022][Last Version]
  - Add PWA (Service Worker) to "hiphp-desktop".
  - Updated installation options.

@@ -583,12 +583,15 @@ p1.cli()
   <summary>Click to See changelog History</summary>
 
 ```
-## 0.2.32 [05-12-2022][Last Version]
+## 0.2.33 [05-12-2022][Last Version]
+ - Bug fixes & performance improvements.
+
+## 0.2.32 [05-12-2022]
  - Update template in "hiphp-desktop".
  - Update documents.
  - Bug fixes & performance improvements.
 
-## 0.2.31 [27-11-2022][Last Version]
+## 0.2.31 [27-11-2022]
  - Add PWA (Service Worker) to "hiphp-desktop".
  - Updated installation options.
  - Update site files.

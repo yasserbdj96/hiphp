@@ -582,7 +582,7 @@ p1.cli()
   <summary>Click to See changelog History</summary>
 
 ```
-## 0.2.32 [Last Version]
+## 0.2.32 [05-12-2022][Last Version]
  - Update template in "hiphp-desktop".
  - Update documents.
  - Bug fixes & performance improvements.

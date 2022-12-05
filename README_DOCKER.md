@@ -35,7 +35,7 @@
 
 <br>
 <h2>What is Hiphp?</h2>
-<p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the HIPHP_HOLE_CODE into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
+<p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the <a href="#HIPHP_HOLE_CODE-Example">HIPHP_HOLE_CODE</a> into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
 
 
 <br>

@@ -12,4 +12,5 @@
 
 #START{
 find . -type d -name __pycache__ -prune -exec rm -rf {} \;
+find . -type d -name venv -prune -exec rm -rf {} \;
 #}END.

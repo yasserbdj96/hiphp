@@ -149,8 +149,7 @@
 
 <br>
 <h2>Hiphp with Docker:</h2>
-<h4>Docker pull build and run: <a href="https://asciinema.org/a/QRlMY6JH9uwMCIbaV7F6lLoQ1">Demo</a></h4>
-
+<h4>Docker pull build and run:</h4>
 
 ```bash
 # Build:
@@ -162,6 +161,8 @@
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
 ```
+<p>click to see <a href="https://asciinema.org/a/QRlMY6JH9uwMCIbaV7F6lLoQ1">Demo</a></p><br>
+
 
 <h4>Docker Hub pull build and run:</h4>
 

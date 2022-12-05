@@ -17,10 +17,10 @@ if [ -z "$1" ]; then
     echo "Usage: hiphp [OPTION]";
     echo "";
     echo "ex:  hiphp --help               | # hiphp cli help.";
-    echo "     hiphp --geth [KEY] [URL]   | # Get the hole Code.";
-    echo "     hiphp [KEY] [URL]          | # Connect to the victim's website.";
-    echo "     hiphp --tk                 | # Run hiphp as GUI with 'hiphp-tk' script.";
-    echo "     hiphp --dst                | # Run hiphp as GUI with 'hiphp-desktop'.";
+    echo "     hiphp --geth [KEY] [URL]   | # Get the HIPHP_HOLE_CODE Encrypted by your [KEY].";
+    echo "     hiphp [KEY] [URL]          | # Connect to the victim's website (CLI) Mode.";
+    echo "     hiphp --tk                 | # Run hiphp with 'hiphp-tk' (GUI) Mode.";
+    echo "     hiphp --dst                | # Run hiphp with 'hiphp-desktop' (GUI) Mode.";
     echo "     hiphp --version            | # Get the version number you are working with.";
 
 #cli help:

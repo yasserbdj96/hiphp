@@ -33,6 +33,6 @@ jobs:
       - name: pip Upgrade
         run: python -m pip install --upgrade pip
       - name: Install requirements
-        run: ./install_all_requirements_linux.sh
+        run: bash install_all_requirements_linux.sh
       - name: Run
         run: python wrdir/pypiup.py ${{ secrets.PYPI_USER }} ${{ secrets.PYPI_API_TOKEN }}

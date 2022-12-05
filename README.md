@@ -33,50 +33,50 @@
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <br>
-<h2>1- What is Hiphp?</h2>
+<h2>What is Hiphp?</h2>
 <p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the HIPHP_HOLE_CODE into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
 
 
 <br>
-<h2>2- Table of Contents:</h2>
+<h2>Table of Contents:</h2>
 
-- [1- What is Hipip?](#1-what-is-hiphp)
-- [2- Table of Contents](#2-Table-of-Contents)
-- [3- Demo](#3-Demo)
-- [4- How do you use this version of the project?](#4-How-do-you-use-this-version-of-the-project)
-- [5- All languages used in this project](#5-All-languages-used-in-this-project)
-- [6- Where can you find this project?](#6-Where-can-you-find-this-project)
-- [7- Requirements](#7-Requirements)
-    - [A- used requirements](#A-used-requirements)
-    - [B- Install all Requirements](#B-Install-all-Requirements)
-- [8- Supported Distributions](#8-Supported-Distributions)
-- [9- Hiphp with Docker](#9-Hiphp-with-Docker)
-    - [A- Docker pull build and run](#A-Docker-pull-build-and-run)
-    - [B- Docker Hub pull build and run](#B-Docker-Hub-pull-build-and-run)
-    - [C- GitHub container registry pull build and run](#C-GitHub-container-registry-pull-build-and-run)
-- [10- Installation](#10-Installation)
-    - [A- Python Package Installation](#A-Python-Package-Installation)
-    - [B- Ubuntu Installation](#B-Ubuntu-Installation)
-    - [C- Termux Installation](#C-Termux-Installation)
-- [11- Run without installation](#11-Run-without-installation)
-    - [A- Run with hiphp-cli](#A-Run-with-hiphp-cli)
-        - [a- Help for hiphp-cli](#a-help-for-hiphp-cli)
-    - [B- Run with hiphp-desktop](#B-Run-with-hiphp-desktop)
-    - [C- Run with hiphp-tk](#C-Run-with-hiphp-tk)
-- [12- Use hiphp As Script](#12-Use-As-Script)
-    - [A- Script Usage](#A-Script-Usage)
-    - [B- Script Examples](#B-Script-Examples)
-- [13- HIPHP_HOLE_CODE Example](#13-HIPHP_HOLE_CODE-Example)
-- [14- Screenshots](#14-Screenshots)
-- [15- Changelog History](#15-Changelog-History)
-- [16- Limitations](#16-Limitations)
-- [17- Development By](#17-Development-By)
-- [18- License](#18-License)
-- [19- Support](#19-Support)
+- [What is Hipip?](#what-is-hiphp)
+- [Table of Contents](#Table-of-Contents)
+- [Demo](#Demo)
+- [How do you use this version of the project?](#How-do-you-use-this-version-of-the-project)
+- [All languages used in this project](#All-languages-used-in-this-project)
+- [Where can you find this project?](#Where-can-you-find-this-project)
+- [Requirements](#Requirements)
+    - [used requirements](#used-requirements)
+    - [Install all Requirements](#Install-all-Requirements)
+- [Supported Distributions](#Supported-Distributions)
+- [Hiphp with Docker](#Hiphp-with-Docker)
+    - [Docker pull build and run](#Docker-pull-build-and-run)
+    - [Docker Hub pull build and run](#Docker-Hub-pull-build-and-run)
+    - [GitHub container registry pull build and run](#GitHub-container-registry-pull-build-and-run)
+- [Installation](#Installation)
+    - [Python Package Installation](#Python-Package-Installation)
+    - [Ubuntu Installation](#Ubuntu-Installation)
+    - [Termux Installation](#Termux-Installation)
+- [Run without installation](#Run-without-installation)
+    - [Run with hiphp-cli](#Run-with-hiphp-cli)
+        - [Help for hiphp-cli](#help-for-hiphp-cli)
+    - [Run with hiphp-desktop](#Run-with-hiphp-desktop)
+    - [Run with hiphp-tk](#Run-with-hiphp-tk)
+- [Use hiphp As Script](#Use-As-Script)
+    - [Script Usage](#Script-Usage)
+    - [Script Examples](#Script-Examples)
+- [HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Example)
+- [Screenshots](#Screenshots)
+- [Changelog History](#Changelog-History)
+- [Limitations](#Limitations)
+- [Development By](#Development-By)
+- [License](#License)
+- [Support](#Support)
 
 
 <br>
-<h2>3- Demo:</h2>
+<h2>Demo:</h2>
 <div align="center">
     <!--a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
         <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">
@@ -85,7 +85,7 @@
 </div>
 
 <br>
-<h2>4- How do you use this version of the project?</h2>
+<h2>How do you use this version of the project?</h2>
 [✓] Command Line Interface (CLI).<br>
 [✓] Graphical User Interface (GUI).<br>
 [✓] Python Package.<br>
@@ -93,7 +93,7 @@
 [✓] Docker Container.
 
 <br>
-<h2>5- All languages used in this project:</h2>
+<h2>All languages used in this project:</h2>
 * Python3<br>
 * PHP<br>
 * Shell (Bash)<br>
@@ -103,15 +103,15 @@
 * HTML
 
 <br>
-<h2>6- Where can you find this project?</h2>
+<h2>Where can you find this project?</h2>
 [✓] <a href="https://pypi.org/project/hiphp">https://pypi.org/project/hiphp/</a><br>
 [✓] <a href="https://hub.docker.com/r/yasserbdj96/hiphp">https://hub.docker.com/r/yasserbdj96/hiphp</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hiphp">https://github.com/yasserbdj96/hiphp</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hiphp/pkgs/container/hiphp">Github Packages</a><br>
 
 <br>
-<h2>7- Requirements</h2>
-<h4>A- used requirements:</h4>
+<h2>Requirements</h2>
+<h4>used requirements:</h4>
 <!--[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br-->
 [✓] <a href="https://pypi.org/project/requests/">requests</a><br>
 [✓] <a href="https://pypi.org/project/hexor/">hexor</a><br>
@@ -122,7 +122,7 @@
 [✓] <a href="https://pypi.org/project/chardet/">chardet</a>
 
 <br>
-<h4>B- Install all Requirements:</h4>
+<h4>Install all Requirements:</h4>
 
 ```bash
 # For Linux:
@@ -136,7 +136,7 @@
 ```
 
 <br>
-<h2>8- Supported Distributions:</h2>
+<h2>Supported Distributions:</h2>
 
 | Distribution   | Version Check | Python Version | Installation | hiphp-cli  | hiphp-desktop | hiphp-tk |
 | :------------: | :-----------: | :------------: | :----------: | :--------: | :-----------: | :------: |
@@ -147,8 +147,8 @@
 | Nethunter      | Last version  | 3.6 --> 3.10   | ✓            |  ✓         | ✗             | ✓        |
 
 <br>
-<h2>9- Hiphp with Docker:</h2>
-<h4>A- Docker pull build and run:</h4>
+<h2>Hiphp with Docker:</h2>
+<h4>Docker pull build and run:</h4>
 
 ```bash
 # Build:
@@ -161,7 +161,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
 ```
 
-<h4>B- Docker Hub pull build and run:</h4>
+<h4>Docker Hub pull build and run:</h4>
 
 ```bash
 # Pull:
@@ -177,7 +177,7 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
 ```
 
-<h4>C- GitHub container registry pull build and run:</h4>
+<h4>GitHub container registry pull build and run:</h4>
 
 ```bash
 # Pull:
@@ -193,8 +193,8 @@
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
 ```
 <br>
-<h2>10- Installation:</h2>
-<h4>A- Python Package Installation:</h4>
+<h2>Installation:</h2>
+<h4>Python Package Installation:</h4>
 
 ```bash
 # Install from pypi:
@@ -212,7 +212,7 @@
 ❯ pip uninstall hiphp
 ```
 
-<h4>B- Ubuntu Installation:</h4>
+<h4>Ubuntu Installation:</h4>
 
 ```bash
 # Dwonload:
@@ -241,7 +241,7 @@
 ❯ bash install.sh -u
 ```
 
-<h4>C- Termux Installation:</h4>
+<h4>Termux Installation:</h4>
 
 ```bash
 # Dwonload:
@@ -269,8 +269,8 @@
 ```
 
 <br>
-<h2>11- Run without installation:</h2>
-<h4>A- Run with hiphp-cli:</h4>
+<h2>Run without installation:</h2>
+<h4>Run with hiphp-cli:</h4>
 
 ```bash
 # Dwonload:
@@ -301,7 +301,7 @@
 ```
 
 <br>
-<h5>a- Help for hiphp-cli:</h5>
+<h5>Help for hiphp-cli:</h5>
 
 ```
 hiphp Commands :
@@ -386,7 +386,7 @@ hiphp Commands :
 ```
 
 <br>
-<h4>B- Run with hiphp-desktop:</h4>
+<h4>Run with hiphp-desktop:</h4>
 
 ```bash
 # Dwonload:
@@ -422,7 +422,7 @@ hiphp Commands :
 ```
 
 <br>
-<h4>C- Run with hiphp-tk:</h4>
+<h4>Run with hiphp-tk:</h4>
 
 ```bash
 # Dwonload:
@@ -458,8 +458,8 @@ hiphp Commands :
 ```
 
 <br>
-<h2>12- Use hiphp As Script:</h2>
-<h4>A- Script Usage:</h4>
+<h2>Use hiphp As Script:</h2>
+<h4>Script Usage:</h4>
 
 ```python
 from hiphp import *
@@ -468,7 +468,7 @@ from hiphp import *
 p1=hiphp(key="<KEY>",url="<URL>")
 ```
 
-<h4>B- Script Examples:</h4>
+<h4>Script Examples:</h4>
 
 ```python
 #START{
@@ -513,13 +513,13 @@ p1.cli()
 ```
 
 <br>
-<h2>13- HIPHP_HOLE_CODE Example:</h2>
+<h2>HIPHP_HOLE_CODE Example:</h2>
 <div align="center">
     <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/HIPHP_HOLE_CODE.png" alt="hiphp by yasserbdj96">
 </div>
 
 <br>
-<h2>14- Screenshots:</h2>
+<h2>Screenshots:</h2>
 
 <div align="center">
     <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/screenshot.png">
@@ -576,7 +576,7 @@ p1.cli()
 </div>
 
 <br>
-<h2>15- Changelog History:</h2>
+<h2>Changelog History:</h2>
 
 <details>
   <summary>Click to See changelog History</summary>
@@ -778,7 +778,7 @@ p1.cli()
 </details>
 
 <br>
-<h2>16- Limitations:</h2>
+<h2>Limitations:</h2>
 1. When you use hiphp for the first time on a site, the code HIPHP_HOLE_CODE will show you, copy it and upload it to the path you want to connect to, for example 'https://localhost/inc/example.php'.<br>
 2. In order for hiphp to work well and without errors, HIPHP_HOLE_CODE must be placed at the top of the target file.<br>
 3. hiphp will not work and it will show you a message stating that you are unable to connect to the site if you do not enter the correct path to the location of HIPHP_HOLE_CODE via the link.<br>
@@ -787,12 +787,12 @@ p1.cli()
 6. I AM NOT RESPONSIBLE HOW YOU USE MY TOOLS/PROGRAMS/PROJECTS. BE LEGAL AND NOT STUPID.
 
 <br>
-<h2>17- Development By:</h2>
+<h2>Development By:</h2>
 
 Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
 
 <br>
-<h2>18- License:</h2>
+<h2>License:</h2>
 
 <p>Copyright © 2008->Present, yasserbdj96 (Boudjada Yasser)
 <br>
@@ -1007,7 +1007,7 @@ The content of this repository is bound by the following license:</p>
 </details>
 
 <br>
-<h2>19- Support:</h2>
+<h2>Support:</h2>
 <p>If you like `hiphp` and want to see it improve furthur or want me to create intresting projects , You can buy me a coffee </p>
 <div align="center">
     <a href="https://ko-fi.com/yasserbdj96">

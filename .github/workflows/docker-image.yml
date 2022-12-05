@@ -1,8 +1,17 @@
 name: Docker image
+
+#on:
+#  push:
+#    branches:
+#      - 'main'
+# Controls when the action will run. 
 on:
-  push:
-    branches:
-      - 'main'
+  # Triggers the workflow when a release is created
+  release: 
+    types: [created]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest

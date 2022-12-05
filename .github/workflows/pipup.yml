@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Upload to PIP
+name: Upload to PYPI
 
 # Controls when the action will run. 
 on:
@@ -43,5 +43,5 @@ jobs:
           python3 setup.py sdist bdist_wheel
           python3 -m twine upload dist/*
         env:
-          TWINE_USERNAME: __token__
+          TWINE_USERNAME: ${{ secrets.PYPI_USER }}
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}

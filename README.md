@@ -161,10 +161,11 @@
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
 ```
+
 <p>click to see <a href="https://asciinema.org/a/QRlMY6JH9uwMCIbaV7F6lLoQ1">Demo</a></p><br>
 
 
-<h4>Docker Hub pull build and run:</h4>
+<h4>Docker-Hub pull build and run:</h4>
 
 ```bash
 # Pull:
@@ -179,6 +180,8 @@
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
 ```
+
+<p>click to see <a href="https://asciinema.org/a/HAzDifB2g81KJ8CBhil8K0mzC">Demo</a></p><br>
 
 <h4>GitHub container registry pull build and run:</h4>
 
@@ -195,6 +198,10 @@
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
 ```
+
+<p>click to see <a href="https://asciinema.org/a/wDWAVo5GURsAbCUVseZsN2PdY">Demo</a></p><br>
+
+
 <br>
 <h2>Installation:</h2>
 <h4>Python Package Installation:</h4>
@@ -214,6 +221,9 @@
 # Uninstall:
 ❯ pip uninstall hiphp
 ```
+
+<p>click to see <a href="https://asciinema.org/a/a8DVPENs0gGfrPhBmUGRWPYZG">Demo</a></p><br>
+
 
 <h4>Ubuntu Installation:</h4>
 

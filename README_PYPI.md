@@ -125,6 +125,8 @@
 ❯ pip uninstall hiphp
 ```
 
+<p>click to see <a href="https://asciinema.org/a/a8DVPENs0gGfrPhBmUGRWPYZG">Demo</a></p><br>
+
 <br>
 <h2>Use hiphp As Script:</h2>
 <h4>Script Usage:</h4>

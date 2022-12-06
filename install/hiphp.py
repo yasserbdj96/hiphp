@@ -21,12 +21,17 @@ if sys.argv[1]=="--help":
     from hiphp.hiphphelp import *
     print(help(__version__))
     exit()
+
 #geth
 elif sys.argv[1]=="--geth":
-    p1=hiphp(key=sys.argv[2],url=sys.argv[3])
+    try:
+        p1=hiphp(key=sys.argv[2],url=sys.argv[3],lang=sys.argv[4])
+    except:
+        p1=hiphp(key=sys.argv[2],url=sys.argv[3])
     # Get the hole Code:
     p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php
     exit()
+
 #version
 elif sys.argv[1]=="--version":
     print(__version__)
@@ -34,8 +39,13 @@ elif sys.argv[1]=="--version":
 else:
     KEY=sys.argv[1]
     URL=sys.argv[2]
-    p2=hiphp(key=KEY,url=URL,retu=True)
-    p1=hiphp(key=KEY,url=URL)#Default: retu=False.
+    try:
+        LANG=sys.argv[3]
+    except:
+        LANG="php"
+
+    p2=hiphp(key=KEY,url=URL,lang=LANG,retu=True)
+    p1=hiphp(key=KEY,url=URL,lang=LANG)#Default: retu=False.
     # Command line interface:
     if emsg_1 not in p2.cli():
         p1.cli()

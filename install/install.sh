@@ -132,11 +132,12 @@ elif [ "$1" == "-tup" ] ; then
 # usage:
 else
     echo "Usage: bash $0 [OPTION]";
-    echo "       -i   | # for install.";
-    echo "       -u   | # for uninstall.";
-    echo "       -up  | # for update.";
-    echo "       -ti  | # for install hiphp on termux.";
-    echo "       -tu  | # for uninstall hiphp from termux.";
-    echo "       -tup | # for update hiphp on termux.";
+    echo "";
+    echo "# -i     = for install.";
+    echo "# -u     = for uninstall.";
+    echo "# -up    = for update.";
+    echo "# -ti    = for install hiphp on termux.";
+    echo "# -tu    = for uninstall hiphp from termux.";
+    echo "# -tup   = for update hiphp on termux.";
 fi
 #}END.

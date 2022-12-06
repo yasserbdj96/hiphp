@@ -9,13 +9,19 @@
 # --+----------------------------------------------------------+--
 #   |                                                          |
 
+#make run arg="cli" url="<URL>" key="<KEY>" lang="<LANG>"
+
 #START{
 VENV = venv
 PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
 
+ifndef lang
+	lang=php
+endif
+
 ifeq ($(arg),cli)
-	RUN = run.py $(key) $(url)
+	RUN = run.py $(key) $(url) $(lang)
 else
 	ifeq ($(arg),tk)
 		RUN = hiphp-tk/main.py $(key) $(url)
@@ -38,8 +44,6 @@ $(VENV)/bin/activate: requirements.txt
 	$(PIP) install -r ./hiphp-desktop/requirements-dst.txt
 	$(PIP) install -r ./hiphp-tk/requirements-tk.txt
 	$(PIP) install -r ./requirements-linux.txt
-
-
 
 clean:
 	rm -rf hiphp/__pycache__

@@ -136,7 +136,13 @@
 from hiphp import *
 
 # Connect:
-p1=hiphp(key="<KEY>",url="<URL>")
+p1=hiphp(key="<KEY*>",url="<URL*>",lang="<LANG>",retu=<RETURN>)# Default: retu=False
+
+# *      = All inputs must be entered.
+# KEY    = The password used for encrypt HIPHP_HOLE_CODE.
+# URL    = Victim website link.
+# LANG   = based site language, default LANG='php'.
+# RETURN = True for return data as a string, false for print data in the console.
 ```
 
 <h4>Script Examples:</h4>

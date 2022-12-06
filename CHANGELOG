@@ -1,3 +1,7 @@
+## 0.3.0-beta [In Progress]
+ - Prepare files for version 0.3.0 that supports golang (GO).
+ - Bug fixes & performance improvements.
+
 ## 0.2.33 [05-12-2022][Last Version]
  - Bug fixes & performance improvements.
 

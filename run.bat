@@ -23,6 +23,6 @@ set mypath="%~dp0"
 rem config.ini:
 FOR /F "tokens=*" %%A IN ('type !mypath!"config.ini"') DO set %%A
 
-!python_default_path! run.py %1 %2
+!python_default_path! run.py %1 %2 %3
 
 rem }END.

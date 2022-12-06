@@ -22,6 +22,7 @@ emsg_6=": Command does not exist or ended with a server error."
 
 msgi="[!]"
 msg_1=f"{msgi} Copy the PHP code below to the website path you entered:"
+msg_1_1=f"{msgi} Copy the GO code below to the website path you entered:"
 msg_2=f"{msgi} There is a new update "
 msg_3=f"{msgi} Download the new version from 'https://github.com/yasserbdj96/hiphp'"
 msg_4=f"{msgi} No updates available"

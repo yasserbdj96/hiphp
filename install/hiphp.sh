@@ -16,12 +16,17 @@ if [ -z "$1" ]; then
     python3 "/usr/share/hiphp/hiphp/hiphplogo.py" "ok_view";
     echo "Usage: hiphp [OPTION]";
     echo "";
-    echo "ex:  hiphp --help               | # hiphp cli help.";
-    echo "     hiphp --geth [KEY] [URL]   | # Get the HIPHP_HOLE_CODE Encrypted by your [KEY].";
-    echo "     hiphp [KEY] [URL]          | # Connect to the victim's website (CLI) Mode.";
-    echo "     hiphp --tk                 | # Run hiphp with 'hiphp-tk' (GUI) Mode.";
-    echo "     hiphp --dst                | # Run hiphp with 'hiphp-desktop' (GUI) Mode.";
-    echo "     hiphp --version            | # Get the version number you are working with.";
+    echo "# hiphp --help                      = hiphp cli help.";
+    echo "# hiphp --geth [KEY*] [URL*] [LANG] = Get the HIPHP_HOLE_CODE Encrypted by your [KEY] & based site language [LANG].";
+    echo "# hiphp [KEY*] [URL*] [LANG]        = Connect to the victim's website (CLI) Mode.";
+    echo "# hiphp --tk                        = Run hiphp with 'hiphp-tk' (GUI) Mode.";
+    echo "# hiphp --dst                       = Run hiphp with 'hiphp-desktop' (GUI) Mode.";
+    echo "# hiphp --version                   = Get the version number you are working with.";
+    echo "";
+    echo "# *     = All inputs must be entered."
+    echo "# KEY   = The password used for encrypt HIPHP_HOLE_CODE."
+    echo "# URL   = Victim website link."
+    echo "# LANG  = based site language, default LANG='php'."
 
 #cli help:
 elif [ "$1" == "--help" ] ; then
@@ -29,11 +34,7 @@ elif [ "$1" == "--help" ] ; then
 
 #hiphp_tk:
 elif [ "$1" == "--tk" ] ; then
-    if [ -z "$2" ]; then 
-        python3 "/usr/share/hiphp/hiphp-tk/main.py" "$2" "$3";
-    else
-        python3 "/usr/share/hiphp/hiphp-tk/main.py";
-    fi
+    python3 "/usr/share/hiphp/hiphp-tk/main.py";
 
 #hiphp_desktop:
 elif [ "$1" == "--dst" ] ; then
@@ -43,9 +44,16 @@ elif [ "$1" == "--dst" ] ; then
 elif [ "$1" == "--version" ] ; then
     python3 "/usr/share/hiphp/hiphp.py" "--version";
 
+#geth:
+elif [ "$1" == "--geth" ] ; then
+    if [ "$4" ] ; then
+        python3 "/usr/share/hiphp/hiphp.py" $1 $2 $3 $4;
+    else
+        python3 "/usr/share/hiphp/hiphp.py" $1 $2 $3;
+    fi
 #cli:
 else
-    if [ "$1" == "--geth" ] ; then
+    if [ "$3" ] ; then
         python3 "/usr/share/hiphp/hiphp.py" $1 $2 $3;
     else
         python3 "/usr/share/hiphp/hiphp.py" $1 $2;

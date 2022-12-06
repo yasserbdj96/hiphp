@@ -12,7 +12,7 @@
 ######## local build & run:
 # docker build -t hiphp:latest .
 # Run as CLI:
-# docker run -e KEY="<KEY>" -e URL="<URL>" -i -t hiphp:latest
+# docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t hiphp:latest
 # Run as GUI:
 # docker run -e DST="True" --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
 
@@ -20,7 +20,7 @@
 # docker pull docker.io/yasserbdj96/hiphp:latest
 # docker build -t docker.io/yasserbdj96/hiphp:latest .
 # Run as CLI:
-# docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
+# docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t docker.io/yasserbdj96/hiphp:latest
 # Run as GUI:
 # docker run -e DST="True" --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
 
@@ -28,9 +28,14 @@
 # docker pull ghcr.io/yasserbdj96/hiphp:latest
 # docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 # Run as CLI:
-# docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+# docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 # Run as GUI:
 # docker run -e DST="True" --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
+
+# *     = All inputs must be entered.
+# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
+# URL   = Victim website link.
+# LANG  = based site language, default LANG='php'.
 
 #START{
 FROM python:3.11.0

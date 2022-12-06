@@ -23,7 +23,7 @@ MimeType=text/x-hiphp
 Keywords=backdoor;controller;
 
 [Desktop Action hiphp-desktop]
-Name=hiphp-desktop
+Name=Hiphp - desktop
 Exec=bash /usr/local/bin/hiphp --dst
 Icon=/usr/share/hiphp/hiphp.png
 #}END.

@@ -116,10 +116,15 @@
 ❯ docker build -t hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t hiphp:latest
+❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
+
+# *     = All inputs must be entered.
+# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
+# URL   = Victim website link.
+# LANG  = based site language, default LANG='php'.
 ```
 
 <p>click to see <a href="https://asciinema.org/a/QRlMY6JH9uwMCIbaV7F6lLoQ1">Demo</a></p><br>
@@ -135,14 +140,18 @@
 ❯ docker build -t docker.io/yasserbdj96/hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
+❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t docker.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
+
+# *     = All inputs must be entered.
+# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
+# URL   = Victim website link.
+# LANG  = based site language, default LANG='php'.
 ```
 
 <p>click to see <a href="https://asciinema.org/a/HAzDifB2g81KJ8CBhil8K0mzC">Demo</a></p><br>
-
 
 <h4>GitHub container registry pull build and run:</h4>
 
@@ -154,10 +163,15 @@
 ❯ docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
+
+# *     = All inputs must be entered.
+# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
+# URL   = Victim website link.
+# LANG  = based site language, default LANG='php'.
 ```
 
 <p>click to see <a href="https://asciinema.org/a/wDWAVo5GURsAbCUVseZsN2PdY">Demo</a></p><br>

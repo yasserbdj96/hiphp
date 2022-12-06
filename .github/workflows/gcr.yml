@@ -4,10 +4,10 @@ name: Github Container Registry
 #  push:
 #    branches:
 #      - main
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow when a release is created
-  release: 
+  release:
     types: [created]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

@@ -38,7 +38,7 @@
 # LANG  = based site language, default LANG='php'.
 
 #START{
-FROM python:3.11.0
+FROM python:3.11.1
 
 # start install google-chrome:
 # Download the Chrome Driver

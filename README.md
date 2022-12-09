@@ -145,11 +145,11 @@
 
 | Distribution   | Version Check | Python Version | Installation | hiphp-cli  | hiphp-desktop | hiphp-tk |
 | :------------: | :-----------: | :------------: | :----------: | :--------: | :-----------: | :------: |
-| Ubuntu         | Last version  | 3.6 --> 3.10   | ✓            |  ✓         | ✓             | ✓        |
-| Windwos        | Last version  | 3.6 --> 3.10   | ✗            |  ✓         | ✓             | ✓        |
-| MacOS          | Last version  | 3.6 --> 3.10   | ✗            |  ✓         | ✓             | ✓        |
-| Android-termux | Last version  | 3.6 --> 3.10   | ✓            |  ✓         | ✗             | ✗        |
-| Nethunter      | Last version  | 3.6 --> 3.10   | ✓            |  ✓         | ✗             | ✓        |
+| Ubuntu         | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓             | ✓        |
+| Windwos        | Last version  | 3.7 --> 3.9    | ✗            |  ✓         | ✓             | ✓        |
+| MacOS          | Last version  | 3.7 --> 3.9    | ✗            |  ✓         | ✓             | ✓        |
+| Android-termux | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✗             | ✗        |
+| Nethunter      | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✗             | ✓        |
 
 <br>
 <h2>Hiphp with Docker:</h2>

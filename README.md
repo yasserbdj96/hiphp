@@ -5,15 +5,15 @@
 </div>
 <br>
 
-[![Run on Linux/Ubuntu-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
-[![Run on Windows-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
-[![Run on MacOS-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
-[![Test Requirements on Windows-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml)
-[![Test Requirements on Linux/Ubuntu-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml)
-[![PYPI Build & Setup On Linux/Ubuntu-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml)
-[![PYPI Build & Setup On MacOS-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml)
-[![PYPI Build & Setup On Windows-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml)
-[![Install On Linux/Ubuntu-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
+[![Run on Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
+[![Run on Windows-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
+[![Run on MacOS-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
+[![Test Requirements on Windows-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml)
+[![Test Requirements on Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml)
+[![PYPI Build & Setup On Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml)
+[![PYPI Build & Setup On MacOS-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml)
+[![PYPI Build & Setup On Windows-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml)
+[![Install On Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
 [![Push To Docker](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
 [![Push To Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)
 [![Push To PYPI](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml)
@@ -60,7 +60,7 @@
     - [GitHub container registry pull build and run](#GitHub-container-registry-pull-build-and-run)
 - [Installation](#Installation)
     - [Python Package Installation](#Python-Package-Installation)
-    - [Ubuntu/Nethunter Installation](#Ubuntu/Nethunter-Installation)
+    - [Ubuntu/Nethunter Installation](#Ubuntu-Nethunter-Installation)
     - [Termux Installation](#Termux-Installation)
 - [Run without installation](#Run-without-installation)
     - [Run with hiphp-cli](#Run-with-hiphp-cli)
@@ -156,11 +156,11 @@
 
 | Distribution   | Version Check | Python Version | Installation | hiphp-cli  | hiphp-desktop | hiphp-tk |
 | :------------: | :-----------: | :------------: | :----------: | :--------: | :-----------: | :------: |
-| Ubuntu         | Last version  | 3.7 --> 3.10   | ✓            |  ✓         | ✓             | ✓        |
-| Windwos        | Last version  | 3.7 --> 3.10   | ✗            |  ✓         | ✓             | ✓        |
-| MacOS          | Last version  | 3.7 --> 3.10   | ✗            |  ✓         | ✓             | ✓        |
-| Android-termux | Last version  | 3.7 --> 3.10   | ✓            |  ✓         | ✗             | ✗        |
-| Nethunter      | Last version  | 3.7 --> 3.10   | ✓            |  ✓         | ✓             | ✗        |
+| Ubuntu         | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓             | ✓        |
+| Windwos        | Last version  | 3.7 --> 3.9    | ✗            |  ✓         | ✓             | ✓        |
+| MacOS          | Last version  | 3.7 --> 3.9    | ✗            |  ✓         | ✓             | ✓        |
+| Android-termux | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✗             | ✗        |
+| Nethunter      | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓             | ✗        |
 
 <br>
 <h2>Hiphp with Docker:</h2>
@@ -238,7 +238,7 @@
 ```
 
 <br>
-<h4>Ubuntu/Nethunter Installation:</h4>
+<h4>Ubuntu-Nethunter Installation:</h4>
 
 ```bash
 # Download hiphp from github:

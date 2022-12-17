@@ -8,12 +8,12 @@
 # install requirements:
 ❯ pip install -r requirements.txt
 ❯ pip install -r hiphp-desktop/requirements-dst.txt
-❯ pip install -r requirements-linux.txt #for linux os.
-❯ pip install -r requirements-win.txt #for windows os.
+❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
+❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
 # OR
-❯ bash install_all_requirements_linux.sh #for linux os.
+❯ bash hiphp-linux/install_all_requirements_linux.sh #for linux os.
 # OR
-❯ install_all_requirements_win.bat #for windows os.
+❯ hiphp-win/install_all_requirements_win.bat #for windows os.
 
 # run with hiphp-desktop tool:
 ❯ cd hiphp-desktop

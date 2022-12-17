@@ -5,19 +5,20 @@
 </div>
 <br>
 
-[![Test on Ubuntu latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
-[![Test on Windows latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
-[![Test on MacOS latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
-[![Test requirements windows](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml)
-[![Test requirements linux](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml)
-[![pypi-setup](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml)
-[![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
-[![Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)
-[![Upload to PYPI](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml)
-[![Mirror and run GitLab CI](https://github.com/yasserbdj96/hiphp/actions/workflows/push-gitLab.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/push-gitLab.yml)
-[![ubuntu install](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
+[![Run on Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
+[![Run on Windows-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
+[![Run on MacOS-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
+[![Test Requirements on Windows-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml)
+[![Test Requirements on Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml)
+[![PYPI Build & Setup On Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml)
+[![PYPI Build & Setup On MacOS-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml)
+[![PYPI Build & Setup On Windows-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml)
+[![Install On Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
+[![Push To Docker](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
+[![Push To Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)
+[![Push To PYPI](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml)
 [![Deploy static content to Pages](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml)
-[![CodeQL](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)
+[![CodeQL (python, javascript)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
@@ -31,14 +32,12 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/yasserbdj96/hiphp)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/yasserbdj96/hiphp)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/yasserbdj96/hiphp)
-![GitHub last commit](https://img.shields.io/github/last-commit/yasserbdj96/hiphp)
 [![GitHub license](https://img.shields.io/github/license/yasserbdj96/hiphp)](https://github.com/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <br>
 <h2>What is Hiphp?</h2>
-<p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the <a href="#HIPHP_HOLE_CODE-Example">HIPHP_HOLE_CODE</a> into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
-
+<p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the HIPHP_HOLE_CODE into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
 
 <br>
 <h2>Table of Contents:</h2>
@@ -96,14 +95,14 @@
 [✓] <a href="https://hub.docker.com/r/yasserbdj96/hiphp">https://hub.docker.com/r/yasserbdj96/hiphp</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hiphp">https://github.com/yasserbdj96/hiphp</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hiphp/pkgs/container/hiphp">Github Packages</a><br>
+[✓] <a href="https://gitlab.com/yasserbdj96/hiphp">https://gitlab.com/yasserbdj96/hiphp</a><br>
 
 <br>
 <h2>used requirements:</h2>
-<!--[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br-->
 [✓] <a href="https://pypi.org/project/requests/">requests</a><br>
 [✓] <a href="https://pypi.org/project/hexor/">hexor</a><br>
 [✓] <a href="https://pypi.org/project/biglibrary/">biglibrary</a><br>
-[✓] <a href="">tk</a><br>
+[✓] <a href="https://pypi.org/project/tk/">tk</a><br>
 [✓] <a href="https://pypi.org/project/Eel/">eel</a><br>
 [✓] <a href="https://pypi.org/project/readline/">readline</a><br>
 [✓] <a href="https://pypi.org/project/chardet/">chardet</a>
@@ -112,14 +111,20 @@
 <h2>Python Package Installation:</h2>
 
 ```bash
-# Install from pypi:
+# Install from PYPI:
 ❯ pip install hiphp
 # OR
 ❯ python -m pip install hiphp
 
 # Local install:
+# Download hiphp from github:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
+# OR
+# Download hiphp from gitlab:
+❯ git clone https://gitlab.com/yasserbdj96/hiphp.git
+# Go to downloaded folder:
 ❯ cd hiphp
+# install
 ❯ pip install -r requirements-pypi.txt
 ❯ sudo python setup.py install
 
@@ -154,7 +159,7 @@ from hiphp import *
 
 # Connect:
 p1=hiphp(key="123",url="http://127.0.0.1/index.php")#Default: retu=False.
-#p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")
+#p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")# If you use hiphp on .onion sites, you must run tor services or tor browser.
 #p1=hiphp(key="123",url="https://google.com/index.php")
 
 # Get the hole Code:

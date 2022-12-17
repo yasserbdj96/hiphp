@@ -1,4 +1,4 @@
-name: PYPI Build & Setup On Windows-latest | python 3.7->3.10
+name: PYPI Build & Setup On Windows-latest | python 3.7->3.9
 on: [push]
 #defaults:
 #  run:
@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest] #,windows-latest
-        python-version: [3.7, 3.8, 3.9, 3.10]
+        python-version: [3.7, 3.8, 3.9]
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{matrix.python-version}}

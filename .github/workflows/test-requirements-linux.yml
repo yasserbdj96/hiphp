@@ -32,6 +32,8 @@ jobs:
         run: cp hiphp-linux/install_all_requirements_linux.sh wrdir/hiphp-linux/install_all_requirements_linux.sh && cp requirements.txt wrdir/requirements.txt && cp requirements-pypi.txt wrdir/requirements-pypi.txt && cp hiphp-desktop/requirements-dst.txt wrdir/hiphp-desktop/requirements-dst.txt && cp hiphp-tk/requirements-tk.txt wrdir/hiphp-tk/requirements-tk.txt && cp hiphp-linux/requirements-linux.txt wrdir/hiphp-linux/requirements-linux.txt
       - name: pip Upgrade
         run: python -m pip install --upgrade pip
+      - name: change dir
+        run: cd wrdir/hiphp-linux
       - name: Run
         run: bash wrdir/hiphp-linux/install_all_requirements_linux.sh
 

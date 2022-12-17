@@ -10,10 +10,6 @@
 ❯ pip install -r hiphp-desktop/requirements-dst.txt
 ❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
 ❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
-# OR
-❯ bash hiphp-linux/install_all_requirements_linux.sh #for linux os.
-# OR
-❯ hiphp-win/install_all_requirements_win.bat #for windows os.
 
 # run with hiphp-desktop tool:
 ❯ cd hiphp-desktop
@@ -23,12 +19,14 @@
 ❯ make run arg="dst" url="<URL>" key="<KEY>"
 
 # For Linux:
+cd hiphp-linux
 ❯ bash run-hiphp-desktop.sh
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
-# OR Run 'configure-config-file-for-windows.py'.
+# OR Run 'hiphp-win\config-configure.py'.
+cd hiphp-win
 ❯ run-hiphp-desktop.bat
 
 # OR if you installed it on Ubuntu:

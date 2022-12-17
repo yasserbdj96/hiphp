@@ -15,7 +15,7 @@ jobs:
       matrix:
         os: [ubuntu-latest] #,windows-latest
         python-version: [3.7, 3.8, 3.9]
-      steps:
+    steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{matrix.python-version}}
         uses: actions/setup-python@v4
@@ -46,3 +46,5 @@ jobs:
       run: pip install -r hiphp-tk/requirements-tk.txt
       - name: test hiphp-linux/requirements-linux.txt
       run: pip install -r hiphp-linux/requirements-linux.txt
+      - name: test run.py
+      run: python run.py

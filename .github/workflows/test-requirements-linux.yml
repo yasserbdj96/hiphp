@@ -35,5 +35,5 @@ jobs:
       - name: change dir
         run: cd wrdir/hiphp-linux
       - name: Run
-        run: bash wrdir/hiphp-linux/install_all_requirements_linux.sh
+        run: bash install_all_requirements_linux.sh
 

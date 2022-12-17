@@ -23,6 +23,7 @@ set mypath="%~dp0"
 rem config.ini:
 FOR /F "tokens=*" %%A IN ('type !mypath!"config.ini"') DO set %%A
 
+cd ..
 cd hiphp-tk
 !python_default_path! main.py
 

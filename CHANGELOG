@@ -1,11 +1,15 @@
-## 0.3.0-beta [In Progress]
- - Prepare files for version 0.3.0 that supports golang (GO).
+## 0.2.34 [17-12-2022][Last Version]
+ - Update "Makefile" to work on any operating system.
+ - Delete Android app ".apk".
+ - Delete ".exe" direct play files on windows.
+ - Upgrade and change the locations of some files.
+ - Cancellation Release hiphp v3.0.0.
  - Bug fixes & performance improvements.
 
-## 0.2.33 [05-12-2022][Last Version]
+## 0.2.33 [05-12-2022]
  - Bug fixes & performance improvements.
 
-## 0.2.32 [05-12-2022][Version cancelled]
+## 0.2.32 [05-12-2022]
  - Update template in "hiphp-desktop".
  - Update documents.
  - Bug fixes & performance improvements.

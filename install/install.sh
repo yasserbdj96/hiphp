@@ -15,13 +15,16 @@
 appname="hiphp"
 
 install() {
+    #chmod +x "../$appname"
     chmod +x "$appname.sh";
+    #chmod +x "install.sh"
     sudo mkdir "/usr/share/$appname";
     sudo cp -r "../$appname/." "/usr/share/$appname/$appname";
     sudo cp "$appname.py" "/usr/share/$appname/$appname.py";
     sudo cp "$appname.png" "/usr/share/$appname/$appname.png";
     sudo cp "$appname.desktop" "/usr/share/applications/$appname.desktop";
     sudo cp "$appname.sh" "/usr/local/bin/$appname";
+    #chmod +x "/usr/share/$appname";
     pip install -r "../requirements.txt";
     #sudo cp -r "../src/." "/usr/share/$appname/src";
 
@@ -35,6 +38,12 @@ install() {
     #sudo cp "../hiphp-desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
     sudo cp -r "../hiphp-desktop/." "/usr/share/$appname/hiphp-desktop";
     pip install -r "../hiphp-desktop/requirements-dst.txt";
+
+    # install linux requirements:
+    pip install -r "../hiphp-linux/requirements-linux.txt"
+
+    # run:
+    hiphp
 }
 
 uninstall() {
@@ -132,12 +141,11 @@ elif [ "$1" == "-tup" ] ; then
 # usage:
 else
     echo "Usage: bash $0 [OPTION]";
-    echo "";
-    echo "# -i     = for install.";
-    echo "# -u     = for uninstall.";
-    echo "# -up    = for update.";
-    echo "# -ti    = for install hiphp on termux.";
-    echo "# -tu    = for uninstall hiphp from termux.";
-    echo "# -tup   = for update hiphp on termux.";
+    echo "       -i   | # for install.";
+    echo "       -u   | # for uninstall.";
+    echo "       -up  | # for update.";
+    echo "       -ti  | # for install hiphp on termux.";
+    echo "       -tu  | # for uninstall hiphp from termux.";
+    echo "       -tup | # for update hiphp on termux.";
 fi
 #}END.

@@ -22,10 +22,10 @@ set mypath="%~dp0"
 rem config.ini:
 FOR /F "tokens=*" %%A IN ('type !mypath!"config.ini"') DO set %%A
 
-!python_default_path! -m pip install -r ./requirements.txt
-!python_default_path! -m pip install -r ./requirements-pypi.txt
-!python_default_path! -m pip install -r ./hiphp-desktop/requirements-dst.txt
-!python_default_path! -m pip install -r ./hiphp-tk/requirements-tk.txt
+!python_default_path! -m pip install -r ../requirements.txt
+!python_default_path! -m pip install -r ../requirements-pypi.txt
+!python_default_path! -m pip install -r ../hiphp-desktop/requirements-dst.txt
+!python_default_path! -m pip install -r ../hiphp-tk/requirements-tk.txt
 !python_default_path! -m pip install -r ./requirements-win.txt
 
 rem }END.

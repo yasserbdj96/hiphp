@@ -1,0 +1,2 @@
+# try: sudo apt install python3-tk -y
+# if you find this error on Debian/Ubuntu: ModuleNotFoundError: No module named 'tkinter'

@@ -5,19 +5,20 @@
 </div>
 <br>
 
-[![Test on Ubuntu latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
-[![Test on Windows latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
-[![Test on MacOS latest](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
-[![Test requirements windows](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml)
-[![Test requirements linux](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml)
-[![pypi-setup](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup.yml)
-[![Docker image](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
-[![Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)
-[![Upload to PYPI](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml)
-[![Mirror and run GitLab CI](https://github.com/yasserbdj96/hiphp/actions/workflows/push-gitLab.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/push-gitLab.yml)
-[![ubuntu install](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
+[![Run on Linux/Ubuntu-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
+[![Run on Windows-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
+[![Run on MacOS-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
+[![Test Requirements on Windows-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml)
+[![Test Requirements on Linux/Ubuntu-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml)
+[![PYPI Build & Setup On Linux/Ubuntu-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml)
+[![PYPI Build & Setup On MacOS-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml)
+[![PYPI Build & Setup On Windows-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml)
+[![Install On Linux/Ubuntu-latest | python 3.7->3.10](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
+[![Push To Docker](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
+[![Push To Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)
+[![Push To PYPI](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml)
 [![Deploy static content to Pages](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml)
-[![CodeQL](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)
+[![CodeQL (python, javascript)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
@@ -31,16 +32,12 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/yasserbdj96/hiphp)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/yasserbdj96/hiphp)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/yasserbdj96/hiphp)
-![GitHub last commit](https://img.shields.io/github/last-commit/yasserbdj96/hiphp)
 [![GitHub license](https://img.shields.io/github/license/yasserbdj96/hiphp)](https://github.com/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <br>
 <h2>What is Hiphp?</h2>
-<p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the <a href="#HIPHP_HOLE_CODE-Example">HIPHP_HOLE_CODE</a> into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
-<br>
-<h3>What's new in the version 0.3.0?</h3>
-<p>hiphp will be able to control websites based on golang (GO).</p>
+<p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the HIPHP_HOLE_CODE into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
 
 
 <br>
@@ -52,6 +49,7 @@
 - [How do you use this version of the project?](#How-do-you-use-this-version-of-the-project)
 - [All languages used in this project](#All-languages-used-in-this-project)
 - [Where can you find this project?](#Where-can-you-find-this-project)
+- [How to download](#How-to-download)
 - [Requirements](#Requirements)
     - [used requirements](#used-requirements)
     - [Install all Requirements](#Install-all-Requirements)
@@ -62,7 +60,7 @@
     - [GitHub container registry pull build and run](#GitHub-container-registry-pull-build-and-run)
 - [Installation](#Installation)
     - [Python Package Installation](#Python-Package-Installation)
-    - [Ubuntu Installation](#Ubuntu-Installation)
+    - [Ubuntu/Nethunter Installation](#Ubuntu/Nethunter-Installation)
     - [Termux Installation](#Termux-Installation)
 - [Run without installation](#Run-without-installation)
     - [Run with hiphp-cli](#Run-with-hiphp-cli)
@@ -114,6 +112,18 @@
 [✓] <a href="https://hub.docker.com/r/yasserbdj96/hiphp">https://hub.docker.com/r/yasserbdj96/hiphp</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hiphp">https://github.com/yasserbdj96/hiphp</a><br>
 [✓] <a href="https://github.com/yasserbdj96/hiphp/pkgs/container/hiphp">Github Packages</a><br>
+[✓] <a href="https://gitlab.com/yasserbdj96/hiphp">https://gitlab.com/yasserbdj96/hiphp</a><br>
+
+<br>
+<h4>How to download?</h4>
+
+```bash
+# Download hiphp from github:
+❯ git clone https://github.com/yasserbdj96/hiphp.git
+# OR
+# Download hiphp from gitlab:
+❯ git clone https://gitlab.com/yasserbdj96/hiphp.git
+```
 
 <br>
 <h2>Requirements</h2>
@@ -122,7 +132,7 @@
 [✓] <a href="https://pypi.org/project/requests/">requests</a><br>
 [✓] <a href="https://pypi.org/project/hexor/">hexor</a><br>
 [✓] <a href="https://pypi.org/project/biglibrary/">biglibrary</a><br>
-[✓] <a href="">tk</a><br>
+[✓] <a href="https://pypi.org/project/tk/">tk</a><br>
 [✓] <a href="https://pypi.org/project/Eel/">eel</a><br>
 [✓] <a href="https://pypi.org/project/readline/">readline</a><br>
 [✓] <a href="https://pypi.org/project/chardet/">chardet</a>
@@ -132,13 +142,13 @@
 
 ```bash
 # For Linux:
-❯ bash install_all_requirements_linux.sh
+❯ bash hiphp-linux/install_all_requirements_linux.sh
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
-# OR Run 'configure-config-file-for-windows.py'.
-❯ install_all_requirements_win.bat
+# OR Run 'hiphp-win\config-configure.py'.
+❯ hiphp-win\install_all_requirements_win.bat
 ```
 
 <br>
@@ -146,11 +156,11 @@
 
 | Distribution   | Version Check | Python Version | Installation | hiphp-cli  | hiphp-desktop | hiphp-tk |
 | :------------: | :-----------: | :------------: | :----------: | :--------: | :-----------: | :------: |
-| Ubuntu         | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓             | ✓        |
-| Windwos        | Last version  | 3.7 --> 3.9    | ✗            |  ✓         | ✓             | ✓        |
-| MacOS          | Last version  | 3.7 --> 3.9    | ✗            |  ✓         | ✓             | ✓        |
-| Android-termux | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✗             | ✗        |
-| Nethunter      | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓             | ✓        |
+| Ubuntu         | Last version  | 3.7 --> 3.10   | ✓            |  ✓         | ✓             | ✓        |
+| Windwos        | Last version  | 3.7 --> 3.10   | ✗            |  ✓         | ✓             | ✓        |
+| MacOS          | Last version  | 3.7 --> 3.10   | ✗            |  ✓         | ✓             | ✓        |
+| Android-termux | Last version  | 3.7 --> 3.10   | ✓            |  ✓         | ✗             | ✗        |
+| Nethunter      | Last version  | 3.7 --> 3.10   | ✓            |  ✓         | ✓             | ✗        |
 
 <br>
 <h2>Hiphp with Docker:</h2>
@@ -161,21 +171,14 @@
 ❯ docker build -t hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t hiphp:latest
+❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
-
-# *     = All inputs must be entered.
-# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
-# URL   = Victim website link.
-# LANG  = based site language, default LANG='php'.
 ```
 
-<p>click to see <a href="https://asciinema.org/a/QRlMY6JH9uwMCIbaV7F6lLoQ1">Demo</a></p><br>
-
-
-<h4>Docker-Hub pull build and run:</h4>
+<br>
+<h4>Docker Hub pull build and run:</h4>
 
 ```bash
 # Pull:
@@ -185,19 +188,13 @@
 ❯ docker build -t docker.io/yasserbdj96/hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t docker.io/yasserbdj96/hiphp:latest
+❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
-
-# *     = All inputs must be entered.
-# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
-# URL   = Victim website link.
-# LANG  = based site language, default LANG='php'.
 ```
 
-<p>click to see <a href="https://asciinema.org/a/HAzDifB2g81KJ8CBhil8K0mzC">Demo</a></p><br>
-
+<br>
 <h4>GitHub container registry pull build and run:</h4>
 
 ```bash
@@ -208,33 +205,31 @@
 ❯ docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+❯ docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
-
-# *     = All inputs must be entered.
-# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
-# URL   = Victim website link.
-# LANG  = based site language, default LANG='php'.
 ```
-
-<p>click to see <a href="https://asciinema.org/a/wDWAVo5GURsAbCUVseZsN2PdY">Demo</a></p><br>
-
 
 <br>
 <h2>Installation:</h2>
 <h4>Python Package Installation:</h4>
 
 ```bash
-# Install from pypi:
+# Install from PYPI:
 ❯ pip install hiphp
 # OR
 ❯ python -m pip install hiphp
 
 # Local install:
+# Download hiphp from github:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
+# OR
+# Download hiphp from gitlab:
+❯ git clone https://gitlab.com/yasserbdj96/hiphp.git
+# Go to downloaded folder:
 ❯ cd hiphp
+# install
 ❯ pip install -r requirements-pypi.txt
 ❯ sudo python setup.py install
 
@@ -242,51 +237,58 @@
 ❯ pip uninstall hiphp
 ```
 
-<p>click to see <a href="https://asciinema.org/a/a8DVPENs0gGfrPhBmUGRWPYZG">Demo</a></p><br>
-
-
-<h4>Ubuntu Installation:</h4>
+<br>
+<h4>Ubuntu/Nethunter Installation:</h4>
 
 ```bash
-# Dwonload:
+# Download hiphp from github:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
+# OR
+# Download hiphp from gitlab:
+❯ git clone https://gitlab.com/yasserbdj96/hiphp.git
+
+# Go to downloaded folder:
+❯ cd hiphp
 
 # Go to Installation folder:
-❯ cd hiphp/install
+❯ cd install
 
 # Install:
+# If you encounter problems with installation and operation, please repeat the process by giving root permission.
 ❯ bash install.sh -i
 ❯ hiphp
 
 # Update:
 ❯ bash install.sh -up
 
-#Usage: hiphp [OPTION]
-
-# hiphp --help                      = hiphp cli help.
-# hiphp --geth [KEY*] [URL*] [LANG] = Get the HIPHP_HOLE_CODE Encrypted by your [KEY] & based site language [LANG].
-# hiphp [KEY*] [URL*] [LANG]        = Connect to the victim's website (CLI) Mode.
-# hiphp --tk                        = Run hiphp with 'hiphp-tk' (GUI) Mode.
-# hiphp --dst                       = Run hiphp with 'hiphp-desktop' (GUI) Mode.
-# hiphp --version                   = Get the version number you are working with.
-
-# *     = All inputs must be entered.
-# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
-# URL   = Victim website link.
-# LANG  = based site language, default LANG='php'.
+# Usage:
+#      hiphp [OPTION]
+#      hiphp --help                --> hiphp cli help.
+#      hiphp --geth [KEY] [URL]    --> Get the HIPHP_HOLE_CODE Encrypted by your [KEY].
+#      hiphp [KEY] [URL]           --> Connect to the victim's website (CLI) Mode.
+#      hiphp --tk                  --> Run hiphp with 'hiphp-tk' (GUI) Mode.
+#      hiphp --dst                 --> Run hiphp with 'hiphp-desktop' (GUI) Mode.
+#      hiphp --version             --> Get the version number you are working with.
 
 # Uninstall:
 ❯ bash install.sh -u
 ```
 
+<br>
 <h4>Termux Installation:</h4>
 
 ```bash
-# Dwonload:
+# Download hiphp from github:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
+# OR
+# Download hiphp from gitlab:
+❯ git clone https://gitlab.com/yasserbdj96/hiphp.git
+
+# Go to downloaded folder:
+❯ cd hiphp
 
 # Go to Installation folder:
-❯ cd hiphp/install
+❯ cd install
 
 # Install:
 ❯ bash install.sh -ti
@@ -295,17 +297,12 @@
 # Update:
 ❯ bash install.sh -tup
 
-#Usage: hiphp [OPTION]
-
-# hiphp --help                      = hiphp cli help.
-# hiphp --geth [KEY*] [URL*] [LANG] = Get the HIPHP_HOLE_CODE Encrypted by your [KEY] & based site language [LANG].
-# hiphp [KEY*] [URL*] [LANG]        = Connect to the victim's website (CLI) Mode.
-# hiphp --version                   = Get the version number you are working with.
-
-# *     = All inputs must be entered.
-# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
-# URL   = Victim website link.
-# LANG  = based site language, default LANG='php'.
+# Usage:
+#      hiphp [OPTION]
+#      hiphp --help                --> hiphp cli help.
+#      hiphp --geth [KEY] [URL]    --> Get the HIPHP_HOLE_CODE Encrypted by your [KEY].
+#      hiphp [KEY] [URL]           --> Connect to the victim's website (CLI) Mode.
+#      hiphp --version             --> Get the version number you are working with.
 
 # Uninstall:
 ❯ bash install.sh -tu
@@ -316,35 +313,38 @@
 <h4>Run with hiphp-cli:</h4>
 
 ```bash
-# Dwonload:
+# Download hiphp from github:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
+# OR
+# Download hiphp from gitlab:
+❯ git clone https://gitlab.com/yasserbdj96/hiphp.git
+
+# Go to downloaded folder:
 ❯ cd hiphp
 
 # install requirements:
 ❯ pip install -r requirements.txt
-❯ pip install -r requirements-linux.txt #for linux os.
-❯ pip install -r requirements-win.txt #for windows os.
+❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
+❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
 # OR
-❯ bash install_all_requirements_linux.sh #for linux os.
+❯ bash hiphp-linux/install_all_requirements_linux.sh #for linux os.
 # OR
-❯ install_all_requirements_win.bat #for windows os.
+❯ hiphp-win/install_all_requirements_win.bat #for windows os.
 
 # default run on any os:
-❯ python3 run.py <KEY*> <URL*> <LANG>
+❯ python run.py <KEY> <URL>
 
 # Run with Makefile:
-❯ make run arg="cli" url="<URL*>" key="<KEY*>" lang="<LANG>"
+❯ make run arg="cli" url="<URL>" key="<KEY>"
+
+# For linux:
+❯ hiphp-linux/hiphp-cli.sh <KEY> <URL>
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
-# OR Run 'configure-config-file-for-windows.py'.
-❯ run.bat <KEY*> <URL*> <LANG>
-
-# *     = All inputs must be entered.
-# KEY   = The password used for encrypt HIPHP_HOLE_CODE.
-# URL   = Victim website link.
-# LANG  = based site language, default LANG='php'.
+# OR Run 'hiphp-win\config-configure.py'.
+❯ hiphp-win/hiphp-cli.bat <KEY> <URL>
 
 ```
 
@@ -437,35 +437,40 @@ hiphp Commands :
 <h4>Run with hiphp-desktop:</h4>
 
 ```bash
-# Dwonload:
+# Download hiphp from github:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
+# OR
+# Download hiphp from gitlab:
+❯ git clone https://gitlab.com/yasserbdj96/hiphp.git
+
+# Go to downloaded folder:
 ❯ cd hiphp
 
 # install requirements:
 ❯ pip install -r requirements.txt
 ❯ pip install -r hiphp-desktop/requirements-dst.txt
-❯ pip install -r requirements-linux.txt #for linux os.
-❯ pip install -r requirements-win.txt #for windows os.
+❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
+❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
 # OR
-❯ bash install_all_requirements_linux.sh #for linux os.
+❯ bash hiphp-linux/install_all_requirements_linux.sh #for linux os.
 # OR
-❯ install_all_requirements_win.bat #for windows os.
+❯ hiphp-win/install_all_requirements_win.bat #for windows os.
 
 # run with hiphp-desktop tool:
 ❯ cd hiphp-desktop
-❯ python3 main.py
+❯ python main.py
 
 # Run with Makefile:
-❯ make run arg="dst"
+❯ make run arg="dst" url="<URL>" key="<KEY>"
 
 # For Linux:
-❯ bash run-hiphp-desktop.sh
+❯ bash hiphp-linux/run-hiphp-desktop.sh
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
-# OR Run 'configure-config-file-for-windows.py'.
-❯ run-hiphp-desktop.bat
+# OR Run 'hiphp-win\config-configure.py'.
+❯ hiphp-win/run-hiphp-desktop.bat
 
 ```
 
@@ -473,37 +478,40 @@ hiphp Commands :
 <h4>Run with hiphp-tk:</h4>
 
 ```bash
-# Dwonload:
+# Download hiphp from github:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
+# OR
+# Download hiphp from gitlab:
+❯ git clone https://gitlab.com/yasserbdj96/hiphp.git
+
+# Go to downloaded folder:
 ❯ cd hiphp
 
 # install requirements:
 ❯ pip install -r requirements.txt
 ❯ pip install -r hiphp-tk/requirements-tk.txt
-❯ pip install -r requirements-linux.txt #for linux os.
-❯ pip install -r requirements-win.txt #for windows os.
+❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
+❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
 # OR
-❯ bash install_all_requirements_linux.sh #for linux os.
+❯ bash hiphp-linux/install_all_requirements_linux.sh #for linux os.
 # OR
-❯ install_all_requirements_win.bat #for windows os.
+❯ hiphp-win/install_all_requirements_win.bat #for windows os.
 
 # run with hiphp-tk tool:
 ❯ cd hiphp-tk
-❯ python3 main.py
+❯ python main.py
 
 # Run with Makefile:
 ❯ make run arg="tk" url="<URL>" key="<KEY>"
-# OR
-❯ make run arg="tk"
 
 # For Linux:
-❯ bash run-hiphp-tk.sh
+❯ bash hiphp-linux/run-hiphp-tk.sh
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
-# OR Run 'configure-config-file-for-windows.py'.
-❯ run-hiphp-tk.bat
+# OR Run 'hiphp-win\config-configure.py'.
+❯ hiphp-win/run-hiphp-tk.bat
 
 ```
 
@@ -512,18 +520,17 @@ hiphp Commands :
 <h4>Script Usage:</h4>
 
 ```python
+# install hiphp package:
+# ❯ pip install hiphp
+
+# import hiphp package:
 from hiphp import *
 
 # Connect:
-p1=hiphp(key="<KEY*>",url="<URL*>",lang="<LANG>",retu=<RETURN>)# Default: retu=False
-
-# *      = All inputs must be entered.
-# KEY    = The password used for encrypt HIPHP_HOLE_CODE.
-# URL    = Victim website link.
-# LANG   = based site language, default LANG='php'.
-# RETURN = True for return data as a string, false for print data in the console.
+p1=hiphp(key="<KEY>",url="<URL>")
 ```
 
+<br>
 <h4>Script Examples:</h4>
 
 ```python
@@ -531,9 +538,9 @@ p1=hiphp(key="<KEY*>",url="<URL*>",lang="<LANG>",retu=<RETURN>)# Default: retu=F
 from hiphp import *
 
 # Connect:
-p1=hiphp(key="123456789",url="http://127.0.0.1/index.php")#Default: retu=False.
-#p1=hiphp(key="123456789",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")
-#p1=hiphp(key="123456789",url="https://google.com/index.php")
+p1=hiphp(key="123",url="http://127.0.0.1/index.php")#Default: retu=False.
+#p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")# If you use hiphp on .onion sites, you must run tor services or tor browser.
+#p1=hiphp(key="123",url="https://google.com/index.php")
 
 # Get the hole Code:
 p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php

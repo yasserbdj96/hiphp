@@ -9,33 +9,43 @@
 # --+----------------------------------------------------------+--
 #   |                                                          |
 
-#make run arg="cli" url="<URL>" key="<KEY>" lang="<LANG>"
-
 #START{
 VENV = venv
 PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
 
-ifndef lang
-	lang=php
+#
+ifeq ($(OS),Windows_NT) 
+    detected_OS := Windows
+else
+    detected_OS := $(shell sh -c 'uname 2>/dev/null || echo Unknown')
 endif
 
+ifeq ($(detected_OS),Windows)
+    pipforos = $(PIP) install -r ./hiphp-win/requirements-win.txt
+endif
+	
+ifeq ($(detected_OS),Linux)#Darwin for Mac OS X
+    pipforos = $(PIP) install -r ./hiphp-linux/requirements-linux.txt
+endif
+
+#
 ifeq ($(arg),cli)
-	RUN = run.py $(key) $(url) $(lang)
+	RUN = $(PYTHON) run.py $(key) $(url)
 else
 	ifeq ($(arg),tk)
-		RUN = hiphp-tk/main.py $(key) $(url)
+		RUN = $(PYTHON) hiphp-tk/main.py $(key) $(url)
 	else
 		ifeq ($(arg),dst)
-			RUN = hiphp-desktop/main.py
+			RUN = $(PYTHON) hiphp-desktop/main.py
 		else
-			RUN = makefile_errors.py
+			RUN = $(info USAGE: make run arg='cli/dst/tk' url='URL' key='KEY')
 		endif
 	endif
 endif
 
 run: $(VENV)/bin/activate
-	$(PYTHON) $(RUN)
+	$(RUN)
 
 $(VENV)/bin/activate: requirements.txt
 	python3 -m venv $(VENV)
@@ -43,7 +53,7 @@ $(VENV)/bin/activate: requirements.txt
 	$(PIP) install -r ./requirements-pypi.txt
 	$(PIP) install -r ./hiphp-desktop/requirements-dst.txt
 	$(PIP) install -r ./hiphp-tk/requirements-tk.txt
-	$(PIP) install -r ./requirements-linux.txt
+	$(pipforos)
 
 clean:
 	rm -rf hiphp/__pycache__

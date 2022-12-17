@@ -11,10 +11,9 @@
 #   |                                                          |
 
 #START{
-python -m pip install -r ./requirements.txt
-python -m pip install -r ./requirements-pypi.txt
-python -m pip install -r ./hiphp-desktop/requirements-dst.txt
-python -m pip install -r ./hiphp-tk/requirements-tk.txt
+python -m pip install -r ../requirements.txt
+python -m pip install -r ../requirements-pypi.txt
+python -m pip install -r ../hiphp-desktop/requirements-dst.txt
+python -m pip install -r ../hiphp-tk/requirements-tk.txt
 python -m pip install -r ./requirements-linux.txt
-
 #}END.

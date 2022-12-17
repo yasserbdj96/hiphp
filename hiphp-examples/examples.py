@@ -16,7 +16,7 @@ from hiphp import *
 
 # connect:
 p1=hiphp(key="123",url="http://127.0.0.1/index.php")#Default: retu=False.
-#p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")
+#p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")# If you use hiphp on .onion sites, you must run tor services or tor browser.
 #p1=hiphp(key="123",url="https://google.com/index.php")
 
 # Get the hole Code:

@@ -37,7 +37,7 @@
 
 <br>
 <h2>What is Hiphp?</h2>
-<p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the HIPHP_HOLE_CODE into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
+<p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the <a href="#HIPHP_HOLE_CODE-Example">HIPHP_HOLE_CODE</a> into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
 
 
 <br>
@@ -50,9 +50,7 @@
 - [All languages used in this project](#All-languages-used-in-this-project)
 - [Where can you find this project?](#Where-can-you-find-this-project)
 - [How to download](#How-to-download)
-- [Requirements](#Requirements)
-    - [used requirements](#used-requirements)
-    - [Install all Requirements](#Install-all-Requirements)
+- [Used Requirements](#Used-Requirements)
 - [Supported Distributions](#Supported-Distributions)
 - [Hiphp with Docker](#Hiphp-with-Docker)
     - [Docker pull build and run](#Docker-pull-build-and-run)
@@ -126,8 +124,7 @@
 ```
 
 <br>
-<h2>Requirements</h2>
-<h4>used requirements:</h4>
+<h2>Used Requirements:</h2>
 <!--[✓] <a href="https://github.com/yasserbdj96/ashar">ashar</a><br-->
 [✓] <a href="https://pypi.org/project/requests/">requests</a><br>
 [✓] <a href="https://pypi.org/project/hexor/">hexor</a><br>
@@ -136,20 +133,6 @@
 [✓] <a href="https://pypi.org/project/Eel/">eel</a><br>
 [✓] <a href="https://pypi.org/project/readline/">readline</a><br>
 [✓] <a href="https://pypi.org/project/chardet/">chardet</a>
-
-<br>
-<h4>Install all Requirements:</h4>
-
-```bash
-# For Linux:
-❯ bash hiphp-linux/install_all_requirements_linux.sh
-
-# For Windows:
-# Do not forget to modify the "config.ini" file or use the following command:
-# > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
-# OR Run 'hiphp-win\config-configure.py'.
-❯ hiphp-win\install_all_requirements_win.bat
-```
 
 <br>
 <h2>Supported Distributions:</h2>
@@ -326,10 +309,6 @@
 ❯ pip install -r requirements.txt
 ❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
 ❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
-# OR
-❯ bash hiphp-linux/install_all_requirements_linux.sh #for linux os.
-# OR
-❯ hiphp-win/install_all_requirements_win.bat #for windows os.
 
 # default run on any os:
 ❯ python run.py <KEY> <URL>
@@ -338,13 +317,15 @@
 ❯ make run arg="cli" url="<URL>" key="<KEY>"
 
 # For linux:
-❯ hiphp-linux/hiphp-cli.sh <KEY> <URL>
+❯ cd hiphp-linux
+❯ bash hiphp-cli.sh <KEY> <URL>
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
 # OR Run 'hiphp-win\config-configure.py'.
-❯ hiphp-win/hiphp-cli.bat <KEY> <URL>
+❯ cd hiphp-win
+❯ hiphp-cli.bat <KEY> <URL>
 
 ```
 
@@ -451,10 +432,6 @@ hiphp Commands :
 ❯ pip install -r hiphp-desktop/requirements-dst.txt
 ❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
 ❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
-# OR
-❯ bash hiphp-linux/install_all_requirements_linux.sh #for linux os.
-# OR
-❯ hiphp-win/install_all_requirements_win.bat #for windows os.
 
 # run with hiphp-desktop tool:
 ❯ cd hiphp-desktop
@@ -464,13 +441,15 @@ hiphp Commands :
 ❯ make run arg="dst" url="<URL>" key="<KEY>"
 
 # For Linux:
-❯ bash hiphp-linux/run-hiphp-desktop.sh
+❯ cd hiphp-linux
+❯ bash run-hiphp-desktop.sh
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
 # OR Run 'hiphp-win\config-configure.py'.
-❯ hiphp-win/run-hiphp-desktop.bat
+❯ cd hiphp-win
+❯ run-hiphp-desktop.bat
 
 ```
 
@@ -492,10 +471,6 @@ hiphp Commands :
 ❯ pip install -r hiphp-tk/requirements-tk.txt
 ❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
 ❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
-# OR
-❯ bash hiphp-linux/install_all_requirements_linux.sh #for linux os.
-# OR
-❯ hiphp-win/install_all_requirements_win.bat #for windows os.
 
 # run with hiphp-tk tool:
 ❯ cd hiphp-tk
@@ -505,13 +480,15 @@ hiphp Commands :
 ❯ make run arg="tk" url="<URL>" key="<KEY>"
 
 # For Linux:
-❯ bash hiphp-linux/run-hiphp-tk.sh
+❯ cd hiphp-linux
+❯ bash run-hiphp-tk.sh
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
 # OR Run 'hiphp-win\config-configure.py'.
-❯ hiphp-win/run-hiphp-tk.bat
+❯ hiphp-win
+❯ run-hiphp-tk.bat
 
 ```
 

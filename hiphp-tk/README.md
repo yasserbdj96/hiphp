@@ -8,12 +8,8 @@
 # install requirements:
 ❯ pip install -r requirements.txt
 ❯ pip install -r hiphp-tk/requirements-tk.txt
-❯ pip install -r requirements-linux.txt #for linux os.
-❯ pip install -r requirements-win.txt #for windows os.
-# OR
-❯ bash install_all_requirements_linux.sh #for linux os.
-# OR
-❯ install_all_requirements_win.bat #for windows os.
+❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
+❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
 
 # run with hiphp-tk tool:
 ❯ cd hiphp-tk
@@ -23,12 +19,14 @@
 ❯ make run arg="tk" url="<URL>" key="<KEY>"
 
 # For Linux:
+❯ cd hiphp-linux
 ❯ bash run-hiphp-tk.sh
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
-# OR Run 'configure-config-file-for-windows.py'.
+# OR Run 'hiphp-win\config-configure.py'.
+❯ cd hiphp-win
 ❯ run-hiphp-tk.bat
 
 # OR if you installed it on Ubuntu:

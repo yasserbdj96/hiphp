@@ -1,4 +1,6 @@
 ## 0.2.34 [17-12-2022][Last Version]
+ - Update workflows to work on python 3.7->3.9.
+ - Update documents.
  - Update "Makefile" to work on any operating system.
  - Delete Android app ".apk".
  - Delete ".exe" direct play files on windows.

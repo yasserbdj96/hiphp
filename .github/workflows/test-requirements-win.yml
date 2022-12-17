@@ -1,4 +1,4 @@
-name: Test requirements windows
+name: Test Requirements on Windows-latest | python 3.7->3.9
 on: [push]
 #defaults:
 #  run:

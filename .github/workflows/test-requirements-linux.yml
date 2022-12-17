@@ -26,12 +26,16 @@ jobs:
       # You can test your matrix by printing the current Python version
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
-      - name: Create Workspace Folder
-        run: mkdir -p wrdir && mkdir -p wrdir/hiphp-tk && mkdir -p wrdir/hiphp-desktop && mkdir -p wrdir/hiphp-linux
-      - name: Copy Files & folders to Workspace Folder
-        run: cp hiphp-linux/requirements-linux.txt wrdir/hiphp-linux/requirements-linux.txt && cp hiphp-linux/install_all_requirements_linux.sh wrdir/hiphp-linux/install_all_requirements_linux.sh && cp requirements.txt wrdir/requirements.txt && cp requirements-pypi.txt wrdir/requirements-pypi.txt && cp hiphp-desktop/requirements-dst.txt wrdir/hiphp-desktop/requirements-dst.txt && cp hiphp-tk/requirements-tk.txt wrdir/hiphp-tk/requirements-tk.txt
       - name: pip Upgrade
         run: python -m pip install --upgrade pip
-      - name: Run
-        run: cd wrdir/hiphp-linux && bash install_all_requirements_linux.sh
+      - name: install requirements.txt
+        run: python -m pip install -r requirements.txt
+      - name: install requirements-pypi.txt
+        run: python -m pip install -r requirements-pypi.txt
+      - name: install hiphp-desktop/requirements-dst.txt
+        run: python -m pip install -r hiphp-desktop/requirements-dst.txt
+      - name: install hiphp-tk/requirements-tk.txt
+        run: python -m pip install -r hiphp-tk/requirements-tk.txt
+      - name: install hiphp-win/requirements-win.txt
+        run: python -m pip install -r hiphp-win/requirements-win.txt
 

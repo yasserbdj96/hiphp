@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Upload to PYPI
+name: Push To PYPI
 
 # Controls when the action will run.
 on:
@@ -25,11 +25,11 @@ jobs:
       # Sets up python
       - uses: actions/setup-python@v4
         with:
-          python-version: 3.9
+          python-version: 3.10
 
       # Install requirements
       - name: "Installs requirements"
-        run: bash install_all_requirements_linux.sh
+        run: bash hiphp-linux/install_all_requirements_linux.sh
 
       # Install dependencies
       - name: "Installs dependencies"

@@ -17,5 +17,5 @@
     }else{
         echo "This is a test without a variable.";
     }
-    #}END.
+#}END.
 ?>

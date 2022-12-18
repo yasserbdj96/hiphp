@@ -1,0 +1,7 @@
+body{font-family: monospace;margin:0;background:linear-gradient(270deg,#48367d 0,#241842 100%)}
+.container{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;flex-direction:column;margin-top:40px}
+h1{line-height:1.2;font-weight:700;font-size:2.2em;color:#2e2e2e;text-align:center}
+.container a{color:#2e2e2e}
+.white-box{text-align: center;padding:60px 80px;background:#fff;width:70%;z-index:1;font-size: 10px;}
+.footer{justify-content:center;align-items:center;display:flex;flex-direction:column;margin-top:90px;color:#fff}
+.footer a{color:#fff}

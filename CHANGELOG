@@ -1,4 +1,8 @@
-## 0.2.34 [17-12-2022][Last Version]
+## 0.2.35 [17-12-2022][Last Version]
+ - Add the ability to contact with proxies, beta for hiphp-cli only.
+ - Bug fixes & performance improvements.
+
+## 0.2.34 [17-12-2022]
  - Update workflows to work on python 3.7->3.9.
  - Update documents.
  - Update "Makefile" to work on any operating system.

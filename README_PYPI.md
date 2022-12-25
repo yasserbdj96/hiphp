@@ -23,7 +23,6 @@
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
 [![Docker pulls](https://img.shields.io/docker/pulls/yasserbdj96/hiphp)](https://hub.docker.com/r/yasserbdj96/hiphp/)
-[![Open Source](https://img.shields.io/badge/Open%20Source-%E2%99%A5-red)](https://github.com/yasserbdj96/hiphp)
 [![Stars](https://img.shields.io/github/stars/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Forks](https://img.shields.io/github/forks/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Watching](https://img.shields.io/github/watchers/yasserbdj96/hiphp?label=Watchers&color=red&style=flat-square)](https://github.com/yasserbdj96/hiphp)
@@ -33,6 +32,8 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/yasserbdj96/hiphp)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/yasserbdj96/hiphp)
 [![GitHub license](https://img.shields.io/github/license/yasserbdj96/hiphp)](https://github.com/yasserbdj96/hiphp)
+[![Open Source](https://img.shields.io/badge/Open%20Source-%E2%99%A5-red)](https://github.com/yasserbdj96/hiphp)
+[![wakatime](https://wakatime.com/badge/user/d6d361fc-4abd-4305-b82f-15977e27deed/project/6d2eb063-5f69-4101-9fdd-1de59cb96ed4.svg)](https://wakatime.com/badge/user/d6d361fc-4abd-4305-b82f-15977e27deed/project/6d2eb063-5f69-4101-9fdd-1de59cb96ed4)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <br>
@@ -139,16 +140,20 @@
 <h4>Script Usage:</h4>
 
 ```python
+# install hiphp package:
+# ❯ pip install hiphp
+
+# import hiphp package:
 from hiphp import *
 
 # Connect:
-p1=hiphp(key="<KEY*>",url="<URL*>",lang="<LANG>",retu=<RETURN>)# Default: retu=False
+p1=hiphp(key="<KEY*>",url="<URL*>",proxies="<PROXIES>",retu=<RETURN>)# Default: retu=False
 
-# *      = All inputs must be entered.
-# KEY    = The password used for encrypt HIPHP_HOLE_CODE.
-# URL    = Victim website link.
-# LANG   = based site language, default LANG='php'.
-# RETURN = True for return data as a string, false for print data in the console.
+# *       = All inputs must be entered.
+# KEY     = The password used for encrypt HIPHP_HOLE_CODE.
+# URL     = Victim website link.
+# PROXIES = To use a proxy.
+# RETURN  = True for return data as a string, false for print data in the console.
 ```
 
 <h4>Script Examples:</h4>
@@ -158,9 +163,9 @@ p1=hiphp(key="<KEY*>",url="<URL*>",lang="<LANG>",retu=<RETURN>)# Default: retu=F
 from hiphp import *
 
 # Connect:
-p1=hiphp(key="123",url="http://127.0.0.1/index.php")#Default: retu=False.
+p1=hiphp(key="123",url="http://127.0.0.1/index.php")#Default: retu=False, proxies="".
 #p1=hiphp(key="123",url="http://kfdjlkgjflkgjdfkjgkfdjgkjdfkgjk.onion/index.php")# If you use hiphp on .onion sites, you must run tor services or tor browser.
-#p1=hiphp(key="123",url="https://google.com/index.php")
+#p1=hiphp(key="123",url="https://localhost.com/vvv2.php")
 
 # Get the hole Code:
 p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php

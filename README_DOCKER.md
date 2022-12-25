@@ -23,7 +23,6 @@
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
 [![Docker pulls](https://img.shields.io/docker/pulls/yasserbdj96/hiphp)](https://hub.docker.com/r/yasserbdj96/hiphp/)
-[![Open Source](https://img.shields.io/badge/Open%20Source-%E2%99%A5-red)](https://github.com/yasserbdj96/hiphp)
 [![Stars](https://img.shields.io/github/stars/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Forks](https://img.shields.io/github/forks/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Watching](https://img.shields.io/github/watchers/yasserbdj96/hiphp?label=Watchers&color=red&style=flat-square)](https://github.com/yasserbdj96/hiphp)
@@ -33,6 +32,8 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/yasserbdj96/hiphp)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/yasserbdj96/hiphp)
 [![GitHub license](https://img.shields.io/github/license/yasserbdj96/hiphp)](https://github.com/yasserbdj96/hiphp)
+[![Open Source](https://img.shields.io/badge/Open%20Source-%E2%99%A5-red)](https://github.com/yasserbdj96/hiphp)
+[![wakatime](https://wakatime.com/badge/user/d6d361fc-4abd-4305-b82f-15977e27deed/project/6d2eb063-5f69-4101-9fdd-1de59cb96ed4.svg)](https://wakatime.com/badge/user/d6d361fc-4abd-4305-b82f-15977e27deed/project/6d2eb063-5f69-4101-9fdd-1de59cb96ed4)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <br>
@@ -117,7 +118,7 @@
 ❯ docker build -t hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t hiphp:latest
+❯ docker run -e KEY="<KEY>*" -e URL="<URL>*" -i -t hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
@@ -125,13 +126,12 @@
 # *     = All inputs must be entered.
 # KEY   = The password used for encrypt HIPHP_HOLE_CODE.
 # URL   = Victim website link.
-# LANG  = based site language, default LANG='php'.
 ```
 
 <p>click to see <a href="https://asciinema.org/a/QRlMY6JH9uwMCIbaV7F6lLoQ1">Demo</a></p><br>
 
-
-<h4>Docker-Hub pull build and run:</h4>
+<br>
+<h4>Docker Hub pull build and run:</h4>
 
 ```bash
 # Pull:
@@ -141,7 +141,7 @@
 ❯ docker build -t docker.io/yasserbdj96/hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t docker.io/yasserbdj96/hiphp:latest
+❯ docker run -e KEY="<KEY>*" -e URL="<URL>*" -i -t docker.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
@@ -149,11 +149,11 @@
 # *     = All inputs must be entered.
 # KEY   = The password used for encrypt HIPHP_HOLE_CODE.
 # URL   = Victim website link.
-# LANG  = based site language, default LANG='php'.
 ```
 
 <p>click to see <a href="https://asciinema.org/a/HAzDifB2g81KJ8CBhil8K0mzC">Demo</a></p><br>
 
+<br>
 <h4>GitHub container registry pull build and run:</h4>
 
 ```bash
@@ -164,7 +164,7 @@
 ❯ docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -e LANGU="<LANG>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+❯ docker run -e KEY="<KEY>*" -e URL="<URL>*" -i -t ghcr.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
@@ -172,7 +172,6 @@
 # *     = All inputs must be entered.
 # KEY   = The password used for encrypt HIPHP_HOLE_CODE.
 # URL   = Victim website link.
-# LANG  = based site language, default LANG='php'.
 ```
 
 <p>click to see <a href="https://asciinema.org/a/wDWAVo5GURsAbCUVseZsN2PdY">Demo</a></p><br>

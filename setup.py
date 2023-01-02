@@ -28,7 +28,7 @@ setup(
     project_urls={
         'Source': "https://github.com/yasserbdj96/hiphp",
         'WebSite': "https://yasserbdj96.github.io/hiphp",
-        #'Documentation': "https://yasserbdj96.github.io/hiphp",
+        'Documentation': "https://yasserbdj96.github.io/hiphp",
         'Chat': "https://gitter.im/yasserbdj96/hiphp",
         'Author WebSite':"https://yasserbdj96.github.io/"
     },

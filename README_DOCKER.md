@@ -33,6 +33,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/yasserbdj96/hiphp)
 [![GitHub license](https://img.shields.io/github/license/yasserbdj96/hiphp)](https://github.com/yasserbdj96/hiphp)
 [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%99%A5-red)](https://github.com/yasserbdj96/hiphp)
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6754/badge)](https://bestpractices.coreinfrastructure.org/projects/6754)
 [![wakatime](https://wakatime.com/badge/github/yasserbdj96/hiphp.svg)](https://wakatime.com/badge/github/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 

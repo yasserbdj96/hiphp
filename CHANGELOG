@@ -1,4 +1,7 @@
-## 0.2.35 [17-12-2022][Last Version]
+## 0.3.0 [02-01-2023][Last Version]
+ - Bug fixes & performance improvements.
+
+## 0.2.35 [17-12-2022]
  - Add the ability to contact with proxies, beta for hiphp-cli only.
  - Bug fixes & performance improvements.
 

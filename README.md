@@ -40,7 +40,11 @@
 
 <br>
 <h2>What is Hiphp?</h2>
-<p>The BackDoor of HIPHP allows you to control the websites that are based on PHP using HTTP/HTTPS protocol. It works by sending files, tokens, and commands to the site using port 80's POST/GET method. After placing the <a href="#HIPHP_HOLE_CODE-Example">HIPHP_HOLE_CODE</a> into any PHP file, it will allow you to access it and perform various activities such as downloading and editing files. It also allows you to connect to tor networks, this BackDoor is a password protected.</p>
+<p>The BackDoor of HIPHP gives you the power to control websites based on PHP using HTTP/HTTPS protocol. By sending files, tokens and commands through port 80's POST/GET method, users can access a range of activities such as downloading and editing files. It also allows for connecting to Tor networks with password protection for extra security.<br>
+
+HIPHP is an open source project created by developers who wanted to give webmasters more control over their sites without having to rely on third-party software or services. With this backdoor in place, users are able to make changes quickly and easily from anywhere in the world - all they need is access rights granted by placing the <a href="#HIPHP_HOLE_CODE-Example">HIPHP_HOLE_CODE</a> into any PHP file within their site’s directory structure. This makes it easier than ever before for website owners looking for greater flexibility when managing their online presence!<br>
+
+For those concerned about security risks associated with using this type of tool, rest assured that HIPHP has been designed with safety protocols in mind – including regular updates which ensure compatibility across different versions of PHP codebase used today’s most popular content management systems (CMS). Additionally, its password protection feature adds another layer of defense against malicious actors trying gain unauthorized entry into your system or data stores; making it one secure solution worth considering if you're looking take back full control over your website hosting environment!</p>
 
 
 <br>

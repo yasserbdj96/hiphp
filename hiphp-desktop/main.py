@@ -134,8 +134,11 @@ def darkmode():
     return how
 
 try:
-    if sys.argv[1]:
+    if sys.argv[1]!="ipynb":
         host_ip="0.0.0.0"
+        host_port=8080
+    else:
+        host_ip="127.0.0.1"
         host_port=8080
 except:
     host_ip="127.0.0.1"
@@ -149,5 +152,21 @@ def iswork():
 print(f"hiphp-dst run on : {host_ip}:{host_port}")
 
 #eel.start("index.html",host=host_ip,port=host_port,size=(1050,500))
-eel.start("index.html",host=host_ip,port=host_port,mode='default')
+try:
+    if sys.argv[1]=="ipynb":
+        from pyngrok import ngrok
+
+        ngrok.set_auth_token(sys.argv[2])
+        public_url = ngrok.connect("8080").public_url
+        print(f"Sharing app at {public_url}")
+        eel.start("index.html",host=host_ip,port=host_port)
+        with True:
+            pass
+
+        print("Killing streamlit app")
+        print("Killing ngrok tunnel")
+        ngrok.kill()
+        raise
+except:
+    eel.start("index.html",host=host_ip,port=host_port,mode='default')
 #}END.

@@ -12,13 +12,20 @@
 */
 
 /*START{*/
+
+
+:root {
+    --default: #474b85;
+    --white: #ffffff;
+}
+
 body{
     background-color: #0d1117;
 }
 
 input[type=button],.button{
-    background-color: #474b85;
-    color: white;
+    background-color: var(--default);
+    color:var(--white);
 }
 
 /*input[type=text],input[type=password]{
@@ -28,7 +35,7 @@ input[type=button],.button{
 }*/
 
 input[type=text],input[type=password]{
-    color: white;
+    color: var(--white);
 }
 
 .form__label {

@@ -134,11 +134,11 @@ def darkmode():
     return how
 
 try:
-    if sys.argv[1]!="ipynb":
-        host_ip="0.0.0.0"
-        host_port=8080
-    else:
+    if sys.argv[1]=="ipynb":
         host_ip="127.0.0.1"
+        host_port=1000
+    else:
+        host_ip="0.0.0.0"
         host_port=8080
 except:
     host_ip="127.0.0.1"
@@ -157,7 +157,7 @@ try:
         from pyngrok import ngrok
 
         ngrok.set_auth_token(sys.argv[2])
-        public_url = ngrok.connect("8080").public_url
+        public_url = ngrok.connect(host_port).public_url
         print(f"Sharing app at {public_url}")
         eel.start("index.html",host=host_ip,port=host_port)
         with True:

@@ -17,6 +17,7 @@
 [![Push To Docker](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
 [![Push To Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)
 [![Push To PYPI](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml)
+[![hiphp-desktop In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhishekkrthakur/diffuzers/blob/main/diffuzers.ipynb)
 [![Deploy static content to Pages](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml)
 [![CodeQL (python, javascript)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp)
@@ -37,6 +38,8 @@
 [![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6754/badge)](https://bestpractices.coreinfrastructure.org/projects/6754)
 [![wakatime](https://wakatime.com/badge/github/yasserbdj96/hiphp.svg)](https://wakatime.com/badge/github/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
 
 <br>
 <h2>What is Hiphp?</h2>
@@ -71,6 +74,7 @@ For those concerned about security risks associated with using this type of tool
     - [Run with hiphp-cli](#Run-with-hiphp-cli)
         - [Help for hiphp-cli](#help-for-hiphp-cli)
     - [Run with hiphp-desktop](#Run-with-hiphp-desktop)
+        - [Run hiphp-desktop In Colab](#Run-hiphp-desktop-In-Colab)
     - [Run with hiphp-tk](#Run-with-hiphp-tk)
 - [Use hiphp As Script](#Use-As-Script)
     - [Script Usage](#Script-Usage)
@@ -477,6 +481,10 @@ hiphp Commands :
 ❯ run-hiphp-desktop.bat
 
 ```
+
+<br>
+<h5>Run hiphp-desktop In Colab:</h5>
+<a target="_blank" href="https://colab.research.google.com/github/yasserbdj96/hiphp/blob/main/hiphp.ipynb">Open hiphp-desktop In Colab</a>
 
 <br>
 <h4>Run with hiphp-tk:</h4>

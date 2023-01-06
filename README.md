@@ -17,7 +17,7 @@
 [![Push To Docker](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
 [![Push To Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)
 [![Push To PYPI](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml)
-[![hiphp-desktop In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/abhishekkrthakur/diffuzers/blob/main/diffuzers.ipynb)
+[![hiphp-desktop In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yasserbdj96/hiphp/blob/main/hiphp.ipynb)
 [![Deploy static content to Pages](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml)
 [![CodeQL (python, javascript)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp)

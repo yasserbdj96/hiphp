@@ -34,6 +34,10 @@ cd hiphp-win
 ```
 
 <br>
+<h4>Run hiphp-desktop In Colab:</h4>
+<a target="_blank" href="https://colab.research.google.com/github/yasserbdj96/hiphp/blob/main/hiphp.ipynb">Open hiphp-desktop In Colab</a>
+
+<br>
 <h2>Screenshots:</h2>
 
 <div align="center">

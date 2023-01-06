@@ -18,10 +18,15 @@
    font-family: "Lucida Console", "Courier New", monospace;
 }
 
+body{
+  background-color:var(--c3);
+}
+
 input[type=text], input[type=password] {
     padding: 5px 5px;
     margin: 4px 0;
     box-sizing: border-box;
+    color: var(--c2);
 }
 
 
@@ -36,10 +41,8 @@ input[type=text], input[type=password] {
 
 /**/
 input[type=button],.button{
-  background-color: #303134;
   border: 1px solid #303134;
   border-radius: 4px;
-  color: #e8eaed;
   font-family: arial,sans-serif;
   font-size: 14px;
   margin: 11px 4px;
@@ -50,12 +53,15 @@ input[type=button],.button{
   text-align: center;
   cursor: pointer;
   user-select: none;
+  background-color: var(--c1);
+  color:var(--c24);
 }
 
 
 #connected{
     display:none;
     height: 41px;
+    background-color: var(--c1);
 }
 #codeEditor{
   display:none;
@@ -92,6 +98,8 @@ input[type=button],.button{
     width: 10px;
     height: 10px;
     border: 2px solid;
+    background-color: var(--c1);
+    color: var(--c2);
 }
 
 .tc{text-align:center;}
@@ -106,7 +114,19 @@ input[type=button],.button{
     width: 10px;
     height: 10px;
     border: 2px solid;
+    background-color: var(--c1);
+    color: var(--c24);
 }
+
+spam{
+  color:var(--c24);
+}
+
+spam:hover {
+  background-color:var(--c5);
+  height: 18px;
+}
+
 
 .padding_11{
   padding: 11px;
@@ -120,12 +140,26 @@ input[type=button],.button{
   padding: 9px;
 }
 
+.c_red{
+  color:var(--c9);
+}
+.c_blue{
+  color:var(--c10);
+}
+.c_orange{
+  color: var(--c11);
+}
+.c_green{
+  color: var(--c12);
+}
+
 .settings{
   margin-top: -14px;
   display:none;
   /*width: 100%;*/
   height: calc(100vh - 50px);
   padding: 5px;
+  background-color: var(--c3);
 }
 
 #login{
@@ -143,6 +177,7 @@ input[type=button],.button{
     position: absolute;
     /*margin-top: 8px;*/
     margin-left: 0px;
+    color:var(--c24);
 }
 
 .pointer{cursor: pointer;}
@@ -183,12 +218,26 @@ input[type=button],.button{
   padding-bottom: 12px;
   text-align: left;
 }
+
+table{
+  color: var(--c2);
+}
+
+#ls tr:nth-child(even), #settings tr:nth-child(even){background-color: var(--c6);}
+
+#ls tr:hover, #settings tr:hover{background-color: var(--c7)}
+
+#ls th, #settings th {
+    background-color: var(--c8);
+    color: var(--c24);
+}
 /**/
 .save{
     display: none;
     position: absolute;
     /*margin-top: 8px;*/
     margin-left: 50%;
+    color: var(--c24);
 }
 /**/
 .select{
@@ -197,6 +246,7 @@ input[type=button],.button{
     width: 100%;
     padding: 10px;
     text-align: center;
+    background-color: var(--c1);
 }
 
 .version{
@@ -215,6 +265,8 @@ input[type=button],.button{
   margin:100px auto;
   padding:30px 20px 20px;
   width:80%;
+  background: var(--c13);
+  box-shadow: 0 2px 3px 0 var(--c15);
 }
 
 /*td{
@@ -291,6 +343,19 @@ input[type=checkbox]:checked + span::after{
   top: 8px;
 }
 
+input[type=checkbox] + span {
+  background: var(--c14);
+  box-shadow: 0 2px 3px 0 var(--c15);
+}
+
+input[type=checkbox] + span::before, input[type=checkbox] + span::after{
+  background:var(--c24);
+}
+
+input[type=checkbox]:checked + span {
+  background:var(--c1);			    
+}
+
 /*
 input[type=submit] {
   background-color: #04aa6d;
@@ -325,6 +390,9 @@ input[type=submit] {
     /* Determine appearance of code editor */
     height: calc(100vh - 38px);
     padding-top: calc(12px);
+    background-color:var(--c3);
+    border-color:var(--c16);
+    color:var(--c2);
 }
 #lineCounter {
     display: flex;
@@ -338,10 +406,39 @@ input[type=submit] {
     margin-top: 41px;
     /*display:none;*/
     height: calc(100vh - 38px);
+    color: var(--c17);
+    background-color: var(--c18);
+    background-color:var(--c19);
+    border-color:var(--c16);
+    color:var(--c20);
 }
 #lineCounter:focus-visible,
 #cat:focus-visible {
     outline:none;
+}
+
+
+/**/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--c21); 
+  /*border-radius: 10px;*/
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--c22); 
+  /*border-radius: 10px;*/
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c23); 
 }
 
 /**/
@@ -391,6 +488,7 @@ input[type=submit] {
   transition: 0.2s;
   font-size: 1rem;
   /*color: #9b9b9b;*/
+  color:var(--c4);
 }
 
 .form__field:focus {

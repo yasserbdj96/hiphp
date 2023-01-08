@@ -1,4 +1,4 @@
-name: PYPI Build & Setup On Windows-latest | python 3.7->3.9
+name: PYPI Build & Setup On Windows
 on: [push]
 #defaults:
 #  run:

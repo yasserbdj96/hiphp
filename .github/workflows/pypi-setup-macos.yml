@@ -1,4 +1,4 @@
-name: PYPI Build & Setup On MacOS-latest | python 3.7->3.9
+name: PYPI Build & Setup On MacOS
 on: [push]
 #defaults:
 #  run:

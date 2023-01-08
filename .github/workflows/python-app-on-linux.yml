@@ -1,4 +1,4 @@
-name: Run on Linux/Ubuntu-latest | python 3.7->3.9
+name: Run on Ubuntu
 on: [push]
 #defaults:
 #  run:

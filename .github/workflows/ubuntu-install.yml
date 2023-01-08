@@ -1,4 +1,4 @@
-name: Install On Linux/Ubuntu-latest | python 3.7->3.9
+name: Install On Ubuntu
 on: [push]
 jobs:
   build:

@@ -1,4 +1,4 @@
-name: Run on MacOS-latest | python 3.7->3.9
+name: Run on MacOS
 on: [push]
 #defaults:
 #  run:

@@ -38,5 +38,20 @@ function geth(){
     //return php_s+"\n"+code+"\n"+php_e;
 }
 
+function copy(){
+    // Get the text field
+    var copyText = document.getElementById("HIPHP_HOLE_CODE");
+
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Alert the copied text
+    //alert("Copied the text: " + copyText.value);
+}
+
 //console.log(geth("123"));
 //}END.

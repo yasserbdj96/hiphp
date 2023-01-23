@@ -26,6 +26,8 @@
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
 [![Docker pulls](https://img.shields.io/docker/pulls/yasserbdj96/hiphp)](https://hub.docker.com/r/yasserbdj96/hiphp/)
+
+[![Downloads](https://img.shields.io/pypi/dm/hiphp)](https://img.shields.io/pypi/dm/hiphp)
 [![Stars](https://img.shields.io/github/stars/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Forks](https://img.shields.io/github/forks/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Watching](https://img.shields.io/github/watchers/yasserbdj96/hiphp?label=Watchers&color=red&style=flat-square)](https://github.com/yasserbdj96/hiphp)
@@ -36,7 +38,6 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/yasserbdj96/hiphp)
 [![GitHub license](https://img.shields.io/github/license/yasserbdj96/hiphp)](https://github.com/yasserbdj96/hiphp)
 [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%99%A5-red)](https://github.com/yasserbdj96/hiphp)
-![platform](https://img.shields.io/badge/platform-Linux%20%7C%20Ubuntu%20%7C%20KaliLinux%20%7C%20ParrotOs%20%7C%20Windows%20%7C%20MacOS%20%7C%20Android%20%7C%20Termux%20%7C%20Nethunter-blue)
 [![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6754/badge)](https://bestpractices.coreinfrastructure.org/projects/6754)
 [![wakatime](https://wakatime.com/badge/github/yasserbdj96/hiphp.svg)](https://wakatime.com/badge/github/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)

@@ -5,24 +5,29 @@
 </div>
 <br>
 
-[![Run on Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
-[![Run on Windows-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
-[![Run on MacOS-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
-[![Test Requirements on Windows-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml)
-[![Test Requirements on Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml)
-[![PYPI Build & Setup On Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml)
-[![PYPI Build & Setup On MacOS-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml)
-[![PYPI Build & Setup On Windows-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml)
-[![Install On Linux/Ubuntu-latest | python 3.7->3.9](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
+[![Run on Ubuntu](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
+[![Run on Windows](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
+[![Run on MacOS](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
+[![Test Requirements on Windows](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-win.yml)
+[![Test Requirements on Ubuntu](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/test-requirements-linux.yml)
+[![PYPI Build & Setup On Ubuntu](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml)
+[![PYPI Build & Setup On MacOS](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml)
+[![PYPI Build & Setup On Windows](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml)
+[![Install On Ubuntu](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
 [![Push To Docker](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
 [![Push To Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)
 [![Push To PYPI](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pipup.yml)
+[![hiphp-desktop In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yasserbdj96/hiphp/blob/main/hiphp.ipynb)
 [![Deploy static content to Pages](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pages.yml)
-[![CodeQL (python, javascript)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)
+[![CodeQL](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp)
+[![Size](https://img.shields.io/github/repo-size/yasserbdj96/hiphp)](https://img.shields.io/github/repo-size/yasserbdj96/hiphp)
+[![languages](https://img.shields.io/github/languages/count/yasserbdj96/hiphp)](https://img.shields.io/github/languages/count/yasserbdj96/hiphp)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)
 [![Docker pulls](https://img.shields.io/docker/pulls/yasserbdj96/hiphp)](https://hub.docker.com/r/yasserbdj96/hiphp/)
+
+[![Downloads](https://img.shields.io/pypi/dm/hiphp)](https://img.shields.io/pypi/dm/hiphp)
 [![Stars](https://img.shields.io/github/stars/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Forks](https://img.shields.io/github/forks/yasserbdj96/hiphp?color=red)](https://github.com/yasserbdj96/hiphp)
 [![Watching](https://img.shields.io/github/watchers/yasserbdj96/hiphp?label=Watchers&color=red&style=flat-square)](https://github.com/yasserbdj96/hiphp)
@@ -36,6 +41,7 @@
 [![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6754/badge)](https://bestpractices.coreinfrastructure.org/projects/6754)
 [![wakatime](https://wakatime.com/badge/github/yasserbdj96/hiphp.svg)](https://wakatime.com/badge/github/yasserbdj96/hiphp)
 [![Join the chat at https://gitter.im/yasserbdj96/hiphp](https://badges.gitter.im/yasserbdj96/hiphp.svg)](https://gitter.im/yasserbdj96/hiphp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 <br>
 <h2>What is Hiphp?</h2>

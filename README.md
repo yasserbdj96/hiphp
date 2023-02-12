@@ -171,6 +171,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
+# Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
 # KEY   = The password used for encrypt HIPHP_HOLE_CODE.
@@ -194,6 +195,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
+# Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
 # KEY   = The password used for encrypt HIPHP_HOLE_CODE.
@@ -217,6 +219,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
+# Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
 # KEY   = The password used for encrypt HIPHP_HOLE_CODE.
@@ -470,10 +473,12 @@ hiphp Commands :
 
 # Run with Makefile:
 ❯ make run arg="dst"
+# Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # For Linux:
 ❯ cd hiphp-linux
 ❯ bash run-hiphp-desktop.sh
+# Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
@@ -481,6 +486,7 @@ hiphp Commands :
 # OR Run 'hiphp-win\config-configure.py'.
 ❯ cd hiphp-win
 ❯ run-hiphp-desktop.bat
+# Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 ```
 

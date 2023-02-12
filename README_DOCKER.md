@@ -132,6 +132,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
+# Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
 # KEY   = The password used for encrypt HIPHP_HOLE_CODE.
@@ -155,6 +156,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
+# Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
 # KEY   = The password used for encrypt HIPHP_HOLE_CODE.
@@ -178,6 +180,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # Run as GUI:
 ❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
+# Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
 # KEY   = The password used for encrypt HIPHP_HOLE_CODE.

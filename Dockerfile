@@ -33,7 +33,7 @@
 # docker run -e DST="True" --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
 
 #START{
-FROM python:3.11.1
+FROM python:3.11.2
 
 # start install google-chrome:
 # Download the Chrome Driver

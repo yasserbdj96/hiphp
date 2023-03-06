@@ -1,2 +1,7 @@
-## 0.2.2 [18-11-2022][Last Version]
- - Bug fixes & performance improvements.
+## 0.2.3 [06-03-2023][Last Version]
+ - fix run on docker and others.
+ - Bug fixes & performance improvements.
+
+## 0.2.2 [18-11-2022]
+ - Bug fixes & performance improvements.
+

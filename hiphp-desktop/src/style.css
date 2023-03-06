@@ -406,7 +406,7 @@ input[type=submit] {
     margin-top: 41px;
     /*display:none;*/
     height: calc(100vh - 38px);
-    color: var(--c17);
+    /*color: var(--c17);*/
     background-color: var(--c18);
     background-color:var(--c19);
     border-color:var(--c16);

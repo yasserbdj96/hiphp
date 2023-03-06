@@ -44,7 +44,6 @@ if ('serviceWorker' in navigator){
 }
 
 
-
 var download_pwa = document.getElementsByClassName('download_pwa');
 if (download_pwa.length > 0){
     // Code to handle install prompt on desktop
@@ -52,6 +51,26 @@ if (download_pwa.length > 0){
     const addBtn = document.querySelector('.download_pwa');
     //addBtn.style.display = 'none';
     addBtn.checked=true;
+
+
+    
+    // Show uninstall button
+    /*if (window.matchMedia('(display-mode: standalone)').matches) {
+      download_pwa.style.display = 'block';
+    }*/
+    /*download_pwa.addEventListener('click', () => {
+      addBtn.checked=false;
+      // Clear the cache
+      caches.keys().then((cacheNames) => {
+        cacheNames.forEach((cacheName) => {
+          caches.delete(cacheName);
+        });
+      });
+      console.log('App Uninstalled');
+    });*/
+
+
+
 
   window.addEventListener('beforeinstallprompt',(e)=>{
     // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -82,13 +101,5 @@ if (download_pwa.length > 0){
 }
 
 
-/*function pwa_uninstall(){
-  
-  // given the above, is anything like the following possible?
-window.addEventListener('appuninstalled', function(e) {
-  console.log('onappuninstalled', e)
-  localStorage.setItem('APP_INSTALLED', '0')
-})
-  alert("hiii");
-}*/
+
 //}END.

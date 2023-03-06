@@ -134,39 +134,54 @@ def darkmode():
     return how
 
 try:
-    if sys.argv[1]=="ipynb":
+    run_type=sys.argv[1]
+    if run_type=="ipynb":
         host_ip="127.0.0.1"
         host_port=1000
-    else:
+    elif run_type=="docker":
         host_ip="0.0.0.0"
         host_port=8080
+    elif run_type=="local":
+        host_ip="127.0.0.1"
+        host_port=8080
+    else:
+        exit()
 except:
-    host_ip="127.0.0.1"
-    host_port=8080
+    print(f"USAGE : python3 {sys.argv[0]} <ipynb/docker/local>")
 
 #iswork:
 @eel.expose
 def iswork():
     return "True"
 
-print(f"hiphp-dst run on : {host_ip}:{host_port}")
+print(f"hiphp-dst run on : {run_type}@{host_ip}:{host_port}")
+
+if run_type=="docker":
+    import socket
+    ip_address = socket.gethostbyname(socket.gethostname())
+    print(f"Listening on {ip_address}:{host_port}")
 
 #eel.start("index.html",host=host_ip,port=host_port,size=(1050,500))
-try:
-    if sys.argv[1]=="ipynb":
-        from pyngrok import ngrok
+if run_type=="ipynb":
+    from pyngrok import ngrok
 
-        ngrok.set_auth_token(sys.argv[2])
-        public_url = ngrok.connect(host_port).public_url
-        print(f"Sharing app at {public_url}")
-        eel.start("index.html",host=host_ip,port=host_port)
-        with True:
-            pass
+    try:
+        auth_token=sys.argv[2]
+    except:
+        print(f"USAGE : python3 {sys.argv[0]} <ipynb> <auth_token>")
+        exit()
 
-        print("Killing streamlit app")
-        print("Killing ngrok tunnel")
-        ngrok.kill()
-        raise
-except:
+    ngrok.set_auth_token(auth_token)
+    public_url = ngrok.connect(host_port).public_url
+    print(f"Sharing app at {public_url}")
+    eel.start("index.html",host=host_ip,port=host_port)
+    with True:
+        pass
+
+    print("Killing streamlit app")
+    print("Killing ngrok tunnel")
+    ngrok.kill()
+    raise
+else:
     eel.start("index.html",host=host_ip,port=host_port,mode='default')
 #}END.

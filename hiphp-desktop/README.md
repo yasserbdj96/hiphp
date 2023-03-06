@@ -13,7 +13,7 @@
 
 # run with hiphp-desktop tool:
 ❯ cd hiphp-desktop
-❯ python3 main.py
+❯ python3 main.py local
 
 # Run with Makefile:
 ❯ make run arg="dst" url="<URL>" key="<KEY>"

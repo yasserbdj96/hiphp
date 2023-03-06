@@ -1,4 +1,9 @@
-## 0.3.0 [02-01-2023][Last Version]
+## 0.3.1 [06-03-2023][Last Version]
+ - Fix hiphp-desktop on docker and others.
+ - Add new menu.
+ - Bug fixes & performance improvements.
+
+## 0.3.0 [02-01-2023]
  - Bug fixes & performance improvements.
 
 ## 0.2.35 [17-12-2022]

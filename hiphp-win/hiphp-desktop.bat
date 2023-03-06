@@ -25,6 +25,6 @@ FOR /F "tokens=*" %%A IN ('type !mypath!"config.ini"') DO set %%A
 
 cd ..
 cd hiphp-desktop
-!python_default_path! main.py
+!python_default_path! main.py local
 
 rem }END.

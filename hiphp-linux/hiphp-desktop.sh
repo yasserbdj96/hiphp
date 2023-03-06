@@ -11,5 +11,5 @@
 #   |                                                          |
 
 #START{
-python ../hiphp-desktop/main.py
+python3 ../hiphp-desktop/main.py local
 #}END.

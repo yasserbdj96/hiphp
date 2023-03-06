@@ -469,7 +469,7 @@ hiphp Commands :
 
 # run with hiphp-desktop tool:
 ❯ cd hiphp-desktop
-❯ python main.py
+❯ python main.py local
 
 # Run with Makefile:
 ❯ make run arg="dst"

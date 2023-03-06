@@ -37,7 +37,7 @@ else
 		RUN = $(PYTHON) hiphp-tk/main.py $(key) $(url)
 	else
 		ifeq ($(arg),dst)
-			RUN = $(PYTHON) hiphp-desktop/main.py
+			RUN = $(PYTHON) hiphp-desktop/main.py local
 		else
 			RUN = $(info USAGE: make run arg='cli/dst/tk' url='URL' key='KEY')
 		endif

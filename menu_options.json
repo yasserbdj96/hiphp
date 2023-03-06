@@ -1,0 +1,23 @@
+{
+    "Run":{
+        "Run hiphp-desktop":"python3 hiphp-desktop/main.py local",
+        "Run hiphp-tk":"python3 hiphp-tk/main.py",
+        "back": "back"
+    },
+    "Install requirements":{
+        "install the basic requirements":"pip install --user -r requirements.txt --break-system-packages",
+        "install dst requirements":"pip install --user -r hiphp-desktop/requirements-dst.txt --break-system-packages",
+        "install tk requirements":"pip install --user -r hiphp-tk/requirements-tk.txt --break-system-packages",
+        "install linux requirements":"pip install --user -r hiphp-linux/requirements-linux.txt --break-system-packages",
+        "install windows requirements":"pip install --user -r hiphp-win/requirements-win.txt --break-system-packages",
+        "install ipynb requirements":"pip install --user -r requirements-ipynb.txt --break-system-packages",
+        "install pypi requirements":"pip install --user -r requirements-pypi.txt --break-system-packages",
+        "back": "back"
+    },
+    "Install":{
+        "Install on debian":"cd install && bash install.sh -i",
+        "Install on termux":"cd install && bash install.sh -ti",
+        "back": "back"
+    },
+    "exit": "exit()"
+}

@@ -37,7 +37,7 @@ elif [ "$1" == "--tk" ] ; then
 
 #hiphp_desktop:
 elif [ "$1" == "--dst" ] ; then
-    python3 "/usr/share/hiphp/hiphp-desktop/main.py";
+    python3 "/usr/share/hiphp/hiphp-desktop/main.py local";
 
 #version:
 elif [ "$1" == "--version" ] ; then

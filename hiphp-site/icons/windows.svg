@@ -1,9 +1,1 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-	<title>windows-11-JJBp_C</title>
-	<defs>
-		<image  width="221" height="220" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN0AAADcBAMAAAAGtrmMAAAAAXNSR0IB2cksfwAAACFQTFRFAHbUAHfUAHfUAAAAAHfUAHfVAHnXAHjVAHjUAHfTAHTRYayJTgAAAAt0Uk5TiP+/ANB4Jkg1OiE9U2W+AAAAnElEQVR4nO3UQQ2AQAxFwSIBDRggqQIcrAskIAARXJEKEqCHDSHz7j9zamMYC02ZuVSGLXg8Ho/H4/F4PB6Px+PxeDwej8fj8Xg8Ho/H4/F4PB6Px+PxeDwej/dNb90K7bd3VIZnZNdmHu+V1/se/v5feDwej8fj8Xg8Ho/H4/F4PB6Px+PxeDwej8fj8Xg8Ho/H4/F4PB6P98i7AD1Xt+JAPsJFAAAAAElFTkSuQmCC"/>
-	</defs>
-	<style>
-	</style>
-	<use id="Background" href="#img1" x="17" y="18"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" version="1.2" viewBox="0 0 256 256"><title>windows-11-JJBp_C</title><defs><image id="img1" width="221" height="220" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN0AAADcBAMAAAAGtrmMAAAAAXNSR0IB2cksfwAAACFQTFRFAHbUAHfUAHfUAAAAAHfUAHfVAHnXAHjVAHjUAHfTAHTRYayJTgAAAAt0Uk5TiP+/ANB4Jkg1OiE9U2W+AAAAnElEQVR4nO3UQQ2AQAxFwSIBDRggqQIcrAskIAARXJEKEqCHDSHz7j9zamMYC02ZuVSGLXg8Ho/H4/F4PB6Px+PxeDwej8fj8Xg8Ho/H4/F4PB6Px+PxeDwej/dNb90K7bd3VIZnZNdmHu+V1/se/v5feDwej8fj8Xg8Ho/H4/F4PB6Px+PxeDwej8fj8Xg8Ho/H4/F4PB6P98i7AD1Xt+JAPsJFAAAAAElFTkSuQmCC"/></defs><style/><use id="Background" x="17" y="18" href="#img1"/></svg>

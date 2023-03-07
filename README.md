@@ -691,12 +691,9 @@ Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
 <h2>Support:</h2>
 <p>If you like `hiphp` and want to see it improve furthur or want me to create intresting projects , You can sponsor me.</p>
 <div align="center">
-
-    [![Sponsor yasserbdj96](https://img.shields.io/badge/Sponsor-yasserbdj96-orange.svg?logo=github&style=flat-square)](https://github.com/sponsors/yasserbdj96)
-    
-    <!--br>
-    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9<br-->
+  [![Sponsor yasserbdj96](https://img.shields.io/badge/Sponsor-yasserbdj96-orange.svg?logo=github&style=flat-square)](https://github.com/sponsors/yasserbdj96)
 </div>
+
 <br>
 <br>
 

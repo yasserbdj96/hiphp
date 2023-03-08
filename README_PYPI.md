@@ -266,15 +266,9 @@ Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
 
 <br>
 <h2>Support:</h2>
-<p>If you like `hiphp` and want to see it improve furthur or want me to create intresting projects , You can buy me a coffee </p>
-<div align="center">
-    <a href="https://github.com/sponsors/yasserbdj96">
-        <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="hiphp by yasserbdj96">
-    </a><br>
-    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9<br>
-</div>
-
-<br><br>
+<p>If you enjoy this project and would like to see it continue to improve, or if you would like me to create more interesting projects, please consider <a href="https://github.com/sponsors/yasserbdj96">sponsoring me</a>.</p>
+<br>
+<br>
 
 <p align="center">
   <samp>
@@ -291,6 +285,6 @@ Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
     <a href="https://t.me/yasserbdj96">telegram</a> .
     <a href="https://gitter.im/yasserbdj96/yasserbdj96">gitter</a> .
     <a href="mailto:yasser.bdj96@gmail.com">e-mail</a> .
-    <a href="https://ko-fi.com/yasserbdj96">sponsor</a>
+    <a href="https://github.com/sponsors/yasserbdj96">sponsor</a>
   </samp>
 </p>

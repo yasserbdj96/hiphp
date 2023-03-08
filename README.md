@@ -690,7 +690,6 @@ Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
 <br>
 <h2>Support:</h2>
 <p>If you enjoy this project and would like to see it continue to improve, or if you would like me to create more interesting projects, please consider <a href="https://github.com/sponsors/yasserbdj96">sponsoring me</a>.</p>
-
 <br>
 <br>
 

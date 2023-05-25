@@ -1,13 +1,15 @@
-#   |                                                          |
-# --+----------------------------------------------------------+--
-#   |   Code by : yasserbdj96                                  |
-#   |   Email   : yasser.bdj96@gmail.com                       |
-#   |   Github  : https://github.com/yasserbdj96               |
-#   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
-# --+----------------------------------------------------------+--  
-#   |        all posts #yasserbdj96 ,all views my own.         |
-# --+----------------------------------------------------------+--
-#   |                                                          |
+#   |                                                         |   #
+# --+---------------------------------------------------------+-- #
+#   |    Code by: yasserbdj96                                 |   #
+#   |    Email: yasser.bdj96@gmail.com                        |   #
+#   |    GitHub: github.com/yasserbdj96                       |   #
+#   |    Sponsor: github.com/sponsors/yasserbdj96             |   #
+#   |    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9      |   #
+#   |                                                         |   #
+#   |    All posts with #yasserbdj96                          |   #
+#   |    All views are my own.                                |   #
+# --+---------------------------------------------------------+-- #
+#   |                                                         |   #
 
 #START{
 VENV = venv
@@ -30,17 +32,43 @@ ifeq ($(detected_OS),Linux)#Darwin for Mac OS X
 endif
 
 #
-ifeq ($(arg),cli)
-	RUN = $(PYTHON) run.py $(key) $(url)
-else
-	ifeq ($(arg),tk)
-		RUN = $(PYTHON) hiphp-tk/main.py $(key) $(url)
+ifeq ($(filter-out $(MAKECMDGOALS),run),)
+    ARGUMENTS := $(filter-out $@,$(MAKECMDGOALS))
+endif
+
+
+# Extract the values of specific arguments
+URL := $(shell echo $(ARGUMENTS) | sed -n 's/.*\(--url\)[= ]\+\([^ ]\+\).*/\2/p')
+ifeq ($(strip $(URL)),)
+    URL := $(shell echo $(ARGUMENTS) | sed -n 's/.*\(--URL\)[= ]\+\([^ ]\+\).*/\2/p')
+endif
+
+KEY := $(shell echo $(ARGUMENTS) | sed -n 's/.*\(--key\)[= ]\+\([^ ]\+\).*/\2/p')
+ifeq ($(strip $(KEY)),)
+    KEY := $(shell echo $(ARGUMENTS) | sed -n 's/.*\(--KEY\)[= ]\+\([^ ]\+\).*/\2/p')
+endif
+
+ifeq ($(filter --TK,$(ARGUMENTS)),--TK)
+	ifeq ($(strip $(URL)$(KEY)),)
+    	RUN = $(PYTHON) main.py --TK
 	else
-		ifeq ($(arg),dst)
-			RUN = $(PYTHON) hiphp-desktop/main.py local
-		else
-			RUN = $(info USAGE: make run arg='cli/dst/tk' url='URL' key='KEY')
-		endif
+		RUN = $(PYTHON) main.py --TK --KEY='$(KEY)' --URL='$(URL)'
+	endif
+else ifeq ($(filter --tk,$(ARGUMENTS)),--tk)
+	ifeq ($(strip $(URL)$(KEY)),)
+    	RUN = $(PYTHON) main.py --TK
+	else
+		RUN = $(PYTHON) main.py --TK --KEY='$(KEY)' --URL='$(URL)'
+	endif
+else ifeq ($(filter --dst,$(ARGUMENTS)),--dst)
+	RUN = $(PYTHON) main.py --DST
+else ifeq ($(filter --DST,$(ARGUMENTS)),--DST)
+	RUN = $(PYTHON) main.py --DST
+else
+	ifeq ($(strip $(URL)$(KEY)),)
+		$(error URL and KEY are both empty)
+	else
+		RUN = $(PYTHON) main.py --KEY=$(KEY) --URL=$(URL)
 	endif
 endif
 
@@ -50,9 +78,6 @@ run: $(VENV)/bin/activate
 $(VENV)/bin/activate: requirements.txt
 	python3 -m venv $(VENV)
 	$(PIP) install -r ./requirements.txt
-	$(PIP) install -r ./requirements-pypi.txt
-	$(PIP) install -r ./hiphp-desktop/requirements-dst.txt
-	$(PIP) install -r ./hiphp-tk/requirements-tk.txt
 	$(pipforos)
 
 clean:

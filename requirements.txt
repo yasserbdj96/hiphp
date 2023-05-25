@@ -3,3 +3,12 @@ hexor
 asciitext
 biglibrary
 BeautifulSoup4
+#for pypi
+twine
+#for ipynb
+pyngrok
+#for hiphp-desktop
+eel
+#for hiphp-tk
+tk
+chardet

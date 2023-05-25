@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 # coding:utf-8
-#   |                                                          |
-# --+----------------------------------------------------------+--
-#   |   Code by : yasserbdj96                                  |
-#   |   Email   : yasser.bdj96@gmail.com                       |
-#   |   Github  : https://github.com/yasserbdj96               |
-#   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
-# --+----------------------------------------------------------+--  
-#   |        all posts #yasserbdj96 ,all views my own.         |
-# --+----------------------------------------------------------+--
-#   |                                                          |
+#   |                                                         |   #
+# --+---------------------------------------------------------+-- #
+#   |    Code by: yasserbdj96                                 |   #
+#   |    Email: yasser.bdj96@gmail.com                        |   #
+#   |    GitHub: github.com/yasserbdj96                       |   #
+#   |    Sponsor: github.com/sponsors/yasserbdj96             |   #
+#   |    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9      |   #
+#   |                                                         |   #
+#   |    All posts with #yasserbdj96                          |   #
+#   |    All views are my own.                                |   #
+# --+---------------------------------------------------------+-- #
+#   |                                                         |   #
 
 #START{
 import sys
@@ -37,11 +39,13 @@ except:
 from tkinter import *
 from tkinter import filedialog
 from chardet import detect
+import argparse
 
 ftp_version="1.1.9"
 
 #usage_msg=f"USAGE : python3 {sys.argv[0]} [KEY] [URL]"
 
+"""
 try:
     #
     url = os.environ['URL'] if "URL" in os.environ else sys.argv[2]
@@ -51,8 +55,22 @@ except:
     url=""
     password=""
     #print(usage_msg)
-    #exit()
+    #exit()"""
 
+
+# Create an ArgumentParser object
+parser = argparse.ArgumentParser()
+
+# Add arguments with names
+parser.add_argument('--KEY','--key', type=str, default=os.getenv('KEY', ''), help='Specifies the key (key) for the operation.')
+parser.add_argument('--URL','--url', type=str, default=os.getenv('URL', ''), help='Specifies the URL (url) for the operation.')
+
+# Parse the command-line arguments
+args = parser.parse_args()
+
+# Access the variables by their names
+password = args.KEY
+url = args.URL
 
 # get file encoding type
 def get_encoding_type(file):

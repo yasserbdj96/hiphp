@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 # coding:utf-8
-#   |                                                          |
-# --+----------------------------------------------------------+--
-#   |   Code by : yasserbdj96                                  |
-#   |   Email   : yasser.bdj96@gmail.com                       |
-#   |   Github  : https://github.com/yasserbdj96               |
-#   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
-# --+----------------------------------------------------------+--  
-#   |        all posts #yasserbdj96 ,all views my own.         |
-# --+----------------------------------------------------------+--
-#   |                                                          |
+#   |                                                         |   #
+# --+---------------------------------------------------------+-- #
+#   |    Code by: yasserbdj96                                 |   #
+#   |    Email: yasser.bdj96@gmail.com                        |   #
+#   |    GitHub: github.com/yasserbdj96                       |   #
+#   |    Sponsor: github.com/sponsors/yasserbdj96             |   #
+#   |    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9      |   #
+#   |                                                         |   #
+#   |    All posts with #yasserbdj96                          |   #
+#   |    All views are my own.                                |   #
+# --+---------------------------------------------------------+-- #
+#   |                                                         |   #
 
 #START{
 from hexor import *
@@ -43,11 +45,13 @@ def logo(__version__):
     logox+="\n"
     logox+=color.c(bl.center("+-----------------------------------------------------------------------------------+"),c_red)
     logox+="\n"
-    logox+=color.c(bl.center(f"hiphp - free & open source project for create a BackDoor to control PHP-based sites."),c_yellow)
+    logox+=color.c(bl.center(f"HIPHP - Free & Open Source Project"),c_yellow)
     logox+="\n"
-    logox+=color.c(bl.center(f"hiphp v{__version__} by yasserbdj96"),c_green)
+    logox+=color.c(bl.center(f"A Backdoor Tool for Controlling PHP-based Sites"),c_yellow)
     logox+="\n"
-    logox+=color.c(bl.center(f"https://yasserbdj96.github.io/hiphp/"),c_blue)
+    logox+=color.c(bl.center(f"Version: {__version__} by yasserbdj96"),c_green)
+    logox+="\n"
+    logox+=color.c(bl.center(f"Visit: https://yasserbdj96.github.io/hiphp/"),c_blue)
     logox+="\n"
     logox+=color.c(bl.center("+-----------------------------------------------------------------------------------+"),c_red)
     logox+="\n"

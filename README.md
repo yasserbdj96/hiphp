@@ -152,9 +152,9 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 | Distribution   | Version Check | Python Version | Installation | hiphp-cli  | hiphp-desktop | hiphp-tk |
 | :------------: | :-----------: | :------------: | :----------: | :--------: | :-----------: | :------: |
-| Ubuntu         | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓             | ✓        |
-| Windwos        | Last version  | 3.7 --> 3.9    | ✗            |  ✓         | ✓             | ✓        |
-| MacOS          | Last version  | 3.7 --> 3.9    | ✗            |  ✓         | ✓             | ✓        |
+| Ubuntu         | Last version  | 3.7 --> 3.11   | ✓            |  ✓         | ✓             | ✓        |
+| Windwos        | Last version  | 3.7 --> 3.11   | ✗            |  ✓         | ✓             | ✓        |
+| MacOS          | Last version  | 3.7 --> 3.10   | ✗            |  ✓         | ✓             | ✓        |
 | Android-termux | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✗             | ✗        |
 | Nethunter      | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓             | ✗        |
 
@@ -170,7 +170,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 ❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -i -t hiphp:latest
 
 # Run as GUI:
-❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
+❯ docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t hiphp:latest
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
@@ -194,7 +194,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 ❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -i -t docker.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
-❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
+❯ docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t docker.io/yasserbdj96/hiphp:latest
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
@@ -218,7 +218,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 ❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
-❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
+❯ docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t ghcr.io/yasserbdj96/hiphp:latest
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
@@ -247,7 +247,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 # Go to downloaded folder:
 ❯ cd hiphp
 # install
-❯ pip install -r requirements-pypi.txt
+❯ pip install -r requirements.txt
 ❯ sudo python setup.py install
 
 # Uninstall:
@@ -278,14 +278,15 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 # Update:
 ❯ bash install.sh -up
 
-# Usage:
-#      hiphp [OPTION]
-#      hiphp --help                --> hiphp cli help.
-#      hiphp --geth [KEY] [URL]    --> Get the HIPHP_HOLE_CODE Encrypted by your [KEY].
-#      hiphp [KEY] [URL]           --> Connect to the victim's website (CLI) Mode.
-#      hiphp --tk                  --> Run hiphp with 'hiphp-tk' (GUI) Mode.
-#      hiphp --dst                 --> Run hiphp with 'hiphp-desktop' (GUI) Mode.
-#      hiphp --version             --> Get the version number you are working with.
+# Usage: hiphp [OPTION]
+
+# Examples:
+#         hiphp --help                  # Show CLI help for hiphp.
+#         hiphp --geth [KEY] [URL]      # Retrieve the HIPHP_HOLE_CODE encrypted by your [KEY].
+#         hiphp [KEY] [URL]             # Connect to the victim's website in CLI mode.
+#         hiphp --tk                    # Run hiphp in 'hiphp-tk' (GUI) mode.
+#         hiphp --dst                   # Run hiphp in 'hiphp-desktop' (GUI) mode.
+#         hiphp --version               # Check the current version number.
 
 # Uninstall:
 ❯ bash install.sh -u
@@ -314,12 +315,13 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 # Update:
 ❯ bash install.sh -tup
 
-# Usage:
-#      hiphp [OPTION]
-#      hiphp --help                --> hiphp cli help.
-#      hiphp --geth [KEY] [URL]    --> Get the HIPHP_HOLE_CODE Encrypted by your [KEY].
-#      hiphp [KEY] [URL]           --> Connect to the victim's website (CLI) Mode.
-#      hiphp --version             --> Get the version number you are working with.
+# Usage: hiphp [OPTION]
+
+# Examples:
+#         hiphp --help                  # Show CLI help for hiphp.
+#         hiphp --geth [KEY] [URL]      # Retrieve the HIPHP_HOLE_CODE encrypted by your [KEY].
+#         hiphp [KEY] [URL]             # Connect to the victim's website in CLI mode.
+#         hiphp --version               # Check the current version number.
 
 # Uninstall:
 ❯ bash install.sh -tu
@@ -345,21 +347,21 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 ❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
 
 # default run on any os:
-❯ python run.py <KEY> <URL>
+❯ python main.py --KEY="<KEY*>" --URL="<URL*>"
 
 # Run with Makefile:
-❯ make run arg="cli" url="<URL*>" key="<KEY*>"
+❯ make ARGUMENTS="--KEY='<KEY*>' --URL='<URL*>'" run
 
 # For linux:
 ❯ cd hiphp-linux
-❯ bash hiphp-cli.sh "<KEY*>" "<URL*>"
+❯ bash hiphp-cli.sh --KEY="<KEY*>" --URL="<URL*>"
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
 # OR Run 'hiphp-win\config-configure.py'.
 ❯ cd hiphp-win
-❯ hiphp-cli.bat "<KEY*>" "<URL*>"
+❯ hiphp-cli.bat --KEY="<KEY*>" --URL="<URL*>"
 
 ```
 
@@ -367,85 +369,73 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 <h5>Help for hiphp-cli:</h5>
 
 ```
-hiphp Commands :
-════════════════
-  Command                            Description
-  -------                            -----------
-[OPTIONS]
+Commands:
 
-  --help, help                       ─> # Display this help.
-  --help [ACTIONS], help [ACTIONS]   ─> # Help for a specific command.
-  --geth, geth                       ─> # Get the hole Code, "HIPHP_HOLE_CODE" It has the same purpose.
-  --phpinfo, phpinfo                 ─> # Some information about the server.
-  --cls, cls                         ─> # Clear console.
-  --exit, exit                       ─> # Exit this console.
+  --help, help                       # Display this help.
+  --help [ACTIONS], help [ACTIONS]   # Help for a specific command.
+  --geth, geth                       # Get the HIPHP_HOLE_CODE (same purpose as --geth).
+  --phpinfo, phpinfo                 # Display information about the server.
+  --cls, cls                         # Clear the console.
+  --exit, exit                       # Exit the console.
 
-[ACTIONS]
+Actions:
 
-  --ls, ls                           ─> # List information about the FILEs (the current directory by default).
+  --ls, ls                           # List files and folders (current directory by default).
   Usage: --ls [OPTION] [PATH], ls [OPTION] [PATH]
-  Mandatory arguments to long options:
-    --ls                             ─> # Get a list of all files and folders from the current directory.
-    --ls [PATH]                      ─> # Get a list of all files and folders from a specified directory.
-    --ls -all                        ─> # Get a list of all files, folders and subfolders from the current directory.
-    --ls -all [PATH]                 ─> # Get a list of all files, folders and subfolders from a specified directory.
+    --ls                             # List all files and folders in the current directory.
+    --ls [PATH]                      # List all files and folders in the specified directory.
+    --ls -all                        # List all files, folders, and subfolders in the current directory.
+    --ls -all [PATH]                 # List all files, folders, and subfolders in the specified directory.
 
-  --cat, cat                         ─> # Concatenate FILE to standard output.
+  --cat, cat                         # Concatenate a file to standard output.
   Usage: --cat [FILE_PATH]
 
-  --set, set                         ─> # Create a code that is always saved on during work.
+  --set, set                         # Create a code snippet that is always saved during work.
   Usage: --set [PHP_CODE]
-  You can return the initial value with "--dset" or "dset".
+  To reset to the initial value, use "--dset" or "dset".
 
-  --cd, cd                           ─> # Change directory.
+  --cd, cd                           # Change directory.
   Usage: --cd [PATH]
 
-  --rf, rf, run                      ─> # Run code from file.
+  --rf, rf, run                      # Run code from a file.
   Usage: --rf [FILE_PATH] [VARIABLES]
-  Mandatory arguments to long options:
-    --rf [FILE_PATH]                 ─> # Run code from file.
-    --rf [FILE_PATH] [VARIABLES]     ─> # Run code from file with variables, EX: --rf example.php var==hello
+    --rf [FILE_PATH]                 # Run code from a file.
+    --rf [FILE_PATH] [VARIABLES]     # Run code from a file with variables (e.g., --rf example.php var==hello).
   
-  --up, up, upload                   ─> # Upload a file.
+  --up, up, upload                   # Upload a file.
   Usage: --up [FILE_PATH] [PATH]
-  Mandatory arguments to long options:
-    --up [FILE_PATH]                 ─> # Upload a file to the current directory.
-    --up [FILE_PATH] [PATH]          ─> # Upload a file to a specified directory.
+    --up [FILE_PATH]                 # Upload a file to the current directory.
+    --up [FILE_PATH] [PATH]          # Upload a file to a specified directory.
 
-  --down, down, download             ─> # download a file.
+  --down, down, download             # Download a file.
   Usage: --down [-f/-d] [FILE/DIR_PATH] [OUT_PATH]
-  Mandatory arguments to long options:
-    --down -f [FILE_PATH]            ─> # Download a file to the current directory.
-    --down -f [FILE_PATH] [OUT_PATH] ─> # Download file to a specified directory.
-    --down -d [DIR_PATH]             ─> # Download a folder to the current directory.
-    --down -d [DIR_PATH] [OUT_PATH]  ─> # Download folder to a specified directory.
-    --down -all                      ─> # Download all files to the current directory.
-    --down -all [OUT_PATH]           ─> # Download all files to a specified directory.
+    --down -f [FILE_PATH]            # Download a file to the current directory.
+    --down -f [FILE_PATH] [OUT_PATH] # Download a file to a specified directory.
+    --down -d [DIR_PATH]             # Download a folder to the current directory.
+    --down -d [DIR_PATH] [OUT_PATH]  # Download a folder to a specified directory.
+    --down -all                      # Download all files to the current directory.
+    --down -all [OUT_PATH]           # Download all files to a specified directory.
 
-  --zip, zip                         ─> # Compress a directory.
+  --zip, zip                         # Compress a directory.
   Usage: --zip [DIR_PATH]
-  Mandatory arguments to long options:
-    --zip                            ─> # Compress the current directory.
-    --zip [DIR_PATH]                 ─> # Compress a specific directory.
+    --zip                            # Compress the current directory.
+    --zip [DIR_PATH]                 # Compress a specific directory.
 
-  --edt, edt, edit                   ─> # To edit files.
+  --edt, edt, edit                   # Edit files.
   Usage: --edt [FILE_PATH]
-  Mandatory arguments to long options:
-    CTRL+q                           ─> # To exit.
-    CTRL+s                           ─> # To save.
+    CTRL+q                           # Exit the editor.
+    CTRL+s                           # Save the changes.
 
-  --rm, rm, delete                   ─> # To delete files and folders.
+  --rm, rm, delete                   # Delete files and folders.
   Usage: --rm [-f/-d] [FILE/DIR_PATH]
-  Mandatory arguments to long options:
-    --rm -f [FILE_PATH]              ─> # Delete a file.
-    --rm -d [DIR_PATH]               ─> # Delete a folder.
+    --rm -f [FILE_PATH]              # Delete a file.
+    --rm -d [DIR_PATH]               # Delete a folder.
 
-[ABOUT]
-
-  --update, update                   ─> # check for updates.
-  --license, license                 ─> # This project license.
-  --about, about                     ─> # About this project.
-  --version, version                 ─> # Get the version number you are working with.
+About:
+  --update, update                   # Check for updates.
+  --license, license                 # View the project license.
+  --about, about                     # About this project.
+  --version, version                 # Get the current version number.
 ```
 
 <br>
@@ -463,21 +453,19 @@ hiphp Commands :
 
 # install requirements:
 ❯ pip install -r requirements.txt
-❯ pip install -r hiphp-desktop/requirements-dst.txt
 ❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
 ❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
 
 # run with hiphp-desktop tool:
-❯ cd hiphp-desktop
-❯ python main.py local
+❯ python main.py --DST
 
 # Run with Makefile:
-❯ make run arg="dst"
+❯ make ARGUMENTS="--DST" run
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # For Linux:
 ❯ cd hiphp-linux
-❯ bash run-hiphp-desktop.sh
+❯ bash hiphp-desktop.sh
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # For Windows:
@@ -485,7 +473,7 @@ hiphp Commands :
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
 # OR Run 'hiphp-win\config-configure.py'.
 ❯ cd hiphp-win
-❯ run-hiphp-desktop.bat
+❯ hiphp-desktop.bat
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 ```
@@ -509,18 +497,16 @@ hiphp Commands :
 
 # install requirements:
 ❯ pip install -r requirements.txt
-❯ pip install -r hiphp-tk/requirements-tk.txt
 ❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
 ❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
 
 # run with hiphp-tk tool:
-❯ cd hiphp-tk
-❯ python main.py
+❯ python main.py --TK
 
 # Run with Makefile:
-❯ make run arg="tk"
+❯ make ARGUMENTS="--TK" run
 # OR
-❯ make run arg="tk" url="<URL>" key="<KEY>"
+❯ make ARGUMENTS="--TK --KEY='<KEY>' --URL='<URL>'" run
 
 # For Linux:
 ❯ cd hiphp-linux

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+#   |                                                         |   #
+# --+---------------------------------------------------------+-- #
+#   |    Code by: yasserbdj96                                 |   #
+#   |    Email: yasser.bdj96@gmail.com                        |   #
+#   |    GitHub: github.com/yasserbdj96                       |   #
+#   |    Sponsor: github.com/sponsors/yasserbdj96             |   #
+#   |    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9      |   #
+#   |                                                         |   #
+#   |    All posts with #yasserbdj96                          |   #
+#   |    All views are my own.                                |   #
+# --+---------------------------------------------------------+-- #
+#   |                                                         |   #
+-->
+<html>
+<head>
+    <title>hiphp : login</title>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/include.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+    <script>include("{{ url_for('static', filename='css/white.css') }}","css");</script>
+</head>
+<body>
+    <div id="login" >
+        <img src="{{ url_for('static', filename='src/hiphp_logo.png') }}" style="width: 160px;" alt="hiphp logo"><br>
+        <center>
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Url EX: http://localhost/index.php" name="url" id='url' value="http://localhost/index.php" required />
+                <label for="url" class="form__label">Url</label>
+            </div>
+
+            <div class="form__group field">
+                <input type="password" class="form__field" placeholder="password" name="password" id='key' value="123" required />
+                <label for="password" class="form__label">Password</label>
+            </div>
+        </center>
+        <br>
+
+        <!--input type="text" id="url" value="http://127.0.0.1/vvv2.php" style="width:50%;" placeholder="Url EX: http://localhost/index.php"><br>
+        <input type="password" id="key" placeholder="Key" style="width:50%;" value="123"><br-->
+        <button class="button" onclick="login()"><i class="fa fa-sign-in"></i> Login</button><br>
+        <div class="version" id="version"></div>
+    </div>
+    
+        <!--input type="button" onclick="getPythonVersion()" value="Get Python Version">
+        <input type="button" onclick="search('test')" value="search"-->
+    <p id="result"></p>
+</body>
+</html>

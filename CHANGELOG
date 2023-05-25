@@ -1,4 +1,17 @@
-## 0.3.1 [06-03-2023][Last Version]
+## 0.3.2 [26-05-2023][Latest Release]:
+ - Improved command argument handling for enhanced functionality.
+ - Enhanced Docker run functionality for seamless execution.
+ - Optimized Makefile run process for smoother workflow.
+ - Updated hiphp-desktop commands to enhance user experience.
+ - Refined hiphp-tk commands for improved functionality.
+ - Streamlined installation process on Ubuntu OS.
+ - Centralized command control and execution via 'main.py' file.
+ - Updated help menu.
+ - Fixed websites scanner on hiphp-cli.
+ - Changed license from "Apache Software License" to "MIT License."
+ - Addressed bug fixes and implemented performance improvements for a more reliable experience.
+
+## 0.3.1 [06-03-2023]
  - Fix hiphp-desktop on docker and others.
  - Add new menu.
  - Bug fixes & performance improvements.

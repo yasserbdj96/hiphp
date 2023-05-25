@@ -1,15 +1,17 @@
 #!/usr/bin/env python
 # coding:utf-8
-#   |                                                          |
-# --+----------------------------------------------------------+--
-#   |   Code by : yasserbdj96                                  |
-#   |   Email   : yasser.bdj96@gmail.com                       |
-#   |   Github  : https://github.com/yasserbdj96               |
-#   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
-# --+----------------------------------------------------------+--  
-#   |        all posts #yasserbdj96 ,all views my own.         |
-# --+----------------------------------------------------------+--
-#   |                                                          |
+#   |                                                         |   #
+# --+---------------------------------------------------------+-- #
+#   |    Code by: yasserbdj96                                 |   #
+#   |    Email: yasser.bdj96@gmail.com                        |   #
+#   |    GitHub: github.com/yasserbdj96                       |   #
+#   |    Sponsor: github.com/sponsors/yasserbdj96             |   #
+#   |    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9      |   #
+#   |                                                         |   #
+#   |    All posts with #yasserbdj96                          |   #
+#   |    All views are my own.                                |   #
+# --+---------------------------------------------------------+-- #
+#   |                                                         |   #
 
 #START{
 from hiphp.hiphpversion import __version__
@@ -84,6 +86,8 @@ class hiphp:
 
     #cli:
     def cli(self):
+        scanner="n"
+
         #logo
         logox=""
         if self.do_x==0:
@@ -97,10 +101,12 @@ class hiphp:
         except:
             reee=None
         
-        if (emsg_1 in reee) or (reee==None) or (emsg_3 in reee):
+        #if (emsg_1 in reee) or (reee==None) or (emsg_3 in reee):
+        if reee is None or (emsg_1 in reee or emsg_3 in reee):
             #print(reee)
             #exit()
             scanner=input(f"Scan '{self.url}' to find HIPHP_HOLE_CODE (Y/N):")
+            
             if scanner.lower()=="y":
                 def crawl(url):
                     #all_links=[]
@@ -153,9 +159,11 @@ class hiphp:
                 """
             else:
                 #hiphp.get_hole(self,get=True)
+                exit()
                 return reee
         else:
             getcwd=self.color.c(reee,self.c_green)
+
         #
         xxr1=self.color.c('┌──(',self.c_blue)
         xxr2=self.color.c(')──[',self.c_blue)
@@ -395,7 +403,11 @@ class hiphp:
                     self.color2.c(errx+" "+command+emsg_6,self.c_red)
         else:
             self.color2.c(emsg_2,self.c_red)
+        
+        #if scanner.lower()=="y":
         hiphp.cli(self)
+        #else:
+            #exit()
 
     #do:
     def do(self,key,url,header,retu,command):

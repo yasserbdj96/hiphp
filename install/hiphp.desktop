@@ -12,23 +12,23 @@
 #START{
 [Desktop Entry]
 Name=Hiphp - CLI
-Comment=hiphp - free & open source project for create a BackDoor to control PHP-based sites.
-GenericName=hiphp
+Comment=Hiphp - Free and open-source project for creating a tool to manage PHP-based sites.
+GenericName=Hiphp
 Exec=sh -c '/usr/local/bin/hiphp;${SHELL:-bash}'
 Icon=/usr/share/hiphp/hiphp.png
 Type=Application
 Terminal=true
-Categories=RevisionControl;RemoteAccess;
+Categories=Development;Utility;
 MimeType=text/x-hiphp
-Keywords=backdoor;controller;
+Keywords=PHP;development;management;
 
 [Desktop Action hiphp-desktop]
-Name=hiphp-desktop
-Exec=bash /usr/local/bin/hiphp --dst
+Name=Hiphp - Desktop
+Exec=bash /usr/local/bin/hiphp --DST
 Icon=/usr/share/hiphp/hiphp.png
 
 [Desktop Action hiphp-tk]
-Name=hiphp-tk
-Exec=bash /usr/local/bin/hiphp --tk
+Name=Hiphp - Tk
+Exec=bash /usr/local/bin/hiphp --TK
 Icon=/usr/share/hiphp/hiphp.png
 #}END.

@@ -35,4 +35,4 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
       - name: Test hiphp
-        run: python wrdir/main.py --key="123" --url="https://www.google.com/"
+        run: python wrdir/main.py

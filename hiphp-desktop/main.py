@@ -1,20 +1,28 @@
 #!/usr/bin/env python
 # coding:utf-8
-#   |                                                          |
-# --+----------------------------------------------------------+--
-#   |   Code by : yasserbdj96                                  |
-#   |   Email   : yasser.bdj96@gmail.com                       |
-#   |   Github  : https://github.com/yasserbdj96               |
-#   |   BTC     : bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9   |
-# --+----------------------------------------------------------+--  
-#   |        all posts #yasserbdj96 ,all views my own.         |
-# --+----------------------------------------------------------+--
-#   |                                                          |
+#   |                                                         |   #
+# --+---------------------------------------------------------+-- #
+#   |    Code by: yasserbdj96                                 |   #
+#   |    Email: yasser.bdj96@gmail.com                        |   #
+#   |    GitHub: github.com/yasserbdj96                       |   #
+#   |    Sponsor: github.com/sponsors/yasserbdj96             |   #
+#   |    BTC: bc1q2dks8w8uurca5xmfwv4jwl7upehyjjakr3xga9      |   #
+#   |                                                         |   #
+#   |    All posts with #yasserbdj96                          |   #
+#   |    All views are my own.                                |   #
+# --+---------------------------------------------------------+-- #
+#   |                                                         |   #
 
 #START{
 import sys
 import os
 import json
+import argparse
+import eel
+from src.php import *
+
+#
+hiphp_desktop_version="0.2.0"
 
 try:
     try:
@@ -34,12 +42,8 @@ except:
         sys.path.insert(0, '..')
         from hiphp import *
         from hiphp.hiphpversion import __version__
-    
-import eel
-from src.php import *
 
-hiphp_desktop_version="0.2.0"
-
+#
 eel.init(f'{os.path.dirname(os.path.realpath(__file__))}/src')
 #eel.init('src')
 
@@ -133,45 +137,57 @@ def darkmode():
         f.truncate()  
     return how
 
-try:
-    run_type=sys.argv[1]
-    if run_type=="ipynb":
-        host_ip="127.0.0.1"
-        host_port=1000
-    elif run_type=="docker":
-        host_ip="0.0.0.0"
-        host_port=8080
-    elif run_type=="local":
-        host_ip="127.0.0.1"
-        host_port=8080
-    else:
-        exit()
-except:
-    print(f"USAGE : python3 {sys.argv[0]} <ipynb/docker/local>")
-
 #iswork:
 @eel.expose
 def iswork():
     return "True"
 
+# Create an ArgumentParser object
+parser = argparse.ArgumentParser()
+
+# Add arguments with names
+parser.add_argument('--DOCKER', '--docker', dest='DOCKER', action='store_true', default=bool(os.getenv('DOCKER', False)), help='Specifies whether to use Docker (docker) or not. Set to "True" to enable Docker usage.')
+parser.add_argument('--IPYNB', '--ipynb', dest='IPYNB', action='store_true', default=bool(os.getenv('IPYNB', False)), help='')
+parser.add_argument('--TOKEN', '--token', dest='TOKEN', type=str, default=os.getenv('TOKEN', ''), help='Specifies the token (token) for the operation.')
+
+# Parse the command-line arguments
+args = parser.parse_args()
+
+# Access the variables by their names
+DOCKER=args.DOCKER
+IPYNB=args.IPYNB
+TOKEN=args.TOKEN
+
+
+if IPYNB:
+    host_ip="127.0.0.1"
+    host_port=1000
+    run_type="ipynb"
+elif DOCKER:
+    host_ip="0.0.0.0"
+    host_port=8080
+    run_type="docker"
+else:
+    host_ip="127.0.0.1"
+    host_port=8080
+    run_type="local"
+
 print(f"hiphp-dst run on : {run_type}@{host_ip}:{host_port}")
 
+#
 if run_type=="docker":
     import socket
     ip_address = socket.gethostbyname(socket.gethostname())
     print(f"Listening on {ip_address}:{host_port}")
 
+#
 #eel.start("index.html",host=host_ip,port=host_port,size=(1050,500))
 if run_type=="ipynb":
     from pyngrok import ngrok
 
-    try:
-        auth_token=sys.argv[2]
-    except:
-        print(f"USAGE : python3 {sys.argv[0]} <ipynb> <auth_token>")
-        exit()
+    #print(f"USAGE : python3 {sys.argv[0]} --IPYNB --token='<auth_token>'")
 
-    ngrok.set_auth_token(auth_token)
+    ngrok.set_auth_token(TOKEN)
     public_url = ngrok.connect(host_port).public_url
     print(f"Sharing app at {public_url}")
     eel.start("index.html",host=host_ip,port=host_port)
@@ -182,6 +198,8 @@ if run_type=="ipynb":
     print("Killing ngrok tunnel")
     ngrok.kill()
     raise
+
+#
 else:
     eel.start("index.html",host=host_ip,port=host_port,mode='default')
 #}END.

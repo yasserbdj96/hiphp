@@ -88,6 +88,7 @@ elif TK:
 else:
     if KEY=="" or URL=="":
         os.system(f"{python_path} main.py --help")
+        exit()
     
     # connect:
     p1=hiphp(key=KEY,url=URL)#Default: retu=False.

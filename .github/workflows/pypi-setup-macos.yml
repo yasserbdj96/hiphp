@@ -34,7 +34,5 @@ jobs:
         run: python -m pip install --upgrade pip
       - name: Install requirements
         run: pip install -r requirements.txt
-      - name: Install pypi requirements
-        run: pip install -r requirements-pypi.txt
       - name: Run setup.py File
         run: python wrdir/setup.py install

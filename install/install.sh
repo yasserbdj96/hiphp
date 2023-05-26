@@ -94,10 +94,10 @@ termux_install(){
     #pip install -r "../hiphp-desktop/requirements-dst.txt";
 
     # install linux requirements:
-    pip install -r "../hiphp-linux/requirements-linux.txt"
+    #pip install -r "../hiphp-linux/requirements-linux.txt"
 
     #cp -r *.sh ${PREFIX}/bin
-    pip install -r "../requirements.txt";
+    #pip install -r "../requirements.txt";
 
     #mv ../colors/monokai.vim ~/.vim/colors && rm -rf vim-monokai/
 

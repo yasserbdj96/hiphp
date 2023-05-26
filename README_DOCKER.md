@@ -128,10 +128,10 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 ❯ docker build -t hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY>*" -e URL="<URL>*" -i -t hiphp:latest
+❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -i -t hiphp:latest
 
 # Run as GUI:
-❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t hiphp:latest
+❯ docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t hiphp:latest
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
@@ -152,10 +152,10 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 ❯ docker build -t docker.io/yasserbdj96/hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY>*" -e URL="<URL>*" -i -t docker.io/yasserbdj96/hiphp:latest
+❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -i -t docker.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
-❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t docker.io/yasserbdj96/hiphp:latest
+❯ docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t docker.io/yasserbdj96/hiphp:latest
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.
@@ -176,10 +176,10 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 ❯ docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 
 # Run as CLI:
-❯ docker run -e KEY="<KEY>*" -e URL="<URL>*" -i -t ghcr.io/yasserbdj96/hiphp:latest
+❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
-❯ docker run -e DST="True" -d --rm -p 127.0.0.1:8080:8080 -i -t ghcr.io/yasserbdj96/hiphp:latest
+❯ docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t ghcr.io/yasserbdj96/hiphp:latest
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
 
 # *     = All inputs must be entered.

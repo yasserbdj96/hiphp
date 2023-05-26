@@ -117,6 +117,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 [✓] <a href="https://pypi.org/project/readline/">readline</a><br>
 [✓] <a href="https://pypi.org/project/chardet/">chardet</a>
 
+
 <br>
 <h2>Python Package Installation:</h2>
 
@@ -135,7 +136,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 # Go to downloaded folder:
 ❯ cd hiphp
 # install
-❯ pip install -r requirements-pypi.txt
+❯ pip install -r requirements.txt
 ❯ sudo python setup.py install
 
 # Uninstall:

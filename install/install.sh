@@ -59,6 +59,7 @@ uninstall() {
 
 termux_install(){
     #!/data/data/com.termux/files/usr/bin/bash
+    chmod +x ../../hiphp
 
     # My Termux setup
 
@@ -83,6 +84,7 @@ termux_install(){
     #git clone https://github.com/sickill/vim-monokai 
 
     mkdir -p ${PREFIX}/share/hiphp
+
 
     cp -r "../hiphp/." "${PREFIX}/share/hiphp/hiphp";
     cp "../main.py" "${PREFIX}/share/hiphp/hiphp.py";

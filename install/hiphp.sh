@@ -42,7 +42,7 @@ for arg in "$@"; do
       tk=true
       ;;
     --dst|--DST)
-      DST=true
+      dst=true
       ;;
     --version|--VERSION)
       version=true

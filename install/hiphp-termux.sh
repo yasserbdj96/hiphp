@@ -34,7 +34,7 @@ for arg in "$@"; do
       help=true
       ;;
     --dst|--DST)
-      DST=true
+      dst=true
       ;;
     --version|--VERSION)
       version=true

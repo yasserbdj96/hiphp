@@ -13,6 +13,8 @@
 #   |                                                         |   #
 
 #START{
+cd ${PREFIX}/share/hiphp/
+
 # Default values
 key=""
 url=""

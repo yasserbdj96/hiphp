@@ -52,21 +52,21 @@ done
 #cli help:
 if [ "$help" = true ]; then
 #elif [ "$1" == "--HELP" ] || [ "$1" == "--help" ]; then
-    python3 "${PREFIX}/share/hiphp.py" --HELP;
+    python3 "${PREFIX}/share/hiphp/hiphp.py" --HELP;
 
 #hiphp_desktop:
 elif [ "$dst" = true ]; then
 #elif [ "$1" == "--DST" ] || [ "$1" == "--dst" ]; then
-    python3 "${PREFIX}/share/hiphp.py" --DST;
+    python3 "${PREFIX}/share/hiphp/hiphp.py" --DST;
 
 #version:
 elif [ "$version" = true ]; then
 #elif [ "$1" == "--VERSION" ] || [ "$1" == "--version" ]; then
-    python3 "${PREFIX}/share/hiphp.py" --VERSION;
+    python3 "${PREFIX}/share/hiphp/hiphp.py" --VERSION;
 
 elif [ "$geth" = true ]; then
     if [ -n "$key" ] || [ -n "$url" ]; then
-        python3 "${PREFIX}/share/hiphp.py" --GETH --KEY=$2 --URL=$3;
+        python3 "${PREFIX}/share/hiphp/hiphp.py" --GETH --KEY=$2 --URL=$3;
     else
         echo "At least one variable is empty"
     fi
@@ -74,9 +74,9 @@ elif [ "$geth" = true ]; then
 #help:
 else
     if [ -n "$url" ] && [ -n "$key" ]; then
-        python3 "${PREFIX}/share/hiphp.py" --KEY=$key --URL=$url;
+        python3 "${PREFIX}/share/hiphp/hiphp.py" --KEY=$key --URL=$url;
     else
-        python3 "${PREFIX}/share/hiphp/hiphplogo.py" "ok_view";
+        python3 "${PREFIX}/share/hiphp/hiphp/hiphplogo.py" "ok_view";
         echo "Usage: hiphp [OPTION]";
         echo "";
         echo "Examples:";

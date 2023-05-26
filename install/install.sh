@@ -90,7 +90,7 @@ termux_install(){
 
     # install hiphp-desktop script:
     #sudo cp "../hiphp-desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
-    sudo cp -r "../hiphp-desktop/." "${PREFIX}/share/$appname/hiphp-desktop";
+    cp -r "../hiphp-desktop/." "${PREFIX}/share/hiphp/hiphp-desktop";
     #pip install -r "../hiphp-desktop/requirements-dst.txt";
 
     # install linux requirements:
@@ -121,7 +121,7 @@ termux_install(){
 
 termux_uninstall(){
     rm -rf "${PREFIX}/share/hiphp";
-    rm "${PREFIX}/share/hiphp.py";
+    #rm "${PREFIX}/share/hiphp.py";
     rm "${PREFIX}/bin/hiphp";
 }
 

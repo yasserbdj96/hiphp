@@ -77,15 +77,16 @@ class hiphp:
         self.cd=""
         self.do_x=0
 
+        self.DS=""
+
         #
         self.sep=os.sep
-
-        self.DS=hiphp.do(self,self.key,self.url,self.headers,True,DIRECTORY_SEPARATOR())
 
         self.proxies=proxies
 
     #cli:
     def cli(self):
+        self.DS=hiphp.do(self,self.key,self.url,self.headers,True,DIRECTORY_SEPARATOR())
         scanner="n"
 
         #logo

@@ -44,8 +44,6 @@ install() {
     # install linux requirements:
     pip install -r "../hiphp-linux/requirements-linux.txt"
 
-
-
     # run:
     clear
     hiphp
@@ -85,7 +83,6 @@ termux_install(){
 
     mkdir -p ${PREFIX}/share/hiphp
 
-
     cp -r "../hiphp/." "${PREFIX}/share/hiphp/hiphp";
     cp "../main.py" "${PREFIX}/share/hiphp/hiphp.py";
     cp "hiphp-termux.sh" "${PREFIX}/bin/hiphp";
@@ -111,7 +108,6 @@ termux_install(){
     # MORE
     # remove Termux welcome text
     #rm /data/data/com.termux/files/usr/etc/motd
-
 
     clear
     echo "Termux setup complete!"

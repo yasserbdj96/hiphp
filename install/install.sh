@@ -84,10 +84,17 @@ termux_install(){
 
     mkdir -p ${PREFIX}/share/hiphp
 
-    cp -r "../hiphp/." "${PREFIX}/share/hiphp";
-    cp "../main.py" "${PREFIX}/share/hiphp.py";
+    cp -r "../hiphp/." "${PREFIX}/share/hiphp/hiphp";
+    cp "../main.py" "${PREFIX}/share/hiphp/hiphp.py";
     cp "hiphp-termux.sh" "${PREFIX}/bin/hiphp";
 
+    # install hiphp-desktop script:
+    #sudo cp "../hiphp-desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
+    sudo cp -r "../hiphp-desktop/." "${PREFIX}/share/$appname/hiphp-desktop";
+    #pip install -r "../hiphp-desktop/requirements-dst.txt";
+
+    # install linux requirements:
+    pip install -r "../hiphp-linux/requirements-linux.txt"
 
     #cp -r *.sh ${PREFIX}/bin
     pip install -r "../requirements.txt";

@@ -19,7 +19,6 @@ cd ${PREFIX}/share/hiphp/
 key=""
 url=""
 help=false
-dst=false
 version=false
 geth=false
 
@@ -34,9 +33,6 @@ for arg in "$@"; do
       ;;
     --help|--HELP)
       help=true
-      ;;
-    --dst|--DST)
-      dst=true
       ;;
     --version|--VERSION)
       version=true
@@ -55,11 +51,6 @@ done
 if [ "$help" = true ]; then
 #elif [ "$1" == "--HELP" ] || [ "$1" == "--help" ]; then
     python3 "${PREFIX}/share/hiphp/hiphp.py" --HELP;
-
-#hiphp_desktop:
-elif [ "$dst" = true ]; then
-#elif [ "$1" == "--DST" ] || [ "$1" == "--dst" ]; then
-    python3 "${PREFIX}/share/hiphp/hiphp.py" --DST;
 
 #version:
 elif [ "$version" = true ]; then
@@ -85,7 +76,6 @@ else
         echo "         hiphp --help                             # Show CLI help for hiphp.";
         echo "         hiphp --geth --key='[KEY]' --url='[URL]' # Retrieve the HIPHP_HOLE_CODE encrypted by your [KEY].";
         echo "         hiphp --key='[KEY]' --url='[URL]'        # Connect to the victim's website in CLI mode.";
-        echo "         hiphp --dst                              # Run hiphp in 'hiphp-desktop' (GUI) mode.";
         echo "         hiphp --version                          # Check the current version number.";
     fi
 fi

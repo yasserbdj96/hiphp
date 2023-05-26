@@ -59,12 +59,12 @@ uninstall() {
 
 termux_install(){
     #!/data/data/com.termux/files/usr/bin/bash
-    chmod +x ../../hiphp
+    #chmod +x ../../hiphp
 
     # My Termux setup
 
     # update, upgrade
-    #pkg update -y && pkg upgrade -y
+    pkg update -y && pkg upgrade -y
 
     # configure storage
     termux-setup-storage
@@ -92,14 +92,14 @@ termux_install(){
 
     # install hiphp-desktop script:
     #sudo cp "../hiphp-desktop/main.py" "/usr/share/$appname/hiphp_desktop.py";
-    cp -r "../hiphp-desktop/." "${PREFIX}/share/hiphp/hiphp-desktop";
+    #cp -r "../hiphp-desktop/." "${PREFIX}/share/hiphp/hiphp-desktop";
     #pip install -r "../hiphp-desktop/requirements-dst.txt";
 
     # install linux requirements:
-    #pip install -r "../hiphp-linux/requirements-linux.txt"
+    pip install -r "../hiphp-linux/requirements-linux.txt"
 
     #cp -r *.sh ${PREFIX}/bin
-    #pip install -r "../requirements.txt";
+    pip install -r "../requirements.txt";
 
     #mv ../colors/monokai.vim ~/.vim/colors && rm -rf vim-monokai/
 
@@ -116,7 +116,7 @@ termux_install(){
     clear
     echo "Termux setup complete!"
     chmod +x /data/data/com.termux/files/usr/bin/hiphp
-    #clear
+    clear
     hiphp
     #exit 0
 }

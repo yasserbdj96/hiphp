@@ -116,7 +116,7 @@ termux_install(){
     clear
     echo "Termux setup complete!"
     chmod +x /data/data/com.termux/files/usr/bin/hiphp
-    clear
+    #clear
     hiphp
     #exit 0
 }

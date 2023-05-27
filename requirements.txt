@@ -7,8 +7,8 @@ BeautifulSoup4
 twine
 #for ipynb
 pyngrok
-#for hiphp-desktop
-eel
 #for hiphp-tk
 tk
 chardet
+#for hiphp-desktop
+eel

@@ -201,6 +201,14 @@ class hiphp:
             #about
             elif command[0:7].lower()=="--about" or command[0:5].lower()=="about":
                 print(about())
+            #cp
+            elif command[0:4].lower()=="--mv" or command[0:2].lower()=="mv":
+                ppth=command.split(" ")
+                try:
+                    command=simulate_mv(ppth[1],ppth[2])
+                    print(hiphp.do(self,self.key,self.url,self.headers,True,command))
+                except:
+                    help(__version__,"--mv")
             #download
             elif command[0:6].lower()=="--down" or command[0:4].lower()=="down" or command[0:8].lower()=="download":
                 down=command.split(" ")
@@ -491,6 +499,7 @@ class hiphp:
 
     #upload:
     def upload(self,path_to_upluad,to=""):
+        self.DS=hiphp.do(self,self.key,self.url,self.headers,True,DIRECTORY_SEPARATOR())
         try:
             with open(path_to_upluad,"rb") as base64_file:
                 encoded_string=tobase64(base64_file.read().decode("utf-8"))
@@ -516,10 +525,27 @@ class hiphp:
 
     #download:
     def download(self,path_x,outpath=""):
+        def get_download_folder():
+            if os.name == 'nt':  # Windows
+                download_folder = os.path.expanduser('~/Downloads')
+            elif os.name == 'posix':  # Linux, macOS, and other UNIX-based systems
+                download_folder = os.path.expanduser('~/Downloads')
+            else:
+                # Unsupported operating system
+                download_folder = None
+
+            return download_folder
+        download_folder = get_download_folder()
+        if download_folder:
+            outpath=download_folder
+        else:
+            outpath=os.path.abspath(os.getcwd())
+
+
         new_command=file_to_b64(path_x)
         path_x=os.path.basename(path_x)
-        if outpath=="":
-            outpath=os.path.abspath(os.getcwd())
+        #if outpath=="":
+        #    outpath=os.path.abspath(os.getcwd())
         
         if outpath[-1]!=self.sep:
             outpath+=self.sep

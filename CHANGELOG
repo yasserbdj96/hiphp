@@ -10,6 +10,7 @@
  - Fixed websites scanner on hiphp-cli.
  - Changed license from "Apache Software License" to "MIT License."
  - Fix "--cd" command on "hiphp-cli".
+ - Add "--mv" as a new command on "hiphp-cli".
  - Addressed bug fixes and implemented performance improvements for a more reliable experience.
 
 ## 0.3.1 [06-03-2023]

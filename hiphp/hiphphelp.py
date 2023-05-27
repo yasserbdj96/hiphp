@@ -120,6 +120,13 @@ Actions:
     --rm -f [FILE_PATH]              # Delete a file.
     --rm -d [DIR_PATH]               # Delete a folder.
 """
+
+#
+  mv_c="""
+  --mv, mv                           # Move files and folders.
+  Usage: --mv [SOURCE] [DESTINATION]
+"""
+
   #
   ABOUT="""
 About:
@@ -130,7 +137,7 @@ About:
   --version, version                 # Get the current version number."""
 
   if opt=="":
-    return header+OPTIONS+ACTIONS+ls_c+spsbar+cat_c+spsbar+set_c+spsbar+cd_c+spsbar+rf_c+spsbar+up_c+spsbar+down_c+spsbar+zip_c+spsbar+edt_c+spsbar+rm_c+spsbar+ABOUT
+    return header+OPTIONS+ACTIONS+ls_c+spsbar+cat_c+spsbar+set_c+spsbar+cd_c+spsbar+rf_c+spsbar+up_c+spsbar+down_c+spsbar+zip_c+spsbar+edt_c+spsbar+rm_c+spsbar+mv_c+spsbar+ABOUT
   else:
     opt=opt.replace("--","")
     opt=opt+"_c"

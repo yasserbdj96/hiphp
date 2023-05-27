@@ -59,6 +59,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Internet :: WWW/HTTP"
     ],
-    python_requires=">=3.9"
+    #python_requires=">=3.9"
 )
 #}END.

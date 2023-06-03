@@ -136,8 +136,8 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 # Go to downloaded folder:
 ❯ cd hiphp
 # install
-❯ pip install -r requirements.txt
-❯ sudo python setup.py install
+#❯ pip install -r requirements.txt
+❯ pip install .
 
 # Uninstall:
 ❯ pip uninstall hiphp

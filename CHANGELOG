@@ -1,4 +1,13 @@
-## 0.3.2 [27-05-2023][Latest Release]:
+## 0.3.3 [03-06-2023][Latest Release]:
+ - Remove unused code/packages.
+ - Enhance the code for improved stability.
+ - Update the commands in the input for the "hiphp-cli".
+ - Introduce the "chmod" command in the "hiphp-cli" for changing file/folder permissions.
+ - Resolve the issue with the "--down -d" command.
+ - Resolve the issues with HTTP/HTTPS protocols during the initial scan.
+ - Bug fixes & performance improvements.
+
+## 0.3.2 [27-05-2023]:
  - Improved command argument handling for enhanced functionality.
  - Enhanced Docker run functionality for seamless execution.
  - Optimized Makefile run process for smoother workflow.

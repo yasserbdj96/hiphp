@@ -180,6 +180,8 @@ def simulate_mv(path, newpath):
 
     return php_code
 
+
+
 #
 def zip_path(path="./"):
     php_zip_code="""// Get real path for our folder
@@ -234,15 +236,17 @@ def DIRECTORY_SEPARATOR():
     return code
 
 #
-def rm(t,path):
-    code1="""
-$filename = '"""+path+"""';
+def rm(t, path):
+    if t == "-f":
+        code = """
+$filename = '""" + path + """';
 if (unlink($filename)){
-	echo 'The file "'.$filename.'" was deleted successfully!';
+    echo 'The file "'.$filename.'" was deleted successfully!';
 } else {
-	echo 'There was a error deleting the file "'.$filename.'"';
+    echo 'There was an error deleting the file "'.$filename.'"';
 }"""
-    code2="""
+    elif t == "-d":
+        code = """
 function deleteDirectory($dir) {
     if (!file_exists($dir)) {
         return true;
@@ -261,16 +265,25 @@ function deleteDirectory($dir) {
     if (rmdir($dir)){
         echo 'The Directory "'.$dir.'" was deleted successfully!';
     }else{
-        echo 'There was a error deleting the Directory "'.$dir.'"';
+        echo 'There was an error deleting the Directory "'.$dir.'"';
     }
 }
-deleteDirectory('"""+path+"""');
+deleteDirectory('""" + path + """');
 """
-    if t=="-f":
-        return code1
-    elif t=="-d":
-        return code2
+    else:
+        raise ValueError("Invalid type option for rm function")
 
+    return code
+
+#
+def chmod(permissions,path):
+    code="""
+    if (chmod('"""+path+"""', """+permissions+""")) {
+    echo "Permissions changed successfully for the file.";
+    } else {
+    echo "Failed to change permissions for the file.";
+    }"""
+    return code
 
 #
 def php_info():

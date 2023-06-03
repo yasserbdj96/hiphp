@@ -1,7 +1,6 @@
 requests
 hexor
-asciitext
-biglibrary
+#asciitext
 BeautifulSoup4
 #for pypi
 twine

@@ -15,7 +15,8 @@
 
 #START{
 from hexor import *
-from biglibrary import *
+#from biglibrary import *
+from hiphp.hiphpfunc import *
 
 # logo:
 def logo(__version__):
@@ -27,33 +28,33 @@ def logo(__version__):
     c_white="#f7f7f7"
 
     color=hexor(True,"hex")
-    bl=biglibrary(returning=True)
+    #bl=biglibrary(returning=True)
     logox="\n"
-    logox+=color.c(bl.center("             ▄███████▄    ▄█    █▄       ▄███████▄"),c_red)
+    logox+=color.c(center("             ▄███████▄    ▄█    █▄       ▄███████▄"),c_red)
     logox+="\n"
-    logox+=color.c(bl.center("            ███    ███   ███    ███     ███    ███"),c_red)
+    logox+=color.c(center("            ███    ███   ███    ███     ███    ███"),c_red)
     logox+="\n"
-    logox+=color.c(bl.center("╦   ╦       ███    ███   ███    ███     ███    ███"),c_red)
+    logox+=color.c(center("╦   ╦       ███    ███   ███    ███     ███    ███"),c_red)
     logox+="\n"
-    logox+=color.c(bl.center("║   ║ ═╦═ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀ "),c_red)
+    logox+=color.c(center("║   ║ ═╦═ ▀█████████▀  ▀▀███▀▀▀▀███▀  ▀█████████▀ "),c_red)
     logox+="\n"
-    logox+=color.c(bl.center("╠═══╣  ║    ███          ███    ███     ███       "),c_red)
+    logox+=color.c(center("╠═══╣  ║    ███          ███    ███     ███       "),c_red)
     logox+="\n"
-    logox+=color.c(bl.center("║   ║  ║    ███          ███    ███     ███       "),c_red)
+    logox+=color.c(center("║   ║  ║    ███          ███    ███     ███       "),c_red)
     logox+="\n"
-    logox+=color.c(bl.center("╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀     "),c_red)
+    logox+=color.c(center("╩   ╩ ═╩═  ▄████▀        ███    █▀     ▄████▀     "),c_red)
     logox+="\n"
-    logox+=color.c(bl.center("+-----------------------------------------------------------------------------------+"),c_red)
+    logox+=color.c(center("+-----------------------------------------------------------------------------------+"),c_red)
     logox+="\n"
-    logox+=color.c(bl.center(f"HIPHP - Free & Open Source Project"),c_yellow)
+    logox+=color.c(center(f"HIPHP - Free & Open Source Project"),c_yellow)
     logox+="\n"
-    logox+=color.c(bl.center(f"A Backdoor Tool for Controlling PHP-based Sites"),c_yellow)
+    logox+=color.c(center(f"A Backdoor Tool for Controlling PHP-based Sites"),c_yellow)
     logox+="\n"
-    logox+=color.c(bl.center(f"Version: {__version__} by yasserbdj96"),c_green)
+    logox+=color.c(center(f"Version: {__version__} by yasserbdj96"),c_green)
     logox+="\n"
-    logox+=color.c(bl.center(f"Visit: https://yasserbdj96.github.io/hiphp/"),c_blue)
+    logox+=color.c(center(f"Visit: https://yasserbdj96.github.io/hiphp/"),c_blue)
     logox+="\n"
-    logox+=color.c(bl.center("+-----------------------------------------------------------------------------------+"),c_red)
+    logox+=color.c(center("+-----------------------------------------------------------------------------------+"),c_red)
     logox+="\n"
     logox+=color.c("\n [!] '--help' for more informations.\n",c_yellow)
     logox+=color.c(" [!] '--exit' OR 'Ctrl+C' for exit.\n",c_yellow)

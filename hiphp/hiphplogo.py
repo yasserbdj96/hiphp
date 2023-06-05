@@ -62,11 +62,16 @@ def logo(__version__):
 
     return logox
 #
+"""
 try:
     import sys
     from hiphpversion import __version__
     if sys.argv[1]=="ok_view":
-        print(logo(__version__))
+        print("hiii")
+        #print(logo(__version__))
+        exit()
+    else:
+        pass
 except:
-    pass
+    pass"""
 #}END.

@@ -18,6 +18,8 @@ from hiphp import *
 from hiphp.hiphpversion import __version__
 import argparse
 import os
+import sys
+
 python_path = sys.executable
 
 # Create an ArgumentParser object

@@ -22,7 +22,7 @@ jobs:
       run: |
         REPO_DIR=""      # Replace with the path to your repository
         REPO_NAME="hiphp"                   # Replace with your repository name
-        DEB_FILE="hiphp.deb"       # Replace with the path to your .deb file
+        DEB_FILE="./hiphp.deb"       # Replace with the path to your .deb file
 
         #cd "$REPO_DIR"
 

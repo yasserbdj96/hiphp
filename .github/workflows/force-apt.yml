@@ -24,7 +24,7 @@ jobs:
         REPO_NAME="hiphp"                   # Replace with your repository name
         DEB_FILE="hiphp.deb"       # Replace with the path to your .deb file
 
-        cd "$REPO_DIR"
+        #cd "$REPO_DIR"
 
         git checkout --orphan gh-pages
         git rm -rf .

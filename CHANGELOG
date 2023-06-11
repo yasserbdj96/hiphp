@@ -1,4 +1,8 @@
-## 0.3.3 [03-06-2023][Latest Release]:
+## 0.3.4 [011-06-2023][Latest Release]:
+ - Now you can easily build a .deb file for Debian installations.
+ - Bug fixes & performance improvements.
+
+## 0.3.3 [03-06-2023]:
  - Remove unused code/packages.
  - Enhance the code for improved stability.
  - Update the commands in the input for the "hiphp-cli".

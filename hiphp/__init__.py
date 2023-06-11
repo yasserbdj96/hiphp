@@ -435,15 +435,16 @@ class hiphp:
                     from_path = "."
     
                 out_path = hiphp.download(self, dirx, "")
+                
                 editor(out_path)
-    
+
                 hiphp.run(self, f"unlink('{dirx}');")
-    
+                
                 if from_path == "":
                     hiphp.upload(self, out_path)
                 else:
                     hiphp.upload(self, out_path, from_path + self.DS)
-    
+                
                 os.remove(out_path)
 
                 #os.system('cls' if os.name == 'nt' else 'clear')
@@ -589,7 +590,10 @@ class hiphp:
                 if to[0:2]!="."+self.DS:
                     p="."+self.DS
                 hiphp.run(self,"if(!file_exists('"+p+to+"')){mkdir('"+p+to+"',0777,true);}")
-            hiphp.run(self,f'Fwrite(fopen("{p+to+os.path.basename(path_to_upluad)}","w+"),base64_decode("{encoded_string}"));')
+            else:
+                pass
+            hiphp.run(self,f'file_put_contents("{p+to+os.path.basename(path_to_upluad)}", base64_decode("{encoded_string}"), FILE_APPEND | LOCK_EX);')
+            #hiphp.run(self,f'Fwrite(fopen("{p+to+os.path.basename(path_to_upluad)}","w+"),base64_decode("{encoded_string}"));')
         except:
             self.color2.c(f"{emsg_5} '{path_to_upluad}'.",self.c_red)
 

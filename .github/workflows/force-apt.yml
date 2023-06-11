@@ -13,11 +13,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Git
-      run: |
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Actions"
-
     - name: Set up APT repository
       run: |
         REPO_NAME="hiphp"                   # Replace with your repository name
@@ -31,11 +26,10 @@ jobs:
         gzip -k -f Packages
 
         git add .
+        git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+        git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
         git commit -m "Add hiphp package"
         git push origin gh-pages
 
         echo "Your APT repository is now hosted on GitHub Pages at:"
         echo "https://$GITHUB_REPOSITORY_OWNER.github.io/$REPO_NAME/"
-
-
-      

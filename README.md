@@ -345,6 +345,8 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # Install:
 ❯ sudo dpkg -i hiphp-<VERSION>.deb
+# OR
+❯ sudo apt install ./hiphp-<VERSION>.deb
 ```
 
 <br>

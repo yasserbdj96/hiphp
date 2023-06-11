@@ -20,11 +20,10 @@ jobs:
 
     - name: Set up APT repository
       run: |
-        REPO_DIR=""      # Replace with the path to your repository
         REPO_NAME="hiphp"                   # Replace with your repository name
-        DEB_FILE="./hiphp.deb"       # Replace with the path to your .deb file
+        DEB_FILE="${GITHUB_WORKSPACE}/hiphp.deb"       # Assuming hiphp.deb is in the root directory
 
-        #cd "$REPO_DIR"
+        cd ${GITHUB_WORKSPACE}
 
         git checkout --orphan gh-pages
         git rm -rf .
@@ -35,11 +34,10 @@ jobs:
         gzip -k -f Packages
 
         git add .
-        git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
-        git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
         git commit -m "Add hiphp package"
         git push origin gh-pages
 
         echo "Your APT repository is now hosted on GitHub Pages at:"
         echo "https://$GITHUB_REPOSITORY_OWNER.github.io/$REPO_NAME/"
+
       

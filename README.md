@@ -71,6 +71,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
     - [Python Package Installation](#Python-Package-Installation)
     - [Ubuntu/Nethunter Installation](#Ubuntu-Nethunter-Installation)
     - [Termux Installation](#Termux-Installation)
+    - [Debian Build and Installation](#Debian-Build-and-Installation)
 - [Run without installation](#Run-without-installation)
     - [Run with hiphp-cli](#Run-with-hiphp-cli)
         - [Help for hiphp-cli](#help-for-hiphp-cli)
@@ -324,6 +325,26 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # Uninstall:
 ❯ bash install.sh -tu
+```
+
+<br>
+<h4>Debian Build and Installation:</h4>
+
+```bash
+# Download hiphp from github:
+❯ git clone https://github.com/yasserbdj96/hiphp.git
+# OR
+# Download hiphp from gitlab:
+❯ git clone https://gitlab.com/yasserbdj96/hiphp.git
+
+# Go to downloaded folder:
+❯ cd hiphp
+
+# build .deb file:
+❯ bash build_deb.sh
+
+# Install:
+❯ sudo dpkg -i hiphp-<VERSION>.deb
 ```
 
 <br>

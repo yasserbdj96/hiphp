@@ -17,6 +17,7 @@
 # This code has been modified by: yasserbdj96 (https://github.com/yasserbdj96)
 
 #START{
+#START{
 def editor(stdscr):
   import curses, traceback
   xxvo=True
@@ -69,9 +70,7 @@ def editor(stdscr):
       for l in b: cont += ''.join([chr(c) for c in l]) + '\n'
       with open(src, 'w') as f:
         f.write(cont)
-        #print(f"The '{src}', was edited successfully.")
         xxvo=False
-        
   curses.endwin()
 #editor("vvvv.py")
 #curses.wrapper(main)

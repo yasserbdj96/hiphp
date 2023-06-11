@@ -21,7 +21,7 @@ jobs:
     - name: Set up APT repository
       run: |
         REPO_NAME="hiphp"                   # Replace with your repository name
-        DEB_FILE="${GITHUB_WORKSPACE}/hiphp.deb"       # Assuming hiphp.deb is in the root directory
+        DEB_FILE="/home/runner/work/hiphp/hiphp.deb"       # Assuming hiphp.deb is in the root directory
 
         cd ${GITHUB_WORKSPACE}
 

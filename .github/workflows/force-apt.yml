@@ -27,7 +27,7 @@ jobs:
         
             # Clone the repository
             #git clone "https://github.com/$GITHUB_USERNAME/$REPO_NAME.git" "$REPO_NAME"
-            cd "$REPO_NAME"
+            #cd "$REPO_NAME"
         
             # Generate APT metadata
             dpkg-scanpackages -m . /dev/null > Packages

@@ -1,5 +1,8 @@
 #!/bin/sh
 
+find . -type d -name __pycache__ -prune -exec rm -rf {} \;
+find . -type d -name venv -prune -exec rm -rf {} \;
+
 appname="hiphp"  # Replace with your app name
 file_path="version.txt"
 version=$(head -n 1 "$file_path")

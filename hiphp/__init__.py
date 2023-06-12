@@ -250,7 +250,8 @@ class hiphp:
                 ppth=command.split(" ")[1:]
                 try:
                     command=simulate_mv(ppth[0],ppth[1])
-                    print(hiphp.do(self,self.key,self.url,self.headers,True,command))
+                    mv_msg=hiphp.do(self,self.key,self.url,self.headers,True,command)
+                    print(print_msg_with_c(mv_msg))
                 except:
                     help(__version__,"--mv")
             #download
@@ -272,7 +273,8 @@ class hiphp:
                             out_path=down[2]
                         except:
                             out_path=""
-                        print(smsg_1+hiphp.download(self,down[1],out_path))
+                        print(print_msg_with_c(smsg_1+hiphp.download(self,down[1],out_path)))
+                        #print(smsg_1+hiphp.download(self,down[1],out_path))
                     elif down[0].lower()=="-d":
                         try:
                             zip_file_name=hiphp.compress(self,down[1])
@@ -284,14 +286,14 @@ class hiphp:
                             out_path=down[2]
                         except:
                             out_path=""
-                        print(smsg_1+hiphp.download(self,zip_file_name,out_path))
+                        print(print_msg_with_c(smsg_1a+hiphp.download(self,zip_file_name,out_path)))
                     elif down[0].lower()=="-all":
                         try:
                             out_path=down[1]
                         except:
                             out_path=""
                         zip_file_name=hiphp.compress(self)
-                        print(smsg_1+hiphp.download(self,zip_file_name,out_path))
+                        print(print_msg_with_c(smsg_1+hiphp.download(self,zip_file_name,out_path)))
                     else:
                         help(__version__,"--down")
 
@@ -301,13 +303,14 @@ class hiphp:
             elif command.lower().startswith("--zip") or command.lower().startswith("zip"):
                 
                 try:
-                    ziping=command.split(" ")[1]
                     try:
+                        ziping=command.split(" ")[1]
                         zip_file_name=hiphp.compress(self,ziping)
                     except:
                         zip_file_name=hiphp.compress(self)
-                    print(smsg_2+reee+self.DS+zip_file_name)
-                except:
+                    print(print_msg_with_c(smsg_2+reee+self.DS+zip_file_name))
+                except NameError as e:
+                    print(e)
                     help(__version__,"--zip")
             #update
             elif command.lower().startswith("--update") or command.lower().startswith("update"):
@@ -326,10 +329,10 @@ class hiphp:
                     else:
                         new=False
                 if new==True:
-                    print(msg_2+version)
-                    print(msg_3)
+                    print(print_msg_with_c(msg_2+version))
+                    print(print_msg_with_c(msg_3))
                 else:
-                    print(msg_4)
+                    print(print_msg_with_c(msg_4))
             #ls
             elif command.lower().startswith("--ls") or command.lower().startswith("ls"):
                 if len(command) == 4 or len(command) == 2:
@@ -426,9 +429,68 @@ class hiphp:
                 hiphp.do(self, self.key, self.url, self.headers, False, command)
 
             #edt
-            elif command.lower().startswith("--edt") or command.lower().startswith("edt") or command.lower().startswith("edit"):
+            elif command.lower().startswith("--edt") or command.lower().startswith("edt") or command.lower().startswith("edit") or command.lower().startswith("--edit"):
                 dirx = command.split(" ")[1]
-    
+
+                xxnn=hiphp.do(self,self.key,self.url,self.headers,True,"echo $_SERVER['SCRIPT_FILENAME'];")
+                xxnnb=hiphp.do(self,self.key,self.url,self.headers,True,"echo getcwd();")
+                
+                ish=xxnn.replace(xxnnb,"")
+                if ish==dirx or ish==self.DS+dirx or ish=="."+self.DS+dirx:
+                    ttx=self.color.c("[!] Edit ",self.c_red)+self.color.c(f"'{xxnn}'",self.c_yellow)+ self.color.c("? This may cause errors or login issues (Y/N): ",self.c_red)
+                    doyou=input(ttx)
+                    if doyou.lower()=="y":
+                        old_url_w=self.url_w
+                        old_url=self.url
+                        out_path = hiphp.download(self, dirx, "")
+                        if editor(out_path)!="q":
+
+                            original_path = out_path
+                            extension = os.path.splitext(original_path)[1]
+                            new_filename = os.path.splitext(original_path)[0] + "_hiphphole" + extension
+
+                            new_path = os.path.join(os.path.dirname(original_path), new_filename)
+
+                            # Perform the file copy operation
+                            with open(original_path, 'rb') as src_file, open(new_path, 'wb') as dest_file:
+                                dest_file.write(src_file.read())
+
+                            hiphp.upload(self, new_path)
+
+
+                            basenamef=os.path.basename(dirx)
+                            ccvvbb=os.path.splitext(basenamef)
+
+                            self.url=self.url.replace(os.path.basename(xxnn),ccvvbb[0]+"_hiphphole"+ccvvbb[1])
+                            url_w=re.compile(r"https?://(www\.)?")
+                            self.url_w=url_w.sub('',str(self.url)).strip().strip('/')
+
+                            hiphp.run(self, f"unlink('{dirx}');")
+
+                            newcopy=dirx.replace(basenamef,ccvvbb[0]+"_hiphphole"+ccvvbb[1])
+
+                            code=f"""$file_path = '{newcopy}';"""+"""
+$new_file_path = str_replace('_hiphphole', '', $file_path);
+if (rename($file_path, $new_file_path)) {echo "File edited successfully!";} else {echo "File edit failed.";}
+                            
+                            """
+                            xx=hiphp.run(self, code)
+
+                            print(xx)
+                            os.remove(out_path)
+                            os.remove(new_filename)
+                            self.url=old_url
+                            self.url_w=old_url_w
+
+                            hiphp.cli(self)
+                            exit()
+
+
+                        else:
+                            hiphp.cli(self)
+                        pass
+                    else:
+                        hiphp.cli(self)
                 try:
                     from_path = os.path.dirname(dirx)
                 except:
@@ -436,16 +498,16 @@ class hiphp:
     
                 out_path = hiphp.download(self, dirx, "")
                 
-                editor(out_path)
-
-                hiphp.run(self, f"unlink('{dirx}');")
+                if editor(out_path)!="q":
+                    hiphp.run(self, f"unlink('{dirx}');")
                 
-                if from_path == "":
-                    hiphp.upload(self, out_path)
+                    if from_path == "":
+                        hiphp.upload(self, out_path)
+                    else:
+                        hiphp.upload(self, out_path, from_path + self.DS)
+                    os.remove(out_path)
                 else:
-                    hiphp.upload(self, out_path, from_path + self.DS)
-                
-                os.remove(out_path)
+                    hiphp.cli(self)
 
                 #os.system('cls' if os.name == 'nt' else 'clear')
                 #print(out_path)
@@ -592,6 +654,7 @@ class hiphp:
                 hiphp.run(self,"if(!file_exists('"+p+to+"')){mkdir('"+p+to+"',0777,true);}")
             else:
                 pass
+            #print(f"{p+to+os.path.basename(path_to_upluad)}")
             hiphp.run(self,f'file_put_contents("{p+to+os.path.basename(path_to_upluad)}", base64_decode("{encoded_string}"), FILE_APPEND | LOCK_EX);')
             #hiphp.run(self,f'Fwrite(fopen("{p+to+os.path.basename(path_to_upluad)}","w+"),base64_decode("{encoded_string}"));')
         except:

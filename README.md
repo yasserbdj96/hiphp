@@ -96,7 +96,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
     <!--a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif">
         <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/hiphp_cli.gif" alt="hiphp by yasserbdj96">
     </a-->
-    <a href="https://asciinema.org/a/523450" target="_blank"><img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/demo.png" /></a>
+    <a href="https://asciinema.org/a/591018" target="_blank"><img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/demo.png" /></a>
 </div>
 
 <br>
@@ -152,11 +152,11 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 | Distribution   | Version Check | Python Version | Installation | hiphp-cli  | hiphp-desktop | hiphp-tk |
 | :------------: | :-----------: | :------------: | :----------: | :--------: | :-----------: | :------: |
-| Ubuntu         | Last version  | 3.7 --> 3.11   | ✓            |  ✓         | ✓             | ✓        |
-| Windwos        | Last version  | 3.7 --> 3.11   | ✗            |  ✓         | ✓             | ✓        |
-| MacOS          | Last version  | 3.7 --> 3.10   | ✗            |  ✓         | ✓             | ✓        |
-| Android-termux | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✗             | ✗        |
-| Nethunter      | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓             | ✗        |
+| Ubuntu         | Last version  | 3.7 --> 3.11   | ✓            |  ✓         | ✓            | ✓        |
+| Windwos        | Last version  | 3.7 --> 3.11   | ✗            |  ✓         | ✓            | ✓        |
+| MacOS          | Last version  | 3.7 --> 3.10   | ✗            |  ✓         | ✓            | ✓        |
+| Android-termux | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✗            | ✗        |
+| Nethunter      | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓            | ✗        |
 
 <br>
 <h2>Hiphp with Docker:</h2>

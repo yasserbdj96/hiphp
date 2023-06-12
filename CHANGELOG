@@ -1,4 +1,10 @@
-## 0.3.4 [011-06-2023][Latest Release]:
+## 0.3.5 [12-06-2023][Latest Release]:
+ - Fix the '--edit' option for editing Script Files.
+ - Fix the '--zip' option.
+ - Added color to certain messages.
+ - Bug fixes & performance improvements.
+
+## 0.3.4 [11-06-2023]:
  - Now you can easily build a .deb file for Debian installations.
  - Bug fixes & performance improvements.
 

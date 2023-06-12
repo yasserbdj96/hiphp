@@ -287,73 +287,49 @@ def chmod(permissions,path):
 
 #
 def php_info():
-    code="""header('Content-type: text/plain');
-    echo "OS : ".php_uname();
-    echo "\n";
-    echo "your_ip: ".$_SERVER['REMOTE_ADDR'];
-    echo "\n";
-    echo "HTTP_HOST : ".$_SERVER['HTTP_HOST'];
-    echo "\n";
-    echo "REQUEST_METHOD : ".$_SERVER['REQUEST_METHOD'];
-    echo "\n";
-    echo "SERVER_ADMIN : ".$_SERVER['SERVER_ADMIN'];
-    echo "\n";
-    echo "SERVER_PORT : ".htmlentities($_SERVER['SERVER_PORT'], ENT_QUOTES, 'UTF-8');
-    echo "\n";
-    echo "server_ip : ".gethostbyname($_SERVER["HTTP_HOST"]);
-    echo "\n";
-    echo "PHP_SELF : ".$_SERVER['PHP_SELF'];
-    echo "\n";
-    echo "GATEWAY_INTERFACE : ".$_SERVER['GATEWAY_INTERFACE'];
-    echo "\n";
-    echo "SERVER_ADDR : ".$_SERVER['SERVER_ADDR'];
-    echo "\n";
-    echo "SERVER_NAME : ".$_SERVER['SERVER_NAME'];
-    echo "\n";
-    echo "SERVER_PROTOCOL : ".$_SERVER['SERVER_PROTOCOL'];
-    echo "\n";
-    echo "REQUEST_TIME : ".$_SERVER['REQUEST_TIME'];
-    echo "\n";
-    echo "QUERY_STRING : ".$_SERVER['QUERY_STRING'];
-    echo "\n";
-    echo "HTTP_ACCEPT : ".$_SERVER['HTTP_ACCEPT'];
-    echo "\n";
-    echo "HTTP_ACCEPT_CHARSET : ".$_SERVER['HTTP_ACCEPT_CHARSET'];
-    echo "\n";
-    echo "HTTP_REFERER : ".$_SERVER['HTTP_REFERER'];
-    echo "\n";
-    echo "HTTPS : ".$_SERVER['HTTPS'];
-    echo "\n";
-    echo "REMOTE_HOST : ".$_SERVER['REMOTE_HOST'];
-    echo "\n";
-    echo "REMOTE_PORT : ".$_SERVER['REMOTE_PORT'];
-    echo "\n";
-    echo "SCRIPT_FILENAME : ".$_SERVER['SCRIPT_FILENAME'];
-    echo "\n";
-    echo "SERVER_SIGNATURE : ".$_SERVER['SERVER_SIGNATURE'];
-    echo "\n";
-    echo "PATH_TRANSLATED : ".$_SERVER['PATH_TRANSLATED'];
-    echo "\n";
-    echo "SCRIPT_NAME : ".$_SERVER['SCRIPT_NAME'];
-    echo "\n";
-    echo "SCRIPT_URI : ".$_SERVER['SCRIPT_URI'];
-    echo "\n";
-    echo "server_software : ".getenv("SERVER_SOFTWARE");
-    echo "\n";
-    echo "Php Version : ".phpversion();
-    echo "\n";
-    echo "Zend : ".htmlentities(zend_version(), ENT_QUOTES, 'UTF-8');
-    echo "\n";
-    echo "Oracle : ".$Oracle2=function_exists('ocilogon')?("ON"):("OFF");   
-    echo "\n";
-    echo "MySQL : ".$MySQL2=function_exists('mysql_connect')?("ON"):("OFF");
-    echo "\n";
-    echo "MSSQL : ".$MSSQL2=function_exists('mssql_connect')?("ON"):("OFF");
-    echo "\n";
-    echo "PostgreSQL : ".$pg_connect2=function_exists('pg_connect')?("ON"):("OFF");
-    echo "\n";
-    echo "disabled_functions : ".$r=ini_get('disable_functions') ? ini_get('disable_functions'):'none';
-    echo "\n";
-    echo "DIRECTORY_SEPARATOR : ".DIRECTORY_SEPARATOR;"""
+    code="""
+$data = array(
+    'OS' => php_uname(),
+    'Your IP' => $_SERVER['REMOTE_ADDR'],
+    'HTTP_HOST' => $_SERVER['HTTP_HOST'],
+    'Request Method' => $_SERVER['REQUEST_METHOD'],
+    'Server Admin' => $_SERVER['SERVER_ADMIN'],
+    'Server Port' => htmlentities($_SERVER['SERVER_PORT'], ENT_QUOTES, 'UTF-8'),
+    'Server IP' => gethostbyname($_SERVER["HTTP_HOST"]),
+    'PHP Self' => $_SERVER['PHP_SELF'],
+    'Gateway Interface' => $_SERVER['GATEWAY_INTERFACE'],
+    'Server Address' => $_SERVER['SERVER_ADDR'],
+    'Server Name' => $_SERVER['SERVER_NAME'],
+    'Server Protocol' => $_SERVER['SERVER_PROTOCOL'],
+    'Request Time' => date('Y-m-d H:i:s', $_SERVER['REQUEST_TIME']),
+    'Query String' => $_SERVER['QUERY_STRING'],
+    'HTTP Accept' => $_SERVER['HTTP_ACCEPT'],
+    'HTTP Accept Charset' => $_SERVER['HTTP_ACCEPT_CHARSET'],
+    'HTTP Referer' => $_SERVER['HTTP_REFERER'],
+    'HTTPS' => isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'Enabled' : 'Disabled',
+    'Remote Host' => isset($_SERVER['REMOTE_HOST']) ? $_SERVER['REMOTE_HOST'] : 'Unknown',
+    'Remote Port' => $_SERVER['REMOTE_PORT'],
+    'Script Filename' => $_SERVER['SCRIPT_FILENAME'],
+    'Server Signature' => $_SERVER['SERVER_SIGNATURE'],
+    'Path Translated' => $_SERVER['PATH_TRANSLATED'],
+    'Script Name' => $_SERVER['SCRIPT_NAME'],
+    'Script URI' => $_SERVER['SCRIPT_URI'],
+    'Server Software' => getenv("SERVER_SOFTWARE"),
+    'PHP Version' => phpversion(),
+    'Zend Version' => htmlentities(zend_version(), ENT_QUOTES, 'UTF-8'),
+    'Oracle' => function_exists('ocilogon') ? 'ON' : 'OFF',
+    'MySQL' => function_exists('mysql_connect') ? 'ON' : 'OFF',
+    'MSSQL' => function_exists('mssql_connect') ? 'ON' : 'OFF',
+    'PostgreSQL' => function_exists('pg_connect') ? 'ON' : 'OFF',
+    'Disabled Functions' => $r = ini_get('disable_functions') ? $r : 'None',
+    'Directory Separator' => DIRECTORY_SEPARATOR,
+    'Current Date and Time' => date('Y-m-d H:i:s')
+);
+
+$maxKeyLength = max(array_map('strlen', array_keys($data)));
+
+foreach ($data as $key => $value) {
+    printf("%-{$maxKeyLength}s : %s\n", $key, $value);
+}"""
     return code
 #}END.

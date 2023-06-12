@@ -14,6 +14,7 @@
 #START{
 import os
 import shutil
+from hexor import *
 
 def center(text):
     try:
@@ -49,5 +50,19 @@ def lslist(lslist, separator='|'):
             lslist_final += key + '\n'
     
     return lslist_final
+
+def print_msg_with_c(text):
+
+    color=hexor(True)
+    if "[✗]" in text:
+        colorx="#ea4335"
+    elif "[!]" in text:
+        colorx="#fbbc05"
+    elif "[✓]" in text:
+        colorx="#34a853"
+    else:
+        colorx="#ffffff"
+    
+    return color.c(text,colorx)
 
 #}END.

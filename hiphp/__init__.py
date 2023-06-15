@@ -680,6 +680,22 @@ if (rename($file_path, $new_file_path)) {echo "File edited successfully!";} else
             else:
                 # Unsupported operating system
                 download_folder = None
+            try:
+                if not download_folder.exists():
+                # Create the directory
+                    download_folder.mkdir(parents=True)
+            except:
+                pass
+
+            return download_folder
+
+            """if os.name == 'nt':  # Windows
+                download_folder = os.path.expanduser('~/Downloads')
+            elif os.name == 'posix':  # Linux, macOS, and other UNIX-based systems
+                download_folder = os.path.expanduser('~/Downloads')
+            else:
+                # Unsupported operating system
+                download_folder = None"""
 
             return download_folder
         download_folder = get_download_folder()

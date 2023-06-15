@@ -15,8 +15,7 @@
 
 #START{
 from hexor import *
-#from biglibrary import *
-from hiphp.hiphpfunc import *
+from hiphp.hiphpfunc import center
 
 # logo:
 def logo(__version__):

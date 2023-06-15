@@ -21,7 +21,6 @@ from hiphp.hiphphelp import help
 from hiphp.hiphpmsgs import *
 from hiphp.hiphplicense import license
 from hiphp.hiphpabout import about
-from hiphp.hiphplogo import *
 from hiphp.hiphpeditor import editor
 from hiphp.hiphplinkextractor import *
 from hiphp.hiphpfunc import *
@@ -34,7 +33,7 @@ import ast
 from os.path import exists
 #from biglibrary import *
 import base64
-
+from hiphp.hiphplogo import logo
 #
 import os
 # if OS is Windows:

@@ -89,7 +89,7 @@ else
     if [ -n "$url" ] && [ -n "$key" ]; then
         python3 "/usr/share/hiphp/hiphp.py" --KEY=$key --URL=$url;
     else
-        python3 "/usr/share/hiphp/hiphp/hiphplogo.py" "ok_view";
+        python3 "/usr/share/hiphp/hiphp.py" --VIEWLOGO;
         echo "Usage: hiphp [OPTION]";
         echo "";
         echo "Examples:";

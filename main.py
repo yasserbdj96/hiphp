@@ -14,11 +14,14 @@
 #   |                                                         |   #
 
 #START{
-from hiphp import *
-from hiphp.hiphpversion import __version__
 import argparse
 import os
 import sys
+
+from hiphp import *
+from hiphp.hiphpversion import __version__
+from hiphp.hiphplogo import logo
+from hiphp.hiphphelp import *
 
 python_path = sys.executable
 
@@ -38,6 +41,8 @@ parser.add_argument('--HELP', '--h', dest='HELP', default=os.getenv('HELP', Fals
 parser.add_argument('--GETH', '--geth', dest='GETH', default=os.getenv('GETH', False), action='store_true', help='')
 parser.add_argument('--VERSION', '--version', '--v', dest='VERSION', default=os.getenv('VERSION', False), action='store_true', help='')
 
+parser.add_argument('--VIEWLOGO', '--viewlogo', dest='VIEWLOGO', default=os.getenv('VIEWLOGO', False), action='store_true', help='')
+
 # Parse the command-line arguments
 args = parser.parse_args()
 
@@ -54,10 +59,15 @@ HELP = args.HELP
 GETH = args.GETH
 VERSION = args.VERSION
 
+VIEWLOGO = args.VIEWLOGO
+
 #help
 if HELP:
-    from hiphp.hiphphelp import *
     print(help(__version__))
+    exit()
+
+if VIEWLOGO:
+    print(logo(__version__))
     exit()
 
 #geth
@@ -88,18 +98,21 @@ elif TK:
     os.system(f"{python_path} main.py --KEY='{KEY}' --URL='{URL}'")
 
 else:
-    if KEY=="" or URL=="":
-        os.system(f"{python_path} main.py --help")
+    if KEY=="" or URL=="" and not VIEWLOGO:
+        file_path = os.path.basename(__file__)
+        os.system(f"{python_path} {file_path} --help")
         exit()
-    
-    # connect:
-    p1=hiphp(key=KEY,url=URL)#Default: retu=False.
-    p2=hiphp(key=KEY,url=URL,retu=True)
-
-    # Command line interface:
-    if emsg_1 not in p2.cli():
-        p1.cli()
+    elif VIEWLOGO:
+        pass
     else:
-        # Get the hole Code:
-        p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php
+        # connect:
+        p1=hiphp(key=KEY,url=URL)#Default: retu=False.
+        p2=hiphp(key=KEY,url=URL,retu=True)
+
+        # Command line interface:
+        if emsg_1 not in p2.cli():
+            p1.cli()
+        else:
+            # Get the hole Code:
+            p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php
 #}END.

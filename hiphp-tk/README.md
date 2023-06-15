@@ -1,22 +1,27 @@
 <h2>Run Hiphp-tk:</h2>
 
 ```bash
-# Dwonload:
+# Download hiphp from github:
 ❯ git clone https://github.com/yasserbdj96/hiphp.git
+# OR
+# Download hiphp from gitlab:
+❯ git clone https://gitlab.com/yasserbdj96/hiphp.git
+
+# Go to downloaded folder:
 ❯ cd hiphp
 
 # install requirements:
 ❯ pip install -r requirements.txt
-❯ pip install -r hiphp-tk/requirements-tk.txt
 ❯ pip install -r hiphp-linux/requirements-linux.txt #for linux os.
 ❯ pip install -r hiphp-win/requirements-win.txt #for windows os.
 
 # run with hiphp-tk tool:
-❯ cd hiphp-tk
-❯ python3 main.py
+❯ python main.py --TK
 
 # Run with Makefile:
-❯ make run arg="tk" url="<URL>" key="<KEY>"
+❯ make ARGUMENTS="--TK" run
+# OR
+❯ make ARGUMENTS="--TK --KEY='<KEY>' --URL='<URL>'" run
 
 # For Linux:
 ❯ cd hiphp-linux
@@ -26,13 +31,8 @@
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
 # OR Run 'hiphp-win\config-configure.py'.
-❯ cd hiphp-win
+❯ hiphp-win
 ❯ run-hiphp-tk.bat
-
-# OR if you installed it on Ubuntu:
-❯ hiphp --tk
-#OR
-❯ hiphp --tk <KEY> <URL>
 ```
 
 <br>

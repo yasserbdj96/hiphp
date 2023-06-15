@@ -41,7 +41,7 @@ from tkinter import filedialog
 from chardet import detect
 import argparse
 
-ftp_version="1.1.9"
+ftp_version="1.1.10"
 
 #usage_msg=f"USAGE : python3 {sys.argv[0]} [KEY] [URL]"
 
@@ -243,17 +243,7 @@ $dir='.';
 $iterator=new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir));
 iterateDirectory($iterator);""")
 
-        
-        if p1!="[✗] We were unable to recognize the hiphp identifier.":
-            files_list=p1.split(",")
-            del files_list[-1]
-            for i in range(len(files_list)):
-                files_list[i]=files_list[i].replace("\\","/")
-            x=files_list
-            for item in range(len(x)): 
-                mylist.insert(END,x[item])
-                mylist.itemconfig(item,bg="#f6f6f6")
-        else:
+        if p1 in emsg_1 or emsg_3 in p1:
             select_all_btn["state"] = "disabled"
             unselect_all_btn["state"] = "disabled"
             openSelected_btn["state"] = "disabled"
@@ -262,6 +252,15 @@ iterateDirectory($iterator);""")
             unzip_btn["state"] = "disabled"
             deleteSelected_btn["state"] = "disabled"
             c1["state"] = "disabled"
+        else:
+            files_list=p1.split(",")
+            del files_list[-1]
+            for i in range(len(files_list)):
+                files_list[i]=files_list[i].replace("\\","/")
+            x=files_list
+            for item in range(len(x)): 
+                mylist.insert(END,x[item])
+                mylist.itemconfig(item,bg="#f6f6f6")
 
 #Reconnect()
 

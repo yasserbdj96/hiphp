@@ -272,11 +272,11 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # Install:
 # If you encounter problems with installation and operation, please repeat the process by giving root permission.
-❯ bash install.sh -i
+❯ bash install.sh --install
 ❯ hiphp
 
 # Update:
-❯ bash install.sh -up
+❯ bash install.sh --update
 
 # Usage: hiphp [OPTION]
 
@@ -289,7 +289,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 #         hiphp --version               # Check the current version number.
 
 # Uninstall:
-❯ bash install.sh -u
+❯ bash install.sh --uninstall
 ```
 
 <br>
@@ -309,11 +309,11 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 ❯ cd install
 
 # Install:
-❯ bash install.sh -ti
+❯ bash install.sh --termux --install
 ❯ hiphp
 
 # Update:
-❯ bash install.sh -tup
+❯ bash install.sh --termux --update
 
 # Usage: hiphp [OPTION]
 
@@ -324,7 +324,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 #         hiphp --version               # Check the current version number.
 
 # Uninstall:
-❯ bash install.sh -tu
+❯ bash install.sh --termux --uninstall
 ```
 
 <br>

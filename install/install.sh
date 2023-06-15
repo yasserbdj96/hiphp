@@ -123,40 +123,71 @@ termux_uninstall(){
     rm "${PREFIX}/bin/hiphp";
 }
 
+
+
+
+# Default values
+install=false
+uninstall=false
+update=false
+termux=false
+
+
+# Parse the command-line arguments
+for arg in "$@"; do
+  case "$arg" in
+    --install|--INSTALL|--i|--I)
+      install=true
+      ;;
+    --uninstall|--UNINSTALL|--u|--U)
+      uninstall=true
+      ;;
+    --update|--UPDATE|--up|--UP)
+      update=true
+      ;;
+    --termux|--TERMUX|--t|--T)
+      termux=true
+      ;;
+    *)
+      echo "Invalid argument: $arg" >&2
+      exit 1
+      ;;
+  esac
+done
+
 # install:
-if [ "$1" == "-i" ] ; then
-    install
+if [ "$install" = true ]; then
+    if [ "$termux" = true ]; then
+        termux_install
+    else
+        install
+    fi
 
 # uninstall:
-elif [ "$1" == "-u" ] ; then
-    uninstall
+elif [ "$uninstall" = true ]; then
+    if [ "$termux" = true ]; then
+        termux_uninstall
+    else
+        uninstall
+    fi
 
 # update:
-elif [ "$1" == "-up" ] ; then
-    uninstall
-    install
-
-# termux_install:
-elif [ "$1" == "-ti" ] ; then
-    termux_install
-
-# termux_uninstall:
-elif [ "$1" == "-tu" ] ; then
-    termux_uninstall
-
-# termux_update:
-elif [ "$1" == "-tup" ] ; then
-    termux_uninstall
-    termux_install
+elif [ "$update" = true ]; then
+    if [ "$termux" = true ]; then
+        termux_uninstall
+        termux_install
+    else
+        uninstall
+        install
+    fi
 
 # usage:
 else
-    echo "Usage: bash $0 [OPTION]";
-    echo "       -i   | # for install.";
-    echo "       -u   | # for uninstall.";
-    echo "       -up  | # for update.";
-    echo "       -ti  | # for install hiphp on termux.";
-    echo "       -tu  | # for uninstall hiphp from termux.";
-    echo "       -tup | # for update hiphp on termux.";
+    echo "Usage: bash $0 [OPTION]"
+    echo "Options:"
+    echo "    --install      # Install the program."
+    echo "    --uninstall    # Uninstall the program."
+    echo "    --update       # Update the program."
+    echo "    --termux       # Enable termux operations."
 fi
 #}END.

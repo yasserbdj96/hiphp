@@ -13,6 +13,7 @@
 [![PYPI Build & Setup On Ubuntu](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-linux.yml)
 [![PYPI Build & Setup On MacOS](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-macos.yml)
 [![PYPI Build & Setup On Windows](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/pypi-setup-win.yml)
+[![Build .deb](https://github.com/yasserbdj96/hiphp/actions/workflows/deb_build.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/deb_build.yml)
 [![Install On Ubuntu](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/ubuntu-install.yml)
 [![Push To Docker](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/docker-image.yml)
 [![Push To Github Container Registry](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/gcr.yml)

@@ -1,0 +1,9 @@
+Usage: hiphp [OPTION]
+
+Examples:
+         hiphp --help                             # Show CLI help for hiphp.
+         hiphp --geth --key='[KEY]' --url='[URL]' # Retrieve the HIPHP_HOLE_CODE encrypted by your [KEY].
+         hiphp --key='[KEY]' --url='[URL]'        # Connect to the victim's website in CLI mode.
+         hiphp --tk                               # Run hiphp in 'hiphp-tk' (GUI) mode.
+         hiphp --dst                              # Run hiphp in 'hiphp-desktop' (GUI) mode.
+         hiphp --version                          # Check the current version number.

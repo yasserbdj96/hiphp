@@ -27,4 +27,4 @@ jobs:
       - name: Install requirements
         run: pip install -r requirements.txt
       - name: Install & Run
-        run: cd wrdir/install/ && bash install.sh -i && hiphp
+        run: cd wrdir/install/ && bash install.sh --install

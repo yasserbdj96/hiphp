@@ -1,3 +1,7 @@
+## 0.3.6 [03-09-2023][Beta]:
+ - Fix errors in the Windows os.
+ - Bug fixes & performance improvements.
+
 ## 0.3.5 [12-06-2023][Latest Release]:
  - Fix the '--edit' option for editing Script Files.
  - Fix the '--zip' option.

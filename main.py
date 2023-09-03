@@ -46,6 +46,11 @@ parser.add_argument('--VIEWLOGO', '--viewlogo', dest='VIEWLOGO', default=os.gete
 # Parse the command-line arguments
 args = parser.parse_args()
 
+# Check if --IPYNB exists and --TOKEN does not exist
+if args.IPYNB and not args.TOKEN:
+    print("Error: --IPYNB exists, but --TOKEN is missing. Aborting script execution.")
+    exit()
+
 # Access the variables by their names
 KEY = args.KEY
 URL = args.URL
@@ -88,14 +93,33 @@ if DST:
     if DOCKER:
         os.system(f"{python_path} main.py --DOCKER")
     elif IPYNB:
-        os.system(f"{python_path} main.py --IPYNB --TOKEN='{TOKEN}'")
+        command=f'{python_path} main.py --IPYNB'
+        arguments=[]
+        # Assuming KEY contains the value 'm123' or m123
+        if TOKEN!='':
+            arguments.append('--TOKEN')
+            arguments.append(TOKEN)
+
+        subprocess_args = [command] + arguments
+        os.system(" ".join(subprocess_args))
+        #os.system(f"{python_path} main.py --IPYNB --TOKEN='{TOKEN}'")
     else:
         os.system(f"{python_path} main.py")
 
 # hiphp-tk
 elif TK:
     os.chdir("hiphp-tk")
-    os.system(f"{python_path} main.py --KEY='{KEY}' --URL='{URL}'")
+    command=f'{python_path} main.py'
+    arguments=[]
+    # Assuming KEY contains the value 'm123' or m123
+    if KEY!='':
+        arguments.append('--key')
+        arguments.append(KEY)
+    if URL!='':
+        arguments.append('--url')
+        arguments.append(URL)
+    subprocess_args = [command] + arguments
+    os.system(" ".join(subprocess_args))
 
 else:
     if KEY=="" or URL=="" and not VIEWLOGO:

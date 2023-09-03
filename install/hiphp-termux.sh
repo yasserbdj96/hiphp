@@ -73,10 +73,11 @@ else
         echo "Usage: hiphp [OPTION]";
         echo "";
         echo "Examples:";
-        echo "         hiphp --help                             # Show CLI help for hiphp.";
-        echo "         hiphp --geth --key='[KEY]' --url='[URL]' # Retrieve the HIPHP_HOLE_CODE encrypted by your [KEY].";
-        echo "         hiphp --key='[KEY]' --url='[URL]'        # Connect to the victim's website in CLI mode.";
-        echo "         hiphp --version                          # Check the current version number.";
+        echo "hiphp --help                             # Display CLI help."
+        echo "hiphp --geth --key='[KEY]' --url='[URL]' # Retrieve encrypted HIPHP_HOLE_CODE."
+        echo "hiphp --key='[KEY]' --url='[URL]'        # Connect to the victim's website in CLI mode."
+        echo "hiphp --version                          # Check the version."
+
     fi
 fi
 #}END.

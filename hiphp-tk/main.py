@@ -62,8 +62,8 @@ except:
 parser = argparse.ArgumentParser()
 
 # Add arguments with names
-parser.add_argument('--KEY','--key', type=str, default=os.getenv('KEY', ''), help='Specifies the key (key) for the operation.')
-parser.add_argument('--URL','--url', type=str, default=os.getenv('URL', ''), help='Specifies the URL (url) for the operation.')
+parser.add_argument('--KEY','--key', type=str, default=os.getenv('KEY', ''), help='Specify the key for the operation.')
+parser.add_argument('--URL','--url', type=str, default=os.getenv('URL', ''), help='Specify the url for the operation.')
 
 # Parse the command-line arguments
 args = parser.parse_args()

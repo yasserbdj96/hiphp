@@ -80,6 +80,9 @@ function connect(how=""){
                         var xx=retu[i].split(':');
                         var pathxx=xx[0];
 
+                        // Use regular expression to replace single backslashes with double backslashes
+                        var pathxx2 = pathxx.replace(/\\/g, '\\\\');
+
                         
                         var file_type=(/[.]/.exec(pathxx)) ? /[^.]+$/.exec(pathxx) : undefined;
                         if (file_type=="zip" || file_type=="rar"){
@@ -93,14 +96,14 @@ function connect(how=""){
                             var img_icon='<i class="fa fa-file-o c_blue"></i>';
                         }
 
-                        var permxx='<a class="pointer" onclick="permi('+"'"+pathxx+"',"+"'"+xx[1]+"'"+')">'+xx[1]+'</a>';
+                        var permxx='<a class="pointer" onclick="permi('+"'"+pathxx2+"',"+"'"+xx[1]+"'"+')">'+xx[1]+'</a>';
                         var s=' ';//space
-                        var edit='<a class="pointer fs20" onclick="cat('+"'"+pathxx+"'"+')"><i class="fa fa-pencil c_blue"></i></a>'+s;
-                        var del='<a class="pointer fs20" onclick="del('+"'"+pathxx+"'"+')"><i class="fa fa-trash-o c_red"></i></a>'+s;
-                        var ren='<a class="pointer fs20" onclick="ren('+"'"+pathxx+"'"+')"><i class="fa fa-i-cursor c_orange"></i></a>'+s;
-                        var down='<a class="pointer fs20" onclick="download_file('+"'"+pathxx+"'"+')"><i class="fa fa-download c_green"></i></a>'+s;
-                        var info='<a class="pointer fs20" onclick="file_info('+"'"+pathxx+"'"+')"><i class="fa fa-info-circle c_orange"></i></a>'+s;
-                        var check='<div class="inline-block"><input name="fileschecked" type="checkbox" value="'+pathxx+'"/><span></span></div>';
+                        var edit='<a class="pointer fs20" onclick="cat('+"'"+pathxx2+"'"+')"><i class="fa fa-pencil c_blue"></i></a>'+s;
+                        var del='<a class="pointer fs20" onclick="del('+"'"+pathxx2+"'"+')"><i class="fa fa-trash-o c_red"></i></a>'+s;
+                        var ren='<a class="pointer fs20" onclick="ren('+"'"+pathxx2+"'"+')"><i class="fa fa-i-cursor c_orange"></i></a>'+s;
+                        var down='<a class="pointer fs20" onclick="download_file('+"'"+pathxx2+"'"+')"><i class="fa fa-download c_green"></i></a>'+s;
+                        var info='<a class="pointer fs20" onclick="file_info('+"'"+pathxx2+"'"+')"><i class="fa fa-info-circle c_orange"></i></a>'+s;
+                        var check='<div class="inline-block"><input name="fileschecked" type="checkbox" value="'+pathxx2+'"/><span></span></div>';
                         //var down='<a class="pointer" onclick="down('+"'"+pathxx+"'"+')">dddd</a>'+s;
                         ls+='<tr><td>'+check+" <div class='ls_list inline-block'>"+img_icon+" "+pathxx+'</div></td><td>'+permxx+'</td><td>'+edit+ren+down+del+info+'</td></tr>';
                     }
@@ -155,6 +158,7 @@ function cat(path){
     var key = getCookie("key");
     //var key=document.getElementById("key").value;
     //var url=document.getElementById("url").value;
+    //alert(path);
     eel.cat(key,url,path)(
         function(ret){
             document.getElementById("temp").innerText=path;
@@ -168,6 +172,8 @@ function cat(path){
             document.getElementById("ls").style.display='none';
             document.getElementById("add").style.display='none';
             document.getElementById("up").style.display='none';
+            document.getElementById("delete").style.display='none';
+            document.getElementById("download").style.display='none';
             try {
                 document.getElementById("reload").style.display='none';
                 document.getElementById("check").style.display='none';
@@ -193,6 +199,8 @@ function back(){
     document.getElementById("cat").style.display='none';
     document.getElementById("return").style.display='none';
     document.getElementById("save").style.display='none';
+    document.getElementById("delete").style.display='block';
+    document.getElementById("download").style.display='block';
     try {
         document.getElementById("reload").style.display='block';
         document.getElementById("check").style.display='block';
@@ -228,7 +236,14 @@ function save(){
     var url = getCookie("url");
     var key = getCookie("key");
     var pathx=document.getElementById("temp").textContent;
-    var contentx=btoa(document.getElementById("cat").value);
+    var ffee=document.getElementById("cat").value
+    // Convert the text to binary (UTF-8)
+    var binaryData = new TextEncoder().encode(ffee);
+
+    // Encode the binary data as Base64
+    var contentx = btoa(String.fromCharCode.apply(null, binaryData));
+
+    //var contentx=btoa(ffee);
     eel.save(key,url,pathx,contentx)(
         function(x){
             if(x==""){alert("unsuccessful save!\nUnknown error.");}
@@ -294,8 +309,9 @@ function add(){
     var key = getCookie("key");
     //let text;
     let newfile=prompt("Enter the file name:","");
-    if(newfile!=null && newfile!=""){
-        eel.add_new(key,url,newfile)(
+    let newfile2 = newfile.replace('\\\\',/\\/g);
+    if(newfile2!=null && newfile2!=""){
+        eel.add_new(key,url,newfile2)(
             function(retu){
                 alert(retu);
                 connect();
@@ -334,9 +350,8 @@ function download_file(path){
 
                 //console.log(obj.file);
 
-
                 download(obj.file,obj.cont,obj.type);
-                connect();
+                //connect();
             }
         )
     }
@@ -412,6 +427,8 @@ function settings(){
         document.getElementById("ls").style.display='none';
         document.getElementById("codeEditor").style.display='none';
         document.getElementById("save").style.display='none';
+        document.getElementById("delete").style.display='none';
+        document.getElementById("download").style.display='none';
       } catch (e) {
         pass(); // pass exception object to error handler
     }
@@ -515,6 +532,18 @@ function settings_opt(){
             document.getElementById("darkmode").checked=true;
             include("dark.css","css");
         }
+
+        //
+        if(data["PWA"]=="True"){
+            //document.getElementById("darkmode").checked = false;
+            document.getElementById("a_pwa").checked=true;
+            include("index.js","js");
+        }
+        //else{
+        //    document.getElementById("pwa").checked=false;
+        //    var pp=document.getElementById("index");
+        //        pp.remove();
+        //}
         //console.log(data["Dark Mode"]);
     });
 }
@@ -537,9 +566,38 @@ function darkmode_check(){
 }
 
 //
+function pwa_check(){
+    eel.pwa_check()(
+        function(retu){
+            if(retu=="False"){
+                var pp=document.getElementById("index");
+                pp.remove();
+                if ('serviceWorker' in navigator) {
+                    // Unregister all service workers
+                    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                      for (let registration of registrations) {
+                        registration.unregister();
+                      }
+                    });
+                }
+            }else{
+                document.getElementById("a_pwa").checked=true;
+                include("index.js","js");
+            }
+        }
+    )
+}
+
+//
 function get_selected(todo){
     //
     var el = document.querySelectorAll('input[name=fileschecked]:checked');
+    if (el.length === 0) {
+        // The list is empty
+        alert("No selected files.");
+    }
+    //alert(el);
+    //if (path==""){alert('se;ect');}
     //const selected_list = [];
     for(var i = 0; i < el.length; i++) {
         //selected_list.push(el[i].value);

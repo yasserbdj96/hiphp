@@ -13,39 +13,48 @@ rem --+---------------------------------------------------------+--
 rem   .                                                         .   
 
 rem START{
-cls
-Setlocal EnableDelayedExpansion
+rem cls
+setlocal EnableDelayedExpansion
 
-rem make symbels true:
+rem Make symbols true:
 for /F "tokens=2 delims=:" %%C in ('chcp') do set /A "$CP=%%C"
 chcp 437 > nul
 
-set mypath="%~dp0"
+set "mypath=%~dp0"
 
-rem config.ini:
-FOR /F "tokens=*" %%A IN ('type !mypath!"config.ini"') DO set %%A
+rem Read config.ini and set variables:
+FOR /F "tokens=*" %%A IN ('type "%mypath%config.ini"') DO set %%A
 
+set "key="
+set "url="
+set "y="
 
-set key=
-set url=
+:parse_args
+if "%~1" == "" goto done_args
 
-rem Parse the command-line arguments
-for %%i in (%*) do (
-  if "%%i"=="--key" (
-    set "key=%%~j"
-  )
-  if "%%i"=="--KEY" (
-    set "key=%%~j"
-  )
-  if "%%i"=="--url" (
-    set "url=%%~j"
-  )
-  if "%%i"=="--URL" (
-    set "url=%%~j"
-  )
+if /I "%~1" == "--key" (
+  set "key=--key=%~2"
+  shift
 )
+if /I "%~1" == "--url" (
+  set "url=--url=%~2"
+  shift
+)
+if /I "%~1" == "--y" (
+  set "y=--y"
+  shift
+)
+if /I "%~1" == "--proxies" (
+  set "proxies=--proxies=%~2"
+  shift
+)
+shift
+goto parse_args
+
+:done_args
 
 cd ..
-!python_default_path! main.py --key="%key%" --url="%url%"
+
+!python_default_path! main.py %url% %key% %y% %proxies%
 
 rem }END.

@@ -43,6 +43,8 @@ parser.add_argument('--VERSION', '--version', '--v', dest='VERSION', default=os.
 
 parser.add_argument('--VIEWLOGO', '--viewlogo', dest='VIEWLOGO', default=os.getenv('VIEWLOGO', False), action='store_true', help='Display the logo of the hiphp project.')
 
+parser.add_argument('--Y', '--y', dest='Y', action='store_true', default=bool(os.getenv('Y', False)), help='')
+parser.add_argument('--PROXIES', '--proxies', dest='PROXIES', type=str, default=os.getenv('PROXIES', ''), help='')
 
 # Parse the command-line arguments
 args = parser.parse_args()
@@ -66,6 +68,9 @@ GETH = args.GETH
 VERSION = args.VERSION
 
 VIEWLOGO = args.VIEWLOGO
+
+SCAN=args.Y
+PROXIES=args.PROXIES
 
 #help
 if HELP:
@@ -100,7 +105,9 @@ if DST:
         if TOKEN!='':
             arguments.append('--TOKEN')
             arguments.append(TOKEN)
-
+        '''if PROXIES!='':
+            arguments.append('--PROXIES')
+            arguments.append(PROXIES)'''
         subprocess_args = [command] + arguments
         os.system(" ".join(subprocess_args))
         #os.system(f"{python_path} main.py --IPYNB --TOKEN='{TOKEN}'")
@@ -119,6 +126,9 @@ elif TK:
     if URL!='':
         arguments.append('--url')
         arguments.append(URL)
+    '''if PROXIES!='':
+        arguments.append('--PROXIES')
+        arguments.append(PROXIES)'''
     subprocess_args = [command] + arguments
     os.system(" ".join(subprocess_args))
 
@@ -131,13 +141,11 @@ else:
         pass
     else:
         # connect:
-        p1=hiphp(key=KEY,url=URL)#Default: retu=False.
-        p2=hiphp(key=KEY,url=URL,retu=True)
-
+        p1=hiphp(key=KEY,url=URL,retu=True,scan=SCAN,proxies=PROXIES)
         # Command line interface:
-        if emsg_1 not in p2.cli():
-            p1.cli()
-        else:
+        if emsg_1 in p1.cli():
             # Get the hole Code:
             p1.get_hole()# Copy this code into the file whose path you entered earlier. ex: https://localhost/index.php
+        else:
+            pass
 #}END.

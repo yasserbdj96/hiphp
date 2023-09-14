@@ -123,15 +123,11 @@ termux_uninstall(){
     rm "${PREFIX}/bin/hiphp";
 }
 
-
-
-
 # Default values
 install=false
 uninstall=false
 update=false
 termux=false
-
 
 # Parse the command-line arguments
 for arg in "$@"; do

@@ -77,48 +77,58 @@ def ls(key,url):
 @eel.expose
 def cat(key,url,path):
     p1=hiphp(key,url,retu=True)
+    path = path.replace('\\', '\\\\')
+    #print(path)
     return p1.run(php_cat(path))
 
 #save:
 @eel.expose
 def save(key,url,path,content):
     p1=hiphp(key,url,retu=True)
+    path = path.replace('\\', '\\\\')
     return p1.run(php_save(path,content))
 
 #delete:
 @eel.expose
 def delte(key,url,path):
     p1=hiphp(key,url,retu=True)
+    path = path.replace('\\', '\\\\')
     return p1.run(php_delte(path))
 
 #info:
 @eel.expose
 def info(key,url,path):
     p1=hiphp(key,url,retu=True)
+    path = path.replace('\\', '\\\\')
     return p1.run(php_file_info(path))
 
 #rename:
 @eel.expose
 def ren(key,url,path,newname):
     p1=hiphp(key,url,retu=True)
+    path = path.replace('\\', '\\\\')
     return p1.run(php_ren(path,newname))
 
 #add:
 @eel.expose
 def add_new(key,url,path):
     p1=hiphp(key,url,retu=True)
+    path = path.replace('\\', '\\\\')
+    print(path)
     return p1.run(php_add(path))
 
 #permissions:
 @eel.expose
 def new_permi(key,url,path,permi):
     p1=hiphp(key,url,retu=True)
+    path = path.replace('\\', '\\\\')
     return p1.run(php_permi(path,permi))
 
 #down_from_path:
 @eel.expose
 def download_file(key,url,path):
     p1=hiphp(key,url,retu=True)
+    path = path.replace('\\', '\\\\')
     return p1.run(down_from_path(path))
 
 #darkmode:
@@ -137,6 +147,22 @@ def darkmode():
         f.truncate()  
     return how
 
+#pwa:
+@eel.expose
+def pwa_check():
+    thispath=os.path.dirname(os.path.abspath(__file__))
+    with open(f'{thispath}/src/config.json', 'r+') as f:
+        data = json.load(f)
+        if data['PWA']=="True":
+            data['PWA']="False"
+        else:
+            data['PWA']="True"
+        how=data['PWA']
+        f.seek(0)        # <--- should reset file position to the beginning.
+        json.dump(data, f, indent=4)
+        f.truncate()  
+    return how
+
 #iswork:
 @eel.expose
 def iswork():
@@ -149,7 +175,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--DOCKER', '--docker', dest='DOCKER', action='store_true', default=bool(os.getenv('DOCKER', False)), help='Enable Docker usage for the operation.')
 parser.add_argument('--IPYNB', '--ipynb', dest='IPYNB', action='store_true', default=bool(os.getenv('IPYNB', False)), help='Enable Jupyter Notebook for the operation.')
 parser.add_argument('--TOKEN', '--token', dest='TOKEN', type=str, default=os.getenv('TOKEN', ''), help='Specify the Ngrok token.')
-
+#parser.add_argument('--PROXIES', '--proxies', dest='PROXIES', type=str, default=os.getenv('PROXIES', ''), help='')
 # Parse the command-line arguments
 args = parser.parse_args()
 
@@ -157,7 +183,7 @@ args = parser.parse_args()
 DOCKER=args.DOCKER
 IPYNB=args.IPYNB
 TOKEN=args.TOKEN
-
+#PROXIES=args.PROXIES
 
 if IPYNB:
     host_ip="127.0.0.1"
@@ -178,7 +204,8 @@ print(f"hiphp-dst run on : {run_type}@{host_ip}:{host_port}")
 if run_type=="docker":
     import socket
     ip_address = socket.gethostbyname(socket.gethostname())
-    print(f"Listening on {ip_address}:{host_port}")
+    print(f"Listening on : {ip_address}:{host_port}")
+    print("Forwarding : 127.0.0.1:8080")
 
 #
 #eel.start("index.html",host=host_ip,port=host_port,size=(1050,500))

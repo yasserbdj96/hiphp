@@ -31,6 +31,15 @@ ifeq ($(detected_OS),Linux)#Darwin for Mac OS X
     pipforos = $(PIP) install -r ./hiphp-linux/requirements-linux.txt
 endif
 
+# The rest of your Makefile remains unchanged
+
+clean:
+	rm -rf hiphp/__pycache__
+	rm -rf $(VENV)
+
+mrproper: clean
+	rm -rf *.log
+
 #
 ifeq ($(filter-out $(MAKECMDGOALS),run),)
     ARGUMENTS := $(filter-out $@,$(MAKECMDGOALS))
@@ -46,6 +55,11 @@ endif
 KEY := $(shell echo $(ARGUMENTS) | sed -n 's/.*\(--key\)[= ]\+\([^ ]\+\).*/\2/p')
 ifeq ($(strip $(KEY)),)
     KEY := $(shell echo $(ARGUMENTS) | sed -n 's/.*\(--KEY\)[= ]\+\([^ ]\+\).*/\2/p')
+endif
+
+PROXIES := $(shell echo $(ARGUMENTS) | sed -n 's/.*\(--proxies\)[= ]\+\([^ ]\+\).*/\2/p')
+ifeq ($(strip $(PROXIES)),)
+    PROXIES := $(shell echo $(ARGUMENTS) | sed -n 's/.*\(--PROXIES\)[= ]\+\([^ ]\+\).*/\2/p')
 endif
 
 ifeq ($(filter --TK,$(ARGUMENTS)),--TK)
@@ -67,8 +81,18 @@ else ifeq ($(filter --DST,$(ARGUMENTS)),--DST)
 else
 	ifeq ($(strip $(URL)$(KEY)),)
 		$(error URL and KEY are both empty)
+	else ifeq ($(filter --Y,$(ARGUMENTS)),--Y)
+#		ifeq ($(strip $(PROXIES)),)
+		RUN = $(PYTHON) main.py --KEY=$(KEY) --URL=$(URL) --Y
+#		else
+#			RUN = $(PYTHON) main.py --KEY=$(KEY) --URL=$(URL) --Y PROXIES=$(PROXIES)
+#		endif
 	else
+#		ifeq ($(strip $(PROXIES)),)
 		RUN = $(PYTHON) main.py --KEY=$(KEY) --URL=$(URL)
+#		else
+#			RUN = $(PYTHON) main.py --KEY=$(KEY) --URL=$(URL) PROXIES="$(PROXIES)"
+#		endif
 	endif
 endif
 
@@ -80,7 +104,7 @@ $(VENV)/bin/activate: requirements.txt
 	$(PIP) install -r ./requirements.txt
 	$(pipforos)
 
-clean:
-	rm -rf hiphp/__pycache__
-	rm -rf $(VENV)
+#clean:
+#	rm -rf hiphp/__pycache__
+#	rm -rf $(VENV)
 #}END.

@@ -104,6 +104,7 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 <h2>How do you use this version of the project?</h2>
 [✓] Command Line Interface (CLI).<br>
 [✓] Graphical User Interface (GUI).<br>
+[✓] Web Application.<br>
 [✓] Python Package.<br>
 [✓] Script.<br>
 [✓] Docker Container.
@@ -170,6 +171,9 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 # Run as CLI:
 ❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -i -t hiphp:latest
 
+# Run as CLI with PROXIES:
+❯ docker run -e KEY="<KEY>" -e URL="<URL>" -e PROXIES="<FILE_PATH/{'http/https':'IP:port'}>" -i -t hiphp:latest
+
 # Run as GUI:
 ❯ docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t hiphp:latest
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
@@ -194,6 +198,9 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 # Run as CLI:
 ❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -i -t docker.io/yasserbdj96/hiphp:latest
 
+# Run as CLI with PROXIES:
+❯ docker run -e KEY="<KEY>" -e URL="<URL>" -e PROXIES="<FILE_PATH/{'http/https':'IP:port'}>" -i -t docker.io/yasserbdj96/hiphp:latest
+
 # Run as GUI:
 ❯ docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t docker.io/yasserbdj96/hiphp:latest
 # Open your web browser and navigate to http://127.0.0.1:8080 to see the default landing page.
@@ -217,6 +224,9 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # Run as CLI:
 ❯ docker run -e KEY="<KEY*>" -e URL="<URL*>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+
+# Run as CLI with PROXIES:
+❯ docker run -e KEY="<KEY>" -e URL="<URL>" -e PROXIES="<FILE_PATH/{'http/https':'IP:port'}>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 
 # Run as GUI:
 ❯ docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t ghcr.io/yasserbdj96/hiphp:latest
@@ -377,14 +387,14 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 
 # For linux:
 ❯ cd hiphp-linux
-❯ bash hiphp-cli.sh --KEY="<KEY*>" --URL="<URL*>"
+❯ bash hiphp-cli.sh --KEY="<KEY*>" --URL="<URL*>" --PROXIES="<FILE_PATH/{'http/https':'IP:port'}>" --Y
 
 # For Windows:
 # Do not forget to modify the "config.ini" file or use the following command:
 # > python -c "import sys; open('config.ini','w+').write('python_default_path='+sys.executable)"
 # OR Run 'hiphp-win\config-configure.py'.
 ❯ cd hiphp-win
-❯ hiphp-cli.bat --KEY="<KEY*>" --URL="<URL*>"
+❯ hiphp-cli.bat --KEY="<KEY*>" --URL="<URL*>" --PROXIES="<FILE_PATH/{'http/https':'IP:port'}>" --Y
 
 ```
 

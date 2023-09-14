@@ -34,6 +34,9 @@ from os.path import exists
 #from biglibrary import *
 import base64
 from hiphp.hiphplogo import logo
+import argparse
+import ast  # For safely parsing the dictionary from the command line
+
 #
 import os
 # if OS is Windows:
@@ -50,7 +53,7 @@ else:
 #start hiphp class:
 class hiphp:
     #__init__:
-    def __init__(self,key,url,retu=False,proxies=""):
+    def __init__(self,key,url,retu=False,proxies="",scan=False):
         #
         self.key=tomd5(str(key))# Encrypt the 'key' with 'md5'.
 
@@ -87,14 +90,83 @@ class hiphp:
 
         #
         self.sep=os.sep
-
+        self.check=True
         self.proxies=proxies
+        self.proxies2=None
+
+        self.scan=scan
 
     def crawl(self,url):
-        links = get_all_website_links(url)
+        #links = get_all_website_links(url)
+        links, cms, version = get_all_website_links(url)
     
+
+        self.color2.c(f"CMS: {cms}", self.c_green)
+        self.color2.c(f"Version: {version}", self.c_green)
+
         for link in links:
             hiphp.check_hiphp_in(self,link)
+
+    def read_proxies(self,proxy_arg):
+        try:
+            # Attempt to parse the argument as a dictionary
+            proxies = ast.literal_eval(proxy_arg)
+            if isinstance(proxies, dict):
+                return proxies
+        except (ValueError, SyntaxError):
+            pass
+
+        # If it's not a valid dictionary, assume it's a file path
+        try:
+            proxies=hiphp.find_best_proxy(proxy_arg, self.url)
+            
+            return proxies
+            #with open(proxy_arg, 'r') as file:
+                #proxy_list_file = [line.strip() for line in file if line.strip()]
+        except FileNotFoundError:
+            return None
+
+
+    def find_best_proxy(file_path, url, headers={}, data=None):
+        import requests
+
+        def read_proxy_list(file_path):
+            with open(file_path, 'r') as file:
+                return [line.strip() for line in file.readlines()]
+
+        def test_proxies(proxy_list, url, headers, data):
+            response_times = []
+            for proxy in proxy_list:
+                proxies = {'http': proxy, 'https': proxy}
+                try:
+                    response = requests.post(url, headers=headers, proxies=proxies, data=data, timeout=5)
+                    response_times.append((proxy, response.elapsed.total_seconds()))
+                except Exception as e:
+                    print(f"Failed to test proxy {proxy}: {e}")
+
+            response_times.sort(key=lambda x: x[1])  # Sort by response time
+            return response_times
+
+        proxy_list = read_proxy_list(file_path)
+        if not proxy_list:
+            print("No proxies found in the file.")
+            return None
+
+        response_times = test_proxies(proxy_list, url, headers, data)
+        if response_times:
+            best_proxy, best_response_time = response_times[0]
+            print(f"Best proxy: {best_proxy} (Response time: {best_response_time} seconds)")
+
+            # Now, you can use the best proxy for your actual request
+            proxies = {'http': best_proxy, 'https': best_proxy}
+            return proxies
+            #response = requests.post(url, headers=headers, proxies=proxies, data=data)
+
+            # Handle the response as needed
+            #print(f"Response from target URL: {response.text}")
+
+
+
 
     def check_hiphp_in(self,url):
         pp11 = hiphp.do(self, self.key, url, self.headers, True, f"echo '{self.key}';")
@@ -127,11 +199,17 @@ class hiphp:
         except:
             reee=None
         
+        #print(reee)
+        #exit()
         #if (emsg_1 in reee) or (reee==None) or (emsg_3 in reee):
         if reee is None or (emsg_1 in reee or emsg_3 in reee):
             #print(reee)
             #exit()
-            scanner=input(f"Scan '{self.url}' to find HIPHP_HOLE_CODE (Y/N):")
+            
+            if self.scan==False:
+                scanner=input(f"Scan '{self.url}' to find HIPHP_HOLE_CODE (Y/N):")
+            else:
+                scanner="y"
             
             if scanner.lower()=="y":
                 hiphp.crawl(self,self.url)
@@ -573,11 +651,14 @@ if (rename($file_path, $new_file_path)) {echo "File edited successfully!";} else
         try:
             if regex.match(url):
                 # .onion
-                proxies = proxies_onion
+                self.proxies2 = proxies_onion
             else:
-                proxies = self.proxies if self.proxies != "" else None
-                
-            response = requests.post(url, headers=header, proxies=proxies, data=self._build_payload(command))
+                if self.proxies!="" and self.check==True:
+                    self.proxies2=hiphp.read_proxies(self,self.proxies)
+                    self.check=False
+
+            response = requests.post(url, headers=header, proxies=self.proxies2, data=self._build_payload(command))
+
             
             if response.status_code == 200:
                 response_text = response.text

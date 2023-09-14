@@ -52,7 +52,7 @@ if (download_pwa.length > 0){
     let deferredPrompt;
     const addBtn = document.querySelector('.download_pwa');
     //addBtn.style.display = 'none';
-    addBtn.checked=true;
+    //addBtn.checked=true;
 
 
     

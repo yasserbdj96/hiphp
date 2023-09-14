@@ -42,8 +42,11 @@ function include(){
 		/**/
 		if(arguments[1]=="js"){
 			var fileref=document.createElement('script');
+			var js=arguments[0].split(".js")[0];
+			js=js.split("/");
 			fileref.setAttribute("type","text/javascript");
 			fileref.setAttribute("src",arguments[0]);
+			fileref.setAttribute("id",js[js.length-1]);
 			document.getElementsByTagName("head")[0].appendChild(fileref);
 		}else if(arguments[1]=="css"){
 			var fileref=document.createElement("link");

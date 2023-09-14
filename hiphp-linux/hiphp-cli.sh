@@ -18,21 +18,23 @@ cd ..
 # Default values
 key=""
 url=""
+proxies=""
+y=""
 
 # Parse the command-line arguments
 for arg in "$@"; do
   case "$arg" in
-    --key=*)
-      key="${arg#*=}"
+    --key=*|--KEY=*)
+      key=--key="${arg#*=}"
       ;;
-    --KEY=*)
-      key="${arg#*=}"
+    --url=*|--URL=*)
+      url=--url="${arg#*=}"
       ;;
-    --url=*)
-      url="${arg#*=}"
+    --proxies=*|--PROXIES=*)
+      proxies=--proxies="${arg#*=}"
       ;;
-    --URL=*)
-      url="${arg#*=}"
+    --y|--Y)
+      y=--y
       ;;
     *)
       echo "Invalid argument: $arg" >&2
@@ -41,5 +43,5 @@ for arg in "$@"; do
   esac
 done
 
-python3 main.py --key="$key" --url="$url"
+python3 main.py $key $url $y $proxies
 #}END.

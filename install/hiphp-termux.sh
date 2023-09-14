@@ -18,6 +18,8 @@ cd ${PREFIX}/share/hiphp/
 # Default values
 key=""
 url=""
+proxies=""
+y=""
 help=false
 version=false
 geth=false
@@ -39,6 +41,12 @@ for arg in "$@"; do
       ;;
     --geth|--GETH)
       geth=true
+      ;;
+    --proxies=*|--PROXIES=*)
+      proxies=--proxies="${arg#*=}"
+      ;;
+    --y|--Y)
+      y=--y
       ;;
     *)
       echo "Invalid argument: $arg" >&2
@@ -67,16 +75,18 @@ elif [ "$geth" = true ]; then
 #help:
 else
     if [ -n "$url" ] && [ -n "$key" ]; then
-        python3 "${PREFIX}/share/hiphp/hiphp.py" --KEY=$key --URL=$url;
+        python3 "${PREFIX}/share/hiphp/hiphp.py" --KEY=$key --URL=$url $y $proxies;
     else
         python3 "${PREFIX}/share/hiphp/hiphp.py" --VIEWLOGO;
         echo "Usage: hiphp [OPTION]";
         echo "";
         echo "Examples:";
-        echo "hiphp --help                             # Display CLI help."
-        echo "hiphp --geth --key='[KEY]' --url='[URL]' # Retrieve encrypted HIPHP_HOLE_CODE."
-        echo "hiphp --key='[KEY]' --url='[URL]'        # Connect to the victim's website in CLI mode."
-        echo "hiphp --version                          # Check the version."
+        echo "hiphp --help                                            # Display CLI help."
+        echo "hiphp --geth --key='[KEY]' --url='[URL]'                # Retrieve encrypted HIPHP_HOLE_CODE."
+        echo "hiphp --key='[KEY]' --url='[URL]'                       # Connect to the victim's website in CLI mode."
+        echo "hiphp --key='[KEY]' --url='[URL]' --proxies='[PROXIES]' # Run as CLI with PROXIES"
+        echo "hiphp --key='[KEY]' --url='[URL]' --y                   # Skip the confirmation."
+        echo "hiphp --version                                         # Check the version."
 
     fi
 fi

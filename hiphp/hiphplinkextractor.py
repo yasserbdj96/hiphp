@@ -15,12 +15,21 @@
 
 #START{
 import requests
-from urllib.parse import urlparse, urljoin
 from bs4 import BeautifulSoup
+import re
+from urllib.parse import urlparse, urljoin
 
-# initialize the set of links (unique links)
+
 internal_urls = set()
 external_urls = set()
+
+# Define patterns for detecting CMS and versions
+cms_patterns = [
+    (r'WordPress', r'Version (\d+\.\d+\.\d+)'),
+    (r'Joomla', r'Joomla! (\d+\.\d+)'),
+    (r'vBulletin', r'vBulletin (\d+\.\d+\.\d+)'),
+    # Add more CMS patterns as needed
+]
 
 
 def is_valid(url):
@@ -31,40 +40,42 @@ def is_valid(url):
     return bool(parsed.netloc) and bool(parsed.scheme)
 
 
+def get_cms_and_version(html):
+    """
+    Detect CMS and its version in the HTML source code.
+    """
+    for cms, version_pattern in cms_patterns:
+        match = re.search(cms, html, re.IGNORECASE)
+        if match:
+            version_match = re.search(version_pattern, html, re.IGNORECASE)
+            version = version_match.group(1) if version_match else "Unknown"
+            return cms, version
+    return "Unknown", "Unknown"
+
 def get_all_website_links(url):
     """
-    Returns all URLs that is found on `url` in which it belongs to the same website
+    Returns all URLs that belong to the same website and detects CMS and version.
     """
-    # all URLs of `url`
+    # All URLs of `url`
     urls = set()
     soup = BeautifulSoup(requests.get(url).content, "html.parser")
+    html = str(soup)  # Convert soup object back to HTML string for CMS detection
+    cms, version = get_cms_and_version(html)
+    
     for a_tag in soup.findAll("a"):
         href = a_tag.attrs.get("href")
         if href == "" or href is None:
-            # href empty tag
             continue
-        # join the URL if it's relative (not absolute link)
         href = urljoin(url, href)
         parsed_href = urlparse(href)
-        # remove URL GET parameters, URL fragments, etc.
         href = parsed_href.scheme + "://" + parsed_href.netloc + parsed_href.path
         if not is_valid(href):
-            # not a valid URL
-            continue
-        if href in internal_urls:
-            # already in the set
             continue
         if urlparse(url).netloc not in href:
-            # external link
-            if href not in external_urls:
-                #print(f"[!] External link: {href}")
-                external_urls.add(href)
             continue
-        #print(f"[*] Internal link: {href}")
         if "mailto://" not in href:
             urls.add(href)
             internal_urls.add(href)
-    return urls
-
+    return urls, cms, version
 #print(crawl("https://asciinema.org/"))
 #}END.

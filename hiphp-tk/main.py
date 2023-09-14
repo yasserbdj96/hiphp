@@ -64,6 +64,8 @@ parser = argparse.ArgumentParser()
 # Add arguments with names
 parser.add_argument('--KEY','--key', type=str, default=os.getenv('KEY', ''), help='Specify the key for the operation.')
 parser.add_argument('--URL','--url', type=str, default=os.getenv('URL', ''), help='Specify the url for the operation.')
+#parser.add_argument('--PROXIES', '--proxies', dest='PROXIES', type=str, default=os.getenv('PROXIES', ''), help='')
+
 
 # Parse the command-line arguments
 args = parser.parse_args()
@@ -71,6 +73,7 @@ args = parser.parse_args()
 # Access the variables by their names
 password = args.KEY
 url = args.URL
+#PROXIES=args.PROXIES
 
 # get file encoding type
 def get_encoding_type(file):

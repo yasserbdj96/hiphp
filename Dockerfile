@@ -15,6 +15,8 @@
 # docker build -t hiphp:latest .
 # Run as CLI:
 # docker run -e KEY="<KEY>" -e URL="<URL>" -i -t hiphp:latest
+# Run as CLI with PROXIES:
+# docker run -e KEY="<KEY>" -e URL="<URL>" -e PROXIES="<FILE_PATH/{'http/https':'IP:port'}>" -i -t hiphp:latest
 # Run as GUI:
 # docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t hiphp:latest
 
@@ -23,6 +25,8 @@
 # docker build -t docker.io/yasserbdj96/hiphp:latest .
 # Run as CLI:
 # docker run -e KEY="<KEY>" -e URL="<URL>" -i -t docker.io/yasserbdj96/hiphp:latest
+# Run as CLI with PROXIES:
+# docker run -e KEY="<KEY>" -e URL="<URL>" -e PROXIES="<FILE_PATH/{'http/https':'IP:port'}>" -i -t docker.io/yasserbdj96/hiphp:latest
 # Run as GUI:
 # docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t docker.io/yasserbdj96/hiphp:latest
 
@@ -31,6 +35,8 @@
 # docker build -t ghcr.io/yasserbdj96/hiphp:latest .
 # Run as CLI:
 # docker run -e KEY="<KEY>" -e URL="<URL>" -i -t ghcr.io/yasserbdj96/hiphp:latest
+# Run as CLI with PROXIES:
+# docker run -e KEY="<KEY>" -e URL="<URL>" -e PROXIES="<FILE_PATH/{'http/https':'IP:port'}>" -i -t ghcr.io/yasserbdj96/hiphp:latest
 # Run as GUI:
 # docker run --rm -p 127.0.0.1:8080:8080 -e DOCKER=True -e DST=True -i -t ghcr.io/yasserbdj96/hiphp:latest
 

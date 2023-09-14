@@ -108,8 +108,8 @@ def php_add(path):
 $file_path=getcwd().pathinfo("$path")['dirname'];
 if(!file_exists("$file_path")){mkdir("$file_path",0777,true);}
 $path=getcwd().$path;
-chmod($path,0777);
 $myfile=fopen($path,"w") or die("Unable to create file!");
+chmod($path,0777);
 fclose($myfile);
 echo "create successfully!";"""
     return x

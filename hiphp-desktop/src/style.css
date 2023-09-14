@@ -126,7 +126,7 @@ spam{
 
 spam:hover {
   background-color:var(--c5);
-  height: 18px;
+  height: 17px;
 }
 
 
@@ -156,7 +156,7 @@ spam:hover {
 }
 
 .settings{
-  margin-top: -14px;
+  /*margin-top: -10px;*/
   display:none;
   /*width: 100%;*/
   height: calc(100vh - 50px);
@@ -405,7 +405,7 @@ input[type=submit] {
     position: absolute;
     width: 3.5rem;
     /* Determine appearance of line counter */
-    margin-top: 41px;
+    margin-top: 40px;
     /*display:none;*/
     height: calc(100vh - 38px);
     /*color: var(--c17);*/
@@ -450,8 +450,8 @@ input[type=submit] {
   left: 50%;
   margin-top: -50px;
   margin-left: -50px;
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
 }
 
 /**/

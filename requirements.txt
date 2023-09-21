@@ -11,3 +11,4 @@ tk
 chardet
 #for hiphp-desktop
 eel
+gevent>=23.9.0 # not directly required, pinned by Snyk to avoid a vulnerability

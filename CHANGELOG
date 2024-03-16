@@ -1,4 +1,4 @@
-## 0.3.6 [14-09-2023][Beta]:
+## 0.3.6 [16-03-2024][Latest Release]:
  - Make connections work better with proxies for hiphp-cli only.
  - Fix command line errors on Windows.
  - Solve errors on Windows related to TK.
@@ -10,7 +10,7 @@
  - Improve messages to help users understand better.
  - Bug fixes & performance improvements.
 
-## 0.3.5 [12-06-2023][Latest Release]:
+## 0.3.5 [12-06-2023]:
  - Fix the '--edit' option for editing Script Files.
  - Fix the '--zip' option.
  - Added color to certain messages.

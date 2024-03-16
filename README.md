@@ -64,6 +64,9 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 - [How to download](#How-to-download)
 - [Used Requirements](#Used-Requirements)
 - [Supported Distributions](#Supported-Distributions)
+- [HIPHP_HOLE_CODE](#HIPHP_HOLE_CODE)
+    - [Get your own HIPHP_HOLE_CODE](#Get-your-own-HIPHP_HOLE_CODE)
+    - [HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Exampl)
 - [Hiphp with Docker](#Hiphp-with-Docker)
     - [Docker pull build and run](#Docker-pull-build-and-run)
     - [Docker Hub pull build and run](#Docker-Hub-pull-build-and-run)
@@ -82,7 +85,6 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 - [Use hiphp As Script](#Use-As-Script)
     - [Script Usage](#Script-Usage)
     - [Script Examples](#Script-Examples)
-- [HIPHP_HOLE_CODE Example](#HIPHP_HOLE_CODE-Example)
 - [Screenshots](#Screenshots)
 - [Changelog History](#Changelog-History)
 - [Limitations](#Limitations)
@@ -159,6 +161,24 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 | MacOS          | Last version  | 3.7 --> 3.10   | ✗            |  ✓         | ✓            | ✓        |
 | Android-termux | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✗            | ✗        |
 | Nethunter      | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓            | ✗        |
+
+
+<br>
+<h2>HIPHP_HOLE_CODE</h2>
+<h4>Get your own HIPHP_HOLE_CODE:</h4>
+
+```bash
+# HIPHP_HOLE_CODE:
+❯ python main.py --geth --key=123
+```
+
+
+<br>
+<h4>HIPHP_HOLE_CODE Example:</h4>
+<div align="center">
+    <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/HIPHP_HOLE_CODE.png" alt="hiphp by yasserbdj96">
+</div>
+
 
 <br>
 <h2>Hiphp with Docker:</h2>
@@ -627,12 +647,6 @@ p1.download("example.zip","<OUT_PATH>")# download a specific file to specific di
 p1.cli()
 #}END.
 ```
-
-<br>
-<h2>HIPHP_HOLE_CODE Example:</h2>
-<div align="center">
-    <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/screenshot/HIPHP_HOLE_CODE.png" alt="hiphp by yasserbdj96">
-</div>
 
 <br>
 <h2>Screenshots:</h2>

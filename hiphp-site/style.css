@@ -76,7 +76,7 @@ input[type=submit]:hover {
 /**/
 .tocenter {
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 50%;
   margin-top: -50px;
   margin-left: -50%;

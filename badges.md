@@ -1,18 +1,18 @@
-| Language   |   Files |   Total Lines |   Code Lines |   Comment Lines |   Empty Lines |
-|:-----------|--------:|--------------:|-------------:|----------------:|--------------:|
-| CSS        |       9 |          3706 |         3492 |              78 |           136 |
-| PYTHON     |      21 |          2889 |         1947 |             602 |           340 |
-| MARKDOWN   |      15 |          1961 |         1571 |              15 |           375 |
-| SVG        |      79 |          1339 |         1339 |               0 |             0 |
-| JAVASCRIPT |       8 |          1088 |          753 |             237 |            98 |
-| SHELL      |      15 |           697 |          330 |             288 |            79 |
-| YAML       |      20 |           622 |          465 |             124 |            33 |
-| HTML       |       4 |           314 |          282 |               6 |            26 |
-| BATCH      |       4 |           157 |           60 |              67 |            30 |
-| PHP        |       4 |           146 |           83 |              59 |             4 |
-| TEXT       |      10 |            33 |           32 |               0 |             1 |
-| INI        |       1 |            22 |            1 |              18 |             3 |
-| JSON       |       1 |             4 |            4 |               0 |             0 |
-| TOTAL      |     191 |         12978 |        10359 |            1494 |          1125 |
+| Language   | Files                                              | Total Lines                                              | Code Lines                                              | Comment Lines                                              | Empty Lines                                              |
+|:-----------|:---------------------------------------------------|:---------------------------------------------------------|:--------------------------------------------------------|:-----------------------------------------------------------|:---------------------------------------------------------|
+| CSS        | <img src="badges/CSS/CSS_files.svg">               | <img src="badges/CSS/CSS_total_lines.svg">               | <img src="badges/CSS/CSS_code_lines.svg">               | <img src="badges/CSS/CSS_comment_lines.svg">               | <img src="badges/CSS/CSS_empty_lines.svg">               |
+| PYTHON     | <img src="badges/PYTHON/PYTHON_files.svg">         | <img src="badges/PYTHON/PYTHON_total_lines.svg">         | <img src="badges/PYTHON/PYTHON_code_lines.svg">         | <img src="badges/PYTHON/PYTHON_comment_lines.svg">         | <img src="badges/PYTHON/PYTHON_empty_lines.svg">         |
+| MARKDOWN   | <img src="badges/MARKDOWN/MARKDOWN_files.svg">     | <img src="badges/MARKDOWN/MARKDOWN_total_lines.svg">     | <img src="badges/MARKDOWN/MARKDOWN_code_lines.svg">     | <img src="badges/MARKDOWN/MARKDOWN_comment_lines.svg">     | <img src="badges/MARKDOWN/MARKDOWN_empty_lines.svg">     |
+| SVG        | <img src="badges/SVG/SVG_files.svg">               | <img src="badges/SVG/SVG_total_lines.svg">               | <img src="badges/SVG/SVG_code_lines.svg">               | <img src="badges/SVG/SVG_comment_lines.svg">               | <img src="badges/SVG/SVG_empty_lines.svg">               |
+| JAVASCRIPT | <img src="badges/JAVASCRIPT/JAVASCRIPT_files.svg"> | <img src="badges/JAVASCRIPT/JAVASCRIPT_total_lines.svg"> | <img src="badges/JAVASCRIPT/JAVASCRIPT_code_lines.svg"> | <img src="badges/JAVASCRIPT/JAVASCRIPT_comment_lines.svg"> | <img src="badges/JAVASCRIPT/JAVASCRIPT_empty_lines.svg"> |
+| SHELL      | <img src="badges/SHELL/SHELL_files.svg">           | <img src="badges/SHELL/SHELL_total_lines.svg">           | <img src="badges/SHELL/SHELL_code_lines.svg">           | <img src="badges/SHELL/SHELL_comment_lines.svg">           | <img src="badges/SHELL/SHELL_empty_lines.svg">           |
+| YAML       | <img src="badges/YAML/YAML_files.svg">             | <img src="badges/YAML/YAML_total_lines.svg">             | <img src="badges/YAML/YAML_code_lines.svg">             | <img src="badges/YAML/YAML_comment_lines.svg">             | <img src="badges/YAML/YAML_empty_lines.svg">             |
+| HTML       | <img src="badges/HTML/HTML_files.svg">             | <img src="badges/HTML/HTML_total_lines.svg">             | <img src="badges/HTML/HTML_code_lines.svg">             | <img src="badges/HTML/HTML_comment_lines.svg">             | <img src="badges/HTML/HTML_empty_lines.svg">             |
+| BATCH      | <img src="badges/BATCH/BATCH_files.svg">           | <img src="badges/BATCH/BATCH_total_lines.svg">           | <img src="badges/BATCH/BATCH_code_lines.svg">           | <img src="badges/BATCH/BATCH_comment_lines.svg">           | <img src="badges/BATCH/BATCH_empty_lines.svg">           |
+| PHP        | <img src="badges/PHP/PHP_files.svg">               | <img src="badges/PHP/PHP_total_lines.svg">               | <img src="badges/PHP/PHP_code_lines.svg">               | <img src="badges/PHP/PHP_comment_lines.svg">               | <img src="badges/PHP/PHP_empty_lines.svg">               |
+| TEXT       | <img src="badges/TEXT/TEXT_files.svg">             | <img src="badges/TEXT/TEXT_total_lines.svg">             | <img src="badges/TEXT/TEXT_code_lines.svg">             | <img src="badges/TEXT/TEXT_comment_lines.svg">             | <img src="badges/TEXT/TEXT_empty_lines.svg">             |
+| INI        | <img src="badges/INI/INI_files.svg">               | <img src="badges/INI/INI_total_lines.svg">               | <img src="badges/INI/INI_code_lines.svg">               | <img src="badges/INI/INI_comment_lines.svg">               | <img src="badges/INI/INI_empty_lines.svg">               |
+| JSON       | <img src="badges/JSON/JSON_files.svg">             | <img src="badges/JSON/JSON_total_lines.svg">             | <img src="badges/JSON/JSON_code_lines.svg">             | <img src="badges/JSON/JSON_comment_lines.svg">             | <img src="badges/JSON/JSON_empty_lines.svg">             |
+| TOTAL      | <img src="badges/total_files.svg">                 | <img src="badges/total_lines.svg">                       | <img src="badges/total_code_lines.svg">                 | <img src="badges/total_comment_lines.svg">                 | <img src="badges/total_empty_lines.svg">                 |
 
-Last Update: 2024-07-07 15:41:02
+Last Update: 2024-07-07 16:13:35

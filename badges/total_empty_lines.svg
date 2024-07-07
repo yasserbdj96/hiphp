@@ -1,0 +1,19 @@
+<svg width="218.0" height="20" viewBox="0 0 2180.0 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Empty Lines (GitHub Repos): 1.1k">
+      <title>Empty Lines (GitHub Repos): 1.1k</title>
+      <linearGradient id="a" x2="0" y2="100%">
+        <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
+        <stop offset="1" stop-opacity=".1"/>
+      </linearGradient>
+      <mask id="m"><rect width="2180.0" height="200" rx="30" fill="#FFF"/></mask>
+      <g mask="url(#m)">
+        <rect width="1816.0" height="200" fill="#555"/>
+        <rect width="364.0" height="200" fill="#08C" x="1816.0"/>
+        <rect width="2180.0" height="200" fill="url(#a)"/>
+      </g>
+      <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
+        <text x="60" y="148" textLength="1716.0" fill="#000" opacity="0.25">Empty Lines (GitHub Repos)</text>
+        <text x="50" y="138" textLength="1716.0">Empty Lines (GitHub Repos)</text>
+        <text x="1851.0" y="148" textLength="264.0" fill="#000" opacity="0.25">1.1k</text>
+        <text x="1861.0" y="138" textLength="264.0">1.1k</text>
+      </g>
+    </svg>

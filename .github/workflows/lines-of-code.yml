@@ -15,7 +15,7 @@ jobs:
     - name: Install requirements
       run: pip install -r wrdir/requirements.txt
     - name: Get this repository badges 
-      run: python wrdir/main.py --URL="https://github.com/${{ github.repository }}"
+      run: cd wrdir && python main.py --URL="https://github.com/${{ github.repository }}"
     - name: remove
       run: rm -rf wrdir
     #- name: Copy badges back to current repo     

@@ -17,7 +17,7 @@ jobs:
     - name: Get this repository badges 
       run: cd wrdir && python main.py --URL="https://github.com/${{ github.repository }}"
     - name: Copy badges back to current repo     
-      run: mkdir -p badges && cp -R ./wrdir/badges/* ./badges/
+      run: mkdir -p badges && cp -R ./wrdir/badges/* ./badges/ && cp -R ./wrdir/badges.md ./badges.md
     - name: remove
       run: rm -rf wrdir
     - name: Commit and push changes

@@ -18,8 +18,8 @@ jobs:
       run: cd wrdir && python main.py --URL="https://github.com/${{ github.repository }}"
     - name: remove
       run: rm -rf wrdir
-    #- name: Copy badges back to current repo     
-    #  run: cp -R ./badges/. .
+    - name: Copy badges back to current repo     
+      run: cp -R ./wrdir/badges/* ./badges
     - name: Commit and push changes
       run: |
         git config --global user.email "github-actions@github.com"

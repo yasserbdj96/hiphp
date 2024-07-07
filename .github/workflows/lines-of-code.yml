@@ -16,10 +16,10 @@ jobs:
       run: pip install -r wrdir/requirements.txt
     - name: Get this repository badges 
       run: cd wrdir && python main.py --URL="https://github.com/${{ github.repository }}"
-    - name: remove
-      run: rm -rf wrdir
     - name: Copy badges back to current repo     
       run: cp -R ./wrdir/badges/* ./badges
+    - name: remove
+      run: rm -rf wrdir
     - name: Commit and push changes
       run: |
         git config --global user.email "github-actions@github.com"

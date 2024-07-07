@@ -12,10 +12,10 @@ jobs:
       run: mkdir -p wrdir
     - name: get Lines Of Code repo
       run: git clone https://github.com/yasserbdj96/linesofcode.git wrdir
-    - name: Get this repository badges 
-      run: python wrdir/main.py --URL="https://github.com/${{ github.repository }}"
     - name: Install requirements
       run: pip install -r wrdir/requirements.txt
+    - name: Get this repository badges 
+      run: python wrdir/main.py --URL="https://github.com/${{ github.repository }}"
     - name: remove
       run: rm -rf wrdir
     #- name: Copy badges back to current repo     

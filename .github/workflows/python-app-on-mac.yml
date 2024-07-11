@@ -1,5 +1,42 @@
 name: Run on MacOS
 on: [push]
+#defaults:
+#  run:
+#    working-directory: wrdir
+jobs:
+  #deploy:
+  #  runs-on: windows-latest
+  #  steps:
+  #    - name: install readline
+  #      run: python -m pip install readline
+  build:
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [macos-latest] #,windows-latest
+        python-version: [3.7, 3.8, 3.9]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{matrix.python-version}}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{matrix.python-version}}
+          # Optional - x64 or x86 architecture, defaults to x64
+          architecture: 'x64'
+      # You can test your matrix by printing the current Python version
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      - name: Create Workspace Folder
+        run: mkdir -p wrdir && mkdir -p wrdir/hiphp
+      - name: Copy Files & folders to Workspace Folder
+        run: cp -r hiphp/* wrdir/hiphp && cp main.py wrdir/main.py
+      - name: pip Upgrade
+        run: python -m pip install --upgrade pip
+      - name: Install requirements
+        run: pip install -r requirements.txt
+      - name: Test hiphp
+        run: python wrdir/main.py name: Run on MacOS
+on: [push]
 jobs:
   build:
     runs-on: ${{ matrix.os }}

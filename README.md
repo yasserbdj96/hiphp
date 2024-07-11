@@ -23,6 +23,7 @@
 [![CodeQL](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/yasserbdj96/hiphp/badge)](https://www.codefactor.io/repository/github/yasserbdj96/hiphp)
 [![Size](https://img.shields.io/github/repo-size/yasserbdj96/hiphp)](https://img.shields.io/github/repo-size/yasserbdj96/hiphp)
+[![total_code_lines](https://raw.githubusercontent.com/yasserbdj96/hiphp/main/badges/total_code_lines.svg)](https://raw.githubusercontent.com/yasserbdj96/hiphp/main/badges/total_code_lines.svg)
 [![languages](https://img.shields.io/github/languages/count/yasserbdj96/hiphp)](https://img.shields.io/github/languages/count/yasserbdj96/hiphp)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/hiphp.svg)](https://pypi.org/project/hiphp) 
 [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=yasserbdj96.hiphp&format=true)](https://github.com/yasserbdj96/hiphp)

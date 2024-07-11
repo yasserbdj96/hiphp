@@ -18,7 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install gettext
-        run: brew install gettext
+        run: |
+          brew install gettext
+          echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> $HOME/.bash_profile
+          echo 'export LDFLAGS="-L/usr/local/opt/gettext/lib"' >> $HOME/.bash_profile
+          echo 'export CPPFLAGS="-I/usr/local/opt/gettext/include"' >> $HOME/.bash_profile
+          source $HOME/.bash_profile
       - name: Set up Python ${{matrix.python-version}}
         uses: actions/setup-python@v4
         with:

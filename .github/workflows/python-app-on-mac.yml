@@ -14,7 +14,14 @@ jobs:
       - name: Install gettext (macOS)
         if: matrix.os == 'macos-latest'
         run: brew install gettext
-      
+
+      - name: Update environment variables for gettext (macOS)
+        if: matrix.os == 'macos-latest'
+        run: |
+          echo "/usr/local/opt/gettext/lib" >> $GITHUB_ENV
+          echo "/usr/local/opt/gettext/bin" >> $GITHUB_ENV
+        shell: bash
+
       - name: Set up Python ${{matrix.python-version}}
         uses: actions/setup-python@v4
         with:

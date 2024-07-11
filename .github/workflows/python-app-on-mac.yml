@@ -1,19 +1,11 @@
 name: Run on MacOS
 on: [push]
-#defaults:
-#  run:
-#    working-directory: wrdir
 jobs:
-  #deploy:
-  #  runs-on: windows-latest
-  #  steps:
-  #    - name: install readline
-  #      run: python -m pip install readline
   build:
-    runs-on: ${{matrix.os}}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest] #,windows-latest
+        os: [macos-latest]
         python-version: [3.7, 3.8, 3.9]
     steps:
       - uses: actions/checkout@v4
@@ -24,13 +16,10 @@ jobs:
           echo 'export LDFLAGS="-L/usr/local/opt/gettext/lib"' >> $HOME/.bash_profile
           echo 'export CPPFLAGS="-I/usr/local/opt/gettext/include"' >> $HOME/.bash_profile
           source $HOME/.bash_profile
-      - name: Set up Python ${{matrix.python-version}}
-        uses: actions/setup-python@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
         with:
-          python-version: ${{matrix.python-version}}
-          # Optional - x64 or x86 architecture, defaults to x64
-          architecture: 'x64'
-      # You can test your matrix by printing the current Python version
+          python-version: ${{ matrix.python-version }}
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - name: Create Workspace Folder

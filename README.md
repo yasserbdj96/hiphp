@@ -1,9 +1,22 @@
-<div align="center">
-  <br><img align="center" height="200" src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96">
-  <h1>Hiphp</h1>
-  <strong>Free & Open source project for create a BackDoor to control PHP-based sites.</strong>
+
+
+<!-- Alert Banner for New Build -->
+<div style="background-color: #f44336; color: white; padding: 15px; text-align: center; font-weight: bold; font-size: 18px; border-radius: 6px; margin-bottom: 20px;">
+  New build with all web languages available now: 
+  <a href="https://github.com/yasserbdj96/WebHole" style="color: #fff; text-decoration: underline;">WebHole on GitHub</a>
 </div>
-<br>
+
+<!-- Project Header -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/install/hiphp.png" alt="hiphp by yasserbdj96" height="200">
+  <h1 style="margin: 10px 0;">Hiphp</h1>
+  <p style="font-size: 18px; font-weight: 500; max-width: 600px;">
+    Free & Open Source project for creating a backdoor to control PHP-based websites.
+  </p>
+</div>
+
+
+
 
 [![Run on Ubuntu](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
 [![Run on Windows](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)

@@ -1,10 +1,8 @@
 
 
-<!-- Alert Banner for New Build -->
-<div style="background-color: #f44336; color: white; padding: 15px; text-align: center; font-weight: bold; font-size: 18px; border-radius: 6px; margin-bottom: 20px;">
-  New build with all web languages available now: 
-  <a href="https://github.com/yasserbdj96/WebHole" style="color: #fff; text-decoration: underline;">WebHole on GitHub</a>
-</div>
+> ## 🚨 New Build Available!
+> **WebHole** now supports **all major web languages**.  
+> Check it out on GitHub: [WebHole on GitHub](https://github.com/yasserbdj96/WebHole)
 
 <!-- Project Header -->
 <div align="center">

@@ -11,3 +11,5 @@ tk
 chardet
 #for hiphp-desktop
 eel
+gevent>=25.4.1 # not directly required, pinned by Snyk to avoid a vulnerability
+setuptools>=78.1.1 # not directly required, pinned by Snyk to avoid a vulnerability

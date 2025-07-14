@@ -11,3 +11,5 @@ tk
 chardet
 #for hiphp-desktop
 eel
+urllib3>=2.5.0 # not directly required, pinned by Snyk to avoid a vulnerability
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability

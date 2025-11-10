@@ -13,9 +13,6 @@
   </p>
 </div>
 
-
-
-
 [![Run on Ubuntu](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-linux.yml)
 [![Run on Windows](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-win.yml)
 [![Run on MacOS](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml/badge.svg)](https://github.com/yasserbdj96/hiphp/actions/workflows/python-app-on-mac.yml)
@@ -63,7 +60,6 @@ Developed by a team of webmasters who wanted to provide greater control over the
 
 Security is a top priority for HIPHP, with regular updates ensuring compatibility across different versions of PHP codebase used by popular content management systems (CMS). Its password protection feature adds an additional layer of defense against unauthorized access. HIPHP is a secure solution for those looking to take back full control over their website hosting environment.</p>
 
-
 <br>
 <h2>Table of Contents:</h2>
 
@@ -103,7 +99,6 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 - [Development By](#Development-By)
 - [License](#License)
 - [Support](#Support)
-
 
 <br>
 <h2>Demo:</h2>
@@ -173,7 +168,6 @@ Security is a top priority for HIPHP, with regular updates ensuring compatibilit
 | MacOS          | Last version  | 3.7 --> 3.10   | ✗            |  ✓         | ✓            | ✓        |
 | Android-termux | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✗            | ✗        |
 | Nethunter      | Last version  | 3.7 --> 3.9    | ✓            |  ✓         | ✓            | ✗        |
-
 
 <br>
 <h2>HIPHP_HOLE_CODE</h2>
@@ -734,17 +728,14 @@ p1.cli()
 <h2>Development By:</h2>
 
 Developer / Author: [yasserbdj96](https://github.com/yasserbdj96)
-
 <br>
 <h2>License:</h2>
 <p>The content of this repository is bound by the following <a href="https://raw.githubusercontent.com/yasserbdj96/hiphp/main/LICENSE">LICENSE</a>.</p>
-
 <br>
 <h2>Support:</h2>
 <p>If you enjoy this project and would like to see it continue to improve, or if you would like me to create more interesting projects, please consider <a href="https://github.com/sponsors/yasserbdj96">sponsoring me</a>.</p>
 <br>
 <br>
-
 <p align="center">
   <samp>
     <a href="https://yasserbdj96.github.io/">website</a> .

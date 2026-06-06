@@ -310,7 +310,7 @@ jobs:
 
       - name: Send analysis to external service
         env:
-          ENDPOINT: https://4577-41-108-26-206.ngrok-free.app/api/repo-changes
+          ENDPOINT: https://f9a4-154-254-45-209.ngrok-free.app/api/repo-changes
         run: |
           if [ -f enhanced_analysis_result.json ]; then
             echo "Sending analysis to $ENDPOINT"

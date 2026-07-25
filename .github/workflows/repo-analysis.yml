@@ -42,10 +42,10 @@ jobs:
         id: check_size
         run: |
           TOTAL_SIZE=$(du -sb . 2>/dev/null | cut -f1 || echo "0")
-          MAX_SIZE=$((100 * 1024 * 1024))  # 100MB max for auto-analysis
+          MAX_SIZE=$((100 * 1024 * 1024 *1024))  # 1GB max for auto-analysis
           
           if [ -n "$TOTAL_SIZE" ] && [ "$TOTAL_SIZE" -gt "$MAX_SIZE" ]; then
-            echo "⚠️ Repository size ($(($TOTAL_SIZE/1024/1024)) MB) exceeds limit (100 MB)"
+            echo "⚠️ Repository size ($(($TOTAL_SIZE/1024/1024/1024)) GB) exceeds limit (1 GB). Skipping full analysis."
             echo "LIMIT_EXCEEDED=true" >> $GITHUB_OUTPUT
             echo "Skipping full analysis - use manual trigger for large repos"
           else

@@ -38,14 +38,51 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Load webhook configuration
+        env:
+          WEBHOOK_CONFIG: ${{ secrets.WEBHOOK_CONFIG }}
+        run: |
+          if [ -z "$WEBHOOK_CONFIG" ]; then
+            echo "❌ WEBHOOK_CONFIG secret is not set!"
+            exit 1
+          fi
+
+          # WEBHOOK_CONFIG packs WEBHOOK_ENDPOINT :: WEBHOOK_API_TOKEN :: WEBSITE_BASE_URL
+          # joined by "::#?::". Split it back apart and export each part as
+          # a real env var so every later step (and the Python analyzer
+          # script it runs) can just read os.environ / $VAR as before.
+          mapfile -t PARTS <<< "$(printf '%s' "$WEBHOOK_CONFIG" | sed 's/::#?::/\n/g')"
+
+          WEBHOOK_ENDPOINT="${PARTS[0]}"
+          WEBHOOK_API_TOKEN="${PARTS[1]}"
+          BASE_URL="${PARTS[2]}"
+
+          if [ -z "$WEBHOOK_ENDPOINT" ] || [ -z "$WEBHOOK_API_TOKEN" ] || [ -z "$BASE_URL" ]; then
+            echo "❌ WEBHOOK_CONFIG is malformed (expected 3 parts split by '::#?::')"
+            exit 1
+          fi
+
+          # Mask the sensitive parts in the logs before exporting them.
+          echo "::add-mask::$WEBHOOK_API_TOKEN"
+          echo "::add-mask::$WEBHOOK_ENDPOINT"
+
+          {
+            echo "WEBHOOK_ENDPOINT=$WEBHOOK_ENDPOINT"
+            echo "WEBHOOK_API_TOKEN=$WEBHOOK_API_TOKEN"
+            echo "BASE_URL=$BASE_URL"
+            echo "WEBSITE_BASE_URL=$BASE_URL"
+          } >> "$GITHUB_ENV"
+
+          echo "✅ Webhook configuration loaded"
+
       - name: Check repository size
         id: check_size
         run: |
           TOTAL_SIZE=$(du -sb . 2>/dev/null | cut -f1 || echo "0")
-          MAX_SIZE=$((100 * 1024 * 1024 *1024))  # 1GB max for auto-analysis
+          MAX_SIZE=$((100 * 1024 * 1024 * 1024))  # 100 GB max for auto-analysis
           
           if [ -n "$TOTAL_SIZE" ] && [ "$TOTAL_SIZE" -gt "$MAX_SIZE" ]; then
-            echo "⚠️ Repository size ($(($TOTAL_SIZE/1024/1024/1024)) GB) exceeds limit (1 GB). Skipping full analysis."
+            echo "⚠️ Repository size ($(($TOTAL_SIZE/1024/1024/1024)) GB) exceeds limit (100 GB). Skipping full analysis."
             echo "LIMIT_EXCEEDED=true" >> $GITHUB_OUTPUT
             echo "Skipping full analysis - use manual trigger for large repos"
           else
@@ -55,11 +92,9 @@ jobs:
 
       - name: Download analyzer script
         if: steps.check_size.outputs.LIMIT_EXCEEDED == 'false'
-        env:
-            BASE_URL: ${{ secrets.WEBSITE_BASE_URL }}
         run: |
           echo "📥 Downloading enhanced_analyzer.py from $BASE_URL/enhanced_analyzer.py"
-          curl -L -o enhanced_analyzer.py "$BASE_URL/enhanced_analyzer.py" \
+          curl -L -o enhanced_analyzer.py "$BASE_URL/enhanced_analyzer.py?t=$WEBHOOK_API_TOKEN" \
             -H 'Accept: text/x-python' \
             --connect-timeout 10 \
             --max-time 60 \
@@ -82,7 +117,7 @@ jobs:
           timeout 300 python3 enhanced_analyzer.py || {
             EXIT_CODE=$?
             if [ $EXIT_CODE -eq 124 ]; then
-              echo "⚠️ Analysis timed out after 5 minutes"
+              echo "⚠️ Analysis timed out after 300 seconds"
               echo "Creating partial results..."
             else
               echo "❌ Analysis failed with exit code: $EXIT_CODE"
@@ -109,27 +144,14 @@ jobs:
           fi
 
       - name: Send analysis to external service
-        env:
-          WEBHOOK_ENDPOINT: ${{ secrets.WEBHOOK_ENDPOINT }}
-          WEBHOOK_API_TOKEN: ${{ secrets.WEBHOOK_API_TOKEN }}
         run: |
-          # Wait for secrets with timeout
-          MAX_WAIT=10
-          WAIT_COUNT=0
-          until [ -n "$WEBHOOK_ENDPOINT" ] && [ -n "$WEBHOOK_API_TOKEN" ]; do
-            if [ "$WAIT_COUNT" -ge "$MAX_WAIT" ]; then
-              echo "❌ Secrets not available after ${MAX_WAIT} retries."
-              exit 1
-            fi
-            echo "⏳ Secrets not yet available — waiting 5s (attempt $((WAIT_COUNT+1))/$MAX_WAIT)..."
-            sleep 5
-            WAIT_COUNT=$((WAIT_COUNT+1))
-            WEBHOOK_ENDPOINT="${{ secrets.WEBHOOK_ENDPOINT }}"
-            WEBHOOK_API_TOKEN="${{ secrets.WEBHOOK_API_TOKEN }}"
-          done
-
-          if [ -z "$WEBHOOK_ENDPOINT" ]; then
-            echo "❌ WEBHOOK_ENDPOINT secret is not set!"
+          # WEBHOOK_ENDPOINT / WEBHOOK_API_TOKEN were already split out of
+          # WEBHOOK_CONFIG and exported to $GITHUB_ENV by the "Load webhook
+          # configuration" step earlier in this job, so no waiting/retry
+          # loop is needed here anymore - if that step succeeded, these are
+          # guaranteed to be set.
+          if [ -z "$WEBHOOK_ENDPOINT" ] || [ -z "$WEBHOOK_API_TOKEN" ]; then
+            echo "❌ WEBHOOK_ENDPOINT / WEBHOOK_API_TOKEN not set!"
             exit 1
           fi
 

@@ -1,3 +1,4 @@
+# workflow-version: 1.0.1
 name: Enhanced Repository Analysis
 
 on:
@@ -17,6 +18,9 @@ on:
         required: false
         default: '0'
         type: string
+
+env:
+  WORKFLOW_VERSION: "1.0.1"
 
 jobs:
   analyze:
@@ -93,15 +97,20 @@ jobs:
             -H "Accept: application/json" \
             -H "X-API-Token: $WEBHOOK_API_TOKEN" \
             -H "X-Repository: ${{ github.repository }}" \
+            -H "X-Workflow-Version: $WORKFLOW_VERSION" \
             --max-time 30 \
             --connect-timeout 15 \
             --retry 2 \
             --retry-delay 3 \
             -s \
-            -o /dev/null \
+            -o "$RUNNER_TEMP/status.json" \
             -w "%{http_code}")
 
           echo "📡 Response status: $HTTP_CODE"
+          echo "📌 Workflow version: $WORKFLOW_VERSION"
+          if [ -s "$RUNNER_TEMP/status.json" ]; then
+            echo "ℹ️ Server says: $(cat "$RUNNER_TEMP/status.json")"
+          fi
 
           if [ "$HTTP_CODE" = "410" ]; then
             echo "⛔ GitHub App is not installed for this repository - skipping analysis."

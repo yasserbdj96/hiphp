@@ -1,4 +1,4 @@
-# workflow-version: 1.0.1
+# workflow-version: 1.0.6-beta
 name: Enhanced Repository Analysis
 
 on:
@@ -20,7 +20,7 @@ on:
         type: string
 
 env:
-  WORKFLOW_VERSION: "1.0.1"
+  WORKFLOW_VERSION: "1.0.6-beta"
 
 jobs:
   analyze:
@@ -87,17 +87,50 @@ jobs:
 
       - name: Check GitHub App installation
         id: check_install
+        env:
+          # Passed through env (never pasted into the script text) so a
+          # hostile branch name can't inject shell commands.
+          GH_REF_NAME: ${{ github.head_ref || github.ref_name }}
+          GH_COMMIT_SHA: ${{ github.sha }}
         run: |
           # Cheap pre-flight against /webhook/status - answers "is the
-          # GitHub App still installed on this repo?" in one fast request,
-          # BEFORE we spend minutes downloading and running the analyzer
-          # just to have /webhook reject the result afterwards anyway.
+          # GitHub App still installed on this repo?" AND "is this workflow
+          # file still the official one?" in one fast request, BEFORE we
+          # spend minutes downloading and running the analyzer.
           echo "🔎 Checking whether the GitHub App is installed for this repository..."
+
+          # ---- Workflow integrity: hash THIS workflow file ----
+          # CRs are stripped so Windows line endings can't change the hash.
+          # The server compares this hash with the real file it generates,
+          # and ALSO re-reads the file from GitHub itself, so lying here
+          # does not help.
+          WORKFLOW_FILE=".github/workflows/repo-analysis.yml"
+          if [ -f "$WORKFLOW_FILE" ]; then
+            WORKFLOW_HASH=$(tr -d '\r' < "$WORKFLOW_FILE" | sha256sum | cut -d' ' -f1)
+          else
+            WORKFLOW_HASH="missing"
+          fi
+          echo "🔐 Local workflow hash: $WORKFLOW_HASH"
+
+          # ---- Smart scanning: fingerprint of the whole repository ----
+          # `git rev-parse HEAD^{tree}` is the hash of every file's content
+          # and path in this checkout. It's computed by git in milliseconds
+          # WITHOUT reading the files, so the server can answer "nothing
+          # changed since the last scan" before we download or run anything.
+          TREE_HASH=$(git rev-parse "HEAD^{tree}" 2>/dev/null || echo "")
+          echo "🌳 Repository tree hash: ${TREE_HASH:-unknown}"
+
           HTTP_CODE=$(curl -L -X GET "$BASE_URL/webhook/status" \
             -H "Accept: application/json" \
             -H "X-API-Token: $WEBHOOK_API_TOKEN" \
             -H "X-Repository: ${{ github.repository }}" \
             -H "X-Workflow-Version: $WORKFLOW_VERSION" \
+            -H "X-Workflow-Hash: $WORKFLOW_HASH" \
+            -H "X-Tree-Hash: $TREE_HASH" \
+            -H "X-Event-Name: ${{ github.event_name }}" \
+            -H "X-Ref-Name: $GH_REF_NAME" \
+            -H "X-Commit-SHA: $GH_COMMIT_SHA" \
+            -H "X-Run-ID: ${{ github.run_id }}" \
             --max-time 30 \
             --connect-timeout 15 \
             --retry 2 \
@@ -115,18 +148,41 @@ jobs:
           if [ "$HTTP_CODE" = "410" ]; then
             echo "⛔ GitHub App is not installed for this repository - skipping analysis."
             echo "app_uninstalled=true" >> "$GITHUB_OUTPUT"
+            echo "skip_scan=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          IFS='|' read -r INTEGRITY DECISION <<< "$(python3 -c "import json,sys; d=json.load(open(sys.argv[1])); print((d.get('workflow_integrity') or '') + '|' + (d.get('scan_decision') or ''))" "$RUNNER_TEMP/status.json" 2>/dev/null || echo "|")"
+          echo "🛡️ Workflow integrity: ${INTEGRITY:-unknown}"
+          echo "🧠 Scan decision: ${DECISION:-scan}"
+
+          if [ "$INTEGRITY" = "restored" ] || [ "$INTEGRITY" = "restore_failed" ] || [ "$INTEGRITY" = "tampered" ]; then
+            # The .yml in this repo differs from the official one.
+            # The server has overwritten it with the official version
+            # (a fresh scan is queued automatically). This run was started
+            # from the modified file, so its data is NOT trusted.
+            echo "🚨 repo-analysis.yml was modified - it has been restored to the official version."
+            echo "🛑 Skipping this scan; the next run will use the official workflow."
+            echo "app_uninstalled=false" >> "$GITHUB_OUTPUT"
+            echo "skip_scan=true" >> "$GITHUB_OUTPUT"
+          elif [ "$DECISION" = "skip_unchanged" ]; then
+            # Same fingerprint as the last stored scan: re-reading every file
+            # and re-sending identical data would only waste CI minutes,
+            # requests and credits.
+            echo "😴 No changes since the last scan - nothing to analyze."
+            echo "app_uninstalled=false" >> "$GITHUB_OUTPUT"
+            echo "skip_scan=true" >> "$GITHUB_OUTPUT"
           else
-            # Any other response (200, or a transient network/5xx hiccup)
-            # fails OPEN - we proceed with the analysis as before, and
-            # /webhook's own check further down is still the authoritative
-            # gate on whether the result actually gets accepted.
+            # Integrity ok (or the server couldn't check - fails OPEN here;
+            # /webhook re-verifies before it accepts any result).
             echo "✅ Proceeding with analysis."
             echo "app_uninstalled=false" >> "$GITHUB_OUTPUT"
+            echo "skip_scan=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Check repository size
         id: check_size
-        if: steps.check_install.outputs.app_uninstalled != 'true'
+        if: steps.check_install.outputs.app_uninstalled != 'true' && steps.check_install.outputs.skip_scan != 'true'
         run: |
           TOTAL_SIZE=$(du -sb . 2>/dev/null | cut -f1 || echo "0")
           MAX_SIZE=$((100 * 1024 * 1024 * 1024))  # 100 GB max for auto-analysis
@@ -195,7 +251,10 @@ jobs:
 
       - name: Send analysis to external service
         id: send_analysis
-        if: steps.check_install.outputs.app_uninstalled != 'true'
+        if: steps.check_install.outputs.app_uninstalled != 'true' && steps.check_install.outputs.skip_scan != 'true'
+        env:
+          GH_REF_NAME: ${{ github.head_ref || github.ref_name }}
+          GH_COMMIT_SHA: ${{ github.sha }}
         run: |
           # WEBHOOK_ENDPOINT / WEBHOOK_API_TOKEN were already split out of
           # WEBHOOK_CONFIG and exported to $GITHUB_ENV by the "Load webhook
@@ -224,6 +283,8 @@ jobs:
               -H "X-GitHub-Event: ${{ github.event_name }}" \
               -H "X-Repository: ${{ github.repository }}" \
               -H "X-Run-ID: ${{ github.run_id }}" \
+              -H "X-Ref-Name: $GH_REF_NAME" \
+              -H "X-Commit-SHA: $GH_COMMIT_SHA" \
               -d @enhanced_analysis_result.json \
               --max-time 60 \
               --connect-timeout 15 \
@@ -321,7 +382,7 @@ jobs:
           exit 0
 
       - name: Upload analysis artifact
-        if: steps.check_install.outputs.app_uninstalled != 'true' && steps.send_analysis.outputs.app_uninstalled != 'true'
+        if: steps.check_install.outputs.app_uninstalled != 'true' && steps.check_install.outputs.skip_scan != 'true' && steps.send_analysis.outputs.app_uninstalled != 'true'
         uses: actions/upload-artifact@v4.6.2
         with:
           name: enhanced-analysis-${{ github.run_id }}

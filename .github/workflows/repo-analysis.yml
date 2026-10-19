@@ -1,5 +1,5 @@
-# workflow-version: 1.0.6-beta
-name: Enhanced Repository Analysis
+# workflow-version: 026.10.15-beta
+name: Cytecs Enhanced Repository Analysis
 
 on:
   push:
@@ -20,7 +20,7 @@ on:
         type: string
 
 env:
-  WORKFLOW_VERSION: "1.0.6-beta"
+  WORKFLOW_VERSION: "026.10.15-beta"
 
 jobs:
   analyze:
@@ -215,7 +215,7 @@ jobs:
           LINE_COUNT=$(wc -l < enhanced_analyzer.py)
           echo "✅ Downloaded enhanced_analyzer.py ($LINE_COUNT lines)"
 
-      - name: Run enhanced repository analysis
+      - name: Run Cytecs enhanced repository analysis
         if: steps.check_install.outputs.app_uninstalled != 'true' && steps.check_size.outputs.LIMIT_EXCEEDED == 'false'
         run: |
           echo "🚀 Starting analysis..."

@@ -1,4 +1,4 @@
-# workflow-version: 026.10.15-beta
+# workflow-version: 026.10.19-beta
 name: Cytecs Enhanced Repository Analysis
 
 on:
@@ -20,7 +20,7 @@ on:
         type: string
 
 env:
-  WORKFLOW_VERSION: "026.10.15-beta"
+  WORKFLOW_VERSION: "026.10.19-beta"
 
 jobs:
   analyze:

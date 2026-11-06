@@ -1,390 +1,153 @@
-# workflow-version: 026.10.19-beta
+# workflow-version: 026.11.02-Beta
 name: Cytecs Enhanced Repository Analysis
 
 on:
   push:
     branches: [ "**" ]
-  pull_request:
-    types: [opened, closed, synchronize, reopened]
   workflow_dispatch:
-    inputs:
-      full_analysis:
-        description: 'Perform full analysis (ignore cache)'
-        required: false
-        default: 'false'
-        type: string
-      max_files:
-        description: 'Maximum files to analyze (0 = unlimited)'
-        required: false
-        default: '0'
-        type: string
 
 env:
-  WORKFLOW_VERSION: "026.10.19-beta"
+  WORKFLOW_VERSION: "026.11.02-Beta"
+
+permissions:
+  contents: read
 
 jobs:
   analyze:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
     permissions:
-      # `write` (not `read`) is required here: if the GitHub App has been
-      # uninstalled (or this repo removed from it), the "Send analysis to
-      # external service" step below gets told to remove this very
-      # workflow file (see the "Remove workflow" step) using this job's
-      # own auto-issued GITHUB_TOKEN - contents:write is what lets that
-      # delete-and-commit call succeed.
-      contents: write
-      actions: read
-    timeout-minutes: 30  # ⏱️ Hard limit for workflow
+      contents: read
+    outputs:
+      app_uninstalled: ${{ steps.check_install.outputs.app_uninstalled }}
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v5
         with:
-          # For large repos, limit fetch depth
-          fetch-depth: ${{ github.event_name == 'push' && 50 || 0 }}
+          persist-credentials: false
 
-      - name: Setup Python
-        uses: actions/setup-python@v5.6.0
+      - uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Load webhook configuration
         env:
           WEBHOOK_CONFIG: ${{ secrets.WEBHOOK_CONFIG }}
         run: |
           if [ -z "$WEBHOOK_CONFIG" ]; then
-            echo "❌ WEBHOOK_CONFIG secret is not set!"
+            echo "WEBHOOK_CONFIG secret is not set!"
             exit 1
           fi
-
-          # WEBHOOK_CONFIG packs WEBHOOK_ENDPOINT :: WEBHOOK_API_TOKEN :: WEBSITE_BASE_URL
-          # joined by "::#?::". Split it back apart and export each part as
-          # a real env var so every later step (and the Python analyzer
-          # script it runs) can just read os.environ / $VAR as before.
           mapfile -t PARTS <<< "$(printf '%s' "$WEBHOOK_CONFIG" | sed 's/::#?::/\n/g')"
-
           WEBHOOK_ENDPOINT="${PARTS[0]}"
           WEBHOOK_API_TOKEN="${PARTS[1]}"
-          BASE_URL="${PARTS[2]}"
-
-          if [ -z "$WEBHOOK_ENDPOINT" ] || [ -z "$WEBHOOK_API_TOKEN" ] || [ -z "$BASE_URL" ]; then
-            echo "❌ WEBHOOK_CONFIG is malformed (expected 3 parts split by '::#?::')"
+          BASE_URL="${PARTS[2]:-https://anthroponomical-helena-unsynchronised.ngrok-free.dev}"
+          if [ -z "$WEBHOOK_ENDPOINT" ] || [ -z "$WEBHOOK_API_TOKEN" ]; then
+            echo "WEBHOOK_CONFIG is malformed"
             exit 1
           fi
-
-          # Mask the sensitive parts in the logs before exporting them.
           echo "::add-mask::$WEBHOOK_API_TOKEN"
-          echo "::add-mask::$WEBHOOK_ENDPOINT"
-
           {
             echo "WEBHOOK_ENDPOINT=$WEBHOOK_ENDPOINT"
             echo "WEBHOOK_API_TOKEN=$WEBHOOK_API_TOKEN"
             echo "BASE_URL=$BASE_URL"
-            echo "WEBSITE_BASE_URL=$BASE_URL"
           } >> "$GITHUB_ENV"
 
-          echo "✅ Webhook configuration loaded"
-
-      - name: Check GitHub App installation
+      - name: Check GitHub App installation & Integrity
         id: check_install
         env:
-          # Passed through env (never pasted into the script text) so a
-          # hostile branch name can't inject shell commands.
           GH_REF_NAME: ${{ github.head_ref || github.ref_name }}
           GH_COMMIT_SHA: ${{ github.sha }}
+          GH_REPOSITORY: ${{ github.repository }}
+          GH_RUN_ID: ${{ github.run_id }}
         run: |
-          # Cheap pre-flight against /webhook/status - answers "is the
-          # GitHub App still installed on this repo?" AND "is this workflow
-          # file still the official one?" in one fast request, BEFORE we
-          # spend minutes downloading and running the analyzer.
-          echo "🔎 Checking whether the GitHub App is installed for this repository..."
-
-          # ---- Workflow integrity: hash THIS workflow file ----
-          # CRs are stripped so Windows line endings can't change the hash.
-          # The server compares this hash with the real file it generates,
-          # and ALSO re-reads the file from GitHub itself, so lying here
-          # does not help.
           WORKFLOW_FILE=".github/workflows/repo-analysis.yml"
           if [ -f "$WORKFLOW_FILE" ]; then
             WORKFLOW_HASH=$(tr -d '\r' < "$WORKFLOW_FILE" | sha256sum | cut -d' ' -f1)
           else
             WORKFLOW_HASH="missing"
           fi
-          echo "🔐 Local workflow hash: $WORKFLOW_HASH"
-
-          # ---- Smart scanning: fingerprint of the whole repository ----
-          # `git rev-parse HEAD^{tree}` is the hash of every file's content
-          # and path in this checkout. It's computed by git in milliseconds
-          # WITHOUT reading the files, so the server can answer "nothing
-          # changed since the last scan" before we download or run anything.
           TREE_HASH=$(git rev-parse "HEAD^{tree}" 2>/dev/null || echo "")
-          echo "🌳 Repository tree hash: ${TREE_HASH:-unknown}"
 
-          HTTP_CODE=$(curl -L -X GET "$BASE_URL/webhook/status" \
-            -H "Accept: application/json" \
+          HTTP=$(curl -s -o "$RUNNER_TEMP/status.json" -w "%{http_code}" \
             -H "X-API-Token: $WEBHOOK_API_TOKEN" \
-            -H "X-Repository: ${{ github.repository }}" \
+            -H "X-Repository: $GH_REPOSITORY" \
+            -H "X-Run-ID: $GH_RUN_ID" \
             -H "X-Workflow-Version: $WORKFLOW_VERSION" \
             -H "X-Workflow-Hash: $WORKFLOW_HASH" \
             -H "X-Tree-Hash: $TREE_HASH" \
-            -H "X-Event-Name: ${{ github.event_name }}" \
             -H "X-Ref-Name: $GH_REF_NAME" \
             -H "X-Commit-SHA: $GH_COMMIT_SHA" \
-            -H "X-Run-ID: ${{ github.run_id }}" \
-            --max-time 30 \
-            --connect-timeout 15 \
-            --retry 2 \
-            --retry-delay 3 \
-            -s \
-            -o "$RUNNER_TEMP/status.json" \
-            -w "%{http_code}")
+            --max-time 20 --retry 2 \
+            "$BASE_URL/webhook/status" || echo "000")
+          echo "status_code=$HTTP" >> "$GITHUB_OUTPUT"
 
-          echo "📡 Response status: $HTTP_CODE"
-          echo "📌 Workflow version: $WORKFLOW_VERSION"
-          if [ -s "$RUNNER_TEMP/status.json" ]; then
-            echo "ℹ️ Server says: $(cat "$RUNNER_TEMP/status.json")"
-          fi
-
-          if [ "$HTTP_CODE" = "410" ]; then
-            echo "⛔ GitHub App is not installed for this repository - skipping analysis."
+          if [ "$HTTP" = "410" ]; then
             echo "app_uninstalled=true" >> "$GITHUB_OUTPUT"
             echo "skip_scan=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          IFS='|' read -r INTEGRITY DECISION <<< "$(python3 -c "import json,sys; d=json.load(open(sys.argv[1])); print((d.get('workflow_integrity') or '') + '|' + (d.get('scan_decision') or ''))" "$RUNNER_TEMP/status.json" 2>/dev/null || echo "|")"
-          echo "🛡️ Workflow integrity: ${INTEGRITY:-unknown}"
-          echo "🧠 Scan decision: ${DECISION:-scan}"
-
-          if [ "$INTEGRITY" = "restored" ] || [ "$INTEGRITY" = "restore_failed" ] || [ "$INTEGRITY" = "tampered" ]; then
-            # The .yml in this repo differs from the official one.
-            # The server has overwritten it with the official version
-            # (a fresh scan is queued automatically). This run was started
-            # from the modified file, so its data is NOT trusted.
-            echo "🚨 repo-analysis.yml was modified - it has been restored to the official version."
-            echo "🛑 Skipping this scan; the next run will use the official workflow."
-            echo "app_uninstalled=false" >> "$GITHUB_OUTPUT"
-            echo "skip_scan=true" >> "$GITHUB_OUTPUT"
-          elif [ "$DECISION" = "skip_unchanged" ]; then
-            # Same fingerprint as the last stored scan: re-reading every file
-            # and re-sending identical data would only waste CI minutes,
-            # requests and credits.
-            echo "😴 No changes since the last scan - nothing to analyze."
-            echo "app_uninstalled=false" >> "$GITHUB_OUTPUT"
-            echo "skip_scan=true" >> "$GITHUB_OUTPUT"
           else
-            # Integrity ok (or the server couldn't check - fails OPEN here;
-            # /webhook re-verifies before it accepts any result).
-            echo "✅ Proceeding with analysis."
             echo "app_uninstalled=false" >> "$GITHUB_OUTPUT"
-            echo "skip_scan=false" >> "$GITHUB_OUTPUT"
+            INTEGRITY=$(python3 -c "import json,sys; d=json.load(open(sys.argv[1])); print(d.get('workflow_integrity',''))" "$RUNNER_TEMP/status.json" 2>/dev/null || echo "")
+            if [ "$INTEGRITY" = "restored" ] || [ "$INTEGRITY" = "tampered" ]; then
+              echo "skip_scan=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "skip_scan=false" >> "$GITHUB_OUTPUT"
+            fi
           fi
 
-      - name: Check repository size
-        id: check_size
+      - name: Download analyzer
         if: steps.check_install.outputs.app_uninstalled != 'true' && steps.check_install.outputs.skip_scan != 'true'
         run: |
-          TOTAL_SIZE=$(du -sb . 2>/dev/null | cut -f1 || echo "0")
-          MAX_SIZE=$((100 * 1024 * 1024 * 1024))  # 100 GB max for auto-analysis
-          
-          if [ -n "$TOTAL_SIZE" ] && [ "$TOTAL_SIZE" -gt "$MAX_SIZE" ]; then
-            echo "⚠️ Repository size ($(($TOTAL_SIZE/1024/1024/1024)) GB) exceeds limit (100 GB). Skipping full analysis."
-            echo "LIMIT_EXCEEDED=true" >> $GITHUB_OUTPUT
-            echo "Skipping full analysis - use manual trigger for large repos"
-          else
-            echo "LIMIT_EXCEEDED=false" >> $GITHUB_OUTPUT
-            echo "SIZE_MB=$(($TOTAL_SIZE/1024/1024))" >> $GITHUB_OUTPUT
-          fi
+          # token travels in a header (URLs end up in server/proxy logs); no -L so the header is never forwarded elsewhere
+          curl -f -o enhanced_analyzer.py -H "X-API-Token: $WEBHOOK_API_TOKEN" "$BASE_URL/enhanced_analyzer.py" \
+            --connect-timeout 15 --max-time 60 --retry 3
 
-      - name: Download analyzer script
-        if: steps.check_install.outputs.app_uninstalled != 'true' && steps.check_size.outputs.LIMIT_EXCEEDED == 'false'
-        run: |
-          echo "📥 Downloading enhanced_analyzer.py from $BASE_URL/enhanced_analyzer.py"
-          curl -L -o enhanced_analyzer.py "$BASE_URL/enhanced_analyzer.py?t=$WEBHOOK_API_TOKEN" \
-            -H 'Accept: text/x-python' \
-            --connect-timeout 10 \
-            --max-time 60 \
-            --retry 3 \
-            --retry-delay 2
+      - name: Run analyzer
+        if: steps.check_install.outputs.app_uninstalled != 'true' && steps.check_install.outputs.skip_scan != 'true'
+        run: env -u WEBHOOK_API_TOKEN timeout 240 python3 enhanced_analyzer.py
 
-          if [ ! -f enhanced_analyzer.py ]; then
-            echo '❌ Failed to download enhanced_analyzer.py'
-            exit 1
-          fi
-
-          LINE_COUNT=$(wc -l < enhanced_analyzer.py)
-          echo "✅ Downloaded enhanced_analyzer.py ($LINE_COUNT lines)"
-
-      - name: Run Cytecs enhanced repository analysis
-        if: steps.check_install.outputs.app_uninstalled != 'true' && steps.check_size.outputs.LIMIT_EXCEEDED == 'false'
-        run: |
-          echo "🚀 Starting analysis..."
-          # Run with timeout protection
-          timeout 300 python3 enhanced_analyzer.py || {
-            EXIT_CODE=$?
-            if [ $EXIT_CODE -eq 124 ]; then
-              echo "⚠️ Analysis timed out after 300 seconds"
-              echo "Creating partial results..."
-            else
-              echo "❌ Analysis failed with exit code: $EXIT_CODE"
-              exit $EXIT_CODE
-            fi
-          }
-
-          # Check if results were generated
-          if [ -f "enhanced_analysis_result.json" ]; then
-            echo "✅ Analysis completed successfully"
-            FILE_SIZE=$(stat -c%s enhanced_analysis_result.json 2>/dev/null || stat -f%z enhanced_analysis_result.json 2>/dev/null || echo "0")
-            echo "📊 Results file size: $(($FILE_SIZE/1024)) KB"
-          else
-            echo "❌ No analysis results generated"
-            # Create minimal result file
-            echo '{
-              "error": "Analysis timed out or failed",
-              "repository": "${{ github.repository }}",
-              "summary": {
-                "total_files": 0,
-                "code_lines": 0
-              }
-            }' > enhanced_analysis_result.json
-          fi
-
-      - name: Send analysis to external service
-        id: send_analysis
+      - name: Send result
         if: steps.check_install.outputs.app_uninstalled != 'true' && steps.check_install.outputs.skip_scan != 'true'
         env:
-          GH_REF_NAME: ${{ github.head_ref || github.ref_name }}
-          GH_COMMIT_SHA: ${{ github.sha }}
+          GH_REPOSITORY: ${{ github.repository }}
+          GH_RUN_ID: ${{ github.run_id }}
         run: |
-          # WEBHOOK_ENDPOINT / WEBHOOK_API_TOKEN were already split out of
-          # WEBHOOK_CONFIG and exported to $GITHUB_ENV by the "Load webhook
-          # configuration" step earlier in this job, so no waiting/retry
-          # loop is needed here anymore - if that step succeeded, these are
-          # guaranteed to be set.
-          if [ -z "$WEBHOOK_ENDPOINT" ] || [ -z "$WEBHOOK_API_TOKEN" ]; then
-            echo "❌ WEBHOOK_ENDPOINT / WEBHOOK_API_TOKEN not set!"
-            exit 1
-          fi
+          # 200 = saved, 202 = server queued it in Redis (DB busy) -> both are success.
+          # 5xx / 429 / timeouts / refused connections are retried with back-off (curl honours Retry-After).
+          HTTP=$(curl -s -o "$RUNNER_TEMP/post.json" -w "%{http_code}" -X POST "$WEBHOOK_ENDPOINT" \
+            -H "Content-Type: application/json" \
+            -H "X-API-Token: $WEBHOOK_API_TOKEN" \
+            -H "X-Repository: $GH_REPOSITORY" \
+            -H "X-Run-ID: $GH_RUN_ID" \
+            --max-time 90 --retry 5 --retry-connrefused \
+            --data-binary @enhanced_analysis_result.json || echo "000")
+          echo "POST -> $HTTP"
+          cat "$RUNNER_TEMP/post.json" 2>/dev/null || true
+          echo
+          case "$HTTP" in
+            200|202|410) exit 0 ;;
+            *) echo "::error::analysis result was not accepted (HTTP $HTTP)"; exit 1 ;;
+          esac
 
-          if [ ! -f "enhanced_analysis_result.json" ]; then
-            echo "❌ Analysis file not found"
-            exit 1
-          fi
-
-          # Sends the analysis payload to $1 and prints ONLY the HTTP
-          # status code (body is discarded) - used below to tell a normal
-          # failure apart from a 410, which means "the GitHub App is not
-          # installed here anymore, stop running this workflow".
-          send_analysis() {
-            curl -L -X POST "$1" \
-              -H "Content-Type: application/json" \
-              -H "Accept: application/json" \
-              -H "X-API-Token: $WEBHOOK_API_TOKEN" \
-              -H "X-GitHub-Event: ${{ github.event_name }}" \
-              -H "X-Repository: ${{ github.repository }}" \
-              -H "X-Run-ID: ${{ github.run_id }}" \
-              -H "X-Ref-Name: $GH_REF_NAME" \
-              -H "X-Commit-SHA: $GH_COMMIT_SHA" \
-              -d @enhanced_analysis_result.json \
-              --max-time 60 \
-              --connect-timeout 15 \
-              --retry 2 \
-              --retry-delay 5 \
-              -s \
-              -o /dev/null \
-              -w "%{http_code}"
-          }
-
-          echo "📤 Sending analysis to $WEBHOOK_ENDPOINT"
-          HTTP_CODE=$(send_analysis "$WEBHOOK_ENDPOINT")
-          echo "📡 Response status: $HTTP_CODE"
-
-          if [ "$HTTP_CODE" = "410" ]; then
-            echo "⛔ GitHub App is not installed for this repository (anymore)."
-            echo "app_uninstalled=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
-            echo "❌ Failed to send analysis (HTTP $HTTP_CODE)"
-
-            # Try alternative endpoint
-            if [[ "$WEBHOOK_ENDPOINT" == */ ]]; then
-              ALT_ENDPOINT="${WEBHOOK_ENDPOINT%/}"
-            else
-              ALT_ENDPOINT="${WEBHOOK_ENDPOINT}/"
-            fi
-            echo "🔄 Retrying with alternative endpoint: $ALT_ENDPOINT"
-            HTTP_CODE=$(send_analysis "$ALT_ENDPOINT")
-            echo "📡 Retry response status: $HTTP_CODE"
-
-            if [ "$HTTP_CODE" = "410" ]; then
-              echo "⛔ GitHub App is not installed for this repository (anymore)."
-              echo "app_uninstalled=true" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-
-            if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
-              echo "❌ Failed to send analysis on retry (HTTP $HTTP_CODE)"
-              echo "app_uninstalled=false" >> "$GITHUB_OUTPUT"
-              exit 1
-            fi
-          fi
-
-          echo "✅ Analysis sent successfully"
-          echo "app_uninstalled=false" >> "$GITHUB_OUTPUT"
-
-      - name: Remove workflow (GitHub App not installed)
-        if: steps.check_install.outputs.app_uninstalled == 'true' || steps.send_analysis.outputs.app_uninstalled == 'true'
+  cleanup:
+    needs: analyze
+    if: needs.analyze.outputs.app_uninstalled == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Remove workflow (App uninstalled)
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          REF_NAME: ${{ github.ref_name }}
         run: |
-          set +e
-          WORKFLOW_FILE=".github/workflows/repo-analysis.yml"
-          echo "🛑 The GitHub App is no longer installed for this repository."
-          echo "🗑️ Attempting to remove $WORKFLOW_FILE so this workflow stops running automatically."
-
-          SHA=$(gh api "/repos/${{ github.repository }}/contents/$WORKFLOW_FILE?ref=${{ github.ref_name }}" --jq .sha 2>/dev/null)
-
-          if [ -z "$SHA" ]; then
-            echo "ℹ️ $WORKFLOW_FILE already gone - nothing to remove."
-            exit 0
-          fi
-
-          DELETE_OUTPUT=$(gh api --method DELETE             "/repos/${{ github.repository }}/contents/$WORKFLOW_FILE"             -f message="chore: remove automated analysis workflow (GitHub App not installed)"             -f sha="$SHA"             -f branch="${{ github.ref_name }}" 2>&1)
-          DELETE_STATUS=$?
-
-          if [ $DELETE_STATUS -eq 0 ]; then
-            echo "✅ Workflow removed. Reinstall the app from your dashboard to re-enable automatic analysis."
-            exit 0
-          fi
-
-          # Most common cause: GITHUB_TOKEN is capped at read-only by this
-          # repo's own Actions settings - the "permissions: contents: write"
-          # block above can only ever narrow the token, never exceed the
-          # repo/org's own ceiling. Report it clearly instead of leaving a
-          # bare 403 in the log, and don't fail the whole job for it: the
-          # part that actually matters (no analysis data was accepted /
-          # no credits were spent) already happened successfully.
-          echo "⚠️ Could not delete $WORKFLOW_FILE automatically: $DELETE_OUTPUT"
-          echo ""
-          echo "This is almost always caused by this repository's Actions permissions,"
-          echo "not by anything in the workflow itself. To let this step delete the file"
-          echo "automatically next time:"
-          echo "  1. Go to this repo's Settings -> Actions -> General"
-          echo "  2. Under 'Workflow permissions', select 'Read and write permissions'"
-          echo "  3. Save"
-          echo ""
-          echo "Until then, no repository data is being sent or stored (the GitHub App"
-          echo "is not installed here), but you'll need to delete $WORKFLOW_FILE by hand"
-          echo "if you'd like this workflow to stop appearing in the Actions tab."
-          exit 0
-
-      - name: Upload analysis artifact
-        if: steps.check_install.outputs.app_uninstalled != 'true' && steps.check_install.outputs.skip_scan != 'true' && steps.send_analysis.outputs.app_uninstalled != 'true'
-        uses: actions/upload-artifact@v4.6.2
-        with:
-          name: enhanced-analysis-${{ github.run_id }}
-          path: enhanced_analysis_result.json
-          retention-days: 7
+          FILE=".github/workflows/repo-analysis.yml"
+          SHA=$(gh api --method GET "/repos/$REPO/contents/$FILE" -f ref="$REF_NAME" --jq .sha 2>/dev/null) || exit 0
+          [ -z "$SHA" ] && exit 0
+          gh api --method DELETE "/repos/$REPO/contents/$FILE" \
+            -f message="chore: remove analysis workflow (App not installed)" \
+            -f sha="$SHA" -f branch="$REF_NAME" || true
